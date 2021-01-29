@@ -3,10 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
+		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
+		B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */; };
+		B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */; };
+		B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */; };
+		B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAF325C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift */; };
+		B30CDAFF25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAFE25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift */; };
+		B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB0325C20F3500B7CECF /* TableViewCellSlider.swift */; };
+		B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB0525C20F5000B7CECF /* TableViewCellComment.swift */; };
+		B30CDB1525C2480700B7CECF /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB1025C247F700B7CECF /* OpenSans-Bold.ttf */; };
+		B30CDB1625C2480700B7CECF /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0D25C247F600B7CECF /* OpenSans-LightItalic.ttf */; };
+		B30CDB1725C2480700B7CECF /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0C25C247F600B7CECF /* OpenSans-SemiBold.ttf */; };
+		B30CDB1825C2480700B7CECF /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB1325C247F800B7CECF /* OpenSans-ExtraBold.ttf */; };
+		B30CDB1925C2480700B7CECF /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB1125C247F700B7CECF /* OpenSans-SemiBoldItalic.ttf */; };
+		B30CDB1A25C2480700B7CECF /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB1225C247F800B7CECF /* OpenSans-Italic.ttf */; };
+		B30CDB1B25C2480700B7CECF /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0F25C247F700B7CECF /* OpenSans-ExtraBoldItalic.ttf */; };
+		B30CDB1C25C2480700B7CECF /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB1425C247F900B7CECF /* OpenSans-Light.ttf */; };
+		B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0E25C247F600B7CECF /* OpenSans-BoldItalic.ttf */; };
+		B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0B25C247F500B7CECF /* OpenSans-Regular.ttf */; };
+		B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */; };
+		B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */; };
+		B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */; };
+		B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */; };
+		B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */; };
+		B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */; };
+		B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C453725C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift */; };
+		B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */; };
+		B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */; };
+		B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C459425C0EEC600EBE1BC /* Colors.swift */; };
+		B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */; };
+		B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */; };
+		B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */; };
+		B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
 		B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D825B8B9FA00CD968E /* ViewController.swift */; };
@@ -15,6 +48,7 @@
 		B3CC13E125B8B9FF00CD968E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */; };
 		B3CC13EC25B8BA0000CD968E /* SMNEAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13EB25B8BA0000CD968E /* SMNEAppTests.swift */; };
 		B3CC13F725B8BA0000CD968E /* SMNEAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13F625B8BA0000CD968E /* SMNEAppUITests.swift */; };
+		FAA2F557CA18A751E1DBA3F9 /* Pods_SMNEAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5F2F24A1582314F7D41098 /* Pods_SMNEAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +69,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5F2F24A1582314F7D41098 /* Pods_SMNEAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28241F318D83B92E8CF895F0 /* Pods-SMNEAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.release.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		352282CB6CD169F8171F3F6E /* Pods-SMNEApp-SMNEAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp-SMNEAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		52A3A334AFE4930E3F2EA5E0 /* Pods-SMNEApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.release.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.release.xcconfig"; sourceTree = "<group>"; };
+		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
+		B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBool.swift; sourceTree = "<group>"; };
+		B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S3.swift; sourceTree = "<group>"; };
+		B30CDAF325C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAlgorithmSelection.swift; sourceTree = "<group>"; };
+		B30CDAFE25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S4.swift; sourceTree = "<group>"; };
+		B30CDB0325C20F3500B7CECF /* TableViewCellSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSlider.swift; sourceTree = "<group>"; };
+		B30CDB0525C20F5000B7CECF /* TableViewCellComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellComment.swift; sourceTree = "<group>"; };
+		B30CDB0B25C247F500B7CECF /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		B30CDB0C25C247F600B7CECF /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B30CDB0D25C247F600B7CECF /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B30CDB0E25C247F600B7CECF /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B30CDB0F25C247F700B7CECF /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B30CDB1025C247F700B7CECF /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		B30CDB1125C247F700B7CECF /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B30CDB1225C247F800B7CECF /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		B30CDB1325C247F800B7CECF /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B30CDB1425C247F900B7CECF /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S5.swift; sourceTree = "<group>"; };
+		B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTreatment.swift; sourceTree = "<group>"; };
+		B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPatient.storyboard; sourceTree = "<group>"; };
+		B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPMain.swift; sourceTree = "<group>"; };
+		B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPPageView.swift; sourceTree = "<group>"; };
+		B34C453725C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S1.swift; sourceTree = "<group>"; };
+		B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTitle.swift; sourceTree = "<group>"; };
+		B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellStepper.swift; sourceTree = "<group>"; };
+		B34C459425C0EEC600EBE1BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellInfoPatient.swift; sourceTree = "<group>"; };
+		B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenList.swift; sourceTree = "<group>"; };
+		B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpen.swift; sourceTree = "<group>"; };
+		B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellList.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +122,7 @@
 		B3CC13F225B8BA0000CD968E /* SMNEAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMNEAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13F625B8BA0000CD968E /* SMNEAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEAppUITests.swift; sourceTree = "<group>"; };
 		B3CC13F825B8BA0000CD968E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70126F51649C173B89B3373 /* Pods-SMNEApp-SMNEAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2F557CA18A751E1DBA3F9 /* Pods_SMNEAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +146,109 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A6BCBBF4D2C116ACE5C2E01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */,
+				5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */,
+				1A5F2F24A1582314F7D41098 /* Pods_SMNEAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5957E088F7FADDEB0B1D0888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */,
+				52A3A334AFE4930E3F2EA5E0 /* Pods-SMNEApp.release.xcconfig */,
+				E70126F51649C173B89B3373 /* Pods-SMNEApp-SMNEAppUITests.debug.xcconfig */,
+				352282CB6CD169F8171F3F6E /* Pods-SMNEApp-SMNEAppUITests.release.xcconfig */,
+				6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */,
+				28241F318D83B92E8CF895F0 /* Pods-SMNEAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B30CDB0A25C247E400B7CECF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B30CDB1025C247F700B7CECF /* OpenSans-Bold.ttf */,
+				B30CDB0E25C247F600B7CECF /* OpenSans-BoldItalic.ttf */,
+				B30CDB1325C247F800B7CECF /* OpenSans-ExtraBold.ttf */,
+				B30CDB0F25C247F700B7CECF /* OpenSans-ExtraBoldItalic.ttf */,
+				B30CDB1225C247F800B7CECF /* OpenSans-Italic.ttf */,
+				B30CDB1425C247F900B7CECF /* OpenSans-Light.ttf */,
+				B30CDB0D25C247F600B7CECF /* OpenSans-LightItalic.ttf */,
+				B30CDB0B25C247F500B7CECF /* OpenSans-Regular.ttf */,
+				B30CDB0C25C247F600B7CECF /* OpenSans-SemiBold.ttf */,
+				B30CDB1125C247F700B7CECF /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B31C97B625BF4690006DDCD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B34C459425C0EEC600EBE1BC /* Colors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31C97B725BF46A8006DDCD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B31C97F825BF9248006DDCD8 /* NewPatient */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31C97B825BF46AE006DDCD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B31C97F225BF91E5006DDCD8 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		B31C97F825BF9248006DDCD8 /* NewPatient */ = {
+			isa = PBXGroup;
+			children = (
+				B34C453725C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift */,
+				B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */,
+				B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */,
+				B30CDAFE25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift */,
+				B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */,
+				B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */,
+				B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */,
+				B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */,
+				B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */,
+				B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */,
+				B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */,
+				B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */,
+				B30CDAF325C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift */,
+				B30CDB0325C20F3500B7CECF /* TableViewCellSlider.swift */,
+				B30CDB0525C20F5000B7CECF /* TableViewCellComment.swift */,
+				B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */,
+				B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */,
+				B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */,
+			);
+			path = NewPatient;
+			sourceTree = "<group>";
+		};
 		B3CC13C825B8B9F900CD968E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +256,8 @@
 				B3CC13EA25B8BA0000CD968E /* SMNEAppTests */,
 				B3CC13F525B8BA0000CD968E /* SMNEAppUITests */,
 				B3CC13D225B8B9FA00CD968E /* Products */,
+				5957E088F7FADDEB0B1D0888 /* Pods */,
+				3A6BCBBF4D2C116ACE5C2E01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +274,11 @@
 		B3CC13D325B8B9FA00CD968E /* SMNEApp */ = {
 			isa = PBXGroup;
 			children = (
+				B30CDB0A25C247E400B7CECF /* Fonts */,
+				B31C97F225BF91E5006DDCD8 /* StoryBoards */,
+				B31C97B825BF46AE006DDCD8 /* ViewModel */,
+				B31C97B725BF46A8006DDCD8 /* View */,
+				B31C97B625BF4690006DDCD8 /* Model */,
 				B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */,
 				B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */,
 				B3CC13D825B8B9FA00CD968E /* ViewController.swift */,
@@ -106,6 +286,7 @@
 				B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */,
 				B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */,
 				B3CC13E225B8B9FF00CD968E /* Info.plist */,
+				B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */,
 			);
 			path = SMNEApp;
 			sourceTree = "<group>";
@@ -135,9 +316,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CC13FB25B8BA0000CD968E /* Build configuration list for PBXNativeTarget "SMNEApp" */;
 			buildPhases = (
+				9D2245730088D5FCB07D5E5F /* [CP] Check Pods Manifest.lock */,
 				B3CC13CD25B8B9F900CD968E /* Sources */,
 				B3CC13CE25B8B9F900CD968E /* Frameworks */,
 				B3CC13CF25B8B9F900CD968E /* Resources */,
+				9905B1E910FDC95A7F82CCEA /* [CP] Embed Pods Frameworks */,
+				B31C97CF25BF55C0006DDCD8 /* Firebase Crashlytics */,
+				3993D3A0875A3A06106B30D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CC13FE25B8BA0000CD968E /* Build configuration list for PBXNativeTarget "SMNEAppTests" */;
 			buildPhases = (
+				C68A09EC2CF4ECE12CF14E85 /* [CP] Check Pods Manifest.lock */,
 				B3CC13E325B8BA0000CD968E /* Sources */,
 				B3CC13E425B8BA0000CD968E /* Frameworks */,
 				B3CC13E525B8BA0000CD968E /* Resources */,
@@ -170,9 +356,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CC140125B8BA0000CD968E /* Build configuration list for PBXNativeTarget "SMNEAppUITests" */;
 			buildPhases = (
+				0A5E75228B3E5230CDD171B3 /* [CP] Check Pods Manifest.lock */,
 				B3CC13EE25B8BA0000CD968E /* Sources */,
 				B3CC13EF25B8BA0000CD968E /* Frameworks */,
 				B3CC13F025B8BA0000CD968E /* Resources */,
+				85BC97CAF931269CF7B9B570 /* [CP] Embed Pods Frameworks */,
+				22B91CDF6A0FD933484243AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +420,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30CDB1C25C2480700B7CECF /* OpenSans-Light.ttf in Resources */,
 				B3CC13E125B8B9FF00CD968E /* LaunchScreen.storyboard in Resources */,
+				B30CDB1A25C2480700B7CECF /* OpenSans-Italic.ttf in Resources */,
+				B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */,
+				B30CDB1825C2480700B7CECF /* OpenSans-ExtraBold.ttf in Resources */,
+				B30CDB1625C2480700B7CECF /* OpenSans-LightItalic.ttf in Resources */,
+				B30CDB1925C2480700B7CECF /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				B30CDB1525C2480700B7CECF /* OpenSans-Bold.ttf in Resources */,
+				B30CDB1B25C2480700B7CECF /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				B30CDB1725C2480700B7CECF /* OpenSans-SemiBold.ttf in Resources */,
+				B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */,
+				B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */,
 				B3CC13DE25B8B9FF00CD968E /* Assets.xcassets in Resources */,
 				B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */,
+				B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +454,190 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A5E75228B3E5230CDD171B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMNEApp-SMNEAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22B91CDF6A0FD933484243AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3993D3A0875A3A06106B30D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85BC97CAF931269CF7B9B570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9905B1E910FDC95A7F82CCEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMNEApp/Pods-SMNEApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D2245730088D5FCB07D5E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMNEApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B31C97CF25BF55C0006DDCD8 /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		C68A09EC2CF4ECE12CF14E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMNEAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3CC13CD25B8B9F900CD968E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
+				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
+				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
+				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
+				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
+				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
+				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
+				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
+				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
+				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
+				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
+				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
+				B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */,
 				B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */,
+				B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */,
+				B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */,
+				B30CDAFF25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift in Sources */,
+				B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */,
+				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
+				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +810,12 @@
 		};
 		B3CC13FC25B8BA0000CD968E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,10 +831,12 @@
 		};
 		B3CC13FD25B8BA0000CD968E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A3A334AFE4930E3F2EA5E0 /* Pods-SMNEApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +852,7 @@
 		};
 		B3CC13FF25B8BA0000CD968E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +875,7 @@
 		};
 		B3CC140025B8BA0000CD968E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28241F318D83B92E8CF895F0 /* Pods-SMNEAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +898,7 @@
 		};
 		B3CC140225B8BA0000CD968E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70126F51649C173B89B3373 /* Pods-SMNEApp-SMNEAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +919,7 @@
 		};
 		B3CC140325B8BA0000CD968E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 352282CB6CD169F8171F3F6E /* Pods-SMNEApp-SMNEAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

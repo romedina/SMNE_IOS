@@ -1,20 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algoritmos para el tratamiento farmacológico de la hiperglucemia en diabetes tipo 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tI-66-xJR">
+                                <rect key="frame" x="41.5" y="279" width="331" height="82"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BUx-xM-oml">
+                                <rect key="frame" x="149.5" y="124" width="115" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="PDH-6r-QL2"/>
+                                    <constraint firstAttribute="width" constant="115" id="WTg-z7-on7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hl2-qK-pM6">
+                                <rect key="frame" x="0.0" y="692" width="414" height="204"/>
+                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="lbg-cM-5Tk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi7-iK-TKX">
+                                <rect key="frame" x="0.0" y="687" width="414" height="5"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="kj6-V5-EKj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hl2-qK-pM6" secondAttribute="bottom" id="3Bf-lZ-UWk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hl2-qK-pM6" secondAttribute="trailing" id="CUm-tC-Tft"/>
+                            <constraint firstItem="hl2-qK-pM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NE3-pv-Rwc"/>
+                            <constraint firstItem="hl2-qK-pM6" firstAttribute="top" secondItem="hi7-iK-TKX" secondAttribute="bottom" id="NaN-W7-PQG"/>
+                            <constraint firstItem="1tI-66-xJR" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="b9K-k7-wxu"/>
+                            <constraint firstItem="1tI-66-xJR" firstAttribute="top" secondItem="BUx-xM-oml" secondAttribute="bottom" constant="40" id="kGM-eF-cPY"/>
+                            <constraint firstItem="BUx-xM-oml" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="mbg-ib-y9x"/>
+                            <constraint firstItem="hi7-iK-TKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nzf-hy-lfX"/>
+                            <constraint firstItem="hi7-iK-TKX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p10-lM-miD"/>
+                            <constraint firstItem="1tI-66-xJR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pGS-k7-611"/>
+                            <constraint firstItem="BUx-xM-oml" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="se0-TK-hxo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
