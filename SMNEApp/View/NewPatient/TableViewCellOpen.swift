@@ -10,6 +10,7 @@ import MaterialComponents
 
 class TableViewCellOpen: UITableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var openInput: MDCOutlinedTextField!
     
     override func awakeFromNib() {
@@ -23,5 +24,9 @@ class TableViewCellOpen: UITableViewCell {
         openInput.setOutlineColor(.C2(), for: .editing)
         openInput.setTextColor(.C3(), for: .editing)
     }
-
+    
+    func setInfo(title: String, placeHolder: String) {
+        titleLabel.text = title
+        openInput.placeholder = placeHolder
+    }
 }

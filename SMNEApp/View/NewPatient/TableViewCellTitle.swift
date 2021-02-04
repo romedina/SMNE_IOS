@@ -17,8 +17,11 @@ class TableViewCellTitle: UITableViewCell {
         // Initialization code
     }
     
-    func setInfo(){
-        
+    func setInfo(title: String, subtitle: String){
+        titleLabel.text = title
+        if subtitleLabel != nil {
+            subtitleLabel.text = subtitle
+        }
     }
 
 }

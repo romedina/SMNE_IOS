@@ -21,42 +21,34 @@ class TableViewControllerNewPatient_S3: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return stepThree.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        
+        let cellInfo = stepThree[indexPath.row]
+        
+        if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
 
-            // Configure the cell...
+            cell.setInfo(title: info.title, subtitle: info.subtitle)
 
             return cell
-        case 1:
+        } else if let info = cellInfo as? StepperCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
 
-            // Configure the cell...
+            cell.setInfo(page: info.page)
 
             return cell
-        case 2:
+        } else if let info = cellInfo as? AlgorithmCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "algorithm", for: indexPath) as! TableViewCellAlgorithmSelection
-
-            // Configure the cell...
-            cell.setInfo(algorithm: "Algoritmo de tratamiento de la DM2 con enfermedad renal crónica (ERC)", backColor: .C1(), textColor: .white, viewController: self)
-
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "algorithm", for: indexPath) as! TableViewCellAlgorithmSelection
-
-            // Configure the cell...
-            cell.setInfo(algorithm: "Algortimo en DM2 con insuficiencia cardiaca IM/ACV", backColor: .C2(), textColor: .C3(), viewController: self)
+            
+            cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self)
 
             return cell
-        default:
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
-
-            // Configure the cell...
 
             return cell
         }

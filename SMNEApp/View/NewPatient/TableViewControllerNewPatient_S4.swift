@@ -23,50 +23,41 @@ class TableViewControllerNewPatient_S4: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return stepFour.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        
+        let cellInfo = stepFour[indexPath.row]
+        
+        if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
 
-            // Configure the cell...
+            cell.setInfo(title: info.title, subtitle: info.subtitle)
 
             return cell
-        case 1:
+        } else if let info = cellInfo as? StepperCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
 
-            // Configure the cell...
+            cell.setInfo(page: info.page)
 
             return cell
-        case 2:
+        } else if let info = cellInfo as? SliderCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "slider", for: indexPath) as! TableViewCellSlider
-
-            // Configure the cell...
-
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "slider", for: indexPath) as! TableViewCellSlider
-
-            // Configure the cell...
+            
+            cell.setInfo(title: info.title, max: String(info.max), unit: info.unit)
 
             return cell
-        case 4:
+        } else if let info = cellInfo as? CommentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! TableViewCellComment
 
-            // Configure the cell...
-
             return cell
-        default:
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
-
-            // Configure the cell...
 
             return cell
         }
-        
     }
 
 }

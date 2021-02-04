@@ -21,6 +21,8 @@ class ViewControllerNPMain: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        returnButton.setBorderColor(.C2(), for: .normal)
+        returnButton.setBorderWidth(1, for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

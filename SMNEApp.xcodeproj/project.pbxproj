@@ -32,6 +32,7 @@
 		B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */; };
 		B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */; };
 		B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */; };
+		B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */; };
 		B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C453725C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift */; };
 		B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */; };
 		B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */; };
@@ -44,10 +45,12 @@
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
 		B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D825B8B9FA00CD968E /* ViewController.swift */; };
 		B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DA25B8B9FA00CD968E /* Main.storyboard */; };
-		B3CC13DE25B8B9FF00CD968E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */; };
 		B3CC13E125B8B9FF00CD968E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */; };
 		B3CC13EC25B8BA0000CD968E /* SMNEAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13EB25B8BA0000CD968E /* SMNEAppTests.swift */; };
 		B3CC13F725B8BA0000CD968E /* SMNEAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13F625B8BA0000CD968E /* SMNEAppUITests.swift */; };
+		B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */; };
+		B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */; };
+		B3DA1A7B25CB5220004C89AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */; };
 		FAA2F557CA18A751E1DBA3F9 /* Pods_SMNEAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5F2F24A1582314F7D41098 /* Pods_SMNEAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,7 @@
 		B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPatient.storyboard; sourceTree = "<group>"; };
 		B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPMain.swift; sourceTree = "<group>"; };
 		B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPPageView.swift; sourceTree = "<group>"; };
+		B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmModels.swift; sourceTree = "<group>"; };
 		B34C453725C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S1.swift; sourceTree = "<group>"; };
 		B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTitle.swift; sourceTree = "<group>"; };
 		B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellStepper.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		B3CC13F225B8BA0000CD968E /* SMNEAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMNEAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13F625B8BA0000CD968E /* SMNEAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEAppUITests.swift; sourceTree = "<group>"; };
 		B3CC13F825B8BA0000CD968E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRadioButton.swift; sourceTree = "<group>"; };
+		B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellIMC.swift; sourceTree = "<group>"; };
 		E70126F51649C173B89B3373 /* Pods-SMNEApp-SMNEAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				B34C459425C0EEC600EBE1BC /* Colors.swift */,
+				B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +252,8 @@
 				B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */,
 				B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */,
 				B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */,
+				B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */,
+				B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */,
 			);
 			path = NewPatient;
 			sourceTree = "<group>";
@@ -424,6 +433,7 @@
 				B3CC13E125B8B9FF00CD968E /* LaunchScreen.storyboard in Resources */,
 				B30CDB1A25C2480700B7CECF /* OpenSans-Italic.ttf in Resources */,
 				B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */,
+				B3DA1A7B25CB5220004C89AC /* Assets.xcassets in Resources */,
 				B30CDB1825C2480700B7CECF /* OpenSans-ExtraBold.ttf in Resources */,
 				B30CDB1625C2480700B7CECF /* OpenSans-LightItalic.ttf in Resources */,
 				B30CDB1925C2480700B7CECF /* OpenSans-SemiBoldItalic.ttf in Resources */,
@@ -432,7 +442,6 @@
 				B30CDB1725C2480700B7CECF /* OpenSans-SemiBold.ttf in Resources */,
 				B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */,
 				B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */,
-				B3CC13DE25B8B9FF00CD968E /* Assets.xcassets in Resources */,
 				B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */,
 				B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */,
 			);
@@ -620,8 +629,10 @@
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
 				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
 				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
+				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
 				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
+				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
@@ -636,6 +647,7 @@
 				B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */,
 				B30CDAFF25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift in Sources */,
 				B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */,
+				B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
 				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,
 			);

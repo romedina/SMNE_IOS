@@ -19,7 +19,7 @@ class TableViewCellTreatment: UITableViewCell {
         parentView.layer.cornerRadius = 10
     }
     
-    func setinfo(title: String, subTitle: String) {
+    func setInfo(title: String, subTitle: String) {
         titleLabel.text = title
         subTitleLabel.text = subTitle
     }

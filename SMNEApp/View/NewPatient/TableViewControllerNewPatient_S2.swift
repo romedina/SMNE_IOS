@@ -22,55 +22,46 @@ class TableViewControllerNewPatient_S2: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
+        return stepTwo.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        
+        let cellInfo = stepTwo[indexPath.row]
+        
+        if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
 
-            // Configure the cell...
+            cell.setInfo(title: info.title, subtitle: info.subtitle)
 
             return cell
-        case 1:
+        } else if let info = cellInfo as? StepperCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
 
-            // Configure the cell...
+            cell.setInfo(page: info.page)
 
             return cell
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
-
-            // Configure the cell...
-
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
-
-            // Configure the cell...
-
-            return cell
-        case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
-
-            // Configure the cell...
-
-            return cell
-        case 5:
+        } else if let info = cellInfo as? OpenCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "open", for: indexPath) as! TableViewCellOpen
-
-            // Configure the cell...
+            
+            cell.setInfo(title: info.title, placeHolder: info.placeHolder)
 
             return cell
-        default:
-            break
+        } else if let info = cellInfo as? BoolCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
+            
+            cell.setInfo(title: info.title)
+            
+            return cell
+        } else if let _ = cellInfo as? IMCCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "imc", for: indexPath) as! TableViewCellIMC
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
+
+            return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
     }
 }

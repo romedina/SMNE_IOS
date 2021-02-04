@@ -9,8 +9,10 @@ import UIKit
 
 class TableViewCellList: UITableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var listPicker: UIPickerView!
-    let dataPicker = ["Privada", "Pública"]
+    var dataPicker: [String] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,8 +20,9 @@ class TableViewCellList: UITableViewCell {
         listPicker.dataSource = self
     }
     
-    func setInfo() {
-        
+    func setInfo(title: String, options: [String]) {
+        titleLabel.text = title
+        dataPicker = options
     }
 
 }

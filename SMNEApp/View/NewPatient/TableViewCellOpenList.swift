@@ -10,10 +10,12 @@ import MaterialComponents
 
 class TableViewCellOpenList: UITableViewCell {
     
+    @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var openInput: MDCOutlinedTextField!
+    @IBOutlet weak var listLabel: UILabel!
     @IBOutlet weak var listInput: UIPickerView!
     
-    let dataPicker = ["Prefiero omitir", "Femenino", "Masculino"]
+    var dataPicker: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +30,12 @@ class TableViewCellOpenList: UITableViewCell {
         
         listInput.delegate = self
         listInput.dataSource = self
+    }
+    
+    func setInfo(openTitle: String, listTitle: String, options: [String]) {
+        openLabel.text = openTitle
+        listLabel.text = listTitle
+        dataPicker = options
     }
 
 }

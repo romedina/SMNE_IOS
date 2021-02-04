@@ -54,50 +54,57 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
+        return stepOne.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        let cellInfo = stepOne[indexPath.row]
+        
+        if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
 
-            cell.setInfo()
+            cell.setInfo(title: info.title, subtitle: info.subtitle)
 
             return cell
-        case 1:
+        } else if let info = cellInfo as? StepperCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
 
-            cell.setInfo(page: 1)
+            cell.setInfo(page: info.page)
 
             return cell
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "infoPatient", for: indexPath) as! TableViewCellInfoPatient
-
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "list", for: indexPath) as! TableViewCellList
-
-            return cell
-        case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "open,list", for: indexPath) as! TableViewCellOpenList
-
-            return cell
-        case 5:
+        } else if let info = cellInfo as? OpenCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "open", for: indexPath) as! TableViewCellOpen
+            
+            cell.setInfo(title: info.title, placeHolder: info.placeHolder)
 
             return cell
-        case 6:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
+        } else if let info = cellInfo as? OpenListCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "open,list", for: indexPath) as! TableViewCellOpenList
+            
+            cell.setInfo(openTitle: info.listTitle, listTitle: info.listTitle, options: info.listOptions)
             
             return cell
-        default:
-            break
-        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "open", for: indexPath) as! TableViewCellOpen
+        } else if let info = cellInfo as? ListCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "list", for: indexPath) as! TableViewCellList
+            
+            cell.setInfo(title: info.title, options: info.options)
+            
+            return cell
+        } else if let _ = cellInfo as? InfoCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "infoPatient", for: indexPath) as! TableViewCellInfoPatient
+            
+            return cell
+        } else if let _ = cellInfo as? RadioCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellRadioButton
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
 
-        return cell
+            return cell
+        }
+        
     }
     
     @objc func nextButtonTapped(_ sender: MDCButton) {
