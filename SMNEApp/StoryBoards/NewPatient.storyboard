@@ -405,6 +405,9 @@ de tu paciente. </string>
                                                             <rect key="frame" x="0.0" y="30" width="189" height="70"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="openChanged:" destination="qqn-gB-1Mh" eventType="editingChanged" id="MNW-ZW-7fk"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -465,6 +468,9 @@ de tu paciente. </string>
                                             <rect key="frame" x="18" y="54" width="378" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="openChanged:" destination="jDZ-se-hp2" eventType="editingChanged" id="Mwx-mD-Hew"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>

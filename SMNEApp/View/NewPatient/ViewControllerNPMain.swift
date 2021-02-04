@@ -34,6 +34,9 @@ class ViewControllerNPMain: UIViewController {
         let dateMX = "\(dateSeparated[1])/\(dateSeparated[0])/\(dateSeparated[2])"
         patientInfo.date = dateMX
         
+        let S1 = pageViewCotroller.subViewControllers[0] as! TableViewControllerNewPatient_S1
+        S1.delegate = self
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,4 +63,31 @@ class ViewControllerNPMain: UIViewController {
         }
     }
     
+}
+
+extension ViewControllerNPMain: InfoChangedS1Delegate {
+    func infoChanged(id: String, info: Any) {
+        print(id)
+        print(info)
+        switch id {
+        case "type":
+            patientInfo.type = info as! String
+            break
+        case "age":
+            patientInfo.age = Int(info as! String) ?? 0
+            break
+        case "gender":
+            patientInfo.gender = info as! String
+            break
+        case "racial":
+            let racial =  info as! String == "Afroamericano" ? true: false
+            patientInfo.racial = racial
+            break
+        case "diabetes":
+            patientInfo.diabetesDate = info as! String
+            break
+        default:
+            break
+        }
+    }
 }

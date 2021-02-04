@@ -8,11 +8,17 @@
 import UIKit
 import MaterialComponents
 
+protocol InfoChangedS1Delegate {
+    func infoChanged(id: String, info: Any)
+}
+
 class TableViewControllerNewPatient_S1: UITableViewController {
     
     let nextButton = MDCButton()
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
+    
+    var delegate: InfoChangedS1Delegate?
     
     override func viewDidAppear(_ animated: Bool) {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
@@ -77,18 +83,21 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "open", for: indexPath) as! TableViewCellOpen
             
             cell.setInfo(title: info.title, placeHolder: info.placeHolder)
+            cell.delegate = self
 
             return cell
         } else if let info = cellInfo as? OpenListCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "open,list", for: indexPath) as! TableViewCellOpenList
             
             cell.setInfo(openTitle: info.listTitle, listTitle: info.listTitle, options: info.listOptions)
+            cell.delegate = self
             
             return cell
         } else if let info = cellInfo as? ListCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "list", for: indexPath) as! TableViewCellList
             
             cell.setInfo(title: info.title, options: info.options)
+            cell.delegate = self
             
             return cell
         } else if let _ = cellInfo as? InfoCell {
@@ -97,6 +106,8 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         } else if let _ = cellInfo as? RadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellRadioButton
+            
+            cell.delegate = self
             
             return cell
         } else {
@@ -148,4 +159,26 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         }
     }
 
+}
+
+extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate {
+    func listChanged(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func openChanged(id: String, info: Any) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func radioChanged(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func openChanged(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func listChange(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
 }

@@ -8,7 +8,14 @@
 import UIKit
 import MaterialComponents
 
+protocol OpenListCellDelegate {
+    func openChanged(id: String, info: String)
+    func listChange(id: String, info: String)
+}
+
 class TableViewCellOpenList: UITableViewCell {
+    
+    var delegate: OpenListCellDelegate?
     
     @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var openInput: MDCOutlinedTextField!
@@ -37,6 +44,11 @@ class TableViewCellOpenList: UITableViewCell {
         listLabel.text = listTitle
         dataPicker = options
     }
+    
+    @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
+        delegate?.openChanged(id: "age", info: sender.text ?? "")
+    }
+    
 
 }
 
@@ -53,5 +65,8 @@ extension TableViewCellOpenList: UIPickerViewDelegate, UIPickerViewDataSource {
         return dataPicker[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        delegate?.listChange(id: "gender", info: dataPicker[row])
+    }
     
 }

@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol ListCellDelegate {
+    func listChanged(id: String, info: String)
+}
+
 class TableViewCellList: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var listPicker: UIPickerView!
     var dataPicker: [String] = []
+    var delegate: ListCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,5 +45,7 @@ extension TableViewCellList: UIPickerViewDelegate, UIPickerViewDataSource {
         return dataPicker[row]
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        delegate?.listChanged(id: "type", info: dataPicker[row])
+    }
 }
