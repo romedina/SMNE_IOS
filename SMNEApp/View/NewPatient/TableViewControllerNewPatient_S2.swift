@@ -51,7 +51,7 @@ class TableViewControllerNewPatient_S2: UITableViewController {
         } else if let info = cellInfo as? BoolCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
             
-            cell.setInfo(title: info.title)
+            cell.setInfo(title: info.title, sub: info.sub)
             
             return cell
         } else if let _ = cellInfo as? IMCCell {

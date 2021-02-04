@@ -790,10 +790,10 @@ de tu paciente. </string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bool" id="BA1-Bm-8Kc" customClass="TableViewCellBool" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="201" width="414" height="123"/>
+                                <rect key="frame" x="0.0" y="201" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BA1-Bm-8Kc" id="KJA-eY-Q1d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-fP-mfi">
@@ -832,6 +832,12 @@ de tu paciente. </string>
                                                 <constraint firstAttribute="height" constant="50" id="5bb-Ao-VWa"/>
                                             </constraints>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM0-kB-lLV">
+                                            <rect key="frame" x="18" y="113" width="378" height="18"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                            <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="LyO-1S-308" secondAttribute="trailing" constant="18" id="3UV-yZ-c0N"/>
@@ -839,17 +845,21 @@ de tu paciente. </string>
                                         <constraint firstItem="kvT-fP-mfi" firstAttribute="leading" secondItem="KJA-eY-Q1d" secondAttribute="leading" constant="18" id="Iw8-5v-OxW"/>
                                         <constraint firstItem="LyO-1S-308" firstAttribute="leading" secondItem="KJA-eY-Q1d" secondAttribute="leading" constant="18" id="Luk-16-Uft"/>
                                         <constraint firstItem="kvT-fP-mfi" firstAttribute="top" secondItem="KJA-eY-Q1d" secondAttribute="topMargin" constant="15" id="WOk-Qv-XFY"/>
-                                        <constraint firstAttribute="bottom" secondItem="LyO-1S-308" secondAttribute="bottom" constant="15" id="xL0-G7-Il5"/>
+                                        <constraint firstAttribute="trailing" secondItem="kM0-kB-lLV" secondAttribute="trailing" constant="18" id="pep-Ls-Iye"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kM0-kB-lLV" secondAttribute="bottom" constant="10" id="uqU-S6-QwM"/>
+                                        <constraint firstItem="kM0-kB-lLV" firstAttribute="top" secondItem="LyO-1S-308" secondAttribute="bottom" constant="5" id="xL0-G7-Il5"/>
+                                        <constraint firstItem="kM0-kB-lLV" firstAttribute="leading" secondItem="KJA-eY-Q1d" secondAttribute="leading" constant="18" id="y0M-Av-wb2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="noButton" destination="fKO-7R-bju" id="n4I-qe-Hjl"/>
-                                    <outlet property="titleLabel" destination="kvT-fP-mfi" id="7br-99-D1a"/>
+                                    <outlet property="subLabel" destination="kM0-kB-lLV" id="Y20-8w-CN8"/>
+                                    <outlet property="titleLabel" destination="kvT-fP-mfi" id="7uP-dK-SZ7"/>
                                     <outlet property="yesButton" destination="dYu-Or-BZ8" id="2xn-4V-Oeu"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="Kxs-7s-cRS" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="324" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="353" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kxs-7s-cRS" id="JcN-Kn-CuY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -886,7 +896,7 @@ de tu paciente. </string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imc" id="WZm-Ta-NBK" customClass="TableViewCellIMC" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="432" width="414" height="285.5"/>
+                                <rect key="frame" x="0.0" y="461" width="414" height="285.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZm-Ta-NBK" id="QFq-b9-Mok">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="285.5"/>
@@ -1018,7 +1028,7 @@ de tu paciente. </string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="Ugl-Li-GjD">
-                                <rect key="frame" x="0.0" y="717.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="746.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugl-Li-GjD" id="gOZ-Hv-SZO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>

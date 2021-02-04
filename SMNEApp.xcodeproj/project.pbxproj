@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
+		B305D82C25CB807C007507E1 /* ViewModelNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */; };
 		B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */; };
 		B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */; };
 		B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */; };
@@ -80,6 +81,7 @@
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewPatient.swift; sourceTree = "<group>"; };
 		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
 		B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBool.swift; sourceTree = "<group>"; };
 		B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S3.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		B31C97B825BF46AE006DDCD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
+				B305D82C25CB807C007507E1 /* ViewModelNewPatient.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,

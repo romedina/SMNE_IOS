@@ -16,6 +16,8 @@ class ViewControllerNPMain: UIViewController {
     
     var index = 0
     
+    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,15 @@ class ViewControllerNPMain: UIViewController {
         // Do any additional setup after loading the view.
         returnButton.setBorderColor(.C2(), for: .normal)
         returnButton.setBorderWidth(1, for: .normal)
+        let today = Date()
+        let formatter1 = DateFormatter()
+        formatter1.dateStyle = .short
+        let dateIng = formatter1.string(from: today)
+        
+        let dateSeparated = dateIng.split(separator: "/")
+        let dateMX = "\(dateSeparated[1])/\(dateSeparated[0])/\(dateSeparated[2])"
+        patientInfo.date = dateMX
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

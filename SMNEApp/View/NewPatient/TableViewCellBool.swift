@@ -11,6 +11,7 @@ import MaterialComponents.MDCButton
 class TableViewCellBool: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var yesButton: MDCButton!
     @IBOutlet weak var noButton: MDCButton!
     
@@ -29,8 +30,9 @@ class TableViewCellBool: UITableViewCell {
         noButton.setTitleColor(.white, for: .selected)
     }
     
-    func setInfo(title: String) {
+    func setInfo(title: String, sub: String) {
         titleLabel.text = title
+        subLabel.text = sub
     }
     
     @IBAction func yesButtonTapped(_ sender: Any) {

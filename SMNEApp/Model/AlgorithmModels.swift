@@ -86,6 +86,7 @@ struct OpenCell {
 
 struct BoolCell {
     let title: String
+    let sub: String
 }
 
 struct AlgorithmCell {
@@ -120,10 +121,24 @@ struct IMCCell {
 
 let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), ListCell(title: "Tipo de consulta", options: ["Privada", "Pública"]), OpenListCell(openTitle: "Edad", listTitle: "Género", listOptions: ["Masculino", "Femenino"]), RadioCell(title: ""), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
-let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?"), BoolCell(title: "Tiene hipoglucemia?"), OpenCell(title: "¿Cuál es su IMC?", placeHolder: "Ingresa el índide de Masa Corporal")]
+let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: ""), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)"), BoolCell(title: "Tiene hipoglucemia?", sub: "")]
 
 var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
 
 var stepFour: [Any] = [TitleCell(title: "", subtitle: "Ya casi terminamos."), StepperCell(page: 4)]
 
 var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5)]
+
+struct PatientInfo {
+    var id: String
+    var date: String
+    var type: String
+    var age: Int
+    var gender: String
+    var racial: Bool
+    var diabetesDate: String
+    var IMC: Float
+    var renal: Bool
+    var cardio: Bool
+    var hipo: Bool
+}
