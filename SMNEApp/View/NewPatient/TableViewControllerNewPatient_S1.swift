@@ -89,7 +89,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         } else if let info = cellInfo as? OpenListCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "open,list", for: indexPath) as! TableViewCellOpenList
             
-            cell.setInfo(openTitle: info.listTitle, listTitle: info.listTitle, options: info.listOptions)
+            cell.setInfo(openTitle: info.openTitle, listTitle: info.listTitle, options: info.listOptions)
             cell.delegate = self
             
             return cell

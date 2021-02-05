@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BUx-xM-oml">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo SMNE Blanco" translatesAutoresizingMaskIntoConstraints="NO" id="BUx-xM-oml">
                                 <rect key="frame" x="149.5" y="124" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="PDH-6r-QL2"/>
@@ -47,15 +47,24 @@
                                     <constraint firstAttribute="height" constant="5" id="kj6-V5-EKj"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-Qa-wun">
+                                <rect key="frame" x="59.5" y="435" width="295" height="352"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="W3Q-Ju-mec"/>
+                                    <constraint firstAttribute="height" constant="352" id="cAT-3P-gx5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="hl2-qK-pM6" secondAttribute="bottom" id="3Bf-lZ-UWk"/>
+                            <constraint firstItem="AG4-Qa-wun" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4d1-jI-Q8v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hl2-qK-pM6" secondAttribute="trailing" id="CUm-tC-Tft"/>
                             <constraint firstItem="hl2-qK-pM6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NE3-pv-Rwc"/>
                             <constraint firstItem="hl2-qK-pM6" firstAttribute="top" secondItem="hi7-iK-TKX" secondAttribute="bottom" id="NaN-W7-PQG"/>
                             <constraint firstItem="1tI-66-xJR" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="b9K-k7-wxu"/>
+                            <constraint firstItem="hi7-iK-TKX" firstAttribute="top" secondItem="AG4-Qa-wun" secondAttribute="bottom" constant="-100" id="eh0-N6-tHp"/>
                             <constraint firstItem="1tI-66-xJR" firstAttribute="top" secondItem="BUx-xM-oml" secondAttribute="bottom" constant="40" id="kGM-eF-cPY"/>
                             <constraint firstItem="BUx-xM-oml" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="mbg-ib-y9x"/>
                             <constraint firstItem="hi7-iK-TKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nzf-hy-lfX"/>
@@ -70,4 +79,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo SMNE Blanco" width="115.5" height="114.5"/>
+        <image name="splash" width="295.5" height="352.5"/>
+    </resources>
 </document>

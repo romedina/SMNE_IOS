@@ -28,13 +28,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Dr. Navarrete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-Gc-Q6C">
-                                        <rect key="frame" x="18" y="44" width="122.5" height="19.5"/>
+                                        <rect key="frame" x="18" y="44" width="114.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgU-FV-lOf">
-                                        <rect key="frame" x="18" y="73.5" width="190.5" height="46.5"/>
+                                        <rect key="frame" x="18" y="70.5" width="169.5" height="40"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                                     <rect key="frame" x="18" y="10" width="378" height="215"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tratamiento farmacológico DM2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-Jf-YLs">
-                                                            <rect key="frame" x="30" y="20" width="162" height="90"/>
+                                                            <rect key="frame" x="30" y="20" width="162" height="77"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="162" id="5w1-Yo-eKE"/>
                                                             </constraints>
@@ -107,16 +107,25 @@
                                                                 <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                         </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-EJ-sC3">
+                                                            <rect key="frame" x="226" y="20" width="152" height="195"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="152" id="L9z-YF-GOp"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SOn-bD-6lU" secondAttribute="trailing" constant="20" symbolic="YES" id="7AE-gF-wRy"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d5o-Jf-YLs" secondAttribute="trailing" constant="20" symbolic="YES" id="BDA-yi-Y5L"/>
-                                                        <constraint firstItem="SOn-bD-6lU" firstAttribute="top" secondItem="d5o-Jf-YLs" secondAttribute="bottom" constant="20" id="K1f-hC-8Vn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VfR-EJ-sC3" secondAttribute="bottom" id="Jfz-Dj-lBO"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SOn-bD-6lU" secondAttribute="bottom" constant="40" id="KG9-fB-2lo"/>
                                                         <constraint firstAttribute="height" constant="215" id="SfJ-Jf-rLN"/>
                                                         <constraint firstItem="d5o-Jf-YLs" firstAttribute="leading" secondItem="X1T-Sc-ebB" secondAttribute="leading" constant="30" id="cNW-Dy-M2F"/>
                                                         <constraint firstItem="d5o-Jf-YLs" firstAttribute="top" secondItem="X1T-Sc-ebB" secondAttribute="top" constant="20" id="hND-iK-L29"/>
                                                         <constraint firstItem="SOn-bD-6lU" firstAttribute="leading" secondItem="X1T-Sc-ebB" secondAttribute="leading" constant="30" id="iVW-RU-k1k"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VfR-EJ-sC3" secondAttribute="trailing" id="qlm-5D-JZx"/>
+                                                        <constraint firstItem="VfR-EJ-sC3" firstAttribute="top" secondItem="X1T-Sc-ebB" secondAttribute="top" constant="20" symbolic="YES" id="xeN-Il-BaB"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -128,6 +137,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageViewImage" destination="VfR-EJ-sC3" id="NMT-L0-4lZ"/>
                                             <outlet property="optionButton" destination="SOn-bD-6lU" id="fZZ-u8-t50"/>
                                             <outlet property="parentView" destination="X1T-Sc-ebB" id="bJQ-gG-qb1"/>
                                             <outlet property="titleLabel" destination="d5o-Jf-YLs" id="ozV-g0-76t"/>
@@ -310,7 +320,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-Bv-41t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-Bv-41t" customClass="MDCButton">
                                 <rect key="frame" x="307" y="703" width="79" height="95"/>
                                 <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -385,6 +395,7 @@
         <image name="dr" width="28" height="30.5"/>
         <image name="home" width="30" height="26.5"/>
         <image name="newPatient" width="34.5" height="42.5"/>
+        <image name="phone" width="122" height="221.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

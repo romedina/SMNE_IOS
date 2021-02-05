@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import MaterialComponents.MDCButton
 
 class ViewControllerPatientList: UIViewController {
     
     @IBOutlet weak var tableViewList: UITableView!
-    @IBOutlet weak var newPatientButton: UIButton!
+    @IBOutlet weak var newPatientButton: MDCButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

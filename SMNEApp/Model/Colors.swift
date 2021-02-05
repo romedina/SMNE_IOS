@@ -24,4 +24,9 @@ extension UIColor {
     class func C3() -> UIColor {
         return UIColor(red: 0.020, green: 0.176, blue: 0.424, alpha: 1.0)
     }
+    
+    //9FDDF9
+    class func C4() -> UIColor {
+        return UIColor(red: 0.6235, green: 0.8667, blue: 0.9765, alpha: 1.0)
+    }
 }
