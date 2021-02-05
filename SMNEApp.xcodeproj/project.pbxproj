@@ -42,6 +42,11 @@
 		B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */; };
 		B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */; };
 		B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */; };
+		B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */; };
+		B356BFD125CDD4B20025F62A /* TableViewControllerPatientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFD025CDD4B20025F62A /* TableViewControllerPatientsList.swift */; };
+		B356BFD625CDD4E00025F62A /* TableViewCellPatientListTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFD525CDD4E00025F62A /* TableViewCellPatientListTitle.swift */; };
+		B356BFDB25CDD5000025F62A /* TableViewCellPatientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFDA25CDD5000025F62A /* TableViewCellPatientList.swift */; };
+		B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFDF25CDD7CD0025F62A /* ViewControllerPatientList.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
 		B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D825B8B9FA00CD968E /* ViewController.swift */; };
@@ -114,6 +119,11 @@
 		B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenList.swift; sourceTree = "<group>"; };
 		B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpen.swift; sourceTree = "<group>"; };
 		B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellList.swift; sourceTree = "<group>"; };
+		B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTabBar.swift; sourceTree = "<group>"; };
+		B356BFD025CDD4B20025F62A /* TableViewControllerPatientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerPatientsList.swift; sourceTree = "<group>"; };
+		B356BFD525CDD4E00025F62A /* TableViewCellPatientListTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientListTitle.swift; sourceTree = "<group>"; };
+		B356BFDA25CDD5000025F62A /* TableViewCellPatientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientList.swift; sourceTree = "<group>"; };
+		B356BFDF25CDD7CD0025F62A /* ViewControllerPatientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientList.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +223,7 @@
 		B31C97B725BF46A8006DDCD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B356BFC525CDCCEF0025F62A /* Home */,
 				B31C97F825BF9248006DDCD8 /* NewPatient */,
 			);
 			path = View;
@@ -259,6 +270,26 @@
 				B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */,
 			);
 			path = NewPatient;
+			sourceTree = "<group>";
+		};
+		B356BFC525CDCCEF0025F62A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B356BFCF25CDD48C0025F62A /* Patient */,
+				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B356BFCF25CDD48C0025F62A /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				B356BFD025CDD4B20025F62A /* TableViewControllerPatientsList.swift */,
+				B356BFD525CDD4E00025F62A /* TableViewCellPatientListTitle.swift */,
+				B356BFDA25CDD5000025F62A /* TableViewCellPatientList.swift */,
+				B356BFDF25CDD7CD0025F62A /* ViewControllerPatientList.swift */,
+			);
+			path = Patient;
 			sourceTree = "<group>";
 		};
 		B3CC13C825B8B9F900CD968E = {
@@ -635,8 +666,11 @@
 				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
 				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
+				B356BFD125CDD4B20025F62A /* TableViewControllerPatientsList.swift in Sources */,
+				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
+				B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
 				B305D82C25CB807C007507E1 /* ViewModelNewPatient.swift in Sources */,
@@ -647,10 +681,12 @@
 				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
 				B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */,
 				B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */,
+				B356BFDB25CDD5000025F62A /* TableViewCellPatientList.swift in Sources */,
 				B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */,
 				B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */,
 				B30CDAFF25C20F0F00B7CECF /* TableViewControllerNewPatient_S4.swift in Sources */,
 				B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */,
+				B356BFD625CDD4E00025F62A /* TableViewCellPatientListTitle.swift in Sources */,
 				B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
 				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,

@@ -16,7 +16,7 @@ class ViewControllerNPMain: UIViewController {
     
     var index = 0
     
-    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
+    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "Privada", age: 0, gender: "Masculino", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
     
 
     override func viewDidLoad() {
@@ -48,15 +48,22 @@ class ViewControllerNPMain: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: MDCButton) {
-        
-        if index < 4 {
-            index += 1
-            pageViewCotroller.setViewControllerFromIndex(index: index)
+        print(patientInfo)
+        if patientInfo.age != 0 && patientInfo.diabetesDate != "" {
+            if index < 4 {
+                index += 1
+                pageViewCotroller.setViewControllerFromIndex(index: index)
+            }
+        } else {
+            print("Registra todo")
         }
         
     }
     
     @IBAction func returnButtonTapped(_ sender: MDCButton) {
+        if index == 0 {
+            self.dismiss(animated: true, completion: nil)
+        }
         if index > 0 {
             index -= 1
             pageViewCotroller.setViewControllerFromIndex(index: index)
