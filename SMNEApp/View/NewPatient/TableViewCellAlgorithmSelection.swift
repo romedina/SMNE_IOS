@@ -7,12 +7,19 @@
 
 import UIKit
 import MaterialComponents.MDCButton
+
+protocol AlgorithmSelectedDelegate {
+    func algorithmSelected(option: Int)
+}
 class TableViewCellAlgorithmSelection: UITableViewCell {
 
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var algorithmLabel: UILabel!
     @IBOutlet weak var selectButton: MDCButton!
     var superV: TableViewControllerNewPatient_S3!
+    var row = 0
+    
+    var delegate: AlgorithmSelectedDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,15 +29,16 @@ class TableViewCellAlgorithmSelection: UITableViewCell {
         superV = TableViewControllerNewPatient_S3()
     }
     
-    func setInfo(algorithm: String, backColor: UIColor, textColor: UIColor, viewController: TableViewControllerNewPatient_S3) {
+    func setInfo(algorithm: String, backColor: UIColor, textColor: UIColor, viewController: TableViewControllerNewPatient_S3, indexP: Int) {
         parentView.backgroundColor = backColor
         algorithmLabel.textColor = textColor
         algorithmLabel.text = algorithm
         superV = viewController
+        row = indexP
     }
     
     @IBAction func selectButtonTapped(_ sender: Any) {
-        superV.algorithmSelected()
+        delegate?.algorithmSelected(option: row)
     }
     
 }

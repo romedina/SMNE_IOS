@@ -22,13 +22,13 @@ class TableViewControllerNewPatient_S2: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stepTwo.count
+        return step2Cells.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellInfo = stepTwo[indexPath.row]
+        let cellInfo = step2Cells[indexPath.row]
         
         if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle

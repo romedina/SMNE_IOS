@@ -8,9 +8,14 @@
 import UIKit
 import MaterialComponents.MDCButton
 
+protocol OptionSelectedDelegate {
+    func optionDelegate(option: Int)
+}
+
 class TableViewControllerNewPatient_S3: UITableViewController {
     
     let returnButton = MDCButton()
+    var delegate: OptionSelectedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +26,13 @@ class TableViewControllerNewPatient_S3: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stepThree.count
+        return step3Cells.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellInfo = stepThree[indexPath.row]
+        let cellInfo = step3Cells[indexPath.row]
         
         if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
@@ -44,7 +49,8 @@ class TableViewControllerNewPatient_S3: UITableViewController {
         } else if let info = cellInfo as? AlgorithmCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "algorithm", for: indexPath) as! TableViewCellAlgorithmSelection
             
-            cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self)
+            cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self, indexP: indexPath.row)
+            cell.delegate = self
 
             return cell
         } else {
@@ -53,9 +59,10 @@ class TableViewControllerNewPatient_S3: UITableViewController {
             return cell
         }
     }
-    
-    func algorithmSelected() {
-        // Enviar cambio al pageView para pasar de página
+}
+
+extension TableViewControllerNewPatient_S3: AlgorithmSelectedDelegate {
+    func algorithmSelected(option: Int) {
+        delegate?.optionDelegate(option: option)
     }
-    
 }

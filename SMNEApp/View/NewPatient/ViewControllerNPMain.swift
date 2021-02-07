@@ -13,6 +13,22 @@ class ViewControllerNPMain: UIViewController {
     var pageViewCotroller: ViewControllerNPPageView!
     @IBOutlet weak var returnButton: MDCButton!
     @IBOutlet weak var nextButton: MDCButton!
+    @IBOutlet weak var placeHolderButton: MDCButton!
+    
+    @IBOutlet weak var stepTitleLabel: UILabel!
+    @IBOutlet weak var stepSubtitleLabel: UILabel!
+    
+    @IBOutlet weak var s1Button: UIButton!
+    @IBOutlet weak var s1View: UIView!
+    @IBOutlet weak var s2Button: UIButton!
+    @IBOutlet weak var s2View: UIView!
+    @IBOutlet weak var s3Button: UIButton!
+    @IBOutlet weak var s3View: UIView!
+    @IBOutlet weak var s4Button: UIButton!
+    @IBOutlet weak var s4View: UIView!
+    @IBOutlet weak var s5Button: UIButton!
+    
+    @IBOutlet weak var exitFlowButton: UIButton!
     
     var index = 0
     
@@ -37,6 +53,54 @@ class ViewControllerNPMain: UIViewController {
         let S1 = pageViewCotroller.subViewControllers[0] as! TableViewControllerNewPatient_S1
         S1.delegate = self
         
+        let S3 = pageViewCotroller.subViewControllers[2] as! TableViewControllerNewPatient_S3
+        S3.delegate = self
+        
+        initViews()
+        
+    }
+    
+    func initViews() {
+        switch index {
+        case 0:
+            let info = stepOne[0] as! TitleCell
+            stepTitleLabel.text = info.title
+            stepSubtitleLabel.text = info.subtitle
+            placeHolderButton.isHidden = false
+            exitFlowButton.isHidden = false
+            returnButton.isHidden = true
+            break
+        case 1:
+            let info = stepTwo[0] as! TitleCell
+            stepTitleLabel.text = info.title
+            stepSubtitleLabel.text = info.subtitle
+            exitFlowButton.isHidden = true
+            returnButton.isHidden = false
+            nextButton.isHidden = false
+            placeHolderButton.isHidden = true
+            break
+        case 2:
+            let info = stepThree[0] as! TitleCell
+            stepTitleLabel.text = info.title
+            stepSubtitleLabel.text = info.subtitle
+            nextButton.isHidden = true
+            placeHolderButton.isHidden = false
+            break
+        case 3:
+            let info = stepFour[0] as! TitleCell
+            stepTitleLabel.text = info.title
+            stepSubtitleLabel.text = info.subtitle
+            nextButton.isHidden = false
+            placeHolderButton.isHidden = true
+            break
+        case 4:
+            let info = stepFive[0] as! TitleCell
+            stepTitleLabel.text = info.title
+            stepSubtitleLabel.text = info.subtitle
+            break
+        default:
+            break
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,7 +116,8 @@ class ViewControllerNPMain: UIViewController {
         if patientInfo.age != 0 && patientInfo.diabetesDate != "" {
             if index < 4 {
                 index += 1
-                pageViewCotroller.setViewControllerFromIndex(index: index)
+                changeStepperUp()
+                indexChanged()
             }
         } else {
             print("Registra todo")
@@ -61,18 +126,100 @@ class ViewControllerNPMain: UIViewController {
     }
     
     @IBAction func returnButtonTapped(_ sender: MDCButton) {
-        if index == 0 {
-            self.dismiss(animated: true, completion: nil)
-        }
         if index > 0 {
             index -= 1
-            pageViewCotroller.setViewControllerFromIndex(index: index)
+            changeStepperDown()
+            indexChanged()
         }
     }
     
+    @IBAction func exitButtonTapped(_ sender: Any) {
+        if index == 0 {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func changeStepperDown() {
+        switch index {
+        case 0:
+            s1Button.backgroundColor = .C1()
+            s1View.backgroundColor = .C1()
+            s2Button.backgroundColor = .white
+            s2Button.setTitleColor(.C4(), for: .normal)
+            s2View.backgroundColor = .C4()
+            break
+        case 1:
+            s2Button.backgroundColor = .C1()
+            s2View.backgroundColor = .C1()
+            s3Button.backgroundColor = .white
+            s3Button.setTitleColor(.C4(), for: .normal)
+            s3View.backgroundColor = .C4()
+            break
+        case 2:
+            s3Button.backgroundColor = .C1()
+            s3View.backgroundColor = .C1()
+            s4Button.backgroundColor = .white
+            s4Button.setTitleColor(.C4(), for: .normal)
+            s4View.backgroundColor = .C4()
+            break
+        case 3:
+            s4Button.backgroundColor = .C1()
+            s4View.backgroundColor = .C1()
+            s5Button.backgroundColor = .white
+            s5Button.setTitleColor(.C4(), for: .normal)
+            break
+        default:
+            break
+        }
+    }
+    
+    private func changeStepperUp() {
+        switch index {
+        case 1:
+            s1Button.backgroundColor = .C2()
+            s1View.backgroundColor = .C2()
+            s1Button.setTitleColor(.white, for: .normal)
+            s2Button.backgroundColor = .C1()
+            s2View.backgroundColor = .C1()
+            break
+        case 2:
+            s2Button.backgroundColor = .C2()
+            s2View.backgroundColor = .C2()
+            s2Button.setTitleColor(.white, for: .normal)
+            s3Button.backgroundColor = .C1()
+            s3View.backgroundColor = .C1()
+            break
+        case 3:
+            s3Button.backgroundColor = .C2()
+            s3View.backgroundColor = .C2()
+            s3Button.setTitleColor(.white, for: .normal)
+            s4Button.backgroundColor = .C1()
+            s4View.backgroundColor = .C1()
+            break
+        case 4:
+            s4Button.backgroundColor = .C2()
+            s4View.backgroundColor = .C2()
+            s4Button.setTitleColor(.white, for: .normal)
+            s5Button.backgroundColor = .C1()
+            break
+        default:
+            break
+        }
+    }
+    
+    private func indexChanged() {
+        initViews()
+        pageViewCotroller.setViewControllerFromIndex(index: index)
+    }
 }
 
-extension ViewControllerNPMain: InfoChangedS1Delegate {
+extension ViewControllerNPMain: InfoChangedS1Delegate, OptionSelectedDelegate {
+    func optionDelegate(option: Int) {
+        index += 1
+        changeStepperUp()
+        indexChanged()
+    }
+    
     func infoChanged(id: String, info: Any) {
         print(id)
         print(info)

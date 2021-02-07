@@ -123,7 +123,7 @@ let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Nec
 
 let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: ""), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)"), BoolCell(title: "Tiene hipoglucemia?", sub: "")]
 
-var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
+var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3), AlgorithmCell(title: "Prueba", backColor: .C1(), textColor: .C2())]
 
 var stepFour: [Any] = [TitleCell(title: "", subtitle: "Ya casi terminamos."), StepperCell(page: 4)]
 

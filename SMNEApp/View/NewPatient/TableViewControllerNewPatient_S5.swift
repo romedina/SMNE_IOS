@@ -51,13 +51,13 @@ class TableViewControllerNewPatient_S5: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stepFive.count
+        return step5Cells.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellInfo = stepFive[indexPath.row]
+        let cellInfo = step5Cells[indexPath.row]
         
         if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle

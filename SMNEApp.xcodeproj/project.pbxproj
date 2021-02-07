@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
-		B305D82C25CB807C007507E1 /* ViewModelNewPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */; };
 		B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */; };
 		B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */; };
 		B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */; };
@@ -49,6 +48,7 @@
 		B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFDF25CDD7CD0025F62A /* ViewControllerPatientList.swift */; };
 		B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFE525CDE3310025F62A /* ViewControllerStart.swift */; };
 		B356BFEE25CDE3550025F62A /* TableViewCellStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFED25CDE3550025F62A /* TableViewCellStartOption.swift */; };
+		B356BFF625CE4D810025F62A /* ViewModelSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFF525CE4D810025F62A /* ViewModelSteps.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
 		B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D825B8B9FA00CD968E /* ViewController.swift */; };
@@ -88,7 +88,6 @@
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewPatient.swift; sourceTree = "<group>"; };
 		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
 		B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBool.swift; sourceTree = "<group>"; };
 		B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S3.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		B356BFDF25CDD7CD0025F62A /* ViewControllerPatientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientList.swift; sourceTree = "<group>"; };
 		B356BFE525CDE3310025F62A /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		B356BFED25CDE3550025F62A /* TableViewCellStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellStartOption.swift; sourceTree = "<group>"; };
+		B356BFF525CE4D810025F62A /* ViewModelSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSteps.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		B31C97B825BF46AE006DDCD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B305D82B25CB807C007507E1 /* ViewModelNewPatient.swift */,
+				B356BFF525CE4D810025F62A /* ViewModelSteps.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -673,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B356BFF625CE4D810025F62A /* ViewModelSteps.swift in Sources */,
 				B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */,
 				B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
@@ -688,7 +689,6 @@
 				B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
-				B305D82C25CB807C007507E1 /* ViewModelNewPatient.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,

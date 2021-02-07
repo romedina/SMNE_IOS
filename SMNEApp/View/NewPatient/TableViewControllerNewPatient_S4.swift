@@ -23,13 +23,13 @@ class TableViewControllerNewPatient_S4: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stepFour.count
+        return step4Cells.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellInfo = stepFour[indexPath.row]
+        let cellInfo = step4Cells[indexPath.row]
         
         if let info = cellInfo as? TitleCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
