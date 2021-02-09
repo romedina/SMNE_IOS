@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MaterialComponents
 
 extension UIColor {
     
@@ -30,3 +31,10 @@ extension UIColor {
         return UIColor(red: 0.6235, green: 0.8667, blue: 0.9765, alpha: 1.0)
     }
 }
+
+let appTheme: MDCContainerScheme = {
+    let theme = MDCContainerScheme()
+    theme.colorScheme.primaryColor = .C2()
+    theme.colorScheme.secondaryColor = .C1()
+    return theme
+}()
