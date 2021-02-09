@@ -10,24 +10,33 @@ import MaterialComponents
 
 class TableViewCellRegister: UITableViewCell {
 
-    @IBOutlet weak var nameInput: MDCOutlinedTextField!
-    @IBOutlet weak var surnameInput: MDCOutlinedTextField!
-    @IBOutlet weak var emailInput: MDCOutlinedTextField!
-    @IBOutlet weak var passwordInput: MDCOutlinedTextField!
-    @IBOutlet weak var confirmPasswordInput: MDCOutlinedTextField!
+    @IBOutlet weak var nameInput: MDCTextField!
+    @IBOutlet weak var surnameInput: MDCTextField!
+    @IBOutlet weak var emailInput: MDCTextField!
+    @IBOutlet weak var passwordInput: MDCTextField!
+    @IBOutlet weak var confirmPasswordInput: MDCTextField!
+    
+    var nameController: MDCTextInputControllerOutlined?
+    var surnameController: MDCTextInputControllerOutlined?
+    var emailController: MDCTextInputControllerOutlined?
+    var passController: MDCTextInputControllerOutlined?
+    var confController: MDCTextInputControllerOutlined?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        nameInput.applyTheme(withScheme: appTheme)
+        nameController = MDCTextInputControllerOutlined(textInput: nameInput)
+        surnameController = MDCTextInputControllerOutlined(textInput: surnameInput)
+        emailController = MDCTextInputControllerOutlined(textInput: emailInput)
+        passController = MDCTextInputControllerOutlined(textInput: passwordInput)
+        confController = MDCTextInputControllerOutlined(textInput: confirmPasswordInput)
         
-        surnameInput.setOutlineColor(.C2(), for: .normal)
+        nameController?.applyTheme(withScheme: appTheme)
+        surnameController?.applyTheme(withScheme: appTheme)
+        emailController?.applyTheme(withScheme: appTheme)
+        passController?.applyTheme(withScheme: appTheme)
+        confController?.applyTheme(withScheme: appTheme)
         
-        emailInput.setOutlineColor(.C2(), for: .normal)
-        
-        passwordInput.setOutlineColor(.C2(), for: .normal)
-        
-        confirmPasswordInput.setOutlineColor(.C2(), for: .normal)
     }
 
 }

@@ -37,7 +37,7 @@ extension ViewControllerRegister: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 580
+        return 600
     }
     
 }

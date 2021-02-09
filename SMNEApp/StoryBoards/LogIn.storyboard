@@ -214,7 +214,7 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paN-3z-Wl9" customClass="MDCOutlinedTextField">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paN-3z-Wl9" customClass="MDCTextField">
                                                     <rect key="frame" x="30" y="214" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="wCR-ju-pdx"/>
@@ -222,8 +222,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-9O-IJt" customClass="MDCOutlinedTextField">
-                                                    <rect key="frame" x="30" y="279" width="354" height="50"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-9O-IJt" customClass="MDCTextField">
+                                                    <rect key="frame" x="30" y="284" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="XLO-JN-ywD"/>
                                                     </constraints>
@@ -231,7 +231,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5g-ia-3LC">
-                                                    <rect key="frame" x="30" y="349" width="130" height="22"/>
+                                                    <rect key="frame" x="30" y="354" width="130" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="98w-DH-GaX"/>
                                                     </constraints>
@@ -239,24 +239,24 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-ZX-f5e" customClass="MDCOutlinedTextField">
-                                                    <rect key="frame" x="30" y="381" width="354" height="50"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-ZX-f5e" customClass="MDCTextField">
+                                                    <rect key="frame" x="30" y="386" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="bqf-j4-Eq5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Go-jG7" customClass="MDCOutlinedTextField">
-                                                    <rect key="frame" x="30" y="441" width="354" height="50"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Go-jG7" customClass="MDCTextField">
+                                                    <rect key="frame" x="30" y="456" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="bcg-ho-kPL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-10-2gS" customClass="MDCOutlinedTextField">
-                                                    <rect key="frame" x="30" y="501" width="354" height="50"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-10-2gS" customClass="MDCTextField">
+                                                    <rect key="frame" x="30" y="526" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="cJD-aT-iVg"/>
                                                     </constraints>
@@ -277,7 +277,7 @@
                                                 <constraint firstItem="gLx-qF-kkA" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ARn-jD-Iw6"/>
                                                 <constraint firstItem="e5g-ia-3LC" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ESe-mj-GLh"/>
                                                 <constraint firstItem="UiG-ZX-f5e" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="IKp-XG-zCk"/>
-                                                <constraint firstItem="voL-Go-jG7" firstAttribute="top" secondItem="UiG-ZX-f5e" secondAttribute="bottom" constant="10" id="J0B-5r-MOD"/>
+                                                <constraint firstItem="voL-Go-jG7" firstAttribute="top" secondItem="UiG-ZX-f5e" secondAttribute="bottom" constant="20" id="J0B-5r-MOD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="UiG-ZX-f5e" secondAttribute="trailing" constant="10" id="K4e-Bq-xby"/>
                                                 <constraint firstItem="paN-3z-Wl9" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Mz1-Wn-75S"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="voL-Go-jG7" secondAttribute="trailing" constant="10" id="OCK-y5-GEQ"/>
@@ -286,7 +286,7 @@
                                                 <constraint firstItem="UiG-ZX-f5e" firstAttribute="top" secondItem="e5g-ia-3LC" secondAttribute="bottom" constant="10" id="Tgh-1R-Lwd"/>
                                                 <constraint firstItem="FXP-XR-DfS" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Wzg-FZ-zBc"/>
                                                 <constraint firstItem="hUZ-3C-MKn" firstAttribute="top" secondItem="zdm-v0-EWW" secondAttribute="topMargin" constant="10" id="cov-wm-sNu"/>
-                                                <constraint firstItem="FOO-10-2gS" firstAttribute="top" secondItem="voL-Go-jG7" secondAttribute="bottom" constant="10" id="jq0-8D-pdR"/>
+                                                <constraint firstItem="FOO-10-2gS" firstAttribute="top" secondItem="voL-Go-jG7" secondAttribute="bottom" constant="20" id="jq0-8D-pdR"/>
                                                 <constraint firstItem="FXP-XR-DfS" firstAttribute="top" secondItem="hUZ-3C-MKn" secondAttribute="bottom" constant="10" id="kNg-Ar-4QC"/>
                                                 <constraint firstItem="7AW-9O-IJt" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="lEh-k0-RpV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="7AW-9O-IJt" secondAttribute="trailing" constant="10" id="mss-u0-mEc"/>
@@ -295,7 +295,7 @@
                                                 <constraint firstItem="gLx-qF-kkA" firstAttribute="top" secondItem="FXP-XR-DfS" secondAttribute="bottom" constant="10" id="uVP-Nt-8T5"/>
                                                 <constraint firstItem="paN-3z-Wl9" firstAttribute="top" secondItem="gLx-qF-kkA" secondAttribute="bottom" constant="10" id="w25-2W-cOz"/>
                                                 <constraint firstAttribute="trailing" secondItem="hUZ-3C-MKn" secondAttribute="trailing" constant="30" id="wVm-T8-btG"/>
-                                                <constraint firstItem="7AW-9O-IJt" firstAttribute="top" secondItem="paN-3z-Wl9" secondAttribute="bottom" constant="15" id="z06-j3-nc7"/>
+                                                <constraint firstItem="7AW-9O-IJt" firstAttribute="top" secondItem="paN-3z-Wl9" secondAttribute="bottom" constant="20" id="z06-j3-nc7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -382,7 +382,7 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-Wv-rgy" customClass="MDCOutlinedTextField">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-Wv-rgy" customClass="MDCTextField">
                                                     <rect key="frame" x="30" y="134" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="wTC-GJ-5hO"/>
@@ -390,8 +390,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-hZ-bBQ" customClass="MDCOutlinedTextField">
-                                                    <rect key="frame" x="30" y="194" width="354" height="50"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-hZ-bBQ" customClass="MDCTextField">
+                                                    <rect key="frame" x="30" y="204" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5O5-oj-NCV"/>
                                                     </constraints>
@@ -399,14 +399,14 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-ON-CFy" customClass="MDCButton">
-                                                    <rect key="frame" x="217" y="254" width="167" height="32"/>
+                                                    <rect key="frame" x="217" y="284" width="167" height="32"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="¿Olvidaste tu contraseña?">
                                                         <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBt-A1-Dl4" customClass="MDCButton">
-                                                    <rect key="frame" x="30" y="306" width="354" height="50"/>
+                                                    <rect key="frame" x="30" y="336" width="354" height="50"/>
                                                     <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5D0-cd-AaO"/>
@@ -417,7 +417,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-Ss-9XY" customClass="MDCButton">
-                                                    <rect key="frame" x="128.5" y="371" width="157" height="32"/>
+                                                    <rect key="frame" x="128.5" y="401" width="157" height="32"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="Crear una cuenta nueva">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -483,8 +483,8 @@
                                                 <constraint firstItem="oCL-Wv-rgy" firstAttribute="leading" secondItem="D9S-av-F9h" secondAttribute="leadingMargin" constant="10" id="E1a-ws-rzn"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2m9-9m-2oC" secondAttribute="trailing" constant="10" id="EyY-bA-mew"/>
                                                 <constraint firstItem="cke-dX-XQy" firstAttribute="leading" secondItem="D9S-av-F9h" secondAttribute="leadingMargin" constant="10" id="Flc-cR-ljZ"/>
-                                                <constraint firstItem="ikG-ON-CFy" firstAttribute="top" secondItem="mK5-hZ-bBQ" secondAttribute="bottom" constant="10" id="GdH-W1-zfl"/>
-                                                <constraint firstItem="mK5-hZ-bBQ" firstAttribute="top" secondItem="oCL-Wv-rgy" secondAttribute="bottom" constant="10" id="IKJ-C2-Sje"/>
+                                                <constraint firstItem="ikG-ON-CFy" firstAttribute="top" secondItem="mK5-hZ-bBQ" secondAttribute="bottom" constant="30" id="GdH-W1-zfl"/>
+                                                <constraint firstItem="mK5-hZ-bBQ" firstAttribute="top" secondItem="oCL-Wv-rgy" secondAttribute="bottom" constant="20" id="IKJ-C2-Sje"/>
                                                 <constraint firstItem="2m9-9m-2oC" firstAttribute="leading" secondItem="D9S-av-F9h" secondAttribute="leadingMargin" constant="10" id="K3k-mI-jtk"/>
                                                 <constraint firstItem="2m9-9m-2oC" firstAttribute="top" secondItem="cke-dX-XQy" secondAttribute="bottom" constant="10" id="L2g-47-mSn"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bp6-2F-nRh" secondAttribute="trailing" constant="10" id="PW2-eF-zk3"/>
@@ -512,6 +512,10 @@
                                                 <constraint firstItem="bp6-2F-nRh" firstAttribute="leading" secondItem="D9S-av-F9h" secondAttribute="leadingMargin" constant="10" id="zAL-u6-TLb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailInput" destination="oCL-Wv-rgy" id="S8f-xX-WxS"/>
+                                            <outlet property="passwordInput" destination="mK5-hZ-bBQ" id="2fy-H4-rpc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

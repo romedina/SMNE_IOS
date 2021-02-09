@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class TableViewCellLogin: UITableViewCell {
 
+    @IBOutlet weak var emailInput: MDCTextField!
+    @IBOutlet weak var passwordInput: MDCTextField!
+    
+    var emailController: MDCTextInputControllerOutlined?
+    var passController: MDCTextInputControllerOutlined?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        emailController = MDCTextInputControllerOutlined(textInput: emailInput)
+        passController = MDCTextInputControllerOutlined(textInput: passwordInput)
+        
+        emailController?.applyTheme(withScheme: appTheme)
+        passController?.applyTheme(withScheme: appTheme)
     }
 
 }

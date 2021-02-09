@@ -35,6 +35,6 @@ extension UIColor {
 let appTheme: MDCContainerScheme = {
     let theme = MDCContainerScheme()
     theme.colorScheme.primaryColor = .C2()
-    theme.colorScheme.secondaryColor = .C1()
+    theme.colorScheme.onSurfaceColor = .C2()
     return theme
 }()
