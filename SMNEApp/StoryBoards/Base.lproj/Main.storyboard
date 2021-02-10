@@ -14,6 +14,9 @@
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Inicio-->
@@ -39,7 +42,7 @@
                                                     <rect key="frame" x="18" y="10" width="378" height="215"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tratamiento farmacológico DM2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-Jf-YLs">
-                                                            <rect key="frame" x="30" y="20" width="162" height="77"/>
+                                                            <rect key="frame" x="30" y="20" width="162" height="90"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="162" id="5w1-Yo-eKE"/>
                                                             </constraints>
@@ -101,13 +104,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Dr. Navarrete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-Gc-Q6C">
-                                        <rect key="frame" x="18" y="44" width="114.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                        <rect key="frame" x="18" y="44" width="127" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgU-FV-lOf">
-                                        <rect key="frame" x="18" y="70.5" width="169.5" height="40"/>
+                                        <rect key="frame" x="18" y="73.5" width="190.5" height="46.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -371,9 +374,29 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-pd-eNS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q18-Cn-zff" customClass="MDCButton">
+                                        <rect key="frame" x="18" y="17" width="52" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="7YM-jY-N4b"/>
+                                            <constraint firstAttribute="height" constant="52" id="9QS-5x-upP"/>
+                                        </constraints>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar paciente" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btR-uj-3zQ" customClass="MDCTextField">
+                                        <rect key="frame" x="82" y="26" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="btR-uj-3zQ" firstAttribute="centerY" secondItem="jcm-pd-eNS" secondAttribute="centerY" id="0bT-by-6Sm"/>
+                                    <constraint firstItem="btR-uj-3zQ" firstAttribute="leading" secondItem="q18-Cn-zff" secondAttribute="trailing" constant="12" id="Ygv-g2-DKx"/>
+                                    <constraint firstItem="q18-Cn-zff" firstAttribute="leading" secondItem="jcm-pd-eNS" secondAttribute="leading" constant="18" id="dHB-qg-YFU"/>
                                     <constraint firstAttribute="height" constant="86" id="h9Q-mL-eqV"/>
+                                    <constraint firstItem="q18-Cn-zff" firstAttribute="centerY" secondItem="jcm-pd-eNS" secondAttribute="centerY" id="lpW-9w-JH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="btR-uj-3zQ" secondAttribute="trailing" constant="17" id="s5B-VP-T12"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -397,7 +420,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pacientes" image="Paciente" id="dhE-H1-Wu4"/>
                     <connections>
+                        <outlet property="filterButton" destination="q18-Cn-zff" id="unI-kh-2vu"/>
                         <outlet property="newPatientButton" destination="7f3-Bv-41t" id="abL-qK-bZB"/>
+                        <outlet property="searchPatientInput" destination="btR-uj-3zQ" id="tP8-MQ-HdN"/>
                         <outlet property="tableViewList" destination="tC2-iT-Lgd" id="0cT-Pd-PtX"/>
                     </connections>
                 </viewController>

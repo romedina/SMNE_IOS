@@ -262,6 +262,7 @@
 			children = (
 				B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */,
 				B34ADEFB25D1C85100344685 /* LogIn.storyboard */,
+				B3CC13DA25B8B9FA00CD968E /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -368,7 +369,6 @@
 				B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */,
 				B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */,
 				B3CC13D825B8B9FA00CD968E /* ViewController.swift */,
-				B3CC13DA25B8B9FA00CD968E /* Main.storyboard */,
 				B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */,
 				B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */,
 				B3CC13E225B8B9FF00CD968E /* Info.plist */,

@@ -6,34 +6,33 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
+import MaterialComponents
 
 class ViewControllerPatientList: UIViewController {
     
     @IBOutlet weak var tableViewList: UITableView!
     @IBOutlet weak var newPatientButton: MDCButton!
     
+    @IBOutlet weak var filterButton: MDCButton!
+    @IBOutlet weak var searchPatientInput: MDCTextField!
+    var searchPatientController: MDCTextInputControllerOutlined?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         newPatientButton.layer.cornerRadius = 27
+        filterButton.layer.cornerRadius = 14
+        searchPatientController = MDCTextInputControllerOutlined(textInput: searchPatientInput)
+        searchPatientInput.leadingView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+        searchPatientInput.leftViewMode = .always
+        searchPatientController?.textInput?.layer.borderWidth = 0
         
         tableViewList.delegate = self
         tableViewList.dataSource = self
+        
+        searchPatientInput.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource {
@@ -51,6 +50,11 @@ extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource 
             return cell
         }
     }
-    
-    
+}
+
+extension ViewControllerPatientList: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
