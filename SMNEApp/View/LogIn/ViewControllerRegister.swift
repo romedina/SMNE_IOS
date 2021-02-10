@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class ViewControllerRegister: UIViewController {
 
     @IBOutlet weak var tableViewRegister: UITableView!
+    
+    @IBOutlet weak var privacyButton: MDCButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,7 @@ class ViewControllerRegister: UIViewController {
         // Do any additional setup after loading the view.
         tableViewRegister.dataSource = self
         tableViewRegister.delegate = self
+        privacyButton.setBackgroundColor(.white)
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -37,7 +41,7 @@ extension ViewControllerRegister: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return 610
     }
     
 }
