@@ -28,6 +28,7 @@
 		B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0B25C247F500B7CECF /* OpenSans-Regular.ttf */; };
 		B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */; };
 		B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */; };
+		B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */; };
 		B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */; };
 		B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */; };
 		B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */; };
@@ -114,6 +115,7 @@
 		B30CDB1425C247F900B7CECF /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S5.swift; sourceTree = "<group>"; };
 		B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTreatment.swift; sourceTree = "<group>"; };
+		B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRadioRadio.swift; sourceTree = "<group>"; };
 		B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPatient.storyboard; sourceTree = "<group>"; };
 		B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPMain.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */,
 				B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */,
 				B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */,
+				B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */,
 			);
 			path = NewPatient;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
+				B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */,
 				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
 				B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */,
 				B356BFEE25CDE3550025F62A /* TableViewCellStartOption.swift in Sources */,

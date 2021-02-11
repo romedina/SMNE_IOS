@@ -65,6 +65,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let step = step1Cells
         let cellInfo = step1Cells[indexPath.row]
         
         if let info = cellInfo as? OpenCell {
@@ -74,10 +75,10 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             cell.delegate = self
 
             return cell
-        } else if let info = cellInfo as? OpenListCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "open,list", for: indexPath) as! TableViewCellOpenList
+        } else if let _ = cellInfo as? RadioRadioCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "radio,radio", for: indexPath) as! TableViewCellRadioRadio
             
-            cell.setInfo(openTitle: info.openTitle, listTitle: info.listTitle, options: info.listOptions)
+            
             cell.delegate = self
             
             return cell
@@ -104,6 +105,13 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         }
         
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 {
+            return 150
+        }
+        return tableView.rowHeight
     }
     
     @objc func nextButtonTapped(_ sender: MDCButton) {
@@ -149,7 +157,8 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
 }
 
-extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate {
+extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate, RadioRadioDelegate {
+    
     func listChanged(id: String, info: String) {
         delegate?.infoChanged(id: id, info: info)
     }

@@ -36,6 +36,10 @@ class TableViewCellOpen: UITableViewCell {
         openInput.placeholder = placeHolder
     }
     @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
-        delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
+        if titleLabel.text == "Edad" {
+            delegate?.openChanged(id: "age", info: sender.text ?? "")
+        } else {
+            delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
+        }
     }
 }

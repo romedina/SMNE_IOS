@@ -119,7 +119,11 @@ struct IMCCell {
     let title: String
 }
 
-let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), ListCell(title: "Tipo de consulta", options: ["Privada", "Pública"]), OpenListCell(openTitle: "Edad", listTitle: "Género", listOptions: ["Masculino", "Femenino"]), RadioCell(title: ""), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
+struct RadioRadioCell {
+    let title: String
+}
+
+let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
 let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: ""), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)"), BoolCell(title: "Tiene hipoglucemia?", sub: "")]
 
