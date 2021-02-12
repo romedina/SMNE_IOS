@@ -8,6 +8,12 @@
 import UIKit
 import MaterialComponents
 
+protocol CellInfoChangeDelegate {
+    func infoChange(id: String, info: Float)
+    func infoChange(id: String, info: String)
+    func infoChange(id: String, info: Bool)
+}
+
 class TableViewCellIMC: UITableViewCell {
 
     @IBOutlet weak var weightTextInput: MDCOutlinedTextField!
@@ -16,6 +22,8 @@ class TableViewCellIMC: UITableViewCell {
     @IBOutlet weak var levelstextInput: MDCOutlinedTextField!
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var imcOutput: UILabel!
+    
+    var delegate: CellInfoChangeDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,4 +49,7 @@ class TableViewCellIMC: UITableViewCell {
         levelstextInput.setTextColor(.C3(), for: .editing)
     }
 
+    @IBAction func calculateTapped(_ sender: Any) {
+        delegate?.infoChange(id: "IMC", info: 0.0)
+    }
 }

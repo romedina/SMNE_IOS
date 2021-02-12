@@ -23,36 +23,36 @@ let F = Algorithm(ID: "F", title: "Algoritmo en DM2 con hipoglucemia")
 let algorithmsMatch: [String: [Algorithm]] = [
     "00000": [A],
     "00001": [B],
-    "00010": [D],
-    "00011": [D, B],
-    "00100": [C],
-    "00101": [C, B],
-    "00110": [C, D],
-    "00111": [C, D],
-    "01000": [E],
-    "01001": [E],
-    "01010": [E, D],
-    "01011": [E, D],
-    "01100": [E, C],
-    "01101": [E, C],
-    "01110": [E, C, D],
-    "01111": [E, C, D],
-    "10000": [F],
-    "10001": [F],
-    "10010": [F],
-    "10011": [F],
-    "10100": [F],
-    "10101": [F],
-    "10110": [F],
-    "10111": [F],
-    "11000": [F],
-    "11001": [F],
-    "11010": [F],
-    "11011": [F],
-    "11100": [F],
-    "11101": [F],
-    "11110": [F],
-    "11111": [F],
+    "00010": [F],
+    "00011": [F],
+    "00100": [E],
+    "00101": [E],
+    "00110": [E, F],
+    "00111": [E, F],
+    "01000": [D],
+    "01001": [D],
+    "01010": [D],
+    "01011": [D],
+    "01100": [D, E],
+    "01101": [D, E],
+    "01110": [D, E],
+    "01111": [D, E],
+    "10000": [C],
+    "10001": [C],
+    "10010": [C],
+    "10011": [C],
+    "10100": [C, E],
+    "10101": [C, E],
+    "10110": [C, E],
+    "10111": [C, E],
+    "11000": [C, D],
+    "11001": [C, D],
+    "11010": [C, D],
+    "11011": [C, D],
+    "11100": [C, D],
+    "11101": [C, D],
+    "11110": [C, D],
+    "11111": [C, D],
 ]
 
 struct TitleCell {
@@ -87,6 +87,7 @@ struct OpenCell {
 struct BoolCell {
     let title: String
     let sub: String
+    let id: String
 }
 
 struct AlgorithmCell {
@@ -125,9 +126,9 @@ struct RadioRadioCell {
 
 let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
-let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: ""), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)"), BoolCell(title: "Tiene hipoglucemia?", sub: "")]
+let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: "", id: "renal"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)", id: "cardio"), BoolCell(title: "Tiene hipoglucemia?", sub: "", id: "hipo")]
 
-var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3), AlgorithmCell(title: "Prueba", backColor: .C1(), textColor: .C2())]
+var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
 
 var stepFour: [Any] = [TitleCell(title: "", subtitle: "Ya casi terminamos."), StepperCell(page: 4)]
 

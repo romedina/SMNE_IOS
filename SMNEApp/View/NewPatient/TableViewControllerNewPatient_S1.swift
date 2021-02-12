@@ -8,7 +8,7 @@
 import UIKit
 import MaterialComponents
 
-protocol InfoChangedS1Delegate {
+protocol InfoChangedDelegate {
     func infoChanged(id: String, info: Any)
 }
 
@@ -18,7 +18,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
-    var delegate: InfoChangedS1Delegate?
+    var delegate: InfoChangedDelegate?
     
     override func viewDidAppear(_ animated: Bool) {
         nextButton.translatesAutoresizingMaskIntoConstraints = false

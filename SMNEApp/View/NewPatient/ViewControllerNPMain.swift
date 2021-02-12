@@ -32,7 +32,8 @@ class ViewControllerNPMain: UIViewController {
     
     var index = 0
     
-    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "Privada", age: 0, gender: "Masculino", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
+    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
+    var map = "00000"
     
 
     override func viewDidLoad() {
@@ -52,6 +53,9 @@ class ViewControllerNPMain: UIViewController {
         
         let S1 = pageViewCotroller.subViewControllers[0] as! TableViewControllerNewPatient_S1
         S1.delegate = self
+        
+        let S2 = pageViewCotroller.subViewControllers[1] as! TableViewControllerNewPatient_S2
+        S2.delegate = self
         
         let S3 = pageViewCotroller.subViewControllers[2] as! TableViewControllerNewPatient_S3
         S3.delegate = self
@@ -85,6 +89,8 @@ class ViewControllerNPMain: UIViewController {
             stepSubtitleLabel.text = info.subtitle
             nextButton.isHidden = true
             placeHolderButton.isHidden = false
+            print(map)
+            print(algorithmsMatch[map])
             break
         case 3:
             let info = stepFour[0] as! TitleCell
@@ -103,6 +109,26 @@ class ViewControllerNPMain: UIViewController {
         }
     }
     
+    private func prepareStepThree(){
+        
+        guard let algorithms = algorithmsMatch[map] else { return }
+        if algorithms.count > 1 {
+            stepThree = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
+        } else {
+            stepThree = [TitleCell(title: "Con base en los datos de tu paciente, este es el algoritmo que le corresponde", subtitle: ""), StepperCell(page: 3)]
+        }
+        
+        for index in 0...algorithms.count - 1 {
+            if index % 2 == 0 {
+                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C1(), textColor: .white))
+            } else {
+                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C2(), textColor: .C3()))
+            }
+        }
+        let reinitClass = ReinitStepCells()
+        reinitClass.reinitS3()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PVCMainSegue" {
             if segue.destination.isKind(of: ViewControllerNPPageView.self) {
@@ -115,6 +141,9 @@ class ViewControllerNPMain: UIViewController {
         print(patientInfo)
         if patientInfo.age != 0 && patientInfo.diabetesDate != "" {
             if index < 4 {
+                if index == 1 {
+                    prepareStepThree()
+                }
                 index += 1
                 changeStepperUp()
                 indexChanged()
@@ -213,7 +242,7 @@ class ViewControllerNPMain: UIViewController {
     }
 }
 
-extension ViewControllerNPMain: InfoChangedS1Delegate, OptionSelectedDelegate {
+extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     func optionDelegate(option: Int) {
         index += 1
         changeStepperUp()
@@ -224,24 +253,52 @@ extension ViewControllerNPMain: InfoChangedS1Delegate, OptionSelectedDelegate {
         print(id)
         print(info)
         switch id {
+        //S1
         case "type":
             patientInfo.type = info as! String
             break
         case "age":
             patientInfo.age = Int(info as! String) ?? 0
+            mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
             break
         case "gender":
             patientInfo.gender = info as! String
             break
         case "racial":
-            let racial =  info as! String == "Afroamericano" ? true: false
+            let racial =  info as! String == "Afroamericano" ? true : false
             patientInfo.racial = racial
             break
         case "diabetes":
             patientInfo.diabetesDate = info as! String
             break
+        //S2
+        case "IMC":
+            patientInfo.IMC = info as! Float
+            mapAssign(index: 4, flag: patientInfo.IMC >= 30 ? true : false)
+            break
+        case "renal":
+            patientInfo.renal = info as! Bool
+            mapAssign(index: 0, flag: patientInfo.renal)
+            break
+        case "cardio":
+            patientInfo.cardio = info as! Bool
+            mapAssign(index: 1, flag: patientInfo.cardio)
+            break
+        case "hipo":
+            patientInfo.hipo = info as! Bool
+            mapAssign(index: 3, flag: patientInfo.hipo)
+            break
         default:
             break
+        }
+    }
+    
+    func mapAssign(index: Int, flag: Bool) {
+        var mapArray = ArraySlice(map)
+        mapArray[index] = flag == true ? "1" : "0"
+        map = ""
+        for i in mapArray {
+            map.append(i)
         }
     }
 }

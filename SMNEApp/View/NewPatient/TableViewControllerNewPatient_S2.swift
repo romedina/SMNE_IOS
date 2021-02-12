@@ -14,6 +14,8 @@ class TableViewControllerNewPatient_S2: UITableViewController {
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
+    var delegate: InfoChangedDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,11 +53,14 @@ class TableViewControllerNewPatient_S2: UITableViewController {
         } else if let info = cellInfo as? BoolCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
             
-            cell.setInfo(title: info.title, sub: info.sub)
+            cell.setInfo(title: info.title, sub: info.sub, id: info.id)
+            cell .delegate = self
             
             return cell
         } else if let _ = cellInfo as? IMCCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "imc", for: indexPath) as! TableViewCellIMC
+            
+            cell.delegate = self
             
             return cell
         } else {
@@ -63,5 +68,19 @@ class TableViewControllerNewPatient_S2: UITableViewController {
 
             return cell
         }
+    }
+}
+
+extension TableViewControllerNewPatient_S2: CellInfoChangeDelegate {
+    func infoChange(id: String, info: Float) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: Bool) {
+        delegate?.infoChanged(id: id, info: info)
     }
 }

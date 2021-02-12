@@ -27,7 +27,33 @@ let step2Cells: [Any] = {
     return cells
 }()
 
-let step3Cells: [Any] = {
+class ReinitStepCells {
+    func reinitS3() {
+        step3Cells = {
+            var cells: [Any] = []
+            for cell in stepThree {
+                if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+                    cells.append(cell)
+                }
+            }
+            return cells
+        }()
+    }
+    
+    func reinitS4() {
+        step4Cells = {
+            var cells: [Any] = []
+            for cell in stepFour {
+                if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+                    cells.append(cell)
+                }
+            }
+            return cells
+        }()
+    }
+}
+
+var step3Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepThree {
         if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
@@ -37,7 +63,7 @@ let step3Cells: [Any] = {
     return cells
 }()
 
-let step4Cells: [Any] = {
+var step4Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepFour {
         if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
@@ -47,7 +73,7 @@ let step4Cells: [Any] = {
     return cells
 }()
 
-let step5Cells: [Any] = {
+var step5Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepFive {
         if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {

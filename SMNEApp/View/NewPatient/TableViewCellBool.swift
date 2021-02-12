@@ -15,6 +15,9 @@ class TableViewCellBool: UITableViewCell {
     @IBOutlet weak var yesButton: MDCButton!
     @IBOutlet weak var noButton: MDCButton!
     
+    var delegate: CellInfoChangeDelegate?
+    var id: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,15 +33,17 @@ class TableViewCellBool: UITableViewCell {
         noButton.setTitleColor(.white, for: .selected)
     }
     
-    func setInfo(title: String, sub: String) {
+    func setInfo(title: String, sub: String, id: String) {
         titleLabel.text = title
         subLabel.text = sub
+        self.id = id
     }
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         if !yesButton.isSelected {
             yesButton.isSelected = true
             noButton.isSelected = false
+            delegate?.infoChange(id: id, info: true)
         }
     }
     
@@ -46,6 +51,7 @@ class TableViewCellBool: UITableViewCell {
         if !noButton.isSelected {
             noButton.isSelected = true
             yesButton.isSelected = false
+            delegate?.infoChange(id: id, info: false)
         }
     }
     
