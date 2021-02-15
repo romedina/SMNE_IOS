@@ -28,7 +28,7 @@ class ViewControllerIntro: UIViewController {
         lastPageButton.layer.cornerRadius = 10
         nextPageButton.layer.cornerRadius = 10
         
-        loginButton.setBorderColor(.C2(), for: .normal)
+        loginButton.setBorderColor(.C00D9CC(), for: .normal)
         loginButton.setBorderWidth(1.0, for: .normal)
         loginButton.setBackgroundColor(.white)
         updateInfo()

@@ -12,29 +12,33 @@ import MaterialComponents
 extension UIColor {
     
     //0093FF
-    class func C1() -> UIColor {
+    class func C0093FF() -> UIColor {
         return UIColor(red:0.00, green:0.576, blue:1.00, alpha:1.0)
     }
     
     //00D9CC
-    class func C2() -> UIColor {
+    class func C00D9CC() -> UIColor {
         return UIColor(red:0.00, green:0.851, blue:0.8, alpha:1.0)
     }
     
     //052D6C
-    class func C3() -> UIColor {
+    class func C052D6C() -> UIColor {
         return UIColor(red: 0.020, green: 0.176, blue: 0.424, alpha: 1.0)
     }
     
     //9FDDF9
-    class func C4() -> UIColor {
+    class func C9FDDF9() -> UIColor {
         return UIColor(red: 0.6235, green: 0.8667, blue: 0.9765, alpha: 1.0)
+    }
+    
+    class func CE0F5F8() ->UIColor {
+        return UIColor(red: 0.87, green: 0.96, blue: 0.97, alpha: 1.0)
     }
 }
 
 let appTheme: MDCContainerScheme = {
     let theme = MDCContainerScheme()
-    theme.colorScheme.primaryColor = .C2()
-    theme.colorScheme.onSurfaceColor = .C2()
+    theme.colorScheme.primaryColor = .C00D9CC()
+    theme.colorScheme.onSurfaceColor = .C00D9CC()
     return theme
 }()

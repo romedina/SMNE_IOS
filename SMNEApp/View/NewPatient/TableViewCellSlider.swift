@@ -21,7 +21,7 @@ class TableViewCellSlider: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         parentView.layer.borderWidth = 1
-        parentView.layer.borderColor = UIColor.C2().cgColor
+        parentView.layer.borderColor = UIColor.C00D9CC().cgColor
         parentView.layer.cornerRadius = 10
     }
     

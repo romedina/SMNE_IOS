@@ -30,11 +30,11 @@ class TableViewCellRadioRadio: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         typeView.layer.borderWidth = 1
-        typeView.layer.borderColor = UIColor.C2().cgColor
+        typeView.layer.borderColor = UIColor.C00D9CC().cgColor
         typeView.layer.cornerRadius = 8
         
         genderView.layer.borderWidth = 1
-        genderView.layer.borderColor = UIColor.C2().cgColor
+        genderView.layer.borderColor = UIColor.C00D9CC().cgColor
         genderView.layer.cornerRadius = 8
         
         privateButton.setImage(deselectedImage, for: .normal)

@@ -14,8 +14,8 @@ class ViewControllerStart: UIViewController {
     
     let titles = ["Tratamiento farmacológico DM2", "Consulta de algoritmo para estudio", "Gestión de pacientes"]
     let buttonTitles = ["Iniciar diagnóstico", "Ver algoritmo", "Pacientes"]
-    let titleColors: [UIColor] = [.white, .C3(), .C3()]
-    let backColors: [UIColor] = [.C1(), .C2(), .C4()]
+    let titleColors: [UIColor] = [.white, .C052D6C(), .C052D6C()]
+    let backColors: [UIColor] = [.C0093FF(), .C00D9CC(), .C9FDDF9()]
     let images: [UIImage] = [#imageLiteral(resourceName: "phone"), #imageLiteral(resourceName: "board"), #imageLiteral(resourceName: "info")]
     
     override func viewDidLoad() {

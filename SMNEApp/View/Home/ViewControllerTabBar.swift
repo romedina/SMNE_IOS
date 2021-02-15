@@ -13,7 +13,7 @@ class ViewControllerTabBar: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tabBar.unselectedItemTintColor = .C2()
+        tabBar.unselectedItemTintColor = .C00D9CC()
     }
 
 }

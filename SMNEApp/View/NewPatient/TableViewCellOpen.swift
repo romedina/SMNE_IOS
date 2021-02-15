@@ -15,7 +15,9 @@ protocol OpenCellDelegate {
 class TableViewCellOpen: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var openInput: MDCOutlinedTextField!
+    @IBOutlet weak var openInput: MDCTextField!
+    
+    var openController: MDCTextInputControllerOutlined?
     
     var delegate: OpenCellDelegate?
     
@@ -25,10 +27,10 @@ class TableViewCellOpen: UITableViewCell {
         openInput.keyboardType = .decimalPad
         openInput.returnKeyType = .done
         
-        openInput.setOutlineColor(.C2(), for: .normal)
-        openInput.setTextColor(.C3(), for: .normal)
-        openInput.setOutlineColor(.C2(), for: .editing)
-        openInput.setTextColor(.C3(), for: .editing)
+        openController = MDCTextInputControllerOutlined(textInput: openInput)
+        
+        openController?.applyTheme(withScheme: appTheme)
+        openController?.textInput?.textColor = .C052D6C()
     }
     
     func setInfo(title: String, placeHolder: String) {

@@ -30,7 +30,7 @@ class TableViewCellRadioButton: UITableViewCell {
         radioButtonTwo.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         parentView.layer.cornerRadius = 10
         parentView.layer.borderWidth = 1
-        parentView.layer.borderColor = UIColor.C2().cgColor
+        parentView.layer.borderColor = UIColor.C00D9CC().cgColor
     }
     
     @IBAction func radioOneTapped(_ sender: Any) {

@@ -17,6 +17,7 @@ class ViewControllerNPMain: UIViewController {
     
     @IBOutlet weak var stepTitleLabel: UILabel!
     @IBOutlet weak var stepSubtitleLabel: UILabel!
+    @IBOutlet weak var stepperView: UIView!
     
     @IBOutlet weak var s1Button: UIButton!
     @IBOutlet weak var s1View: UIView!
@@ -35,12 +36,15 @@ class ViewControllerNPMain: UIViewController {
     var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
     var map = "00000"
     
+    var featherImage = #imageLiteral(resourceName: "feather")
+    var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        returnButton.setBorderColor(.C2(), for: .normal)
+        returnButton.setBorderColor(.C00D9CC(), for: .normal)
         returnButton.setBorderWidth(1, for: .normal)
         let today = Date()
         let formatter1 = DateFormatter()
@@ -61,7 +65,31 @@ class ViewControllerNPMain: UIViewController {
         S3.delegate = self
         
         initViews()
+        initButtons()
         
+    }
+    
+    func initButtons() {
+        let border = viewColor.cgColor
+        s1Button.layer.cornerRadius = 11
+        s1Button.layer.borderWidth = 1
+        s1Button.layer.borderColor = border
+        
+        s2Button.layer.cornerRadius = 11
+        s2Button.layer.borderWidth = 1
+        s2Button.layer.borderColor = border
+        
+        s3Button.layer.cornerRadius = 11
+        s3Button.layer.borderWidth = 1
+        s3Button.layer.borderColor = border
+        
+        s4Button.layer.cornerRadius = 11
+        s4Button.layer.borderWidth = 1
+        s4Button.layer.borderColor = border
+        
+        s5Button.layer.cornerRadius = 11
+        s5Button.layer.borderWidth = 1
+        s5Button.layer.borderColor = border
     }
     
     func initViews() {
@@ -82,6 +110,7 @@ class ViewControllerNPMain: UIViewController {
             returnButton.isHidden = false
             nextButton.isHidden = false
             placeHolderButton.isHidden = true
+            stepperView.backgroundColor = .CE0F5F8()
             break
         case 2:
             let info = stepThree[0] as! TitleCell
@@ -89,6 +118,7 @@ class ViewControllerNPMain: UIViewController {
             stepSubtitleLabel.text = info.subtitle
             nextButton.isHidden = true
             placeHolderButton.isHidden = false
+            stepperView.backgroundColor = .C052D6C()
             print(map)
             print(algorithmsMatch[map])
             break
@@ -98,11 +128,13 @@ class ViewControllerNPMain: UIViewController {
             stepSubtitleLabel.text = info.subtitle
             nextButton.isHidden = false
             placeHolderButton.isHidden = true
+            stepperView.backgroundColor = .CE0F5F8()
             break
         case 4:
             let info = stepFive[0] as! TitleCell
             stepTitleLabel.text = info.title
             stepSubtitleLabel.text = info.subtitle
+            stepperView.backgroundColor = .C052D6C()
             break
         default:
             break
@@ -120,9 +152,9 @@ class ViewControllerNPMain: UIViewController {
         
         for index in 0...algorithms.count - 1 {
             if index % 2 == 0 {
-                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C1(), textColor: .white))
+                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C0093FF(), textColor: .white))
             } else {
-                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C2(), textColor: .C3()))
+                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C00D9CC(), textColor: .C052D6C()))
             }
         }
         let reinitClass = ReinitStepCells()
@@ -171,31 +203,39 @@ class ViewControllerNPMain: UIViewController {
     private func changeStepperDown() {
         switch index {
         case 0:
-            s1Button.backgroundColor = .C1()
-            s1View.backgroundColor = .C1()
+            s1Button.backgroundColor = .C0093FF()
+            s1View.backgroundColor = viewColor
+            s1Button.setImage(UIImage(), for: .normal)
+            s1Button.setTitle("1", for: .normal)
             s2Button.backgroundColor = .white
-            s2Button.setTitleColor(.C4(), for: .normal)
-            s2View.backgroundColor = .C4()
+            s2Button.setTitleColor(.C9FDDF9(), for: .normal)
+            s2View.backgroundColor = .C9FDDF9()
             break
         case 1:
-            s2Button.backgroundColor = .C1()
-            s2View.backgroundColor = .C1()
+            s2Button.backgroundColor = .C0093FF()
+            s2View.backgroundColor = viewColor
+            s2Button.setImage(UIImage(), for: .normal)
+            s2Button.setTitle("2", for: .normal)
             s3Button.backgroundColor = .white
-            s3Button.setTitleColor(.C4(), for: .normal)
-            s3View.backgroundColor = .C4()
+            s3Button.setTitleColor(.C9FDDF9(), for: .normal)
+            s3View.backgroundColor = .C9FDDF9()
             break
         case 2:
-            s3Button.backgroundColor = .C1()
-            s3View.backgroundColor = .C1()
+            s3Button.backgroundColor = .C0093FF()
+            s3View.backgroundColor = viewColor
+            s3Button.setImage(UIImage(), for: .normal)
+            s3Button.setTitle("3", for: .normal)
             s4Button.backgroundColor = .white
-            s4Button.setTitleColor(.C4(), for: .normal)
-            s4View.backgroundColor = .C4()
+            s4Button.setTitleColor(.C9FDDF9(), for: .normal)
+            s4View.backgroundColor = .C9FDDF9()
             break
         case 3:
-            s4Button.backgroundColor = .C1()
-            s4View.backgroundColor = .C1()
+            s4Button.backgroundColor = .C0093FF()
+            s4View.backgroundColor = viewColor
+            s4Button.setImage(UIImage(), for: .normal)
+            s4Button.setTitle("4", for: .normal)
             s5Button.backgroundColor = .white
-            s5Button.setTitleColor(.C4(), for: .normal)
+            s5Button.setTitleColor(.C9FDDF9(), for: .normal)
             break
         default:
             break
@@ -205,31 +245,40 @@ class ViewControllerNPMain: UIViewController {
     private func changeStepperUp() {
         switch index {
         case 1:
-            s1Button.backgroundColor = .C2()
-            s1View.backgroundColor = .C2()
+            s1Button.backgroundColor = .C00D9CC()
+            featherImage.withTintColor(.white)
+            s1Button.setImage(featherImage, for: .normal)
+            s1Button.tintColor = .white
+            s1Button.setTitle("", for: .normal)
+            s1View.backgroundColor = .C00D9CC()
             s1Button.setTitleColor(.white, for: .normal)
-            s2Button.backgroundColor = .C1()
-            s2View.backgroundColor = .C1()
+            s2Button.backgroundColor = .C0093FF()
             break
         case 2:
-            s2Button.backgroundColor = .C2()
-            s2View.backgroundColor = .C2()
+            s2Button.backgroundColor = .C00D9CC()
+            s2Button.setImage(featherImage, for: .normal)
+            s2Button.tintColor = .white
+            s2Button.setTitle("", for: .normal)
+            s2View.backgroundColor = .C00D9CC()
             s2Button.setTitleColor(.white, for: .normal)
-            s3Button.backgroundColor = .C1()
-            s3View.backgroundColor = .C1()
+            s3Button.backgroundColor = .C0093FF()
             break
         case 3:
-            s3Button.backgroundColor = .C2()
-            s3View.backgroundColor = .C2()
+            s3Button.backgroundColor = .C00D9CC()
+            s3Button.setImage(featherImage, for: .normal)
+            s3Button.tintColor = .white
+            s3Button.setTitle("", for: .normal)
+            s3View.backgroundColor = .C00D9CC()
             s3Button.setTitleColor(.white, for: .normal)
-            s4Button.backgroundColor = .C1()
-            s4View.backgroundColor = .C1()
+            s4Button.backgroundColor = .C0093FF()
             break
         case 4:
-            s4Button.backgroundColor = .C2()
-            s4View.backgroundColor = .C2()
+            s4Button.backgroundColor = .C00D9CC()
+            s4Button.setImage(featherImage, for: .normal)
+            s4Button.tintColor = .white
+            s4Button.setTitle("", for: .normal)
+            s4View.backgroundColor = .C00D9CC()
             s4Button.setTitleColor(.white, for: .normal)
-            s5Button.backgroundColor = .C1()
             break
         default:
             break

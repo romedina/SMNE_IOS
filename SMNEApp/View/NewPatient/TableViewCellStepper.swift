@@ -37,40 +37,40 @@ class TableViewCellStepper: UITableViewCell {
     func setInfo(page: Int) {
         switch page {
         case 2:
-            step1.backgroundColor = .C2()
-            step1L.backgroundColor = .C2()
+            step1.backgroundColor = .C00D9CC()
+            step1L.backgroundColor = .C00D9CC()
             step2.setTitleColor(.white, for: .normal)
-            step2.backgroundColor = .C1()
+            step2.backgroundColor = .C0093FF()
             break
         case 3:
-            step1.backgroundColor = .C2()
-            step1L.backgroundColor = .C2()
-            step2.backgroundColor = .C2()
-            step2L.backgroundColor = .C2()
+            step1.backgroundColor = .C00D9CC()
+            step1L.backgroundColor = .C00D9CC()
+            step2.backgroundColor = .C00D9CC()
+            step2L.backgroundColor = .C00D9CC()
             step3.setTitleColor(.white, for: .normal)
-            step3.backgroundColor = .C1()
+            step3.backgroundColor = .C0093FF()
             break
         case 4:
-            step1.backgroundColor = .C2()
-            step1L.backgroundColor = .C2()
-            step2.backgroundColor = .C2()
-            step2L.backgroundColor = .C2()
-            step3.backgroundColor = .C2()
-            step3L.backgroundColor = .C2()
+            step1.backgroundColor = .C00D9CC()
+            step1L.backgroundColor = .C00D9CC()
+            step2.backgroundColor = .C00D9CC()
+            step2L.backgroundColor = .C00D9CC()
+            step3.backgroundColor = .C00D9CC()
+            step3L.backgroundColor = .C00D9CC()
             step4.setTitleColor(.white, for: .normal)
-            step4.backgroundColor = .C1()
+            step4.backgroundColor = .C0093FF()
             break
         case 5:
-            step1.backgroundColor = .C2()
-            step1L.backgroundColor = .C2()
-            step2.backgroundColor = .C2()
-            step2L.backgroundColor = .C2()
-            step3.backgroundColor = .C2()
-            step3L.backgroundColor = .C2()
-            step4.backgroundColor = .C2()
-            step4L.backgroundColor = .C2()
+            step1.backgroundColor = .C00D9CC()
+            step1L.backgroundColor = .C00D9CC()
+            step2.backgroundColor = .C00D9CC()
+            step2L.backgroundColor = .C00D9CC()
+            step3.backgroundColor = .C00D9CC()
+            step3L.backgroundColor = .C00D9CC()
+            step4.backgroundColor = .C00D9CC()
+            step4L.backgroundColor = .C00D9CC()
             step5.setTitleColor(.white, for: .normal)
-            step5.backgroundColor = .C1()
+            step5.backgroundColor = .C0093FF()
             break
         default:
             break

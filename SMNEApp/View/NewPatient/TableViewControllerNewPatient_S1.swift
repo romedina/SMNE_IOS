@@ -22,7 +22,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.backgroundColor = .C2()
+        nextButton.backgroundColor = .C00D9CC()
         nextButton.setTitle("Siguiente", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
@@ -30,8 +30,8 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         returnButton.layer.cornerRadius = 5
         returnButton.setBackgroundColor(.white)
         returnButton.setBorderWidth(1, for: .normal)
-        returnButton.setBorderColor(.C2(), for: .normal)
-        returnButton.setTitleColor(.C2(), for: .normal)
+        returnButton.setBorderColor(.C00D9CC(), for: .normal)
+        returnButton.setTitleColor(.C00D9CC(), for: .normal)
         returnButton.setTitle("Regresar", for: .normal)
         
         buttonsStack.alignment = .fill

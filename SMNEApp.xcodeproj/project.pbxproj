@@ -43,6 +43,7 @@
 		B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */; };
 		B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */; };
 		B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */; };
+		B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */; };
 		B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */; };
 		B356BFD125CDD4B20025F62A /* TableViewControllerPatientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFD025CDD4B20025F62A /* TableViewControllerPatientsList.swift */; };
 		B356BFD625CDD4E00025F62A /* TableViewCellPatientListTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFD525CDD4E00025F62A /* TableViewCellPatientListTitle.swift */; };
@@ -130,6 +131,7 @@
 		B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenList.swift; sourceTree = "<group>"; };
 		B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpen.swift; sourceTree = "<group>"; };
 		B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellList.swift; sourceTree = "<group>"; };
+		B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLaunch.swift; sourceTree = "<group>"; };
 		B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTabBar.swift; sourceTree = "<group>"; };
 		B356BFD025CDD4B20025F62A /* TableViewControllerPatientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerPatientsList.swift; sourceTree = "<group>"; };
 		B356BFD525CDD4E00025F62A /* TableViewCellPatientListTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientListTitle.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				B395714C25D1DCCB00E89EB5 /* LogIn */,
 				B356BFC525CDCCEF0025F62A /* Home */,
 				B31C97F825BF9248006DDCD8 /* NewPatient */,
+				B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */,
 				B34ADEFB25D1C85100344685 /* LogIn.storyboard */,
 				B3CC13DA25B8B9FA00CD968E /* Main.storyboard */,
+				B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -373,7 +377,6 @@
 				B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */,
 				B3CC13D825B8B9FA00CD968E /* ViewController.swift */,
 				B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */,
-				B3CC13DF25B8B9FF00CD968E /* LaunchScreen.storyboard */,
 				B3CC13E225B8B9FF00CD968E /* Info.plist */,
 				B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */,
 			);
@@ -713,6 +716,7 @@
 				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
 				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
 				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
+				B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */,
 				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
 				B356BFD125CDD4B20025F62A /* TableViewControllerPatientsList.swift in Sources */,

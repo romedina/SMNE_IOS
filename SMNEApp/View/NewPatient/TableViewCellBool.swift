@@ -22,20 +22,25 @@ class TableViewCellBool: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         yesButton.setBorderWidth(1.0, for: .normal)
-        yesButton.setBorderColor(.C2(), for: .normal)
+        yesButton.setBorderColor(.C00D9CC(), for: .normal)
         yesButton.setBackgroundColor(.white, for: .normal)
-        yesButton.setBackgroundColor(.C2(), for: .selected)
+        yesButton.setBackgroundColor(.C00D9CC(), for: .selected)
         yesButton.setTitleColor(.white, for: .selected)
         noButton.setBorderWidth(1.0, for: .normal)
-        noButton.setBorderColor(.C2(), for: .normal)
+        noButton.setBorderColor(.C00D9CC(), for: .normal)
         noButton.setBackgroundColor(.white, for: .normal)
-        noButton.setBackgroundColor(.C2(), for: .selected)
+        noButton.setBackgroundColor(.C00D9CC(), for: .selected)
         noButton.setTitleColor(.white, for: .selected)
     }
     
     func setInfo(title: String, sub: String, id: String) {
         titleLabel.text = title
         subLabel.text = sub
+        if sub == "" {
+            subLabel.isHidden = true
+        } else {
+            subLabel.isHidden = false
+        }
         self.id = id
     }
     

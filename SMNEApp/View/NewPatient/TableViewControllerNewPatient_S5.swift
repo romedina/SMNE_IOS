@@ -18,15 +18,15 @@ class TableViewControllerNewPatient_S5: UITableViewController {
         super.viewDidLoad()
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.backgroundColor = .C2()
+        nextButton.backgroundColor = .C00D9CC()
         nextButton.setTitle("Terminar", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         
         returnButton.layer.cornerRadius = 5
         returnButton.setBackgroundColor(.white)
         returnButton.setBorderWidth(1, for: .normal)
-        returnButton.setBorderColor(.C2(), for: .normal)
-        returnButton.setTitleColor(.C2(), for: .normal)
+        returnButton.setBorderColor(.C00D9CC(), for: .normal)
+        returnButton.setTitleColor(.C00D9CC(), for: .normal)
         returnButton.setTitle("Regresar", for: .normal)
         
         buttonsStack.alignment = .fill

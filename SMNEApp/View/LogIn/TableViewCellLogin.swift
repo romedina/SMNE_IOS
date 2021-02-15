@@ -37,7 +37,7 @@ class TableViewCellLogin: UITableViewCell {
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
         rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
-        rightButton.tintColor = .C3()
+        rightButton.tintColor = .C052D6C()
         
         passwordInput.trailingView = rightButton
         passwordInput.trailingViewMode = .always
@@ -50,17 +50,17 @@ class TableViewCellLogin: UITableViewCell {
         
         appleLoginButton.setBackgroundColor(.white)
         appleLoginButton.setBorderWidth(1.0, for: .normal)
-        appleLoginButton.setBorderColor(.C2(), for: .normal)
+        appleLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         appleLoginButton.layer.cornerRadius = 8
         
         gmailLoginButton.setBackgroundColor(.white)
         gmailLoginButton.setBorderWidth(1.0, for: .normal)
-        gmailLoginButton.setBorderColor(.C2(), for: .normal)
+        gmailLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         gmailLoginButton.layer.cornerRadius = 8
         
         facebookLoginButton.setBackgroundColor(.white)
         facebookLoginButton.setBorderWidth(1.0, for: .normal)
-        facebookLoginButton.setBorderColor(.C2(), for: .normal)
+        facebookLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         facebookLoginButton.layer.cornerRadius = 8
         
     }

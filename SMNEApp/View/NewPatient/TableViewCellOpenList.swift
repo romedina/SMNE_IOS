@@ -30,10 +30,10 @@ class TableViewCellOpenList: UITableViewCell {
         openInput.keyboardType = .decimalPad
         openInput.returnKeyType = .done
         
-        openInput.setOutlineColor(.C2(), for: .normal)
-        openInput.setTextColor(.C3(), for: .normal)
-        openInput.setOutlineColor(.C2(), for: .editing)
-        openInput.setTextColor(.C3(), for: .editing)
+        openInput.setOutlineColor(.C00D9CC(), for: .normal)
+        openInput.setTextColor(.C052D6C(), for: .normal)
+        openInput.setOutlineColor(.C00D9CC(), for: .editing)
+        openInput.setTextColor(.C052D6C(), for: .editing)
         
         listInput.delegate = self
         listInput.dataSource = self
