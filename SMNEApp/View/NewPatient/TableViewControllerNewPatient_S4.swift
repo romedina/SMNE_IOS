@@ -43,14 +43,18 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             cell.setInfo(page: info.page)
 
             return cell
-        } else if let info = cellInfo as? SliderCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "slider", for: indexPath) as! TableViewCellSlider
+        } else if let info = cellInfo as? OpenOpenCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "openopen", for: indexPath) as! TableViewCellOpenOpen
             
-            cell.setInfo(title: info.title, max: String(info.max), unit: info.unit)
+            cell.setInfo(t1: info.title1, t2: info.title2, tr1: info.trailing1, tr2: info.trailing2)
 
             return cell
-        } else if let info = cellInfo as? CommentCell {
+        } else if let _ = cellInfo as? CommentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! TableViewCellComment
+
+            return cell
+        } else if let _ = cellInfo as? MultiRadioCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio
 
             return cell
         } else {

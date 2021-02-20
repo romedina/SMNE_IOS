@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
+		B304935825DB7FEF0072812C /* TableViewCellOpenOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */; };
 		B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */; };
 		B30CDAEA25C1ED5400B7CECF /* TableViewCellBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */; };
 		B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */; };
@@ -28,9 +29,12 @@
 		B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30CDB0B25C247F500B7CECF /* OpenSans-Regular.ttf */; };
 		B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */; };
 		B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */; };
+		B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317F14625E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift */; };
 		B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */; };
 		B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */; };
 		B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */; };
+		B32C1F3B25DC2E9200D8196A /* TreatmentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C1F3A25DC2E9200D8196A /* TreatmentModels.swift */; };
+		B32C1F4025DF685500D8196A /* ViewModelTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C1F3F25DF685500D8196A /* ViewModelTreatment.swift */; };
 		B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */; };
 		B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */; };
 		B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */; };
@@ -97,6 +101,7 @@
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenOpen.swift; sourceTree = "<group>"; };
 		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
 		B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBool.swift; sourceTree = "<group>"; };
 		B30CDAEE25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S3.swift; sourceTree = "<group>"; };
@@ -116,9 +121,12 @@
 		B30CDB1425C247F900B7CECF /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		B30CDB2225C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S5.swift; sourceTree = "<group>"; };
 		B30CDB2725C24CF000B7CECF /* TableViewCellTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTreatment.swift; sourceTree = "<group>"; };
+		B317F14625E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMultiRadio.swift; sourceTree = "<group>"; };
 		B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRadioRadio.swift; sourceTree = "<group>"; };
 		B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B31C97F325BF921D006DDCD8 /* NewPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPatient.storyboard; sourceTree = "<group>"; };
+		B32C1F3A25DC2E9200D8196A /* TreatmentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentModels.swift; sourceTree = "<group>"; };
+		B32C1F3F25DF685500D8196A /* ViewModelTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTreatment.swift; sourceTree = "<group>"; };
 		B3494A7B25C4828500ACC4DD /* ViewControllerNPMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPMain.swift; sourceTree = "<group>"; };
 		B3494A8025C4839900ACC4DD /* ViewControllerNPPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNPPageView.swift; sourceTree = "<group>"; };
 		B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmModels.swift; sourceTree = "<group>"; };
@@ -239,6 +247,7 @@
 				B34C459425C0EEC600EBE1BC /* Colors.swift */,
 				B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */,
 				B3F8118925D4681F00323534 /* IntroModels.swift */,
+				B32C1F3A25DC2E9200D8196A /* TreatmentModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				B356BFF525CE4D810025F62A /* ViewModelSteps.swift */,
+				B32C1F3F25DF685500D8196A /* ViewModelTreatment.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,6 +307,8 @@
 				B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */,
 				B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */,
 				B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */,
+				B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */,
+				B317F14625E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift */,
 			);
 			path = NewPatient;
 			sourceTree = "<group>";
@@ -710,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B356BFF625CE4D810025F62A /* ViewModelSteps.swift in Sources */,
+				B304935825DB7FEF0072812C /* TableViewCellOpenOpen.swift in Sources */,
 				B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */,
 				B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
@@ -721,6 +734,7 @@
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
 				B356BFD125CDD4B20025F62A /* TableViewControllerPatientsList.swift in Sources */,
 				B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */,
+				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
@@ -735,7 +749,9 @@
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
+				B32C1F4025DF685500D8196A /* ViewModelTreatment.swift in Sources */,
 				B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */,
+				B32C1F3B25DC2E9200D8196A /* TreatmentModels.swift in Sources */,
 				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
 				B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */,
 				B356BFEE25CDE3550025F62A /* TableViewCellStartOption.swift in Sources */,

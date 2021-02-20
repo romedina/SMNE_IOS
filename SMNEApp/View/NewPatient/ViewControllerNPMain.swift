@@ -152,9 +152,9 @@ class ViewControllerNPMain: UIViewController {
         
         for index in 0...algorithms.count - 1 {
             if index % 2 == 0 {
-                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C0093FF(), textColor: .white))
+                stepThree.append(AlgorithmCell(id: algorithms[index].ID, title: algorithms[index].title, backColor: .C0093FF(), textColor: .white))
             } else {
-                stepThree.append(AlgorithmCell(title: algorithms[index].title, backColor: .C00D9CC(), textColor: .C052D6C()))
+                stepThree.append(AlgorithmCell(id: algorithms[index].ID, title: algorithms[index].title, backColor: .C00D9CC(), textColor: .C052D6C()))
             }
         }
         let reinitClass = ReinitStepCells()
@@ -292,7 +292,8 @@ class ViewControllerNPMain: UIViewController {
 }
 
 extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
-    func optionDelegate(option: Int) {
+    func optionDelegate(option: Int, ID: String) {
+        print(ID)
         index += 1
         changeStepperUp()
         indexChanged()

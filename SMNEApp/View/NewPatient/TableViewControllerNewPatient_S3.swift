@@ -9,7 +9,7 @@ import UIKit
 import MaterialComponents.MDCButton
 
 protocol OptionSelectedDelegate {
-    func optionDelegate(option: Int)
+    func optionDelegate(option: Int, ID: String)
 }
 
 class TableViewControllerNewPatient_S3: UITableViewController {
@@ -47,8 +47,7 @@ class TableViewControllerNewPatient_S3: UITableViewController {
             return cell
         } else if let info = cellInfo as? AlgorithmCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "algorithm", for: indexPath) as! TableViewCellAlgorithmSelection
-            
-            cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self, indexP: indexPath.row)
+            cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self, indexP: indexPath.row, ID: info.id)
             cell.delegate = self
 
             return cell
@@ -61,7 +60,7 @@ class TableViewControllerNewPatient_S3: UITableViewController {
 }
 
 extension TableViewControllerNewPatient_S3: AlgorithmSelectedDelegate {
-    func algorithmSelected(option: Int) {
-        delegate?.optionDelegate(option: option)
+    func algorithmSelected(option: Int, ID: String) {
+        delegate?.optionDelegate(option: option, ID: ID)
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import MaterialComponents.MDCButton
 
 protocol AlgorithmSelectedDelegate {
-    func algorithmSelected(option: Int)
+    func algorithmSelected(option: Int, ID: String)
 }
 class TableViewCellAlgorithmSelection: UITableViewCell {
 
@@ -18,6 +18,7 @@ class TableViewCellAlgorithmSelection: UITableViewCell {
     @IBOutlet weak var selectButton: MDCButton!
     var superV: TableViewControllerNewPatient_S3!
     var row = 0
+    var algorithmID = ""
     
     var delegate: AlgorithmSelectedDelegate?
     
@@ -29,16 +30,17 @@ class TableViewCellAlgorithmSelection: UITableViewCell {
         superV = TableViewControllerNewPatient_S3()
     }
     
-    func setInfo(algorithm: String, backColor: UIColor, textColor: UIColor, viewController: TableViewControllerNewPatient_S3, indexP: Int) {
+    func setInfo(algorithm: String, backColor: UIColor, textColor: UIColor, viewController: TableViewControllerNewPatient_S3, indexP: Int, ID: String) {
         parentView.backgroundColor = backColor
         algorithmLabel.textColor = textColor
         algorithmLabel.text = algorithm
         superV = viewController
         row = indexP
+        algorithmID = ID
     }
     
     @IBAction func selectButtonTapped(_ sender: Any) {
-        delegate?.algorithmSelected(option: row)
+        delegate?.algorithmSelected(option: row, ID: algorithmID)
     }
     
 }

@@ -91,6 +91,7 @@ struct BoolCell {
 }
 
 struct AlgorithmCell {
+    let id: String
     let title: String
     let backColor: UIColor
     let textColor: UIColor
@@ -124,13 +125,25 @@ struct RadioRadioCell {
     let title: String
 }
 
+struct OpenOpenCell {
+    let title1: String
+    let title2: String
+    let trailing1: String
+    let trailing2: String
+    
+}
+
+struct MultiRadioCell {
+    let title: String
+}
+
 let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
 let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: "", id: "renal"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)", id: "cardio"), BoolCell(title: "Tiene hipoglucemia?", sub: "", id: "hipo")]
 
 var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
 
-var stepFour: [Any] = [TitleCell(title: "", subtitle: "Ya casi terminamos."), StepperCell(page: 4)]
+var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), MultiRadioCell(title: ""), CommentCell(title: "Observaciones")]
 
 var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5)]
 
