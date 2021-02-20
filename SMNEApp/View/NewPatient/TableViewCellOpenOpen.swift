@@ -18,6 +18,8 @@ class TableViewCellOpenOpen: UITableViewCell {
     var input1Controller: MDCTextInputControllerOutlined?
     var input2Controller: MDCTextInputControllerOutlined?
     
+    var delegate: CellInfoChangeDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -51,4 +53,15 @@ class TableViewCellOpenOpen: UITableViewCell {
         open2Input.trailingView = label1
     }
 
+    @IBAction func open1(_ sender: MDCTextField) {
+        let text = sender.text ?? "0"
+        let myFloat = (text as NSString).floatValue
+        delegate?.infoChange(id: "hba1c", info: myFloat)
+    }
+    
+    @IBAction func open2(_ sender: MDCTextField) {
+        let text = sender.text ?? "0"
+        let myFloat = (text as NSString).floatValue
+        delegate?.infoChange(id: "glucose", info: myFloat)
+    }
 }

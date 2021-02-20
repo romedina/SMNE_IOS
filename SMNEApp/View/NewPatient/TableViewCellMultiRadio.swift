@@ -21,12 +21,15 @@ class TableViewCellMultiRadio: UITableViewCell {
     @IBOutlet weak var op3Button: UIButton!
     @IBOutlet weak var op4Button: UIButton!
     
+    var delegate: CellInfoChangeDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     @IBAction func op1Tapped(_ sender: Any) {
+        delegate?.infoChange(id: "filter", info: "<15")
         op1Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
         op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
@@ -34,6 +37,7 @@ class TableViewCellMultiRadio: UITableViewCell {
     }
     
     @IBAction func op2Tapped(_ sender: Any) {
+        delegate?.infoChange(id: "filter", info: "15 - 29")
         op1Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op2Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
         op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
@@ -41,6 +45,7 @@ class TableViewCellMultiRadio: UITableViewCell {
     }
     
     @IBAction func op3Tapped(_ sender: Any) {
+        delegate?.infoChange(id: "filter", info: "30 - 44")
         op1Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op3Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
@@ -48,6 +53,7 @@ class TableViewCellMultiRadio: UITableViewCell {
     }
     
     @IBAction func op4Tapped(_ sender: Any) {
+        delegate?.infoChange(id: "filter", info: "45 - 59")
         op1Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
         op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)

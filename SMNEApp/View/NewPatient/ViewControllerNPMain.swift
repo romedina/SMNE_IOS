@@ -33,7 +33,7 @@ class ViewControllerNPMain: UIViewController {
     
     var index = 0
     
-    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
+    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
     var map = "00000"
     var algorithmID = ""
     
@@ -64,6 +64,10 @@ class ViewControllerNPMain: UIViewController {
         
         let S3 = pageViewCotroller.subViewControllers[2] as! TableViewControllerNewPatient_S3
         S3.delegate = self
+        S3.delegateInfo = self
+        
+        let S4 = pageViewCotroller.subViewControllers[3] as! TableViewControllerNewPatient_S4
+        S4.delegate = self
         
         initViews()
         initButtons()
@@ -353,6 +357,21 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         case "hipo":
             patientInfo.hipo = info as! Bool
             mapAssign(index: 3, flag: patientInfo.hipo)
+            break
+        case "algorithm":
+            patientInfo.algorithID = info as! String
+            break
+        case "hba1c":
+            patientInfo.hba1c = info as! Float
+            break
+        case "glucose":
+            patientInfo.glucose = info as! Float
+            break
+        case "filter":
+            patientInfo.filterCup = info as! String
+            break
+        case "comment":
+            patientInfo.comment = info as! String
             break
         default:
             break

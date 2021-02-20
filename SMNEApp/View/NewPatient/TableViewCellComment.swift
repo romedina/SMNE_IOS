@@ -11,6 +11,7 @@ import MaterialComponents
 class TableViewCellComment: UITableViewCell {
     
     @IBOutlet weak var parentView: UIView!
+    var delegate: CellInfoChangeDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,6 +32,6 @@ class TableViewCellComment: UITableViewCell {
 
 extension TableViewCellComment: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        
+        delegate?.infoChange(id: "comment", info: textView.text)
     }
 }

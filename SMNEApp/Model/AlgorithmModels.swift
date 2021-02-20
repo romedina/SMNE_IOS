@@ -159,4 +159,9 @@ struct PatientInfo {
     var renal: Bool
     var cardio: Bool
     var hipo: Bool
+    var algorithID: String
+    var hba1c: Float
+    var glucose: Float
+    var filterCup: String
+    var comment: String
 }

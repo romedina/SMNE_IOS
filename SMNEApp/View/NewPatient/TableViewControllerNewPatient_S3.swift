@@ -16,6 +16,7 @@ class TableViewControllerNewPatient_S3: UITableViewController {
     
     let returnButton = MDCButton()
     var delegate: OptionSelectedDelegate?
+    var delegateInfo: InfoChangedDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -62,5 +63,6 @@ class TableViewControllerNewPatient_S3: UITableViewController {
 extension TableViewControllerNewPatient_S3: AlgorithmSelectedDelegate {
     func algorithmSelected(option: Int, ID: String) {
         delegate?.optionDelegate(option: option, ID: ID)
+        delegateInfo?.infoChanged(id: "algorithm", info: ID)
     }
 }

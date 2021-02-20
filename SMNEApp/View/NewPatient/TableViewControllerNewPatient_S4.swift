@@ -14,6 +14,8 @@ class TableViewControllerNewPatient_S4: UITableViewController {
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
+    var delegate: InfoChangedDelegate?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
@@ -52,15 +54,17 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "openopen", for: indexPath) as! TableViewCellOpenOpen
             
             cell.setInfo(t1: info.title1, t2: info.title2, tr1: info.trailing1, tr2: info.trailing2)
+            cell.delegate = self
 
             return cell
         } else if let _ = cellInfo as? CommentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! TableViewCellComment
+            cell.delegate = self
 
             return cell
         } else if let _ = cellInfo as? MultiRadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio
-
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
@@ -69,4 +73,18 @@ class TableViewControllerNewPatient_S4: UITableViewController {
         }
     }
 
+}
+
+extension TableViewControllerNewPatient_S4: CellInfoChangeDelegate {
+    func infoChange(id: String, info: Float) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: Bool) {
+        delegate?.infoChanged(id: id, info: info)
+    }
 }

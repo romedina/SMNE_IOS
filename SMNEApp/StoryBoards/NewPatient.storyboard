@@ -1641,6 +1641,9 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="open1:" destination="9wF-S0-pA0" eventType="editingChanged" id="AX1-5i-1TN"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -1660,6 +1663,9 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="open2:" destination="9wF-S0-pA0" eventType="editingChanged" id="SRf-Bv-3ab"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
