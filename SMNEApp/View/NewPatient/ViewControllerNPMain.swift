@@ -35,6 +35,7 @@ class ViewControllerNPMain: UIViewController {
     
     var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false)
     var map = "00000"
+    var algorithmID = ""
     
     var featherImage = #imageLiteral(resourceName: "feather")
     var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
@@ -159,6 +160,17 @@ class ViewControllerNPMain: UIViewController {
         }
         let reinitClass = ReinitStepCells()
         reinitClass.reinitS3()
+    }
+    
+    private func prepareStepFour() {
+        
+        stepFour = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg")]
+        if algorithmID == "C" {
+            stepFour.append(MultiRadioCell(title: ""))
+        }
+        stepFour.append(CommentCell(title: ""))
+        let reinitClass = ReinitStepCells()
+        reinitClass.reinitS4()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -294,6 +306,10 @@ class ViewControllerNPMain: UIViewController {
 extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     func optionDelegate(option: Int, ID: String) {
         print(ID)
+        algorithmID = ID
+        if index == 2 {
+            prepareStepFour()
+        }
         index += 1
         changeStepperUp()
         indexChanged()

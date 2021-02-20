@@ -143,7 +143,7 @@ let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitl
 
 var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
 
-var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), MultiRadioCell(title: ""), CommentCell(title: "Observaciones")]
+var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), CommentCell(title: "Observaciones")]
 
 var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5)]
 

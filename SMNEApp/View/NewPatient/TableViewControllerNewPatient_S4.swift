@@ -14,6 +14,11 @@ class TableViewControllerNewPatient_S4: UITableViewController {
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
