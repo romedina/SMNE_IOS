@@ -109,8 +109,7 @@ struct CommentCell {
 }
 
 struct TreatmentCell {
-    let title: String
-    let subTitle: String
+    let options: Option
 }
 
 struct RadioCell {
@@ -145,7 +144,7 @@ var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente e
 
 var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), CommentCell(title: "Observaciones")]
 
-var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5)]
+var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5), TreatmentCell(options: Option(treatments: [Treatment(title: "", subtitle: "")]))]
 
 struct PatientInfo {
     var id: String

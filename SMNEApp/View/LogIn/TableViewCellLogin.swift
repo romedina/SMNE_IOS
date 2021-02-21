@@ -25,6 +25,10 @@ class TableViewCellLogin: UITableViewCell {
     
     let rightButton = UIButton(type: .custom)
     
+    var appleImage = UIImage()
+    var faceboolImage = UIImage()
+    var googleImage = UIImage()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,7 +40,7 @@ class TableViewCellLogin: UITableViewCell {
         
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
-        rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
         rightButton.tintColor = .C052D6C()
         
         passwordInput.trailingView = rightButton
@@ -52,25 +56,28 @@ class TableViewCellLogin: UITableViewCell {
         appleLoginButton.setBorderWidth(1.0, for: .normal)
         appleLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         appleLoginButton.layer.cornerRadius = 8
+        appleLoginButton.setImage(#imageLiteral(resourceName: "apple"), for: .normal)
         
         gmailLoginButton.setBackgroundColor(.white)
         gmailLoginButton.setBorderWidth(1.0, for: .normal)
         gmailLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         gmailLoginButton.layer.cornerRadius = 8
+        gmailLoginButton.setImage(#imageLiteral(resourceName: "google"), for: .normal)
         
         facebookLoginButton.setBackgroundColor(.white)
         facebookLoginButton.setBorderWidth(1.0, for: .normal)
         facebookLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         facebookLoginButton.layer.cornerRadius = 8
+        facebookLoginButton.setImage(#imageLiteral(resourceName: "facebook"), for: .normal)
         
     }
     
     @objc func passChangeView() {
         passwordInput.isSecureTextEntry.toggle()
         if passwordInput.isSecureTextEntry {
-            rightButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+            rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
         } else {
-            rightButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+            rightButton.setImage(#imageLiteral(resourceName: "crossEye"), for: .normal)
         }
     }
 

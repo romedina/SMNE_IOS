@@ -36,6 +36,7 @@ class ViewControllerNPMain: UIViewController {
     var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
     var map = "00000"
     var algorithmID = ""
+    var treatment: [Treatment] = []
     
     var featherImage = #imageLiteral(resourceName: "feather")
     var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
@@ -192,6 +193,15 @@ class ViewControllerNPMain: UIViewController {
                 if index == 1 {
                     prepareStepThree()
                 }
+                if index == 3 {
+                    let prepare5 = ModelViewStep5()
+                    if algorithmID != "C" {
+                        self.treatment = prepare5.getOptions(algorithm: patientInfo.algorithID, hba1c: patientInfo.hba1c, glucose: patientInfo.glucose)
+                    } else {
+                        self.treatment = prepare5.getOptions(hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, filter: patientInfo.filterCup)
+                    }
+                    prepare5.getStep5(options: self.treatment)
+                }
                 index += 1
                 changeStepperUp()
                 indexChanged()
@@ -262,8 +272,8 @@ class ViewControllerNPMain: UIViewController {
         switch index {
         case 1:
             s1Button.backgroundColor = .C00D9CC()
-            featherImage.withTintColor(.white)
             s1Button.setImage(featherImage, for: .normal)
+            s1Button.imageView?.tintColor = .white
             s1Button.tintColor = .white
             s1Button.setTitle("", for: .normal)
             s1View.backgroundColor = .C00D9CC()

@@ -44,7 +44,11 @@ class TableViewControllerNewPatient_S5: UITableViewController {
             buttonsStack.trailingAnchor.constraint(equalTo: navCon.view.trailingAnchor, constant: -18).isActive = true
             buttonsStack.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
         }
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -73,8 +77,8 @@ class TableViewControllerNewPatient_S5: UITableViewController {
             return cell
         } else if let info = cellInfo as? TreatmentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "treatment", for: indexPath) as! TableViewCellTreatment
-            
-            cell.setInfo(title: info.title, subTitle: info.subTitle)
+            print(info.options)
+            cell.setInfo(options: info.options)
 
             return cell
         } else {

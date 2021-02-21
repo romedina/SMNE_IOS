@@ -11,11 +11,11 @@ class ViewControllerNPPageView: UIPageViewController {
     
     lazy var subViewControllers: [UIViewController] = {
         return [
-            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(identifier: "S1") as! TableViewControllerNewPatient_S1,
-            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(identifier: "S2") as! TableViewControllerNewPatient_S2,
-            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(identifier: "S3") as! TableViewControllerNewPatient_S3,
-            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(identifier: "S4") as! TableViewControllerNewPatient_S4,
-            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(identifier: "S5") as! TableViewControllerNewPatient_S5,
+            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(withIdentifier: "S1") as! TableViewControllerNewPatient_S1,
+            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(withIdentifier: "S2") as! TableViewControllerNewPatient_S2,
+            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(withIdentifier: "S3") as! TableViewControllerNewPatient_S3,
+            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(withIdentifier: "S4") as! TableViewControllerNewPatient_S4,
+            UIStoryboard(name: "NewPatient", bundle: nil).instantiateViewController(withIdentifier: "S5") as! TableViewControllerNewPatient_S5,
         ]
     }()
 

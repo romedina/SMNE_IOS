@@ -62,8 +62,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
             <Locations>
@@ -231,8 +231,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -247,8 +247,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -263,8 +263,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -279,8 +279,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -343,8 +343,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
             landmarkName = "mapAssign(index:flag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +391,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "optionDelegate(option:ID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,6 +426,241 @@
             startingLineNumber = "57"
             endingLineNumber = "57"
             landmarkName = "open1(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B876056-A639-4154-8451-FCCFEF03CEE0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/ViewModel/ViewModelStep5.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "getStep5(options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "124D7FC8-0088-4136-A077-281A29461D5D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "setInfo(options:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "599">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1474">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "3125">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "4776">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "6427">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "8078">
+               </Location>
+               <Location
+                  uuid = "124D7FC8-0088-4136-A077-281A29461D5D - 86226f31e27801b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.TableViewCellTreatment.setInfo(options: SMNEApp.Option) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guillermo/Desktop/SMNEApp/SMNEApp/SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "9729">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82015422-8E44-4EB1-BAA3-AC65F3DEE506"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setInfo(options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B6F7FFE-C02E-487D-B099-0E1676A04276"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewControllerNewPatient_S5.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0814C9C3-4E3C-4F12-A63F-B52B76385B02"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B9E8A03-0EB8-4367-8FB3-2F5E8BC0BF67"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewControllerNewPatient_S5.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A063A8C-C1B4-4510-AD93-749B4BAA5AD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewControllerNewPatient_S5.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFCB8444-AB81-4C83-A2FD-9373298A8EEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/NewPatient/TableViewCellTreatment.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "setInfo(options:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

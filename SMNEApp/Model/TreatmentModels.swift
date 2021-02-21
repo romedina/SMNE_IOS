@@ -67,3 +67,6 @@ let treatmentE: [Option] = [
         Treatment(title: "Insulina basal", subtitle: "Se prefiere en pacientes catabólicos o > 10 años con DM (0.1-0.2 U/kg)"),
         Treatment(title: "SU", subtitle: "")]),
     Option(treatments: [Treatment(title: "Insulina basal (0.1-0.2 U/Kg) + Metformina", subtitle: ""), Treatment(title: "Insulina basal (0.1-0.2 U/Kg) + Metformina + iDPP4  o iSGLT2 o arGLP1", subtitle: "")])]
+
+let treatmentF: [Option] = [
+    Option(treatments: [Treatment(title:"Monoterapia", subtitle: "Preferir metformina como primera linea de tratamiento, iDDP4, iSGLT2, arGLP-1")])]

@@ -71,6 +71,7 @@
 		B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */; };
 		B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */; };
 		B3DA1A7B25CB5220004C89AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */; };
+		B3E9C34325E1FEDF0072F92A /* ViewModelStep5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */; };
 		B3F8118A25D4681F00323534 /* IntroModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8118925D4681F00323534 /* IntroModels.swift */; };
 		FAA2F557CA18A751E1DBA3F9 /* Pods_SMNEAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5F2F24A1582314F7D41098 /* Pods_SMNEAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -169,6 +170,7 @@
 		B3CC13F825B8BA0000CD968E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3DA1A6E25CB4F24004C89AC /* TableViewCellRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRadioButton.swift; sourceTree = "<group>"; };
 		B3DA1A7325CB4F5C004C89AC /* TableViewCellIMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellIMC.swift; sourceTree = "<group>"; };
+		B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelStep5.swift; sourceTree = "<group>"; };
 		B3F8118925D4681F00323534 /* IntroModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModels.swift; sourceTree = "<group>"; };
 		E70126F51649C173B89B3373 /* Pods-SMNEApp-SMNEAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp-SMNEAppUITests/Pods-SMNEApp-SMNEAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,6 +270,7 @@
 			children = (
 				B356BFF525CE4D810025F62A /* ViewModelSteps.swift */,
 				B32C1F3F25DF685500D8196A /* ViewModelTreatment.swift */,
+				B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
 				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
 				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
+				B3E9C34325E1FEDF0072F92A /* ViewModelStep5.swift in Sources */,
 				B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */,
 				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
@@ -946,6 +950,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -967,6 +972,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

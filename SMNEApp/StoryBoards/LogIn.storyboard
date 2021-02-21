@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVW-pU-hGl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -440,33 +441,32 @@
                                                     <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cke-dX-XQy" customClass="MDCButton">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cke-dX-XQy" customClass="MDCButton">
                                                     <rect key="frame" x="30" y="569" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="XMK-iV-1e2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                    <state key="normal" title="Continuar con Apple">
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Continuar con Apple" image="apple">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-9m-2oC" customClass="MDCButton">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-9m-2oC" customClass="MDCButton">
                                                     <rect key="frame" x="30" y="629" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="paQ-rk-Sy7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                    <state key="normal" title="Continuar con Gmail">
+                                                    <state key="normal" title="Continuar con Gmail" image="google">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-AM-liw" customClass="MDCButton">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-AM-liw" customClass="MDCButton">
                                                     <rect key="frame" x="30" y="689" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="AJi-yc-8Sd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                    <state key="normal" title="Continuar con Facebook">
+                                                    <state key="normal" title="Continuar con Facebook" image="facebook">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
@@ -562,11 +562,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lx7-T9-nkj"/>
+        <segue reference="qSw-1t-rBj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE" width="157" height="155.5"/>
+        <image name="apple" width="19.5" height="23"/>
         <image name="arrowL" width="29" height="29"/>
+        <image name="facebook" width="29" height="29"/>
+        <image name="google" width="28" height="28"/>
         <image name="leftArrowGray" width="20.5" height="14.5"/>
         <image name="rightArrowGray" width="20.5" height="14.5"/>
         <systemColor name="systemBackgroundColor">

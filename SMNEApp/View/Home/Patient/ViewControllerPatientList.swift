@@ -24,7 +24,7 @@ class ViewControllerPatientList: UIViewController {
         newPatientButton.layer.cornerRadius = 27
         filterButton.layer.cornerRadius = 14
         searchPatientController = MDCTextInputControllerOutlined(textInput: searchPatientInput)
-        searchPatientInput.leadingView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+        searchPatientInput.leadingView = UIImageView(image: UIImage(named: "magnifyingglass"))
         searchPatientInput.leftViewMode = .always
         searchPatientController?.textInput?.layer.borderWidth = 0
         
