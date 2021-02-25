@@ -33,7 +33,7 @@ extension ViewControllerLogin: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCellLogin
-        
+        cell.delegate = self
         return cell
     }
     
@@ -41,4 +41,10 @@ extension ViewControllerLogin: UITableViewDelegate, UITableViewDataSource {
         return self.view.layer.bounds.height - 150
     }
     
+}
+
+extension ViewControllerLogin: LoginCellDelegate {
+    func loginTapped() {
+        self.performSegue(withIdentifier: "login", sender: self)
+    }
 }

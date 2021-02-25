@@ -56,11 +56,15 @@
 		B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFE525CDE3310025F62A /* ViewControllerStart.swift */; };
 		B356BFEE25CDE3550025F62A /* TableViewCellStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFED25CDE3550025F62A /* TableViewCellStartOption.swift */; };
 		B356BFF625CE4D810025F62A /* ViewModelSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356BFF525CE4D810025F62A /* ViewModelSteps.swift */; };
+		B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BE16125E74CA800DDFD22 /* ViewControllerMore.swift */; };
+		B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371AE9025E61AA1001377BA /* ViewControllerEditDoctorProfile.swift */; };
+		B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */; };
 		B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715025D1DD3000E89EB5 /* ViewControllerIntro.swift */; };
 		B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */; };
 		B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */; };
 		B395716025D2090100E89EB5 /* TableViewCellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */; };
 		B395716525D2092E00E89EB5 /* TableViewCellLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */; };
+		B3B67BD625E4AE500035916B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B67BD525E4AE500035916B /* Extensions.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
 		B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D825B8B9FA00CD968E /* ViewController.swift */; };
@@ -149,11 +153,15 @@
 		B356BFE525CDE3310025F62A /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		B356BFED25CDE3550025F62A /* TableViewCellStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellStartOption.swift; sourceTree = "<group>"; };
 		B356BFF525CE4D810025F62A /* ViewModelSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSteps.swift; sourceTree = "<group>"; };
+		B36BE16125E74CA800DDFD22 /* ViewControllerMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMore.swift; sourceTree = "<group>"; };
+		B371AE9025E61AA1001377BA /* ViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
+		B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellEditDoctorInfo.swift; sourceTree = "<group>"; };
 		B395715025D1DD3000E89EB5 /* ViewControllerIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIntro.swift; sourceTree = "<group>"; };
 		B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
 		B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
 		B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRegister.swift; sourceTree = "<group>"; };
 		B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLogin.swift; sourceTree = "<group>"; };
+		B3B67BD525E4AE500035916B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 			children = (
 				B395714C25D1DCCB00E89EB5 /* LogIn */,
 				B356BFC525CDCCEF0025F62A /* Home */,
+				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
 				B31C97F825BF9248006DDCD8 /* NewPatient */,
 				B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */,
 			);
@@ -319,9 +328,10 @@
 		B356BFC525CDCCEF0025F62A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B371AE8C25E61A56001377BA /* Doctor */,
 				B356BFE425CDE2FD0025F62A /* Start */,
 				B356BFCF25CDD48C0025F62A /* Patient */,
-				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
+				B36BE16925E74CBC00DDFD22 /* More */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -344,6 +354,23 @@
 				B356BFED25CDE3550025F62A /* TableViewCellStartOption.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		B36BE16925E74CBC00DDFD22 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				B36BE16125E74CA800DDFD22 /* ViewControllerMore.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		B371AE8C25E61A56001377BA /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				B371AE9025E61AA1001377BA /* ViewControllerEditDoctorProfile.swift */,
+				B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */,
+			);
+			path = Doctor;
 			sourceTree = "<group>";
 		};
 		B395714C25D1DCCB00E89EB5 /* LogIn */ = {
@@ -383,17 +410,18 @@
 		B3CC13D325B8B9FA00CD968E /* SMNEApp */ = {
 			isa = PBXGroup;
 			children = (
-				B30CDB0A25C247E400B7CECF /* Fonts */,
-				B31C97F225BF91E5006DDCD8 /* StoryBoards */,
-				B31C97B825BF46AE006DDCD8 /* ViewModel */,
-				B31C97B725BF46A8006DDCD8 /* View */,
-				B31C97B625BF4690006DDCD8 /* Model */,
+				B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */,
+				B3CC13E225B8B9FF00CD968E /* Info.plist */,
 				B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */,
 				B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */,
 				B3CC13D825B8B9FA00CD968E /* ViewController.swift */,
 				B3CC13DD25B8B9FF00CD968E /* Assets.xcassets */,
-				B3CC13E225B8B9FF00CD968E /* Info.plist */,
-				B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */,
+				B30CDB0A25C247E400B7CECF /* Fonts */,
+				B31C97B625BF4690006DDCD8 /* Model */,
+				B31C97F225BF91E5006DDCD8 /* StoryBoards */,
+				B31C97B725BF46A8006DDCD8 /* View */,
+				B31C97B825BF46AE006DDCD8 /* ViewModel */,
+				B3B67BD525E4AE500035916B /* Extensions.swift */,
 			);
 			path = SMNEApp;
 			sourceTree = "<group>";
@@ -741,6 +769,7 @@
 				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
+				B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
 				B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */,
 				B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */,
@@ -748,9 +777,11 @@
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
+				B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */,
 				B3F8118A25D4681F00323534 /* IntroModels.swift in Sources */,
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
+				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
 				B32C1F4025DF685500D8196A /* ViewModelTreatment.swift in Sources */,
@@ -767,6 +798,7 @@
 				B34C458B25C0EA5F00EBE1BC /* TableViewCellTitle.swift in Sources */,
 				B356BFD625CDD4E00025F62A /* TableViewCellPatientListTitle.swift in Sources */,
 				B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */,
+				B3B67BD625E4AE500035916B /* Extensions.swift in Sources */,
 				B395716525D2092E00E89EB5 /* TableViewCellLogin.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
 				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,

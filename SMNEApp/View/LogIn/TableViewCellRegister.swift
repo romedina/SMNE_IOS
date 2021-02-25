@@ -39,4 +39,23 @@ class TableViewCellRegister: UITableViewCell {
         
     }
 
+    @IBAction func nameChanged(_ sender: UITextField) {
+    }
+    
+    @IBAction func surnameChanged(_ sender: UITextField) {
+    }
+    
+    @IBAction func emailChanged(_ sender: MDCTextField) {
+        if !sender.isValidEmail() {
+            emailController?.setErrorText("Email inválido.", errorAccessibilityValue: nil)
+        } else {
+            emailController?.setErrorText(nil, errorAccessibilityValue: nil)
+        }
+    }
+    
+    @IBAction func passChanged(_ sender: UITextField) {
+    }
+    
+    @IBAction func confPassChanged(_ sender: UITextField) {
+    }
 }

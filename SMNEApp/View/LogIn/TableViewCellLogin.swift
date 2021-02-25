@@ -8,6 +8,10 @@
 import UIKit
 import MaterialComponents
 
+protocol LoginCellDelegate {
+    func loginTapped()
+}
+
 class TableViewCellLogin: UITableViewCell {
 
     @IBOutlet weak var emailInput: MDCTextField!
@@ -28,6 +32,8 @@ class TableViewCellLogin: UITableViewCell {
     var appleImage = UIImage()
     var faceboolImage = UIImage()
     var googleImage = UIImage()
+    
+    var delegate: LoginCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -82,5 +88,6 @@ class TableViewCellLogin: UITableViewCell {
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
+        delegate?.loginTapped()
     }
 }

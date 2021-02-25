@@ -34,6 +34,10 @@ extension UIColor {
     class func CE0F5F8() ->UIColor {
         return UIColor(red: 0.87, green: 0.96, blue: 0.97, alpha: 1.0)
     }
+    
+    class func C5FD6CB() -> UIColor {
+        return UIColor(red: 0.37, green: 0.83, blue: 0.79, alpha: 1.0)
+    }
 }
 
 let appTheme: MDCContainerScheme = {
