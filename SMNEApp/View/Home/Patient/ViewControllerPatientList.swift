@@ -13,20 +13,16 @@ class ViewControllerPatientList: UIViewController {
     @IBOutlet weak var tableViewList: UITableView!
     @IBOutlet weak var newPatientButton: MDCButton!
     
-    @IBOutlet weak var filterButton: MDCButton!
-    @IBOutlet weak var searchPatientInput: MDCTextField!
-    var searchPatientController: MDCTextInputControllerOutlined?
+    @IBOutlet weak var searchPatientInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         newPatientButton.layer.cornerRadius = 27
-        filterButton.layer.cornerRadius = 14
-        searchPatientController = MDCTextInputControllerOutlined(textInput: searchPatientInput)
-        searchPatientInput.leadingView = UIImageView(image: UIImage(named: "magnifyingglass"))
-        searchPatientInput.leftViewMode = .always
-        searchPatientController?.textInput?.layer.borderWidth = 0
+        
+        searchPatientInput.backgroundColor = .clear
+        searchPatientInput.borderStyle = .none
         
         tableViewList.delegate = self
         tableViewList.dataSource = self

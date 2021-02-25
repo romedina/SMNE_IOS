@@ -37,9 +37,20 @@ extension ViewControllerStart: UITableViewDelegate, UITableViewDataSource {
         let cell = tableViewOptions.dequeueReusableCell(withIdentifier: "option", for: indexPath) as! TableViewCellStartOption
         
         cell.setInfo(titleText: titles[indexPath.row], buttonTitle: buttonTitles[indexPath.row], textColor: titleColors[indexPath.row], backColor: backColors[indexPath.row], image: images[indexPath.row])
+        cell.delegate = self
         
         return cell
     }
-    
-    
+}
+
+extension ViewControllerStart: StartOptionDelegate {
+    func optionSelected(option: String) {
+        if option == "patients" {
+            tabBarController?.selectedIndex = 1
+        } else if option == "algorithm" {
+            tabBarController?.selectedIndex = 2
+        } else {
+            self.performSegue(withIdentifier: "newPatient", sender: self)
+        }
+    }
 }

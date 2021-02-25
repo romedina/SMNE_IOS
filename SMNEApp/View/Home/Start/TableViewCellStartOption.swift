@@ -6,12 +6,26 @@
 //
 
 import UIKit
+import MaterialComponents
+
+protocol StartOptionDelegate {
+    func optionSelected(option: String)
+}
 
 class TableViewCellStartOption: UITableViewCell {
+    
+    enum Options {
+        case Diagnostic
+        case Algorithm
+        case Patients
+    }
+    
+    var option: Options = .Diagnostic
+    var delegate: StartOptionDelegate?
 
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var optionButton: UIButton!
+    @IBOutlet weak var optionButton: MDCButton!
     @IBOutlet weak var imageViewImage: UIImageView!
     
     override func awakeFromNib() {
@@ -27,6 +41,28 @@ class TableViewCellStartOption: UITableViewCell {
         titleLabel.textColor = textColor
         parentView.backgroundColor = backColor
         imageViewImage.image = image
+        if buttonTitle == "Iniciar diagnóstico" {
+            self.option = .Diagnostic
+        } else if buttonTitle == "Ver algoritmo" {
+            self.option = .Algorithm
+        } else {
+            self.option = .Patients
+        }
     }
+    
+    @IBAction func optionTapped(_ sender: Any) {
+        switch option {
+        case .Diagnostic:
+            delegate?.optionSelected(option: "diagnostic")
+            break
+        case .Algorithm:
+            delegate?.optionSelected(option: "algorithm")
+            break
+        case .Patients:
+            delegate?.optionSelected(option: "patients")
+            break
+        }
+    }
+    
 
 }
