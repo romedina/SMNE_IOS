@@ -34,6 +34,7 @@ class TableViewCellLogin: UITableViewCell {
     var googleImage = UIImage()
     
     var delegate: LoginCellDelegate?
+    var flags = [false, false]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,19 +64,23 @@ class TableViewCellLogin: UITableViewCell {
         appleLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         appleLoginButton.layer.cornerRadius = 8
         appleLoginButton.setImage(#imageLiteral(resourceName: "apple"), for: .normal)
+        appleLoginButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         
         gmailLoginButton.setBackgroundColor(.white)
         gmailLoginButton.setBorderWidth(1.0, for: .normal)
         gmailLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         gmailLoginButton.layer.cornerRadius = 8
         gmailLoginButton.setImage(#imageLiteral(resourceName: "google"), for: .normal)
+        gmailLoginButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         
         facebookLoginButton.setBackgroundColor(.white)
         facebookLoginButton.setBorderWidth(1.0, for: .normal)
         facebookLoginButton.setBorderColor(.C00D9CC(), for: .normal)
         facebookLoginButton.layer.cornerRadius = 8
         facebookLoginButton.setImage(#imageLiteral(resourceName: "facebook"), for: .normal)
+        facebookLoginButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         
+        validateTextNotEmpty()
     }
     
     @objc func passChangeView() {
@@ -86,7 +91,35 @@ class TableViewCellLogin: UITableViewCell {
             rightButton.setImage(#imageLiteral(resourceName: "crossEye"), for: .normal)
         }
     }
-
+    
+    @IBAction func emailChanged(_ sender: MDCTextField) {
+        if sender.text != "" && sender.text != nil {
+            flags[0] = true
+        } else {
+            flags[0] = false
+        }
+        validateTextNotEmpty()
+    }
+    
+    @IBAction func passChanged(_ sender: MDCTextField) {
+        if sender.text != "" && sender.text != nil {
+            flags[1] = true
+        } else {
+            flags[1] = false
+        }
+        validateTextNotEmpty()
+    }
+    
+    func validateTextNotEmpty() {
+        if flags[0] && flags[1] {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor?.withAlphaComponent(1.0)
+        } else {
+            loginButton.backgroundColor?.withAlphaComponent(0.61)
+            loginButton.isEnabled = false
+        }
+    }
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         delegate?.loginTapped()
     }
