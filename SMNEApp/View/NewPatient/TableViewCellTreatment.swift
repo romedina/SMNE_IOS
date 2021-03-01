@@ -27,13 +27,6 @@ class TableViewCellTreatment: UITableViewCell {
     @IBOutlet weak var tl7: UILabel!
     @IBOutlet weak var stl7: UILabel!
     
-    @IBOutlet weak var op2: UIView!
-    @IBOutlet weak var op3: UIView!
-    @IBOutlet weak var op4: UIView!
-    @IBOutlet weak var op5: UIView!
-    @IBOutlet weak var op6: UIView!
-    @IBOutlet weak var op7: UIView!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,12 +35,18 @@ class TableViewCellTreatment: UITableViewCell {
     }
     
     func prepareForInit() {
-        op2.isHidden = true
-        op3.isHidden = true
-        op4.isHidden = true
-        op5.isHidden = true
-        op6.isHidden = true
-        op7.isHidden = true
+        tl2.isHidden = true
+        stl2.isHidden = true
+        tl3.isHidden = true
+        stl3.isHidden = true
+        tl4.isHidden = true
+        stl4.isHidden = true
+        tl5.isHidden = true
+        stl5.isHidden = true
+        tl6.isHidden = true
+        stl6.isHidden = true
+        tl7.isHidden = true
+        stl7.isHidden = true
         
     }
     
@@ -55,7 +54,10 @@ class TableViewCellTreatment: UITableViewCell {
         prepareForInit()
         for i in 0..<options.treatments.count {
             print("i: \(i)")
-            print(options.treatments[i])
+            let title = options.treatments[i].title
+            let subTitle = options.treatments[i].subtitle
+            print("\(title): \(subTitle)")
+            
             switch i {
             case 0:
                 titleLabel.text = options.treatments[i].title
@@ -63,63 +65,93 @@ class TableViewCellTreatment: UITableViewCell {
                 break
             case 1:
                 if options.treatments[i].title != "" {
-                    op2.isHidden = false
+                    tl2.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl2.isHidden = false
+                    } else {
+                        stl2.isHidden = true
+                    }
                 } else {
-                    op2.isHidden = true
+                    tl2.isHidden = true
                     break
                 }
-                tl2.text = options.treatments[i].title
-                stl2.text = options.treatments[i].subtitle
+                tl2.text = title
+                stl2.text = subTitle
                 break
             case 2:
                 if options.treatments[i].title != "" {
-                    op3.isHidden = false
+                    tl3.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl3.isHidden = false
+                    } else {
+                        stl3.isHidden = true
+                    }
                 } else {
-                    op3.isHidden = true
+                    tl3.isHidden = true
                     break
                 }
-                tl3.text = options.treatments[i].title
-                stl3.text = options.treatments[i].subtitle
+                tl3.text = title
+                stl3.text = subTitle
                 break
             case 3:
                 if options.treatments[i].title != "" {
-                    op4.isHidden = false
+                    tl4.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl4.isHidden = false
+                    } else {
+                        stl4.isHidden = true
+                    }
                 } else {
-                    op4.isHidden = true
+                    tl4.isHidden = true
                     break
                 }
-                tl4.text = options.treatments[i].title
-                stl4.text = options.treatments[i].subtitle
+                tl4.text = title
+                stl4.text = subTitle
                 break
             case 4:
                 if options.treatments[i].title != "" {
-                    op5.isHidden = false
+                    tl5.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl5.isHidden = false
+                    } else {
+                        stl5.isHidden = true
+                    }
                 } else {
-                    op5.isHidden = true
+                    tl5.isHidden = true
                     break
                 }
-                tl5.text = options.treatments[i].title
-                stl5.text = options.treatments[i].subtitle
+                tl5.text = title
+                stl5.text = subTitle
                 break
             case 5:
                 if options.treatments[i].title != "" {
-                    op6.isHidden = false
+                    tl6.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl6.isHidden = false
+                    } else {
+                        stl6.isHidden = true
+                    }
                 } else {
-                    op6.isHidden = true
+                    tl6.isHidden = true
                     break
                 }
                 tl6.text = options.treatments[i].title
-                stl6.text = options.treatments[i].subtitle
+                stl6.text = subTitle
                 break
             case 6:
                 if options.treatments[i].title != "" {
-                    op7.isHidden = false
+                    tl7.isHidden = false
+                    if options.treatments[i].subtitle != "" {
+                        stl7.isHidden = false
+                    } else {
+                        stl7.isHidden = true
+                    }
                 } else {
-                    op7.isHidden = true
+                    tl7.isHidden = true
                     break
                 }
-                tl7.text = options.treatments[i].title
-                stl7.text = options.treatments[i].subtitle
+                tl7.text = title
+                stl7.text = subTitle
                 break
             default:
                 break

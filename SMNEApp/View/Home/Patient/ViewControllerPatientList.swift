@@ -23,6 +23,7 @@ class ViewControllerPatientList: UIViewController {
         
         searchPatientInput.backgroundColor = .clear
         searchPatientInput.borderStyle = .none
+        searchPatientInput.textColor = .C052D6C()
         
         tableViewList.delegate = self
         tableViewList.dataSource = self
