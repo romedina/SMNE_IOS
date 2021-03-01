@@ -1744,22 +1744,16 @@
                                                     <rect key="frame" x="18" y="327.5" width="302" height="0.0"/>
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brE-rJ-oHL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="126"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2x-IX-vsM">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="52"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="klt-Pv-VbK"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-NC-MyU">
-                                                                    <rect key="frame" x="10" y="72" width="0.0" height="44"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="aX3-aL-Xw7"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1767,7 +1761,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="C7M-NC-MyU" firstAttribute="top" secondItem="D2x-IX-vsM" secondAttribute="bottom" constant="10" id="8Sf-ZY-LKD"/>
+                                                                <constraint firstItem="C7M-NC-MyU" firstAttribute="top" secondItem="D2x-IX-vsM" secondAttribute="bottom" id="8Sf-ZY-LKD"/>
                                                                 <constraint firstAttribute="bottom" secondItem="C7M-NC-MyU" secondAttribute="bottom" constant="10" id="CZU-ot-J7Y"/>
                                                                 <constraint firstItem="D2x-IX-vsM" firstAttribute="leading" secondItem="brE-rJ-oHL" secondAttribute="leading" id="Hfu-co-VwS"/>
                                                                 <constraint firstItem="D2x-IX-vsM" firstAttribute="top" secondItem="brE-rJ-oHL" secondAttribute="top" constant="10" id="fDa-CP-AZR"/>
@@ -1777,23 +1771,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view hidden="YES" contentMode="scaleToFill" id="wTJ-En-jgg">
-                                                            <rect key="frame" x="0.0" y="126" width="0.0" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-TB-mYE">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="26"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="U20-TW-Zlp"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-JP-tQ2">
-                                                                    <rect key="frame" x="10" y="-32" width="0.0" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="c2r-rz-Yfw"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="-10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1807,28 +1794,21 @@
                                                                 <constraint firstItem="9nq-TB-mYE" firstAttribute="leading" secondItem="wTJ-En-jgg" secondAttribute="leading" id="I1g-cc-mq9"/>
                                                                 <constraint firstItem="9nq-TB-mYE" firstAttribute="top" secondItem="wTJ-En-jgg" secondAttribute="top" constant="10" id="MaI-43-tbU"/>
                                                                 <constraint firstAttribute="trailing" secondItem="9nq-TB-mYE" secondAttribute="trailing" id="Sh2-zc-8uM"/>
-                                                                <constraint firstItem="Mub-JP-tQ2" firstAttribute="top" secondItem="9nq-TB-mYE" secondAttribute="bottom" constant="10" id="Xqs-ii-7qp"/>
+                                                                <constraint firstItem="Mub-JP-tQ2" firstAttribute="top" secondItem="9nq-TB-mYE" secondAttribute="bottom" id="Xqs-ii-7qp"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Mub-JP-tQ2" secondAttribute="bottom" constant="10" id="Yfu-0h-daZ"/>
                                                             </constraints>
                                                         </view>
                                                         <view hidden="YES" contentMode="scaleToFill" id="7Ma-kb-yOt">
-                                                            <rect key="frame" x="0.0" y="126" width="0.0" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-TE-TvI">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="26"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="PcA-Zg-XQh"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJz-kX-GAY">
-                                                                    <rect key="frame" x="10" y="-32" width="0.0" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="ZbT-5V-cJ3"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="-10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1838,7 +1818,7 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="2KY-TE-TvI" firstAttribute="leading" secondItem="7Ma-kb-yOt" secondAttribute="leading" id="7VA-Yj-pfI"/>
-                                                                <constraint firstItem="NJz-kX-GAY" firstAttribute="top" secondItem="2KY-TE-TvI" secondAttribute="bottom" constant="10" id="9Ve-Xt-FV2"/>
+                                                                <constraint firstItem="NJz-kX-GAY" firstAttribute="top" secondItem="2KY-TE-TvI" secondAttribute="bottom" id="9Ve-Xt-FV2"/>
                                                                 <constraint firstItem="2KY-TE-TvI" firstAttribute="top" secondItem="7Ma-kb-yOt" secondAttribute="top" constant="10" id="gRP-qt-aUE"/>
                                                                 <constraint firstItem="NJz-kX-GAY" firstAttribute="leading" secondItem="7Ma-kb-yOt" secondAttribute="leading" constant="10" id="lB1-oS-SET"/>
                                                                 <constraint firstAttribute="trailing" secondItem="NJz-kX-GAY" secondAttribute="trailing" constant="10" id="m5j-vu-EgT"/>
@@ -1847,23 +1827,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view hidden="YES" contentMode="scaleToFill" id="OU2-k3-gNL">
-                                                            <rect key="frame" x="0.0" y="126" width="0.0" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-6j-VAo">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="26"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="RXY-So-tx0"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-dn-wkr">
-                                                                    <rect key="frame" x="10" y="-32" width="0.0" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="TzU-nA-61T"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="-10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1872,7 +1845,7 @@
                                                             <viewLayoutGuide key="safeArea" id="2uc-hm-qyE"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="wLR-dn-wkr" firstAttribute="top" secondItem="8Ab-6j-VAo" secondAttribute="bottom" constant="10" id="1en-GL-Ex3"/>
+                                                                <constraint firstItem="wLR-dn-wkr" firstAttribute="top" secondItem="8Ab-6j-VAo" secondAttribute="bottom" id="1en-GL-Ex3"/>
                                                                 <constraint firstAttribute="trailing" secondItem="wLR-dn-wkr" secondAttribute="trailing" constant="10" id="3zL-EF-QQ0"/>
                                                                 <constraint firstItem="8Ab-6j-VAo" firstAttribute="leading" secondItem="OU2-k3-gNL" secondAttribute="leading" id="6JN-Hd-Q87"/>
                                                                 <constraint firstItem="wLR-dn-wkr" firstAttribute="leading" secondItem="OU2-k3-gNL" secondAttribute="leading" constant="10" id="8HL-vA-fPw"/>
@@ -1882,23 +1855,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view hidden="YES" contentMode="scaleToFill" id="tZt-ca-1V8">
-                                                            <rect key="frame" x="0.0" y="126" width="0.0" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-8M-Tou">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="26"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="uHF-Zp-LuB"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-DZ-P4Y">
-                                                                    <rect key="frame" x="10" y="-32" width="0.0" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="cjm-Vv-xcg"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="-10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1908,7 +1874,7 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="YeY-DZ-P4Y" firstAttribute="leading" secondItem="tZt-ca-1V8" secondAttribute="leading" constant="10" id="FAg-F7-cmM"/>
-                                                                <constraint firstItem="YeY-DZ-P4Y" firstAttribute="top" secondItem="vS5-8M-Tou" secondAttribute="bottom" constant="10" id="R7q-hf-DZa"/>
+                                                                <constraint firstItem="YeY-DZ-P4Y" firstAttribute="top" secondItem="vS5-8M-Tou" secondAttribute="bottom" id="R7q-hf-DZa"/>
                                                                 <constraint firstItem="vS5-8M-Tou" firstAttribute="top" secondItem="tZt-ca-1V8" secondAttribute="top" constant="10" id="Tuh-pp-S2N"/>
                                                                 <constraint firstItem="vS5-8M-Tou" firstAttribute="leading" secondItem="tZt-ca-1V8" secondAttribute="leading" id="UAT-oc-u9N"/>
                                                                 <constraint firstAttribute="bottom" secondItem="YeY-DZ-P4Y" secondAttribute="bottom" constant="10" id="jzT-2I-pdi"/>
@@ -1917,23 +1883,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view hidden="YES" contentMode="scaleToFill" id="dXq-Mv-zKX">
-                                                            <rect key="frame" x="0.0" y="126" width="0.0" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65q-3N-oGH">
-                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="26"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="52" id="xif-EQ-t4n"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2d-Kz-3rx">
-                                                                    <rect key="frame" x="10" y="-32" width="0.0" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="44" id="lfJ-HQ-ABe"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="10" y="-10" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1944,7 +1903,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="H2d-Kz-3rx" secondAttribute="bottom" constant="10" id="Dcs-CW-hBN"/>
                                                                 <constraint firstAttribute="trailing" secondItem="65q-3N-oGH" secondAttribute="trailing" id="GJY-Xa-Mwb"/>
-                                                                <constraint firstItem="H2d-Kz-3rx" firstAttribute="top" secondItem="65q-3N-oGH" secondAttribute="bottom" constant="10" id="O9t-oR-j4B"/>
+                                                                <constraint firstItem="H2d-Kz-3rx" firstAttribute="top" secondItem="65q-3N-oGH" secondAttribute="bottom" id="O9t-oR-j4B"/>
                                                                 <constraint firstItem="H2d-Kz-3rx" firstAttribute="leading" secondItem="dXq-Mv-zKX" secondAttribute="leading" constant="10" id="RfQ-rC-56K"/>
                                                                 <constraint firstItem="65q-3N-oGH" firstAttribute="top" secondItem="dXq-Mv-zKX" secondAttribute="top" constant="10" id="Wqs-93-ck2"/>
                                                                 <constraint firstItem="65q-3N-oGH" firstAttribute="leading" secondItem="dXq-Mv-zKX" secondAttribute="leading" id="kuI-pH-gb3"/>
