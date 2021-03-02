@@ -10,6 +10,12 @@
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74625ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
+		9BCDA6AA25EDE69B00AA423C /* DoctorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6A925EDE69B00AA423C /* DoctorSchema.swift */; };
+		9BCDA6B225EDE7F200AA423C /* PatientSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6B125EDE7F200AA423C /* PatientSchema.swift */; };
+		9BCDA6B725EDE8EB00AA423C /* EvaluationSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6B625EDE8EB00AA423C /* EvaluationSchema.swift */; };
+		9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */; };
+		9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */; };
+		9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */; };
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
 		B304935825DB7FEF0072812C /* TableViewCellOpenOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */; };
@@ -110,6 +116,12 @@
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
+		9BCDA6A925EDE69B00AA423C /* DoctorSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSchema.swift; sourceTree = "<group>"; };
+		9BCDA6B125EDE7F200AA423C /* PatientSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSchema.swift; sourceTree = "<group>"; };
+		9BCDA6B625EDE8EB00AA423C /* EvaluationSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationSchema.swift; sourceTree = "<group>"; };
+		9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationSchema.swift; sourceTree = "<group>"; };
+		9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaEnum.swift; sourceTree = "<group>"; };
+		9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenOpen.swift; sourceTree = "<group>"; };
 		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
@@ -255,6 +267,18 @@
 			path = "Patient profile";
 			sourceTree = "<group>";
 		};
+		9BCDA6A825EDE61C00AA423C /* FirebaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				9BCDA6A925EDE69B00AA423C /* DoctorSchema.swift */,
+				9BCDA6B125EDE7F200AA423C /* PatientSchema.swift */,
+				9BCDA6B625EDE8EB00AA423C /* EvaluationSchema.swift */,
+				9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */,
+				9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */,
+			);
+			path = FirebaseModels;
+			sourceTree = "<group>";
+		};
 		B30CDB0A25C247E400B7CECF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +299,7 @@
 		B31C97B625BF4690006DDCD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9BCDA6A825EDE61C00AA423C /* FirebaseModels */,
 				B34C459425C0EEC600EBE1BC /* Colors.swift */,
 				B3494A8525C4A7A600ACC4DD /* AlgorithmModels.swift */,
 				B3F8118925D4681F00323534 /* IntroModels.swift */,
@@ -288,8 +313,8 @@
 			children = (
 				B395714C25D1DCCB00E89EB5 /* LogIn */,
 				B356BFC525CDCCEF0025F62A /* Home */,
-				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
 				B31C97F825BF9248006DDCD8 /* NewPatient */,
+				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
 				B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */,
 			);
 			path = View;
@@ -301,6 +326,7 @@
 				B356BFF525CE4D810025F62A /* ViewModelSteps.swift */,
 				B32C1F3F25DF685500D8196A /* ViewModelTreatment.swift */,
 				B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */,
+				9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -779,6 +805,7 @@
 				B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */,
 				B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
+				9BCDA6AA25EDE69B00AA423C /* DoctorSchema.swift in Sources */,
 				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
 				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
 				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
@@ -788,14 +815,17 @@
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
 				B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */,
 				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
+				9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */,
+				9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
 				B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */,
 				B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */,
 				B395716025D2090100E89EB5 /* TableViewCellRegister.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
+				9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
 				B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */,
@@ -805,8 +835,10 @@
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
+				9BCDA6B725EDE8EB00AA423C /* EvaluationSchema.swift in Sources */,
 				B32C1F4025DF685500D8196A /* ViewModelTreatment.swift in Sources */,
 				B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */,
+				9BCDA6B225EDE7F200AA423C /* PatientSchema.swift in Sources */,
 				B32C1F3B25DC2E9200D8196A /* TreatmentModels.swift in Sources */,
 				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
 				B30CDAE525C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift in Sources */,

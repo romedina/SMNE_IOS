@@ -31,6 +31,8 @@ class TableViewCellOpenOpen: UITableViewCell {
         input2Controller?.applyTheme(withScheme: appTheme)
         input2Controller?.textInput?.textColor = .C052D6C()
         
+        
+        
     }
     
     func setInfo(t1: String, t2: String, tr1: String, tr2: String) {

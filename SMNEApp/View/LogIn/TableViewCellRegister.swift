@@ -40,9 +40,11 @@ class TableViewCellRegister: UITableViewCell {
     }
 
     @IBAction func nameChanged(_ sender: UITextField) {
+        
     }
     
     @IBAction func surnameChanged(_ sender: UITextField) {
+        
     }
     
     @IBAction func emailChanged(_ sender: MDCTextField) {
