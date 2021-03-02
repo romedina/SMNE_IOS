@@ -33,7 +33,7 @@ class ViewControllerNPMain: UIViewController {
     
     var index = 0
     
-    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0, renal: false, cardio: false, hipo: false, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
+    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0.0, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
     var map = "00000"
     var algorithmID = ""
     var treatment: [Treatment] = []
@@ -191,7 +191,12 @@ class ViewControllerNPMain: UIViewController {
         if patientInfo.age != 0 && patientInfo.diabetesDate != "" {
             if index < 4 {
                 if index == 1 {
-                    prepareStepThree()
+                    if validationsStep2() {
+                        prepareStepThree()
+                    } else {
+                        print("Llena todo")
+                        return
+                    }
                 }
                 if index == 3 {
                     let prepare5 = ModelViewStep5()
@@ -210,6 +215,13 @@ class ViewControllerNPMain: UIViewController {
             print("Registra todo")
         }
         
+    }
+    
+    func validationsStep2() -> Bool {
+        if patientInfo.IMC != 0.0 && patientInfo.renal != nil && patientInfo.cardio != nil && patientInfo.hipo != nil {
+            return true
+        }
+        return false
     }
     
     @IBAction func returnButtonTapped(_ sender: MDCButton) {
@@ -357,16 +369,16 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             mapAssign(index: 4, flag: patientInfo.IMC >= 30 ? true : false)
             break
         case "renal":
-            patientInfo.renal = info as! Bool
-            mapAssign(index: 0, flag: patientInfo.renal)
+            patientInfo.renal = (info as! Bool)
+            mapAssign(index: 0, flag: patientInfo.renal!)
             break
         case "cardio":
-            patientInfo.cardio = info as! Bool
-            mapAssign(index: 1, flag: patientInfo.cardio)
+            patientInfo.cardio = (info as! Bool)
+            mapAssign(index: 1, flag: patientInfo.cardio!)
             break
         case "hipo":
-            patientInfo.hipo = info as! Bool
-            mapAssign(index: 3, flag: patientInfo.hipo)
+            patientInfo.hipo = (info as! Bool)
+            mapAssign(index: 3, flag: patientInfo.hipo!)
             break
         case "algorithm":
             patientInfo.algorithID = info as! String

@@ -155,9 +155,9 @@ struct PatientInfo {
     var racial: Bool
     var diabetesDate: String
     var IMC: Float
-    var renal: Bool
-    var cardio: Bool
-    var hipo: Bool
+    var renal: Bool?
+    var cardio: Bool?
+    var hipo: Bool?
     var algorithID: String
     var hba1c: Float
     var glucose: Float

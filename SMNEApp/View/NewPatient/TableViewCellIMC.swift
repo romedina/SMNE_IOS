@@ -29,11 +29,16 @@ class TableViewCellIMC: UITableViewCell {
     
     var delegate: CellInfoChangeDelegate?
     
+    var height: Float = 0.0
+    var weight: Float = 0.0
+    var levels: Float = 0.0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         calcButton.setBackgroundColor(.white)
         calcButton.setTitleColor(.white, for: .normal)
+        calcButton.titleLabel?.text = ""
         parentView.layer.borderColor = UIColor.C00D9CC().cgColor
         parentView.layer.cornerRadius = 5.39
         parentView.layer.borderWidth = 1
@@ -72,9 +77,24 @@ class TableViewCellIMC: UITableViewCell {
     }
     
     private func calculateIMC() {
-        
+        delegate?.infoChange(id: "IMC", info: height)
     }
 
+    @IBAction func weightChanged(_ sender: UITextField) {
+        let string = sender.text ?? "0"
+        weight = Float(string) ?? 0.0
+        calculateIMC()
+    }
+    @IBAction func heightChanged(_ sender: UITextField) {
+        let string = sender.text ?? "0"
+        height = Float(string) ?? 0.0
+        calculateIMC()
+    }
+    @IBAction func levelsChanged(_ sender: UITextField) {
+        let string = sender.text ?? "0"
+        levels = Float(string) ?? 0.0
+        calculateIMC()
+    }
     @IBAction func calculateTapped(_ sender: Any) {
         delegate?.infoChange(id: "IMC", info: 0.0)
     }
