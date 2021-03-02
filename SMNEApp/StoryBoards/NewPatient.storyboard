@@ -1001,7 +1001,7 @@
                                                                 <constraint firstAttribute="height" constant="50" id="Vj7-cL-CL2"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -1020,7 +1020,7 @@
                                                                 <constraint firstAttribute="height" constant="50" id="DZm-cd-wps"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -1041,7 +1041,7 @@
                                                 <constraint firstAttribute="height" constant="50" id="GhQ-iG-lWv"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-O1-nf6">
                                             <rect key="frame" x="18" y="264.5" width="378" height="50"/>
