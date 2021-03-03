@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 import GoogleSignIn
 
 class ViewControllerLogin: UIViewController {
@@ -96,13 +97,59 @@ extension ViewControllerLogin:  GIDSignInDelegate {
                     print(err.localizedDescription)
                 }
                 if let result = result {
-                    let user = UserDefaults.standard
-                    user.set(self.email, forKey: "email")
-                    user.set(result.user.displayName, forKey: "name")
-                    user.set(result.user.uid, forKey: "uId")
-                    user.set("google", forKey: "provider")
-                    user.synchronize()
-                    self.performSegue(withIdentifier: "login", sender: self)
+                    
+                    let db = Firestore.firestore()
+                    let docRef = db.collection("doctors").document(result.user.uid)
+                    
+                    docRef.getDocument { (doc, err) in
+                        if doc == nil {
+                            let complete = result.user.displayName?.split(separator: " ")
+                            var name = ""
+                            var lastName = ""
+                            for i in complete! {
+                                if i == complete?.first {
+                                    name = String(i)
+                                } else {
+                                    lastName.append("\(String(i)) ")
+                                }
+                            }
+                            var info: [String: Any] = [:]
+                            info["createdAt"] = Timestamp()
+                            info["name"] = name
+                            info["lastName"] = lastName
+                            info["email"] = result.user.email
+                            info["updatedAt"] = Timestamp()
+                            docRef.setData(info) { (err) in
+                                if let err = err {
+                                    GIDSignIn.sharedInstance()?.signOut()
+                                    print(err.localizedDescription)
+                                } else {
+                                    let user = UserDefaults.standard
+                                    user.set(self.email, forKey: "email")
+                                    user.set(name, forKey: "name")
+                                    user.set(result.user.uid, forKey: "uId")
+                                    user.set(lastName, forKey: "lastName")
+                                    user.synchronize()
+                                    self.performSegue(withIdentifier: "login", sender: self)
+                                }
+                            }
+                        } else {
+                            //doc isnt nil
+                            let user = UserDefaults.standard
+                            if let name = doc?.get("name") as? String {
+                                user.set(name, forKey: "name")
+                            }
+                            if let email = doc?.get("email") as? String {
+                                user.set(email, forKey: "email")
+                            }
+                            if let lastName = doc?.get("lastName") as? String {
+                                user.set(lastName, forKey: "lastName")
+                            }
+                            user.set(result.user.uid, forKey: "uId")
+                            user.synchronize()
+                            self.performSegue(withIdentifier: "login", sender: self)
+                        }
+                    }
                 }
             }
         }

@@ -13,6 +13,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'MaterialComponents'
+pod 'Firebase/Firestore'
 
 
   target 'SMNEAppTests' do
