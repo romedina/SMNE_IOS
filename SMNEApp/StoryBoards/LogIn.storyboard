@@ -115,18 +115,20 @@
                             <constraint firstItem="oOo-ed-HRe" firstAttribute="centerX" secondItem="OzM-uF-emb" secondAttribute="centerX" id="13w-jI-X3M"/>
                             <constraint firstItem="6PN-hd-9Qp" firstAttribute="trailing" secondItem="M9w-Sx-AWA" secondAttribute="trailing" constant="30" id="1yj-Ym-pg7"/>
                             <constraint firstItem="Knf-e2-V6r" firstAttribute="top" secondItem="MaT-NF-TMH" secondAttribute="bottom" constant="20" id="A6g-ge-4IA"/>
-                            <constraint firstItem="pge-Mg-yvg" firstAttribute="top" secondItem="OTM-OI-1Xm" secondAttribute="bottom" constant="120" id="CsP-d0-jMm"/>
+                            <constraint firstItem="pge-Mg-yvg" firstAttribute="top" relation="lessThanOrEqual" secondItem="OTM-OI-1Xm" secondAttribute="bottom" constant="120" id="CsP-d0-jMm"/>
                             <constraint firstItem="6PN-hd-9Qp" firstAttribute="trailing" secondItem="Knf-e2-V6r" secondAttribute="trailing" constant="30" id="DBm-0I-uUZ"/>
                             <constraint firstItem="MaT-NF-TMH" firstAttribute="centerX" secondItem="OzM-uF-emb" secondAttribute="centerX" id="DRj-Pp-hMl"/>
                             <constraint firstItem="Knf-e2-V6r" firstAttribute="centerX" secondItem="OzM-uF-emb" secondAttribute="centerX" id="Dj8-eD-xtU"/>
-                            <constraint firstItem="6PN-hd-9Qp" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="54y-cB-fZE" secondAttribute="bottom" constant="81" id="Ee1-Ql-WW6"/>
+                            <constraint firstItem="6PN-hd-9Qp" firstAttribute="bottom" secondItem="54y-cB-fZE" secondAttribute="bottom" constant="81" id="Ee1-Ql-WW6"/>
                             <constraint firstItem="i0Z-0p-gTF" firstAttribute="top" secondItem="6PN-hd-9Qp" secondAttribute="top" constant="50" id="Gyw-hC-jua"/>
+                            <constraint firstItem="oOo-ed-HRe" firstAttribute="top" relation="lessThanOrEqual" secondItem="6PN-hd-9Qp" secondAttribute="top" constant="130" id="QNy-ai-8H1"/>
+                            <constraint firstItem="oOo-ed-HRe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6PN-hd-9Qp" secondAttribute="top" constant="50" id="RQe-AU-5dK"/>
                             <constraint firstItem="54y-cB-fZE" firstAttribute="top" secondItem="pge-Mg-yvg" secondAttribute="bottom" constant="10" id="SVD-5C-gGm"/>
                             <constraint firstItem="MaT-NF-TMH" firstAttribute="leading" secondItem="6PN-hd-9Qp" secondAttribute="leading" constant="30" id="avJ-7H-BSh"/>
                             <constraint firstItem="i0Z-0p-gTF" firstAttribute="leading" secondItem="6PN-hd-9Qp" secondAttribute="leading" constant="30" id="bGT-my-S2J"/>
+                            <constraint firstItem="pge-Mg-yvg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OTM-OI-1Xm" secondAttribute="bottom" constant="10" id="c33-cl-2h2"/>
                             <constraint firstItem="MaT-NF-TMH" firstAttribute="top" secondItem="oOo-ed-HRe" secondAttribute="bottom" constant="20" id="cW5-dp-MHm"/>
                             <constraint firstItem="OTM-OI-1Xm" firstAttribute="centerX" secondItem="OzM-uF-emb" secondAttribute="centerX" id="dQa-ch-CGk"/>
-                            <constraint firstItem="oOo-ed-HRe" firstAttribute="top" secondItem="M9w-Sx-AWA" secondAttribute="bottom" constant="30" id="fXn-b1-zCj"/>
                             <constraint firstItem="6PN-hd-9Qp" firstAttribute="trailing" secondItem="MaT-NF-TMH" secondAttribute="trailing" constant="30" id="fkV-Jc-Y4l"/>
                             <constraint firstItem="OTM-OI-1Xm" firstAttribute="top" secondItem="Knf-e2-V6r" secondAttribute="bottom" constant="20" id="gMK-gf-kNU"/>
                             <constraint firstItem="6PN-hd-9Qp" firstAttribute="trailing" secondItem="pge-Mg-yvg" secondAttribute="trailing" constant="30" id="jJn-RK-Xhp"/>
@@ -176,7 +178,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-oW-qNv">
                                 <rect key="frame" x="30" y="806" width="354" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wO-fc-mtO" customClass="MDCButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6wO-fc-mtO" customClass="MDCButton">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                         <state key="normal" title="Aviso de privacidad">
@@ -468,6 +470,9 @@
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O iniciar sesión con" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETn-2A-6jb">
                                                     <rect key="frame" x="143.5" y="529" width="127" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="GJy-pu-dFP"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -610,7 +615,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="odf-Oh-Enx"/>
-        <segue reference="Lx7-T9-nkj"/>
+        <segue reference="qSw-1t-rBj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE" width="157" height="155.5"/>

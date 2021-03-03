@@ -40,7 +40,10 @@ class TableViewCellOpen: UITableViewCell {
     @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
         if titleLabel.text == "Edad" {
             let text = sender.text ?? "0"
-            let x = Int(text)!
+            guard let x = Int(text) else {
+                sender.text = String(text.dropLast())
+                return
+            }
             if x > 999 {
                 sender.text = "999"
             }
