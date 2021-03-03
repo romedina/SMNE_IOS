@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import GoogleSignIn
 
 class ViewControllerMore: UIViewController {
 
@@ -28,9 +30,24 @@ class ViewControllerMore: UIViewController {
     }
     
     @IBAction func closeTapped(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "LogIn", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "initial")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        let user = UserDefaults.standard
+        if let provider = user.string(forKey: "provider") {
+            if provider == "google" {
+                GIDSignIn.sharedInstance()?.signOut()
+            }
+        }
+        do {
+            try Auth.auth().signOut()
+            
+            user.removeObject(forKey: "email")
+            user.removeObject(forKey: "uId")
+            user.removeObject(forKey: "name")
+            let storyBoard = UIStoryboard(name: "LogIn", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "initial")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        } catch {
+            //Se ha producido un error
+        }
     }
 }

@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import FirebaseAuth
+import GoogleSignIn
 
 class ViewControllerLogin: UIViewController {
 
     @IBOutlet weak var tableViewLogin: UITableView!
     @IBOutlet weak var returnButton: UIButton!
+    
+    var email = ""
+    var pass = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,9 @@ class ViewControllerLogin: UIViewController {
         // Do any additional setup after loading the view.
         tableViewLogin.delegate = self
         tableViewLogin.dataSource = self
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.delegate = self
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -44,8 +52,59 @@ extension ViewControllerLogin: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewControllerLogin: LoginCellDelegate {
+    func otherLogin(type: TableViewCellLogin.LoginType) {
+        switch type {
+        case .apple:
+            break
+        case .google:
+            GIDSignIn.sharedInstance()?.signOut()
+            GIDSignIn.sharedInstance()?.signIn()
+            break
+        default:
+            break
+        }
+    }
+    
+    func infoChanged(email: String, pass: String) {
+        self.email = email
+        self.pass = pass
+    }
+    
     func loginTapped() {
-        
-        self.performSegue(withIdentifier: "login", sender: self)
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            }
+            if let result = result {
+                let user = UserDefaults.standard
+                user.set(self.email, forKey: "email")
+                user.set(result.user.displayName, forKey: "name")
+                user.set(result.user.uid, forKey: "uId")
+                user.synchronize()
+                self.performSegue(withIdentifier: "login", sender: self)
+            }
+        }
+    }
+}
+
+extension ViewControllerLogin:  GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error == nil && user != nil {
+            let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (result, err) in
+                if let err = err {
+                    print(err.localizedDescription)
+                }
+                if let result = result {
+                    let user = UserDefaults.standard
+                    user.set(self.email, forKey: "email")
+                    user.set(result.user.displayName, forKey: "name")
+                    user.set(result.user.uid, forKey: "uId")
+                    user.set("google", forKey: "provider")
+                    user.synchronize()
+                    self.performSegue(withIdentifier: "login", sender: self)
+                }
+            }
+        }
     }
 }

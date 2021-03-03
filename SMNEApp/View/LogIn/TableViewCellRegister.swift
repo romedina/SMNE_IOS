@@ -22,6 +22,8 @@ class TableViewCellRegister: UITableViewCell {
     var passController: MDCTextInputControllerOutlined?
     var confController: MDCTextInputControllerOutlined?
     
+    var delegate: RegisterDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,11 +42,15 @@ class TableViewCellRegister: UITableViewCell {
     }
 
     @IBAction func nameChanged(_ sender: UITextField) {
-        
+        if sender.text != nil && sender.text != "" {
+            delegate?.infoChanged(id: "name", data: sender.text!)
+        }
     }
     
     @IBAction func surnameChanged(_ sender: UITextField) {
-        
+        if sender.text != nil && sender.text != "" {
+            delegate?.infoChanged(id: "lastName", data: sender.text!)
+        }
     }
     
     @IBAction func emailChanged(_ sender: MDCTextField) {
@@ -52,12 +58,30 @@ class TableViewCellRegister: UITableViewCell {
             emailController?.setErrorText("Email inválido.", errorAccessibilityValue: nil)
         } else {
             emailController?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.infoChanged(id: "email", data: sender.text!)
         }
     }
     
     @IBAction func passChanged(_ sender: UITextField) {
+        if sender.text != nil && sender.text != "" {
+            if confirmPasswordInput.text != nil && confirmPasswordInput.text != "" {
+                if sender.text == confirmPasswordInput.text {
+                    delegate?.infoChanged(id: "pass", data: sender.text!)
+                }
+            }
+        }
     }
     
     @IBAction func confPassChanged(_ sender: UITextField) {
+        if sender.text != nil && sender.text != "" {
+            if passwordInput.text != nil && passwordInput.text != "" {
+                if sender.text == passwordInput.text {
+                    delegate?.infoChanged(id: "pass", data: sender.text!)
+                    confController?.setErrorText(nil, errorAccessibilityValue: nil)
+                } else {
+                    confController?.setErrorText("No coinciden las contraseñas", errorAccessibilityValue: nil)
+                }
+            }
+        }
     }
 }

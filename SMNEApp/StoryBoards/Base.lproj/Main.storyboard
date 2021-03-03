@@ -506,6 +506,7 @@
                         <outlet property="imageView" destination="FwI-6L-BPN" id="I6n-x0-h3r"/>
                         <outlet property="tableViewOptions" destination="2Oa-gk-uqQ" id="ugt-ib-83W"/>
                         <segue destination="dbb-X0-Eni" kind="presentation" identifier="newPatient" modalPresentationStyle="fullScreen" id="ffa-d0-n8i"/>
+                        <segue destination="37f-FK-KQB" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="aZn-T7-enW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwv-Qx-FH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -678,6 +679,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMd-2K-ORr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1359" y="-623"/>
+        </scene>
+        <!--initial-->
+        <scene sceneID="vEp-9U-Yja">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogIn" referencedIdentifier="initial" id="37f-FK-KQB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hV2-wg-jP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2535" y="652"/>
         </scene>
         <!--Pacientes-->
         <scene sceneID="tne-QT-ifu">
@@ -1364,7 +1373,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3u5-hs-73a"/>
+        <segue reference="ffa-d0-n8i"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE Blanco" width="115.5" height="114.5"/>

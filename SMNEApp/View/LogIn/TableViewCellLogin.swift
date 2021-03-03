@@ -10,6 +10,9 @@ import MaterialComponents
 
 protocol LoginCellDelegate {
     func loginTapped()
+    func infoChanged(email: String, pass: String)
+    func otherLogin(type: TableViewCellLogin.LoginType)
+    
 }
 
 class TableViewCellLogin: UITableViewCell {
@@ -35,6 +38,11 @@ class TableViewCellLogin: UITableViewCell {
     
     var delegate: LoginCellDelegate?
     var flags = [false, false]
+    
+    enum LoginType {
+        case apple
+        case google
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -110,10 +118,18 @@ class TableViewCellLogin: UITableViewCell {
         validateTextNotEmpty()
     }
     
+    @IBAction func appleLogin(_ sender: Any) {
+        delegate?.otherLogin(type: .apple)
+    }
+    @IBAction func googleLogin(_ sender: Any) {
+        delegate?.otherLogin(type: .google)
+    }
+    
     func validateTextNotEmpty() {
         if flags[0] && flags[1] {
             loginButton.isEnabled = true
             loginButton.backgroundColor?.withAlphaComponent(1.0)
+            delegate?.infoChanged(email: emailInput.text!, pass: passwordInput.text!)
         } else {
             loginButton.backgroundColor?.withAlphaComponent(0.61)
             loginButton.isEnabled = false

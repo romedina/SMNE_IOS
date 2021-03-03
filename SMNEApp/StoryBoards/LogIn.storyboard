@@ -190,6 +190,9 @@
                                         <state key="normal" title="Registrar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="Jzd-RK-YiZ" eventType="touchUpInside" id="t2K-gf-6gj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -479,6 +482,9 @@
                                                     <state key="normal" title="Continuar con Apple" image="apple">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="appleLogin:" destination="Q0Z-kn-cdj" eventType="touchUpInside" id="RfY-ob-vDW"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-9m-2oC" customClass="MDCButton">
                                                     <rect key="frame" x="30" y="629" width="354" height="50"/>
@@ -488,6 +494,9 @@
                                                     <state key="normal" title="Continuar con Gmail" image="google">
                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="googleLogin:" destination="Q0Z-kn-cdj" eventType="touchUpInside" id="XhY-es-zfs"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-AM-liw" customClass="MDCButton">
                                                     <rect key="frame" x="30" y="689" width="354" height="50"/>
@@ -601,7 +610,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="odf-Oh-Enx"/>
-        <segue reference="qSw-1t-rBj"/>
+        <segue reference="Lx7-T9-nkj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE" width="157" height="155.5"/>

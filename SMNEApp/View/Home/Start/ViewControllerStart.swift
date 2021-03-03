@@ -25,6 +25,7 @@ class ViewControllerStart: UIViewController {
         imageView.layer.cornerRadius = 20
         tableViewOptions.delegate = self
         tableViewOptions.dataSource = self
+        
     }
 }
 
