@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74625ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
@@ -113,6 +114,7 @@
 		52A3A334AFE4930E3F2EA5E0 /* Pods-SMNEApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.release.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.release.xcconfig"; sourceTree = "<group>"; };
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			children = (
 				B371AE9025E61AA1001377BA /* ViewControllerEditDoctorProfile.swift */,
 				B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */,
+				986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
+				986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */,
 				9BCDA6B725EDE8EB00AA423C /* EvaluationSchema.swift in Sources */,
 				B32C1F4025DF685500D8196A /* ViewModelTreatment.swift in Sources */,
 				B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */,

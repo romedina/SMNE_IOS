@@ -39,9 +39,15 @@ class ViewControllerMore: UIViewController {
         do {
             try Auth.auth().signOut()
             
-            user.removeObject(forKey: "email")
-            user.removeObject(forKey: "uId")
             user.removeObject(forKey: "name")
+            user.removeObject(forKey: "lastName")
+            user.removeObject(forKey: "email")
+            user.removeObject(forKey: "gender")
+            user.removeObject(forKey: "cedula")
+            user.removeObject(forKey: "espe")
+            user.removeObject(forKey: "school")
+            user.removeObject(forKey: "country")
+            user.removeObject(forKey: "uId")
             let storyBoard = UIStoryboard(name: "LogIn", bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: "initial")
             vc.modalPresentationStyle = .fullScreen

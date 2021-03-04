@@ -145,6 +145,22 @@ extension ViewControllerLogin:  GIDSignInDelegate {
                             if let lastName = doc?.get("lastName") as? String {
                                 user.set(lastName, forKey: "lastName")
                             }
+                            if let lastName = doc?.get("country") as? String {
+                                user.set(lastName, forKey: "country")
+                            }
+                            if let lastName = doc?.get("gender") as? String {
+                                user.set(lastName, forKey: "gender")
+                            }
+                            if let lastName = doc?.get("professionalLicense") as? String {
+                                user.set(lastName, forKey: "cedula")
+                            }
+                            if let lastName = doc?.get("specialty") as? String {
+                                user.set(lastName, forKey: "espe")
+                            }
+                            if let lastName = doc?.get("MedicineSchool") as? String {
+                                user.set(lastName, forKey: "school")
+                            }
+                            
                             user.set(result.user.uid, forKey: "uId")
                             user.synchronize()
                             self.performSegue(withIdentifier: "login", sender: self)
