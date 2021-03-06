@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct PatientSchema {
     var age: Int
@@ -17,7 +18,7 @@ struct PatientSchema {
     var gender: GenderEnum
     var height: Double
     var racialAncestry: RacialEnum
-    var updatedAt: Date
+    var updatedAt: Timestamp
     var weight: Double
     var currentEvaluation: Int
     var currentTreatment: TreatmentEnum

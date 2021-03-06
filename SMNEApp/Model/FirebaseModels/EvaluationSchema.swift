@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct EvaluationSchema {
     var age: Int
     var cardiovascularComplications: Bool
     var chronicKidneyDisease: Bool
     var consultationType: ConsultationEnum
-    var createdAt: Date
+    var createdAt: Timestamp
     var creatinineLevels: Double
     var diagnosisYear: Int
     var dose: String

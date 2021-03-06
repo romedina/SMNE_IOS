@@ -7,6 +7,7 @@
 
 import UIKit
 import MaterialComponents.MDCButton
+import FirebaseFirestore
 
 class ViewControllerNPMain: UIViewController {
     
@@ -30,6 +31,10 @@ class ViewControllerNPMain: UIViewController {
     @IBOutlet weak var s5Button: UIButton!
     
     @IBOutlet weak var exitFlowButton: UIButton!
+    
+    var patientShema: PatientSchema?
+    var evaluationSchema: EvaluationSchema?
+    var commentSchema: ObservationSchema?
     
     var index = 0
     
@@ -72,6 +77,14 @@ class ViewControllerNPMain: UIViewController {
         
         initViews()
         initButtons()
+        initSchemas()
+        
+    }
+    
+    func initSchemas() {
+        patientShema = PatientSchema(age: 0, birthDate: nil, consultationType: .privada, country: "México", createdAt: Date(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
+        evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
+        commentSchema = ObservationSchema(createdAt: Timestamp(), content: "")
         
     }
     
@@ -210,6 +223,13 @@ class ViewControllerNPMain: UIViewController {
                 index += 1
                 changeStepperUp()
                 indexChanged()
+            } else if index == 4 {
+                let fireclass = FirebaseViewModel()
+                evaluationSchema?.observations.append(commentSchema!)
+                patientShema?.evaluations.append(evaluationSchema!)
+                let dict = fireclass.createDictionary(patientInfo: patientShema!)
+                fireclass.setPatient(info: dict)
+                
             }
         } else {
             print("Registra todo")
@@ -348,52 +368,81 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         //S1
         case "type":
             patientInfo.type = info as! String
+            evaluationSchema?.consultationType = ConsultationEnum(rawValue: info as! String)!
             break
         case "age":
             patientInfo.age = Int(info as! String) ?? 0
             mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
+            patientShema?.age = Int(info as! String) ?? 0
+            evaluationSchema?.age = Int(info as! String) ?? 0
             break
         case "gender":
             patientInfo.gender = info as! String
+            if info as! String == "fem" {
+                patientShema?.gender = .fem
+                evaluationSchema?.gender = .fem
+            } else {
+                patientShema?.gender = .mas
+                evaluationSchema?.gender = .mas
+            }
             break
         case "racial":
             let racial =  info as! String == "Afroamericano" ? true : false
             patientInfo.racial = racial
+            if info as! String == "Afroamericano" {
+                patientShema?.racialAncestry = .Afroamericano
+                evaluationSchema?.racialAncestry = .Afroamericano
+            } else {
+                patientShema?.racialAncestry = .No
+                evaluationSchema?.racialAncestry = .No
+            }
+            
             break
         case "diabetes":
             patientInfo.diabetesDate = info as! String
+            patientShema?.diagnosisYear = Int(info as! String)!
+            evaluationSchema?.diagnosisYear = Int(info as! String)!
             break
         //S2
         case "IMC":
             patientInfo.IMC = info as! Float
+            evaluationSchema?.imc = Double(info as! Float)
             mapAssign(index: 4, flag: patientInfo.IMC >= 30 ? true : false)
             break
         case "renal":
             patientInfo.renal = (info as! Bool)
+            evaluationSchema?.chronicKidneyDisease = info as! Bool
             mapAssign(index: 0, flag: patientInfo.renal!)
             break
         case "cardio":
             patientInfo.cardio = (info as! Bool)
+            evaluationSchema?.cardiovascularComplications = info as! Bool
             mapAssign(index: 1, flag: patientInfo.cardio!)
             break
         case "hipo":
             patientInfo.hipo = (info as! Bool)
+            evaluationSchema?.hypoglycemia = info as! Bool
             mapAssign(index: 3, flag: patientInfo.hipo!)
             break
         case "algorithm":
             patientInfo.algorithID = info as! String
+            patientShema?.currentTreatment = TreatmentEnum(rawValue: info as! String)!
+            evaluationSchema?.treatment = TreatmentEnum(rawValue: info as! String)!
             break
         case "hba1c":
             patientInfo.hba1c = info as! Float
             break
         case "glucose":
             patientInfo.glucose = info as! Float
+            evaluationSchema?.fastingGlucose = Double(info as! Float)
             break
         case "filter":
             patientInfo.filterCup = info as! String
+            evaluationSchema?.estimatedGlomerularFiltrationRate = FiltrationEnum(rawValue: info as! String)!
             break
         case "comment":
             patientInfo.comment = info as! String
+            commentSchema?.content = info as! String
             break
         default:
             break

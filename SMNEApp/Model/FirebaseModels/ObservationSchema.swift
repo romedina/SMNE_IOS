@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct ObservationSchema {
-    var createdAt: Date
+    var createdAt: Timestamp
     var content: String
 }

@@ -12,6 +12,7 @@ class TableViewCellTreatment: UITableViewCell {
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var parentShadowView: UIView!
     
     
     @IBOutlet weak var tl2: UILabel!
@@ -32,6 +33,7 @@ class TableViewCellTreatment: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         parentView.layer.cornerRadius = 10
+        parentShadowView.layer.cornerRadius = 10
     }
     
     func prepareForInit() {
