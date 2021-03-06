@@ -241,6 +241,18 @@
                                     <constraint firstItem="FwI-6L-BPN" firstAttribute="top" secondItem="SZU-OK-jcs" secondAttribute="top" constant="50" id="wkV-wA-y0U"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-6N-h6P">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1EK-do-cq7"/>
+                                    <constraint firstAttribute="height" constant="100" id="QoC-8g-7r3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="X0O-vy-Lpf" eventType="touchUpInside" id="msk-6d-tg1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="INJ-9u-jBj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,6 +261,8 @@
                             <constraint firstItem="INJ-9u-jBj" firstAttribute="bottom" secondItem="2Oa-gk-uqQ" secondAttribute="bottom" id="CyE-57-pdo"/>
                             <constraint firstItem="INJ-9u-jBj" firstAttribute="trailing" secondItem="2Oa-gk-uqQ" secondAttribute="trailing" id="JQ5-Z2-8YS"/>
                             <constraint firstItem="INJ-9u-jBj" firstAttribute="trailing" secondItem="SZU-OK-jcs" secondAttribute="trailing" id="Kql-vW-Glp"/>
+                            <constraint firstItem="n5f-6N-h6P" firstAttribute="centerY" secondItem="MVs-pk-X2a" secondAttribute="centerY" id="plX-lh-FH3"/>
+                            <constraint firstItem="n5f-6N-h6P" firstAttribute="centerX" secondItem="MVs-pk-X2a" secondAttribute="centerX" id="tZ2-am-ycD"/>
                             <constraint firstItem="SZU-OK-jcs" firstAttribute="top" secondItem="INJ-9u-jBj" secondAttribute="top" id="uqO-Ea-rhH"/>
                             <constraint firstItem="SZU-OK-jcs" firstAttribute="leading" secondItem="INJ-9u-jBj" secondAttribute="leading" id="xUG-9J-3tJ"/>
                             <constraint firstItem="2Oa-gk-uqQ" firstAttribute="top" secondItem="SZU-OK-jcs" secondAttribute="bottom" id="zEy-Vl-Co1"/>
@@ -415,7 +429,7 @@
         <!--View Controller Tab Bar-->
         <scene sceneID="CD8-AM-E8g">
             <objects>
-                <tabBarController id="FQU-iH-Xsj" customClass="ViewControllerTabBar" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="init" id="FQU-iH-Xsj" customClass="ViewControllerTabBar" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9IV-Re-hs2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -938,13 +952,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pacientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xun-w7-JEf">
-                                        <rect key="frame" x="158.5" y="56" width="97" height="26"/>
+                                        <rect key="frame" x="154" y="52" width="106.5" height="30"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBu-hy-y4O">
-                                        <rect key="frame" x="10" y="54.5" width="29" height="29"/>
+                                        <rect key="frame" x="10" y="52.5" width="29" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="29" id="bM9-Sn-saP"/>
                                             <constraint firstAttribute="height" constant="29" id="weS-Mp-z2S"/>
@@ -987,13 +1001,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id del paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnG-KR-86W">
-                                        <rect key="frame" x="105" y="27.5" width="182" height="14"/>
+                                        <rect key="frame" x="105" y="27.5" width="182" height="16.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QZWS212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-kI-uza">
-                                        <rect key="frame" x="105" y="50" width="182" height="23.5"/>
+                                        <rect key="frame" x="105" y="46" width="182" height="27.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1406,6 +1420,9 @@
         <image name="phone" width="122" height="221.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -27,6 +27,12 @@ class ViewControllerStart: UIViewController {
         tableViewOptions.dataSource = self
         
     }
+    @IBAction func buttonTapped(_ sender: Any) {
+        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true, completion: nil)
+    }
 }
 
 extension ViewControllerStart: UITableViewDelegate, UITableViewDataSource {

@@ -349,6 +349,7 @@ PODS:
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
   - leveldb-library (1.22)
+  - lottie-ios (3.2.1)
   - MaterialComponents (120.0.0):
     - MaterialComponents/ActionSheet (= 120.0.0)
     - "MaterialComponents/ActionSheet+Theming (= 120.0.0)"
@@ -1003,6 +1004,7 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Firebase/Firestore
   - GoogleSignIn
+  - lottie-ios
   - MaterialComponents
 
 SPEC REPOS:
@@ -1027,6 +1029,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - leveldb-library
+    - lottie-ios
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -1056,6 +1059,7 @@ SPEC CHECKSUMS:
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   MaterialComponents: 1f521dc333679daf0a397fe9dafe1e26ae13da78
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
@@ -1064,6 +1068,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 317890b1523e63c526c78f76a9d6d2cde4a89317
+PODFILE CHECKSUM: 22307c59e6ea03628650a56cee7aa2833ba30902
 
 COCOAPODS: 1.10.1

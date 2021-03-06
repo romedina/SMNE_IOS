@@ -14,6 +14,7 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'MaterialComponents'
 pod 'Firebase/Firestore'
+pod 'lottie-ios'
 
 
   target 'SMNEAppTests' do

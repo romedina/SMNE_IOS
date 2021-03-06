@@ -72,17 +72,23 @@ extension ViewControllerLogin: LoginCellDelegate {
     }
     
     func loginTapped() {
-        Auth.auth().signIn(withEmail: email, password: pass) { (result, err) in
-            if let err = err {
-                print(err.localizedDescription)
-            }
-            if let result = result {
-                let user = UserDefaults.standard
-                user.set(self.email, forKey: "email")
-                user.set(result.user.displayName, forKey: "name")
-                user.set(result.user.uid, forKey: "uId")
-                user.synchronize()
-                self.performSegue(withIdentifier: "login", sender: self)
+        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        let delegate: EndPillAnimationProtocol = nextVC
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true) {
+            Auth.auth().signIn(withEmail: self.email, password: self.pass) { (result, err) in
+                if let err = err {
+                    print(err.localizedDescription)
+                }
+                if let result = result {
+                    let user = UserDefaults.standard
+                    user.set(self.email, forKey: "email")
+                    user.set(result.user.displayName, forKey: "name")
+                    user.set(result.user.uid, forKey: "uId")
+                    user.synchronize()
+                    delegate.endAnimation()
+                }
             }
         }
     }
@@ -90,84 +96,91 @@ extension ViewControllerLogin: LoginCellDelegate {
 
 extension ViewControllerLogin:  GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if error == nil && user != nil {
-            let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
-            Auth.auth().signIn(with: credential) { (result, err) in
-                if let err = err {
-                    print(err.localizedDescription)
-                }
-                if let result = result {
-                    
-                    let db = Firestore.firestore()
-                    let docRef = db.collection("doctors").document(result.user.uid)
-                    
-                    docRef.getDocument { (doc, err) in
-                        if doc == nil {
-                            let complete = result.user.displayName?.split(separator: " ")
-                            var name = ""
-                            var lastName = ""
-                            for i in complete! {
-                                if i == complete?.first {
-                                    name = String(i)
-                                } else {
-                                    lastName.append("\(String(i)) ")
+        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        let delegate: EndPillAnimationProtocol = nextVC
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true) {
+            if error == nil && user != nil {
+                let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
+                Auth.auth().signIn(with: credential) { (result, err) in
+                    if let err = err {
+                        print(err.localizedDescription)
+                    }
+                    if let result = result {
+                        
+                        let db = Firestore.firestore()
+                        let docRef = db.collection("doctors").document(result.user.uid)
+                        
+                        docRef.getDocument { (doc, err) in
+                            if doc == nil {
+                                let complete = result.user.displayName?.split(separator: " ")
+                                var name = ""
+                                var lastName = ""
+                                for i in complete! {
+                                    if i == complete?.first {
+                                        name = String(i)
+                                    } else {
+                                        lastName.append("\(String(i)) ")
+                                    }
                                 }
-                            }
-                            var info: [String: Any] = [:]
-                            info["createdAt"] = Timestamp()
-                            info["name"] = name
-                            info["lastName"] = lastName
-                            info["email"] = result.user.email
-                            info["updatedAt"] = Timestamp()
-                            docRef.setData(info) { (err) in
-                                if let err = err {
-                                    GIDSignIn.sharedInstance()?.signOut()
-                                    print(err.localizedDescription)
-                                } else {
-                                    let user = UserDefaults.standard
-                                    user.set(self.email, forKey: "email")
+                                var info: [String: Any] = [:]
+                                info["createdAt"] = Timestamp()
+                                info["name"] = name
+                                info["lastName"] = lastName
+                                info["email"] = result.user.email
+                                info["updatedAt"] = Timestamp()
+                                docRef.setData(info) { (err) in
+                                    if let err = err {
+                                        GIDSignIn.sharedInstance()?.signOut()
+                                        print(err.localizedDescription)
+                                    } else {
+                                        let user = UserDefaults.standard
+                                        user.set(self.email, forKey: "email")
+                                        user.set(name, forKey: "name")
+                                        user.set(result.user.uid, forKey: "uId")
+                                        user.set(lastName, forKey: "lastName")
+                                        user.synchronize()
+                                        delegate.endAnimation()
+                                    }
+                                }
+                            } else {
+                                //doc isnt nil
+                                let user = UserDefaults.standard
+                                if let name = doc?.get("name") as? String {
                                     user.set(name, forKey: "name")
-                                    user.set(result.user.uid, forKey: "uId")
-                                    user.set(lastName, forKey: "lastName")
-                                    user.synchronize()
-                                    self.performSegue(withIdentifier: "login", sender: self)
                                 }
+                                if let email = doc?.get("email") as? String {
+                                    user.set(email, forKey: "email")
+                                }
+                                if let lastName = doc?.get("lastName") as? String {
+                                    user.set(lastName, forKey: "lastName")
+                                }
+                                if let lastName = doc?.get("country") as? String {
+                                    user.set(lastName, forKey: "country")
+                                }
+                                if let lastName = doc?.get("gender") as? String {
+                                    user.set(lastName, forKey: "gender")
+                                }
+                                if let lastName = doc?.get("professionalLicense") as? String {
+                                    user.set(lastName, forKey: "cedula")
+                                }
+                                if let lastName = doc?.get("specialty") as? String {
+                                    user.set(lastName, forKey: "espe")
+                                }
+                                if let lastName = doc?.get("MedicineSchool") as? String {
+                                    user.set(lastName, forKey: "school")
+                                }
+                                
+                                user.set(result.user.uid, forKey: "uId")
+                                user.synchronize()
+                                delegate.endAnimation()
                             }
-                        } else {
-                            //doc isnt nil
-                            let user = UserDefaults.standard
-                            if let name = doc?.get("name") as? String {
-                                user.set(name, forKey: "name")
-                            }
-                            if let email = doc?.get("email") as? String {
-                                user.set(email, forKey: "email")
-                            }
-                            if let lastName = doc?.get("lastName") as? String {
-                                user.set(lastName, forKey: "lastName")
-                            }
-                            if let lastName = doc?.get("country") as? String {
-                                user.set(lastName, forKey: "country")
-                            }
-                            if let lastName = doc?.get("gender") as? String {
-                                user.set(lastName, forKey: "gender")
-                            }
-                            if let lastName = doc?.get("professionalLicense") as? String {
-                                user.set(lastName, forKey: "cedula")
-                            }
-                            if let lastName = doc?.get("specialty") as? String {
-                                user.set(lastName, forKey: "espe")
-                            }
-                            if let lastName = doc?.get("MedicineSchool") as? String {
-                                user.set(lastName, forKey: "school")
-                            }
-                            
-                            user.set(result.user.uid, forKey: "uId")
-                            user.synchronize()
-                            self.performSegue(withIdentifier: "login", sender: self)
                         }
                     }
                 }
             }
         }
+        
     }
 }
