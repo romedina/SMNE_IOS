@@ -80,6 +80,11 @@ extension ViewControllerLogin: LoginCellDelegate {
             Auth.auth().signIn(withEmail: self.email, password: self.pass) { (result, err) in
                 if let err = err {
                     print(err.localizedDescription)
+                    delegate.endAnimationWith(error: "error", completion: { () in
+                        let warning = UIAlertController(title: "Error al iniciar sesión", message: "Usuario o clave incorrecta", preferredStyle: .alert)
+                        warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                        self.present(warning, animated: true, completion: nil)
+                    })
                 }
                 if let result = result {
                     let user = UserDefaults.standard
