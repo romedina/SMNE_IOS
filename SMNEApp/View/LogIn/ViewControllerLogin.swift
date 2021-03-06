@@ -100,8 +100,8 @@ extension ViewControllerLogin:  GIDSignInDelegate {
         let delegate: EndPillAnimationProtocol = nextVC
         nextVC.modalPresentationStyle = .fullScreen
         
-        self.present(nextVC, animated: true) {
-            if error == nil && user != nil {
+        if error == nil && user != nil {
+            self.present(nextVC, animated: true) {
                 let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
                 Auth.auth().signIn(with: credential) { (result, err) in
                     if let err = err {
@@ -181,6 +181,5 @@ extension ViewControllerLogin:  GIDSignInDelegate {
                 }
             }
         }
-        
     }
 }
