@@ -39,7 +39,6 @@ class FirebaseViewModel {
     }
     
     func createDictionary(patientInfo: PatientSchema) -> [String: Any] {
-        var patient = patientInfo
         var dict: [String: Any] = [:]
         let time = Timestamp()
         dict["age"] = patientInfo.age
@@ -86,5 +85,47 @@ class FirebaseViewModel {
         
         print(dict)
         return dict
+    }
+    
+    func getDoctorDocument(uId: String, completion: @escaping () -> Void) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("doctors").document(uId)
+        
+        docRef.getDocument { (doc, err) in
+            if doc == nil {
+                print("Esto no debió de pasar")
+            } else {
+                let user = UserDefaults.standard
+                if let name = doc?.get("name") as? String {
+                    user.set(name, forKey: "name")
+                }
+                if let email = doc?.get("email") as? String {
+                    user.set(email, forKey: "email")
+                }
+                if let lastName = doc?.get("lastName") as? String {
+                    user.set(lastName, forKey: "lastName")
+                }
+                if let lastName = doc?.get("country") as? String {
+                    user.set(lastName, forKey: "country")
+                }
+                if let lastName = doc?.get("gender") as? String {
+                    user.set(lastName, forKey: "gender")
+                }
+                if let lastName = doc?.get("professionalLicense") as? String {
+                    user.set(lastName, forKey: "cedula")
+                }
+                if let lastName = doc?.get("specialty") as? String {
+                    user.set(lastName, forKey: "espe")
+                }
+                if let lastName = doc?.get("MedicineSchool") as? String {
+                    user.set(lastName, forKey: "school")
+                }
+                
+                user.set(uId, forKey: "uId")
+                user.synchronize()
+                
+                completion()
+            }
+        }
     }
 }

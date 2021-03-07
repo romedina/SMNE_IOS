@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */; };
+		9B63C74725F4130E0024182B /* loading--pill.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B63C74625F4130D0024182B /* loading--pill.json */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74625ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
-		9B8071F025F338E100D23519 /* pill.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B8071EF25F338E100D23519 /* pill.json */; };
 		9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */; };
 		9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */; };
 		9B80722E25F3412100D23519 /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B80722D25F3412100D23519 /* coffee.json */; };
@@ -119,10 +119,10 @@
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
+		9B63C74625F4130D0024182B /* loading--pill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading--pill.json"; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
-		9B8071EF25F338E100D23519 /* pill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pill.json; sourceTree = "<group>"; };
 		9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPillAnimation.swift; sourceTree = "<group>"; };
 		9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerPillAnimation.xib; sourceTree = "<group>"; };
 		9B80722D25F3412100D23519 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
@@ -298,8 +298,8 @@
 		9B8071EE25F3386800D23519 /* JSONS */ = {
 			isa = PBXGroup;
 			children = (
+				9B63C74625F4130D0024182B /* loading--pill.json */,
 				9B80722D25F3412100D23519 /* coffee.json */,
-				9B8071EF25F338E100D23519 /* pill.json */,
 			);
 			path = JSONS;
 			sourceTree = "<group>";
@@ -650,6 +650,7 @@
 				B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */,
 				B3DA1A7B25CB5220004C89AC /* Assets.xcassets in Resources */,
 				B30CDB1825C2480700B7CECF /* OpenSans-ExtraBold.ttf in Resources */,
+				9B63C74725F4130E0024182B /* loading--pill.json in Resources */,
 				B30CDB1625C2480700B7CECF /* OpenSans-LightItalic.ttf in Resources */,
 				B30CDB1925C2480700B7CECF /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				B30CDB1525C2480700B7CECF /* OpenSans-Bold.ttf in Resources */,
@@ -658,7 +659,6 @@
 				B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */,
 				B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */,
 				B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */,
-				9B8071F025F338E100D23519 /* pill.json in Resources */,
 				9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */,
 				B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */,
 			);

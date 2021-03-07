@@ -42,6 +42,7 @@ class TableViewCellLogin: UITableViewCell {
     enum LoginType {
         case apple
         case google
+        case facebook
     }
     
     override func awakeFromNib() {

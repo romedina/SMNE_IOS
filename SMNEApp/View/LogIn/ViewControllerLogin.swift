@@ -61,6 +61,8 @@ extension ViewControllerLogin: LoginCellDelegate {
             GIDSignIn.sharedInstance()?.signOut()
             GIDSignIn.sharedInstance()?.signIn()
             break
+        case .facebook:
+            break
         default:
             break
         }
@@ -87,12 +89,10 @@ extension ViewControllerLogin: LoginCellDelegate {
                     })
                 }
                 if let result = result {
-                    let user = UserDefaults.standard
-                    user.set(self.email, forKey: "email")
-                    user.set(result.user.displayName, forKey: "name")
-                    user.set(result.user.uid, forKey: "uId")
-                    user.synchronize()
-                    delegate.endAnimation()
+                    let firebase = FirebaseViewModel()
+                    firebase.getDoctorDocument(uId: result.user.uid) { () in
+                        delegate.endAnimation()
+                    }
                 }
             }
         }
