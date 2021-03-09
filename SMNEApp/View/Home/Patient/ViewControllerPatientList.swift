@@ -7,6 +7,7 @@
 
 import UIKit
 import MaterialComponents
+import Firebase
 
 class ViewControllerPatientList: UIViewController {
     
@@ -14,6 +15,8 @@ class ViewControllerPatientList: UIViewController {
     @IBOutlet weak var newPatientButton: MDCButton!
     
     @IBOutlet weak var searchPatientInput: UITextField!
+    
+    var patientsList: [PatientSchema]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +32,27 @@ class ViewControllerPatientList: UIViewController {
         tableViewList.dataSource = self
         
         searchPatientInput.delegate = self
+        
+        getData()
+    }
+    
+    func getData() {
+        let firebase = FirebaseViewModel()
+        firebase.getPatients { (patients) in
+            self.patientsList = patients
+            self.tableViewList.reloadData()
+        }
+        
     }
 }
 
 extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        if patientsList != nil {
+            return patientsList!.count + 1
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,7 +61,9 @@ extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource 
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "patient", for: indexPath) as! TableViewCellPatientList
-
+            if let info = patientsList?[indexPath.row - 1] {
+                cell.setInfo(info: info)
+            }
             return cell
         }
     }

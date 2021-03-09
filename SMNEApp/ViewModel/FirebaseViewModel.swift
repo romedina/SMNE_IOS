@@ -13,11 +13,15 @@ class FirebaseViewModel {
     
     var db = Firestore.firestore()
     var docRef: DocumentReference?
+    var colRef: CollectionReference?
+    var patientsRef: CollectionReference?
     
     init() {
         let docId = UserDefaults.standard.string(forKey: "uId")
+        colRef = db.collection("doctors")
         if docId != nil {
             docRef = db.collection("doctors").document(docId!)
+            patientsRef = docRef?.collection("patients")
         }
     }
     
@@ -85,6 +89,35 @@ class FirebaseViewModel {
         
         print(dict)
         return dict
+    }
+    
+    func getPatients(handler: @escaping (_ patients: [PatientSchema])->Void){
+        var patients = [PatientSchema]()
+        patientsRef!.getDocuments { (documents, err) in
+            if err == nil && documents != nil {
+                for i in documents!.documents {
+                    let patient = PatientSchema(pId: i.documentID,
+                                                age: i.get("age") as? Int ?? 0,
+                                                birthDate: nil,
+                                                consultationType: ConsultationEnum(rawValue: i.get("consultationType") as? String ?? ConsultationEnum.privada.rawValue)!,
+                                                country: i.get("country") as? String ?? "",
+                                                createdAt: i.get("createdAt") as? Timestamp ?? Timestamp(),
+                                                diagnosisYear: i.get("diagnosisYear") as? Int ?? 0,
+                                                gender: GenderEnum(rawValue: i.get("gender") as? String ?? "") ?? GenderEnum.fem,
+                                                height: i.get("height") as? Double ?? 0.0,
+                                                racialAncestry: RacialEnum(rawValue: i.get("racialAncestry") as? String ?? RacialEnum.No.rawValue)!,
+                                                updatedAt: i.get("updatedAt") as? Timestamp ?? Timestamp(),
+                                                weight: i.get("weight") as? Double ?? 0.0,
+                                                currentEvaluation: i.get("currentEvaluation") as? Int ?? 0,
+                                                currentTreatment: TreatmentEnum(rawValue: i.get("currentTreatment") as? String ?? TreatmentEnum.A.rawValue)!,
+                                                evaluations: []
+                    )
+                    patients.append(patient)
+                }
+                //return info here
+                handler(patients)
+            }
+        }
     }
     
     func getDoctorDocument(uId: String, completion: @escaping () -> Void) {

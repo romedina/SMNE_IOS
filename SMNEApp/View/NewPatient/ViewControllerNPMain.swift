@@ -82,7 +82,7 @@ class ViewControllerNPMain: UIViewController {
     }
     
     func initSchemas() {
-        patientShema = PatientSchema(age: 0, birthDate: nil, consultationType: .privada, country: "México", createdAt: Date(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
+        patientShema = PatientSchema(pId: "", age: 0, birthDate: nil, consultationType: .privada, country: "México", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
         evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
         commentSchema = ObservationSchema(createdAt: Timestamp(), content: "")
         

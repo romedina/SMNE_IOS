@@ -9,11 +9,12 @@ import Foundation
 import FirebaseFirestore
 
 struct PatientSchema {
+    var pId: String
     var age: Int
     var birthDate: Date?
     var consultationType: ConsultationEnum
     var country: String?
-    var createdAt: Date
+    var createdAt: Timestamp
     var diagnosisYear: Int
     var gender: GenderEnum
     var height: Double

@@ -15,6 +15,8 @@ class TableViewCellPatientList: UITableViewCell {
     @IBOutlet weak var patientIdLabel: UILabel!
     @IBOutlet weak var patientInfoLabel: UILabel!
     
+    var patientInfo: PatientSchema?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,6 +30,11 @@ class TableViewCellPatientList: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setInfo(info: PatientSchema) {
+        self.patientInfo = info
+        patientIdLabel.text = info.pId
     }
 
 }
