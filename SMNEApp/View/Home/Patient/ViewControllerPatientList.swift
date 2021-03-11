@@ -42,7 +42,12 @@ class ViewControllerPatientList: UIViewController {
             self.patientsList = patients
             self.tableViewList.reloadData()
         }
-        
+    }
+    
+    @IBAction func newPatientTapped(_ sender: Any) {
+//        let storyBoard = UIStoryboard(name: "NewPatient", bundle: nil)
+//        let nextVC = storyBoard.instantiateViewController(withIdentifier: "init")
+//        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

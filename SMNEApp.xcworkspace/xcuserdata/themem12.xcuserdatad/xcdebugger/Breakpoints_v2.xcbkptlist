@@ -201,8 +201,8 @@
             filePath = "SMNEApp/View/NewPatient/ViewControllerNPMain.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
             landmarkName = "infoChanged(id:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -219,7 +219,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "setPatient(info:)"
+            landmarkName = "setPatient(info:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -235,7 +235,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "setPatient(info:)"
+            landmarkName = "setPatient(info:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,10 +249,10 @@
             filePath = "SMNEApp/View/Animations/ViewControllers/ViewControllerPillAnimation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -265,8 +265,8 @@
             filePath = "SMNEApp/View/LogIn/ViewControllerLogin.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "sign(_:didSignInFor:withError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -297,8 +297,8 @@
             filePath = "SMNEApp/ViewModel/FirebaseViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "getPatients(handler:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -10,6 +10,7 @@ import Lottie
 
 protocol EndPillAnimationProtocol {
     func endAnimation()
+    func endAnimationWith(handler: @escaping ()->Void)
     func endAnimationWith(error: String, completion: @escaping () -> Void)
 }
 
@@ -18,10 +19,17 @@ class ViewControllerPillAnimation: UIViewController {
     
     @IBOutlet weak var animationView: AnimationView!
     var anim: AnimationView?
+    var animationName: String?
+    
+    enum AnimationEnum: String {
+        case loading = "loading"
+        case treatment = "fin__tratamiento"
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        anim = .init(name: "coffee")
+        anim = .init(name: "loading")
         anim?.frame = view.bounds
         anim?.loopMode = .loop
         view.addSubview(anim!)
@@ -33,9 +41,27 @@ class ViewControllerPillAnimation: UIViewController {
             }
         })
     }
+    
+    func setAnim(type: AnimationEnum) {
+        switch type {
+        case .loading:
+            animationName = type.rawValue
+            break
+        case .treatment:
+            animationName = type.rawValue
+            break
+        }
+    }
 }
 
 extension ViewControllerPillAnimation: EndPillAnimationProtocol {
+    func endAnimationWith(handler: @escaping () -> Void) {
+        self.dismiss(animated: true) {
+            self.anim?.stop()
+            handler()
+        }
+    }
+    
     
     func endAnimation() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)

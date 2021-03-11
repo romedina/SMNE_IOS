@@ -75,6 +75,7 @@ extension ViewControllerLogin: LoginCellDelegate {
     
     func loginTapped() {
         let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        nextVC.setAnim(type: .loading)
         let delegate: EndPillAnimationProtocol = nextVC
         nextVC.modalPresentationStyle = .fullScreen
         
@@ -102,6 +103,7 @@ extension ViewControllerLogin: LoginCellDelegate {
 extension ViewControllerLogin:  GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        nextVC.setAnim(type: .loading)
         let delegate: EndPillAnimationProtocol = nextVC
         nextVC.modalPresentationStyle = .fullScreen
         

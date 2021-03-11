@@ -241,7 +241,7 @@
                                     <constraint firstItem="FwI-6L-BPN" firstAttribute="top" secondItem="SZU-OK-jcs" secondAttribute="top" constant="50" id="wkV-wA-y0U"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-6N-h6P">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-6N-h6P">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -290,7 +290,7 @@
                         <viewLayoutGuide key="safeArea" id="bjc-ug-oeJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Consultar" id="aji-I9-tTh"/>
+                    <tabBarItem key="tabBarItem" title="Consultar" image="Consulta" id="aji-I9-tTh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fas-kQ-Cd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,6 +312,7 @@
                                 </state>
                                 <connections>
                                     <action selector="accountTapped:" destination="ZiM-9j-APo" eventType="touchUpInside" id="rar-vM-lVl"/>
+                                    <segue destination="aLE-ok-say" kind="presentation" modalPresentationStyle="fullScreen" id="6By-J6-Xqs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47O-6Q-fIU">
@@ -420,7 +421,7 @@
                             <constraint firstItem="jgd-lM-ZKf" firstAttribute="top" secondItem="Vw9-AR-W8f" secondAttribute="bottom" constant="-26" id="yHT-2k-sbc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Más" id="qqs-2a-cJD"/>
+                    <tabBarItem key="tabBarItem" title="Más" image="mas" id="qqs-2a-cJD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmP-1h-qIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -845,6 +846,7 @@
                                     <constraint firstAttribute="height" constant="95" id="SJx-6Z-i6v"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="newPatientTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0jQ-Zg-zxt"/>
                                     <segue destination="dbb-X0-Eni" kind="presentation" modalPresentationStyle="fullScreen" id="3u5-hs-73a"/>
                                 </connections>
                             </button>
@@ -1407,8 +1409,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ffa-d0-n8i"/>
+        <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Consulta" width="38" height="27"/>
         <image name="Logo SMNE Blanco" width="115.5" height="114.5"/>
         <image name="Paciente" width="31" height="34"/>
         <image name="arrow" width="8.5" height="14.5"/>
@@ -1416,6 +1420,7 @@
         <image name="dr" width="28" height="30.5"/>
         <image name="home" width="30" height="26.5"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mas" width="31" height="17"/>
         <image name="newPatient" width="34.5" height="42.5"/>
         <image name="phone" width="122" height="221.5"/>
         <systemColor name="systemBackgroundColor">

@@ -25,7 +25,7 @@ class FirebaseViewModel {
         }
     }
     
-    func setPatient(info: [String: Any]) -> Bool{
+    func setPatient(info: [String: Any], handler: @escaping ()->Void) -> Bool{
         var flag = false
         if docRef == nil {
             print("Hubo un error al cargar.")
@@ -38,6 +38,7 @@ class FirebaseViewModel {
                 return
             }
             flag = true
+            handler()
         })
         return flag
     }

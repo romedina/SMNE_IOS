@@ -227,9 +227,18 @@ class ViewControllerNPMain: UIViewController {
                 let fireclass = FirebaseViewModel()
                 evaluationSchema?.observations.append(commentSchema!)
                 patientShema?.evaluations.append(evaluationSchema!)
-                let dict = fireclass.createDictionary(patientInfo: patientShema!)
-                fireclass.setPatient(info: dict)
-                
+                let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+                nextVC.setAnim(type: .treatment)
+                let delegate: EndPillAnimationProtocol = nextVC
+                nextVC.modalPresentationStyle = .fullScreen
+                self.present(nextVC, animated: true) {
+                    let dict = fireclass.createDictionary(patientInfo: self.patientShema!)
+                    fireclass.setPatient(info: dict) { () in
+                        delegate.endAnimationWith {
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                }
             }
         } else {
             print("Registra todo")

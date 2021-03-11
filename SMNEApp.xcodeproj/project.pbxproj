@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */; };
-		9B63C74725F4130E0024182B /* loading--pill.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B63C74625F4130D0024182B /* loading--pill.json */; };
+		9B66C0C825F9EA6A0004041E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B66C0C725F9EA6A0004041E /* loading.json */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74625ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
@@ -21,6 +21,7 @@
 		9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */; };
 		9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */; };
 		9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */; };
+		9BE0943525F85FB400E2F90F /* fin__tratamiento.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BE0943425F85FB400E2F90F /* fin__tratamiento.json */; };
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
 		B304935825DB7FEF0072812C /* TableViewCellOpenOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */; };
@@ -119,7 +120,7 @@
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
-		9B63C74625F4130D0024182B /* loading--pill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading--pill.json"; sourceTree = "<group>"; };
+		9B66C0C725F9EA6A0004041E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74525ECC7A800464AF1 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationSchema.swift; sourceTree = "<group>"; };
 		9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaEnum.swift; sourceTree = "<group>"; };
 		9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		9BE0943425F85FB400E2F90F /* fin__tratamiento.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fin__tratamiento.json; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenOpen.swift; sourceTree = "<group>"; };
 		B30CDAE425C1ED3100B7CECF /* TableViewControllerNewPatient_S2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerNewPatient_S2.swift; sourceTree = "<group>"; };
@@ -298,7 +300,8 @@
 		9B8071EE25F3386800D23519 /* JSONS */ = {
 			isa = PBXGroup;
 			children = (
-				9B63C74625F4130D0024182B /* loading--pill.json */,
+				9B66C0C725F9EA6A0004041E /* loading.json */,
+				9BE0943425F85FB400E2F90F /* fin__tratamiento.json */,
 				9B80722D25F3412100D23519 /* coffee.json */,
 			);
 			path = JSONS;
@@ -650,12 +653,13 @@
 				B31C97BA25BF46E8006DDCD8 /* GoogleService-Info.plist in Resources */,
 				B3DA1A7B25CB5220004C89AC /* Assets.xcassets in Resources */,
 				B30CDB1825C2480700B7CECF /* OpenSans-ExtraBold.ttf in Resources */,
-				9B63C74725F4130E0024182B /* loading--pill.json in Resources */,
+				9BE0943525F85FB400E2F90F /* fin__tratamiento.json in Resources */,
 				B30CDB1625C2480700B7CECF /* OpenSans-LightItalic.ttf in Resources */,
 				B30CDB1925C2480700B7CECF /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				B30CDB1525C2480700B7CECF /* OpenSans-Bold.ttf in Resources */,
 				B30CDB1B25C2480700B7CECF /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				B30CDB1725C2480700B7CECF /* OpenSans-SemiBold.ttf in Resources */,
+				9B66C0C825F9EA6A0004041E /* loading.json in Resources */,
 				B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */,
 				B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */,
 				B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */,
