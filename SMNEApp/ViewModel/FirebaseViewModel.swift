@@ -97,6 +97,33 @@ class FirebaseViewModel {
         patientsRef!.getDocuments { (documents, err) in
             if err == nil && documents != nil {
                 for i in documents!.documents {
+                    let data = i.data()
+                    let revs = data["evaluations"] as! [[String: Any]]
+                    
+                    #warning("get observations")
+                    var revitions: [EvaluationSchema] = []
+                    for i in revs {
+                        let rev = EvaluationSchema(age: i["age"] as! Int,
+                                                   cardiovascularComplications: i["cardiovascularComplications"] as! Bool,
+                                                   chronicKidneyDisease: i["chronicKidneyDisease"] as! Bool,
+                                                   consultationType: ConsultationEnum(rawValue: i["consultationType"] as! String)!,
+                                                   createdAt: i["createdAt"] as! Timestamp,
+                                                   creatinineLevels: i["creatinineLevels"] as! Double,
+                                                   diagnosisYear: i["diagnosisYear"] as! Int,
+                                                   dose: "",
+                                                   estimatedGlomerularFiltrationRate: FiltrationEnum(rawValue: i["estimatedGlomerularFiltrationRate"] as! String)!,
+                                                   fastingGlucose: i["fastingGlucose"] as! Double,
+                                                   gender: GenderEnum(rawValue: i["gender"] as! String)!,
+                                                   glycosylatedHemoglobin: i["glycosylatedHemoglobin"] as! Float,
+                                                   height: i["height"] as! Double,
+                                                   hypoglycemia: i["hypoglycemia"] as! Bool,
+                                                   imc: i["imc"] as! Double,
+                                                   racialAncestry: RacialEnum(rawValue: i["racialAncestry"] as! String)!,
+                                                   treatment: TreatmentEnum(rawValue: i["treatment"] as! String)!,
+                                                   weight: i["weight"] as! Double,
+                                                   observations: [])
+                        revitions.append(rev)
+                    }
                     let patient = PatientSchema(pId: i.documentID,
                                                 age: i.get("age") as? Int ?? 0,
                                                 birthDate: nil,
@@ -111,7 +138,7 @@ class FirebaseViewModel {
                                                 weight: i.get("weight") as? Double ?? 0.0,
                                                 currentEvaluation: i.get("currentEvaluation") as? Int ?? 0,
                                                 currentTreatment: TreatmentEnum(rawValue: i.get("currentTreatment") as? String ?? TreatmentEnum.A.rawValue)!,
-                                                evaluations: []
+                                                evaluations: revitions
                     )
                     patients.append(patient)
                 }

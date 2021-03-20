@@ -28,10 +28,7 @@ class ViewControllerStart: UIViewController {
         
     }
     @IBAction func buttonTapped(_ sender: Any) {
-        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
-        nextVC.modalPresentationStyle = .fullScreen
-        
-        self.present(nextVC, animated: true, completion: nil)
+        AlertToast.show(message: "Hola", controller: self, type: .Error)
     }
 }
 

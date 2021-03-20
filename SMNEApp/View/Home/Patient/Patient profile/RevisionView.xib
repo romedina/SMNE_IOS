@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RevisionView" customModule="SMNEApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-eJ-eRw">
+                    <rect key="frame" x="27" y="12" width="32.5" height="16.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrZ-xb-UMQ">
+                    <rect key="frame" x="27" y="31.5" width="23" height="12.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="9"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.29411764709999999" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ReO-BB-sto">
+                    <rect key="frame" x="381.5" y="24" width="8.5" height="14.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-U5-Lfy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                    <connections>
+                        <action selector="revitionTapped:" destination="iN0-l3-epB" eventType="touchDragInside" id="okA-1h-Ws6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ReO-BB-sto" secondAttribute="trailing" constant="24" id="7IT-Qz-3Vb"/>
+                <constraint firstItem="ReO-BB-sto" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BQm-dp-dyu"/>
+                <constraint firstItem="Hyh-eJ-eRw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Git-DQ-h8U"/>
+                <constraint firstItem="3dc-U5-Lfy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Q9t-5s-VCY"/>
+                <constraint firstItem="3dc-U5-Lfy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SY2-pf-P56"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xrZ-xb-UMQ" secondAttribute="bottom" constant="18" id="ctn-8T-pVq"/>
+                <constraint firstItem="3dc-U5-Lfy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="iFP-9R-zYn"/>
+                <constraint firstItem="xrZ-xb-UMQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="iZ4-mV-BBW"/>
+                <constraint firstItem="Hyh-eJ-eRw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="mft-Fj-v3h"/>
+                <constraint firstItem="3dc-U5-Lfy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u7l-7T-SEH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="subLabel" destination="xrZ-xb-UMQ" id="6lJ-Oa-A3L"/>
+                <outlet property="titleLabel" destination="Hyh-eJ-eRw" id="c0X-EV-DKs"/>
+            </connections>
+            <point key="canvasLocation" x="-165.21739130434784" y="83.705357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="8.5" height="14.5"/>
+    </resources>
+</document>

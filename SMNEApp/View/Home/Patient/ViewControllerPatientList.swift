@@ -36,6 +36,10 @@ class ViewControllerPatientList: UIViewController {
         getData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getData()
+    }
+    
     func getData() {
         let firebase = FirebaseViewModel()
         firebase.getPatients { (patients) in
@@ -75,6 +79,7 @@ extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        PatientSelected.shared.patientInfo = patientsList?[indexPath.row - 1]
         self.performSegue(withIdentifier: "patientInfo", sender: self)
     }
 }

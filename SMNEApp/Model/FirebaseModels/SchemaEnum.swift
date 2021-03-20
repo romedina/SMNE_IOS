@@ -8,8 +8,8 @@
 import Foundation
 
 enum RacialEnum: String {
-    case No = "afroAmerican"
-    case Afroamericano = "notAfroAmerican"
+    case No = "notAfroAmerican"
+    case Afroamericano = "afroAmerican"
 }
 
 enum TreatmentEnum: String {

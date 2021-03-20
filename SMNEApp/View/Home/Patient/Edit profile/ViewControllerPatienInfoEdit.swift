@@ -14,15 +14,22 @@ class ViewControllerPatienInfoEdit: UIViewController {
     @IBOutlet weak var patientInfoTable: UITableView!
     @IBOutlet weak var returnButton: MDCButton!
     @IBOutlet weak var saveButton: MDCButton!
+    @IBOutlet weak var iconView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         patientInfoTable.dataSource = self
         patientInfoTable.delegate = self
         returnButton.setBorderColor(.C00D9CC(), for: .normal)
         returnButton.setBorderWidth(1.0, for: .normal)
+        let str = PatientSelected.shared.patientInfo?.pId ?? ""
+        let index = str.index(str.startIndex, offsetBy: 8)
+        let mySubstring = str[..<index] // Hello
+        idPatientLabel.text = "\(String(mySubstring))..."
+        iconView.layer.cornerRadius = 26
     }
     
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -38,7 +45,7 @@ extension ViewControllerPatienInfoEdit: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! TableViewCellPatientEditProfile
-        
+        cell.setInfo()
         return cell
     }
     
