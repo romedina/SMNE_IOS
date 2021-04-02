@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
+		9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B645C012609774400EA401B /* ViewControllerNreRevition.swift */; };
 		9B65B3D326006C1900917AFA /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B65B3D226006C1900917AFA /* Alerts.storyboard */; };
 		9B65B3D826006DDC00917AFA /* ViewControllerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3D726006DDC00917AFA /* ViewControllerAlert.swift */; };
 		9B65B3DD26006DEC00917AFA /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3DC26006DEC00917AFA /* AlertService.swift */; };
@@ -16,6 +17,7 @@
 		9B65B3E72600896100917AFA /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3E62600896100917AFA /* AlertsView.swift */; };
 		9B65B3EC2600925D00917AFA /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3EB2600925D00917AFA /* AlertToast.swift */; };
 		9B66C0C825F9EA6A0004041E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B66C0C725F9EA6A0004041E /* loading.json */; };
+		9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B675901260FB04400C50151 /* TreatmentFromDB.swift */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
 		9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */; };
@@ -132,6 +134,7 @@
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		986016C225F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
+		9B645C012609774400EA401B /* ViewControllerNreRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNreRevition.swift; sourceTree = "<group>"; };
 		9B65B3D226006C1900917AFA /* Alerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		9B65B3D726006DDC00917AFA /* ViewControllerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAlert.swift; sourceTree = "<group>"; };
 		9B65B3DC26006DEC00917AFA /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 		9B65B3E62600896100917AFA /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
 		9B65B3EB2600925D00917AFA /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
 		9B66C0C725F9EA6A0004041E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		9B675901260FB04400C50151 /* TreatmentFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentFromDB.swift; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
 		9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPillAnimation.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				9BCD12F8260479F100B0DBF5 /* RevisionView.xib */,
 				9BCD130026047EA900B0DBF5 /* TableViewCellRevition.swift */,
 				9BCD130526047EBC00B0DBF5 /* TableViewCellNewRevition.swift */,
+				9B645C012609774400EA401B /* ViewControllerNreRevition.swift */,
 			);
 			path = "Patient profile";
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */,
 				9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */,
 				9BCD130A2604847500B0DBF5 /* PatientSelected.swift */,
+				9B675901260FB04400C50151 /* TreatmentFromDB.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -910,6 +916,7 @@
 				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
 				9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
+				9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */,
 				9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */,
@@ -928,6 +935,7 @@
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
+				9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
 				986016C325F0504A00E63A0C /* TableViewControllerEditDoctorProfile.swift in Sources */,

@@ -17,11 +17,12 @@ class ViewControllerPatientProfile: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var tableViewEvaluations: UITableView!
     @IBOutlet weak var iconView: UIView!
+    @IBOutlet weak var pageTitle: UILabel!
     
     var patientId: String?
     
     let patientInfo = PatientSelected.shared.patientInfo
-    var evaluations = PatientSelected.shared.patientInfo?.evaluations.count
+    var evaluations = PatientSelected.shared.patientInfo?.evaluations
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,14 @@ class ViewControllerPatientProfile: UIViewController {
         patientIdLabel.text = "\(String(mySubstring))..."
         iconView.layer.cornerRadius = 23
         profileButton.layer.cornerRadius = 10
+        
+        pageTitle.text = "\(patientInfo?.name ?? "") \(patientInfo?.lastName ?? "")"
+        evaluations?.reverse()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableViewEvaluations.reloadData()
     }
     
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -52,7 +61,7 @@ class ViewControllerPatientProfile: UIViewController {
 
 extension ViewControllerPatientProfile: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (evaluations ?? 1) + 1
+        return (evaluations?.count ?? 1) + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +71,13 @@ extension ViewControllerPatientProfile: UITableViewDelegate, UITableViewDataSour
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "revition") as! TableViewCellRevition
-            
+            if let info = evaluations?[indexPath.row - 1] {
+                if info.dose == evaluations!.first?.dose {
+                    cell.setInfo(info: info, isLAst: true)
+                } else {
+                    cell.setInfo(info: info, isLAst: false)
+                }
+            }
             return cell
         }
     }

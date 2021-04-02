@@ -34,7 +34,8 @@ class TableViewCellPatientList: UITableViewCell {
     
     func setInfo(info: PatientSchema) {
         self.patientInfo = info
-        patientIdLabel.text = info.pId
+        patientIdLabel.text = "\(info.name) \(info.lastName)"
+        patientInfoLabel.text = info.pId        
     }
 
 }

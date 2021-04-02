@@ -136,7 +136,7 @@ struct MultiRadioCell {
     let title: String
 }
 
-let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
+let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), OpenOpenCell(title1: "Nombre", title2: "Apellido Paterno", trailing1: "", trailing2: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
 let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: "", id: "renal"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)", id: "cardio"), BoolCell(title: "Tiene hipoglucemia?", sub: "", id: "hipo")]
 
@@ -148,6 +148,8 @@ var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), S
 
 struct PatientInfo {
     var id: String
+    var name: String
+    var lastName: String
     var date: String
     var type: String
     var age: Int

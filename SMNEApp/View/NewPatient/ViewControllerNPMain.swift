@@ -8,6 +8,7 @@
 import UIKit
 import MaterialComponents.MDCButton
 import FirebaseFirestore
+import Firebase
 
 class ViewControllerNPMain: UIViewController {
     
@@ -35,13 +36,15 @@ class ViewControllerNPMain: UIViewController {
     var patientShema: PatientSchema?
     var evaluationSchema: EvaluationSchema?
     var commentSchema: ObservationSchema?
+    let fireclass = FirebaseViewModel()
     
     var index = 0
     
-    var patientInfo: PatientInfo = PatientInfo(id: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0.0, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
+    var patientInfo: PatientInfo = PatientInfo(id: "",name: "", lastName: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0.0, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
     var map = "00000"
     var algorithmID = ""
     var treatment: [Treatment] = []
+    var treatmentForDB: [TreatmentFromDB] = []
     
     var featherImage = #imageLiteral(resourceName: "feather")
     var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
@@ -62,7 +65,14 @@ class ViewControllerNPMain: UIViewController {
         let dateMX = "\(dateSeparated[1])/\(dateSeparated[0])/\(dateSeparated[2])"
         patientInfo.date = dateMX
         
+        patientInfo.id = PatientSelected.shared.patientInfo?.pId ?? fireclass.patientDoc?.documentID ?? ""
+        
+        initViews()
+        initButtons()
+        initSchemas()
+        
         let S1 = pageViewCotroller.subViewControllers[0] as! TableViewControllerNewPatient_S1
+        S1.patientId = patientInfo.id
         S1.delegate = self
         
         let S2 = pageViewCotroller.subViewControllers[1] as! TableViewControllerNewPatient_S2
@@ -75,17 +85,56 @@ class ViewControllerNPMain: UIViewController {
         let S4 = pageViewCotroller.subViewControllers[3] as! TableViewControllerNewPatient_S4
         S4.delegate = self
         
-        initViews()
-        initButtons()
-        initSchemas()
+        
         
     }
     
     func initSchemas() {
-        patientShema = PatientSchema(pId: "", age: 0, birthDate: nil, consultationType: .privada, country: "México", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
-        evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
+        if PatientSelected.shared.patientInfo != nil {
+            guard let pSInfo = PatientSelected.shared.patientInfo else { return }
+            patientInfo = PatientInfo(id: pSInfo.pId,
+                                      name: pSInfo.name,
+                                      lastName: pSInfo.lastName,
+                                      date: pSInfo.birthDate?.dateToMxnString() ?? "",
+                                      type: pSInfo.consultationType.rawValue,
+                                      age: pSInfo.age,
+                                      gender: pSInfo.gender.rawValue,
+                                      racial: pSInfo.racialAncestry == .Afroamericano ? true:false,
+                                      diabetesDate: "\(pSInfo.diagnosisYear)",
+                                      IMC: Float(pSInfo.evaluations.last!.imc),
+                                      renal: pSInfo.evaluations.last?.chronicKidneyDisease,
+                                      cardio: pSInfo.evaluations.last?.cardiovascularComplications,
+                                      hipo: pSInfo.evaluations.last?.hypoglycemia,
+                                      algorithID: pSInfo.currentTreatment.rawValue,
+                                      hba1c: pSInfo.evaluations.last!.glycosylatedHemoglobin,
+                                      glucose: Float(pSInfo.evaluations.last!.fastingGlucose),
+                                      filterCup: pSInfo.evaluations.last?.estimatedGlomerularFiltrationRate.rawValue ?? FiltrationEnum.na.rawValue,
+                                      comment: "")
+            patientShema = PatientSelected.shared.patientInfo
+            evaluationSchema = EvaluationSchema(age: patientShema!.age,
+                                                cardiovascularComplications: patientShema!.evaluations.last!.cardiovascularComplications,
+                                                chronicKidneyDisease: patientShema!.evaluations.last!.chronicKidneyDisease,
+                                                consultationType: patientShema!.consultationType,
+                                                createdAt: patientShema!.createdAt,
+                                                creatinineLevels: patientShema!.evaluations.last!.creatinineLevels,
+                                                diagnosisYear: patientShema!.diagnosisYear,
+                                                dose: patientShema!.evaluations.last!.dose,
+                                                estimatedGlomerularFiltrationRate: patientShema!.evaluations.last!.estimatedGlomerularFiltrationRate,
+                                                fastingGlucose: patientShema!.evaluations.last!.fastingGlucose,
+                                                gender: patientShema!.gender,
+                                                glycosylatedHemoglobin: patientShema!.evaluations.last!.glycosylatedHemoglobin,
+                                                height: patientShema!.evaluations.last!.height,
+                                                hypoglycemia: patientShema!.evaluations.last!.hypoglycemia,
+                                                imc: patientShema!.evaluations.last!.imc,
+                                                racialAncestry: patientShema!.racialAncestry,
+                                                treatment: patientShema!.currentTreatment,
+                                                weight: patientShema!.evaluations.last!.weight,
+                                                observations: [])
+        } else {
+            patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
+            evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
+        }
         commentSchema = ObservationSchema(createdAt: Timestamp(), content: "")
-        
     }
     
     func initButtons() {
@@ -139,7 +188,7 @@ class ViewControllerNPMain: UIViewController {
             placeHolderButton.isHidden = false
             stepperView.backgroundColor = .C052D6C()
             print(map)
-            print(algorithmsMatch[map])
+            print(algorithmsMatch[map] as Any)
             break
         case 3:
             let info = stepFour[0] as! TitleCell
@@ -213,10 +262,14 @@ class ViewControllerNPMain: UIViewController {
                 }
                 if index == 3 {
                     let prepare5 = ModelViewStep5()
+                    
                     if algorithmID != "C" {
                         self.treatment = prepare5.getOptions(algorithm: patientInfo.algorithID, hba1c: patientInfo.hba1c, glucose: patientInfo.glucose)
+                        self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: patientInfo.algorithID, hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, currentEv: PatientSelected.shared.patientInfo?.currentEvaluation ?? 1, prevDose: PatientSelected.shared.patientInfo?.dose, hypoglycemia: patientInfo.hipo)
+                        
                     } else {
                         self.treatment = prepare5.getOptions(hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, filter: patientInfo.filterCup)
+                        self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, filter: patientInfo.filterCup, currentEv: 0, prevDose: nil)
                     }
                     prepare5.getStep5(options: self.treatment)
                 }
@@ -224,16 +277,16 @@ class ViewControllerNPMain: UIViewController {
                 changeStepperUp()
                 indexChanged()
             } else if index == 4 {
-                let fireclass = FirebaseViewModel()
                 evaluationSchema?.observations.append(commentSchema!)
                 patientShema?.evaluations.append(evaluationSchema!)
                 let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
                 nextVC.setAnim(type: .treatment)
                 let delegate: EndPillAnimationProtocol = nextVC
                 nextVC.modalPresentationStyle = .fullScreen
-                self.present(nextVC, animated: true) {
-                    let dict = fireclass.createDictionary(patientInfo: self.patientShema!)
-                    fireclass.setPatient(info: dict) { () in
+                self.present(nextVC, animated: true) { [self] in
+                    let dose = createDose()
+                    let dict = fireclass.createDictionary(patientInfo: self.patientShema!, dose: dose)
+                    fireclass.setPatient(info: dict, patientId: patientInfo.id) { () in
                         delegate.endAnimationWith {
                             self.dismiss(animated: true, completion: nil)
                         }
@@ -243,6 +296,26 @@ class ViewControllerNPMain: UIViewController {
         } else {
             print("Registra todo")
         }
+        
+    }
+    
+    func createDose() -> String {
+//        guard let currentEv = patientShema?.currentEvaluation else { return "" }
+//        guard let currentTreatment = patientShema?.currentTreatment else { return ""}
+//
+//        let treatmentList = TreatmentsFromDB().treatmentList
+//
+//        for treatmentInDB in treatmentList {
+//            for i in treatmentInDB {
+//                var count = 0
+//                if i.title == self.treatment.first?.title {
+//                    return "T\(currentTreatment)_E\(currentEv)_D\(count)"
+//                }
+//                count += 1
+//            }
+//        }
+        
+        return self.treatmentForDB[0].name
         
     }
     
@@ -409,7 +482,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "diabetes":
             patientInfo.diabetesDate = info as! String
-            patientShema?.diagnosisYear = Int(info as! String)!
+            patientShema?.diagnosisYear = Int(info as! String) ?? 0
             evaluationSchema?.diagnosisYear = Int(info as! String)!
             break
         //S2
@@ -452,6 +525,23 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         case "comment":
             patientInfo.comment = info as! String
             commentSchema?.content = info as! String
+            break
+        case "name":
+            patientInfo.name = info as! String
+            patientShema?.name = info as! String
+            break
+        case "lastName":
+            patientInfo.lastName = info as! String
+            patientShema?.lastName = info as! String
+            break
+        case "weight":
+            evaluationSchema?.weight = Double(info as! Float)
+            break
+        case "height":
+            evaluationSchema?.height = Double(info as! Float)
+            break
+        case "levels":
+            evaluationSchema?.creatinineLevels = Double(info as! Float)
             break
         default:
             break

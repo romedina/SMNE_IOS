@@ -14,7 +14,7 @@ class AlertToast {
         case Warning
     }
     
-    static func show(message: String, controller: UIViewController, type: AlertType) {
+    static func show(message: String, controller: UIViewController, type: AlertType, handler: @escaping () -> Void) {
         var parentBackground = UIColor()
         var parentBorder = UIColor()
         var imageViewBack = UIColor()
@@ -86,22 +86,6 @@ class AlertToast {
         toastLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 12).isActive = true
         toastLabel.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -12).isActive = true
 
-//        let a1 = NSLayoutConstraint(item: toastLabel, attribute: .centerY, relatedBy: .equal, toItem: toastContainer, attribute: .centerY, multiplier: 1, constant: 0)
-//        let a2 = NSLayoutConstraint(item: toastLabel, attribute: .centerX, relatedBy: .equal, toItem: toastContainer, attribute: .centerX, multiplier: 1, constant: 0)
-//        toastContainer.addConstraints([a1, a2])
-//
-//        let d1 = NSLayoutConstraint(item: iconView, attribute: .leading, relatedBy: .equal, toItem: toastContainer, attribute: .leading, multiplier: 1, constant: 12)
-//        let d2 = NSLayoutConstraint(item: iconView, attribute: .top, relatedBy: .equal, toItem: toastContainer, attribute: .top, multiplier: 1, constant: 10)
-//        let d3 = NSLayoutConstraint(item: iconView, attribute: .trailing, relatedBy: .equal, toItem: toastContainer, attribute: .trailing, multiplier: 1, constant: 81)
-//        let d4 = NSLayoutConstraint(item: iconView, attribute: .bottom, relatedBy: .equal, toItem: toastContainer, attribute: .bottom, multiplier: 1, constant: 10)
-//        toastContainer.addConstraints([d1, d2, d3, d4])
-//
-//        let c1 = NSLayoutConstraint(item: toastContainer, attribute: .leading, relatedBy: .equal, toItem: controller.view, attribute: .leading, multiplier: 1, constant: 20)
-//        let c2 = NSLayoutConstraint(item: toastContainer, attribute: .trailing, relatedBy: .equal, toItem: controller.view, attribute: .trailing, multiplier: 1, constant: -20)
-//        let c3 = NSLayoutConstraint(item: toastContainer, attribute: .top, relatedBy: .equal, toItem: controller.view, attribute: .top, multiplier: 1, constant: 50)
-//        let c4 = NSLayoutConstraint(item: toastContainer, attribute: .bottom, relatedBy: .equal, toItem: controller.view, attribute: .top, multiplier: 1, constant: 137)
-//        controller.view.addConstraints([c1, c2, c3, c4])
-
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
             toastContainer.alpha = 1.0
         }, completion: { _ in
@@ -109,6 +93,7 @@ class AlertToast {
                 toastContainer.alpha = 0.0
             }, completion: {_ in
                 toastContainer.removeFromSuperview()
+                handler()
             })
         })
     }

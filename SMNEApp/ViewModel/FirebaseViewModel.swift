@@ -15,6 +15,7 @@ class FirebaseViewModel {
     var docRef: DocumentReference?
     var colRef: CollectionReference?
     var patientsRef: CollectionReference?
+    var patientDoc: DocumentReference?
     
     init() {
         let docId = UserDefaults.standard.string(forKey: "uId")
@@ -22,16 +23,17 @@ class FirebaseViewModel {
         if docId != nil {
             docRef = db.collection("doctors").document(docId!)
             patientsRef = docRef?.collection("patients")
+            patientDoc = docRef?.collection("patients").document()
         }
     }
     
-    func setPatient(info: [String: Any], handler: @escaping ()->Void) -> Bool{
+    func setPatient(info: [String: Any], patientId: String, handler: @escaping ()->Void) -> Bool{
         var flag = false
         if docRef == nil {
             print("Hubo un error al cargar.")
             return false
         }
-        let patientDoc = docRef?.collection("patients").document()
+        
         patientDoc?.setData(info, completion: { (err) in
             if let err = err {
                 print(err.localizedDescription)
@@ -43,22 +45,24 @@ class FirebaseViewModel {
         return flag
     }
     
-    func createDictionary(patientInfo: PatientSchema) -> [String: Any] {
+    func createDictionary(patientInfo: PatientSchema, dose: String) -> [String: Any] {
         var dict: [String: Any] = [:]
         let time = Timestamp()
         dict["age"] = patientInfo.age
-        dict["birthDate"] = patientInfo.birthDate
+        dict["name"] = patientInfo.name
+        dict["lastName"] = patientInfo.lastName
         dict["consultationType"] = patientInfo.consultationType.rawValue
         dict["country"] = patientInfo.country
         dict["createdAt"] = time
         dict["diagnosisYear"] = patientInfo.diagnosisYear
         dict["gender"] = patientInfo.gender.rawValue
-        dict["height"] = patientInfo.height
+        dict["height"] = patientInfo.evaluations.first?.height ?? 0
         dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
         dict["updatedAt"] = patientInfo.updatedAt
-        dict["weight"] = patientInfo.weight
+        dict["weight"] = patientInfo.evaluations.first?.weight ?? 0
         dict["currentEvaluation"] = 1
         dict["currentTreatment"] = patientInfo.currentTreatment.rawValue
+        dict["dose"] = dose
         
         let patientEv = patientInfo.evaluations[0]
         var evaluations: [String: Any] = [:]
@@ -92,6 +96,36 @@ class FirebaseViewModel {
         return dict
     }
     
+    func updatePatient(handler: @escaping (_ isError: Bool) -> Void) {
+        guard let patientInfo = PatientSelected.shared.patientInfo else { return }
+        var dict = [String: Any]()
+        dict["age"] = patientInfo.age
+        dict["name"] = patientInfo.name
+        dict["lastName"] = patientInfo.lastName
+        dict["consultationType"] = patientInfo.consultationType.rawValue
+        dict["country"] = patientInfo.country
+        dict["diagnosisYear"] = patientInfo.diagnosisYear
+        dict["gender"] = patientInfo.gender.rawValue
+        dict["height"] = patientInfo.height
+        dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
+        dict["updatedAt"] = Timestamp()
+        dict["weight"] = patientInfo.weight
+        
+        guard let dId = UserDefaults.standard.string(forKey: "uId") else { handler(true)
+            return
+        }
+        let db = Firestore.firestore()
+        let patientRef = db.collection("doctors").document(dId).collection("patients").document(patientInfo.pId)
+        
+        patientRef.setData(dict, merge: true) { (err) in
+            if err == nil {
+                handler(false)
+            } else {
+                handler(true)
+            }
+        }
+    }
+    
     func getPatients(handler: @escaping (_ patients: [PatientSchema])->Void){
         var patients = [PatientSchema]()
         patientsRef!.getDocuments { (documents, err) in
@@ -100,40 +134,48 @@ class FirebaseViewModel {
                     let data = i.data()
                     let revs = data["evaluations"] as! [[String: Any]]
                     
-                    #warning("get observations")
                     var revitions: [EvaluationSchema] = []
+//                    var observations: [ObservationSchema] = []
                     for i in revs {
+                        var observations = [ObservationSchema]()
+                        let observationsFromDB = i["observations"] as? [[String:Any]] ?? []
+                        for ob in observationsFromDB {
+                            observations.append(ObservationSchema(createdAt: ob["createdAt"] as? Timestamp ?? Timestamp(), content: ob["content"] as? String ?? ""))
+                        }
                         let rev = EvaluationSchema(age: i["age"] as! Int,
-                                                   cardiovascularComplications: i["cardiovascularComplications"] as! Bool,
-                                                   chronicKidneyDisease: i["chronicKidneyDisease"] as! Bool,
-                                                   consultationType: ConsultationEnum(rawValue: i["consultationType"] as! String)!,
-                                                   createdAt: i["createdAt"] as! Timestamp,
-                                                   creatinineLevels: i["creatinineLevels"] as! Double,
-                                                   diagnosisYear: i["diagnosisYear"] as! Int,
-                                                   dose: "",
-                                                   estimatedGlomerularFiltrationRate: FiltrationEnum(rawValue: i["estimatedGlomerularFiltrationRate"] as! String)!,
-                                                   fastingGlucose: i["fastingGlucose"] as! Double,
-                                                   gender: GenderEnum(rawValue: i["gender"] as! String)!,
-                                                   glycosylatedHemoglobin: i["glycosylatedHemoglobin"] as! Float,
-                                                   height: i["height"] as! Double,
-                                                   hypoglycemia: i["hypoglycemia"] as! Bool,
-                                                   imc: i["imc"] as! Double,
-                                                   racialAncestry: RacialEnum(rawValue: i["racialAncestry"] as! String)!,
-                                                   treatment: TreatmentEnum(rawValue: i["treatment"] as! String)!,
-                                                   weight: i["weight"] as! Double,
-                                                   observations: [])
+                                                   cardiovascularComplications: i["cardiovascularComplications"] as? Bool ?? false,
+                                                   chronicKidneyDisease: i["chronicKidneyDisease"] as? Bool ?? false,
+                                                   consultationType: ConsultationEnum(rawValue: i["consultationType"] as?  String ?? "public") ?? .publica,
+                                                   createdAt: i["createdAt"] as? Timestamp ?? Timestamp(),
+                                                   creatinineLevels: i["creatinineLevels"] as? Double ?? 0.0,
+                                                   diagnosisYear: i["diagnosisYear"] as? Int ?? 0,
+                                                   dose: i["dose"] as? String ?? "",
+                                                   estimatedGlomerularFiltrationRate: FiltrationEnum(rawValue: i["estimatedGlomerularFiltrationRate"] as? String ?? "NA") ?? .na,
+                                                   fastingGlucose: i["fastingGlucose"] as? Double ?? 0.0,
+                                                   gender: GenderEnum(rawValue: i["gender"] as? String ?? "male") ?? .mas,
+                                                   glycosylatedHemoglobin: i["glycosylatedHemoglobin"] as? Float ?? 0.0,
+                                                   height: i["height"] as? Double ?? 0,
+                                                   hypoglycemia: i["hypoglycemia"] as? Bool ?? false,
+                                                   imc: i["imc"] as? Double ?? 0.0,
+                                                   racialAncestry: RacialEnum(rawValue: i["racialAncestry"] as? String ?? "notAfroAmerican") ?? .No,
+                                                   treatment: TreatmentEnum(rawValue: i["treatment"] as? String ?? "") ?? .A,
+                                                   weight: i["weight"] as? Double ?? 0.0,
+                                                   observations: observations)
                         revitions.append(rev)
                     }
                     let patient = PatientSchema(pId: i.documentID,
                                                 age: i.get("age") as? Int ?? 0,
+                                                name: i.get("name") as? String ?? "",
+                                                lastName: i.get("lastName") as? String ?? "",
                                                 birthDate: nil,
                                                 consultationType: ConsultationEnum(rawValue: i.get("consultationType") as? String ?? ConsultationEnum.privada.rawValue)!,
                                                 country: i.get("country") as? String ?? "",
+                                                dose: i.get("dose") as? String ?? "",
                                                 createdAt: i.get("createdAt") as? Timestamp ?? Timestamp(),
                                                 diagnosisYear: i.get("diagnosisYear") as? Int ?? 0,
                                                 gender: GenderEnum(rawValue: i.get("gender") as? String ?? "") ?? GenderEnum.fem,
                                                 height: i.get("height") as? Double ?? 0.0,
-                                                racialAncestry: RacialEnum(rawValue: i.get("racialAncestry") as? String ?? RacialEnum.No.rawValue)!,
+                                                racialAncestry: RacialEnum(rawValue: i.get("racialAncestry") as? String ?? RacialEnum.No.rawValue) ?? .No,
                                                 updatedAt: i.get("updatedAt") as? Timestamp ?? Timestamp(),
                                                 weight: i.get("weight") as? Double ?? 0.0,
                                                 currentEvaluation: i.get("currentEvaluation") as? Int ?? 0,
@@ -186,6 +228,46 @@ class FirebaseViewModel {
                 user.synchronize()
                 
                 completion()
+            }
+        }
+    }
+    
+    func setNewComment(comment: String, patientId: String, handler: @escaping (_ isError: Bool)->Void) {
+        let db = Firestore.firestore()
+        guard let dId = UserDefaults.standard.string(forKey: "uId") else { return }
+        let patientRef = db.collection("doctors").document(dId).collection("patients").document(patientId)
+        patientRef.getDocument { (snapshot, err) in
+            if let err = err {
+                print("Algo sucedió.\n\(err.localizedDescription)")
+                handler(true)
+                return
+            }
+            if var data = snapshot?.data() {
+                if var evaluations = data["evaluations"] as? [[String: Any]] {
+                    var last = evaluations.popLast()
+                    var newComment: [String: Any] = [:]
+                    newComment["content"] = comment
+                    newComment["createdAt"] = Timestamp()
+                    if var lastObservations = last?["observations"] as? [[String: Any]] {
+                        lastObservations.append(newComment)
+                        last?["observations"] = lastObservations
+                    } else {
+                        last?["observations"] = [newComment]
+                    }
+                    evaluations.append(last!)
+                    data["evaluations"] = evaluations
+                    patientRef.setData(data, merge: true) { (err) in
+                        if let err = err {
+                            print("Algo salió aún peor. \(err.localizedDescription)")
+                            handler(true)
+                            return
+                        } else {
+                            let evaluationsCount = PatientSelected.shared.patientInfo?.evaluations.count ?? 1
+                            PatientSelected.shared.patientInfo?.evaluations[evaluationsCount - 1].observations.append(ObservationSchema(createdAt: Timestamp(), content: comment))
+                            handler(false)
+                        }
+                    }
+                }
             }
         }
     }

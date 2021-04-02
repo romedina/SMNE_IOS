@@ -11,24 +11,17 @@ import MaterialComponents
 class TableViewCellComment: UITableViewCell {
     
     var delegate: CellInfoChangeDelegate?
+    @IBOutlet weak var commentInput: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        let textArea = MDCOutlinedTextArea()
-        textArea.label.text = ""
-        textArea.sizeToFit()
-        textArea.applyTheme(withScheme: appTheme)
-        textArea.setTextColor(.C052D6C(), for: .editing)
-        textArea.textView.delegate = self
-        textArea.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(textArea)
-        
-        textArea.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50.0).isActive = true
-        textArea.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 20.0).isActive = true
-        textArea.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 17.0).isActive = true
-        textArea.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -17.0).isActive = true
-        textArea.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        commentInput.delegate = self
+        commentInput.layer.cornerRadius = 8
+        commentInput.layer.borderWidth = 1
+        commentInput.layer.borderColor = UIColor.C5FD6CB().cgColor
+        commentInput.textColor = UIColor.C052D6C()
         
     }
 

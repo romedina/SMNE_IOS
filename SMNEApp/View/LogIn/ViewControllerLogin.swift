@@ -63,8 +63,6 @@ extension ViewControllerLogin: LoginCellDelegate {
             break
         case .facebook:
             break
-        default:
-            break
         }
     }
     

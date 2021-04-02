@@ -9,7 +9,7 @@ import Foundation
 
 enum RacialEnum: String {
     case No = "notAfroAmerican"
-    case Afroamericano = "afroAmerican"
+    case Afroamericano = "AfroAmerican"
 }
 
 enum TreatmentEnum: String {
@@ -26,6 +26,7 @@ enum FiltrationEnum: String {
     case dos = "15-29"
     case tres = "30-44"
     case cuatro = "45-59"
+    case na = "NA"
 }
 
 enum ConsultationEnum: String {

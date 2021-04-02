@@ -24,7 +24,7 @@ class AlertsView: UIView {
     }
     
     class func instanceFromNib() -> UIView {
-        var vc = UINib(nibName: "AlertsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! AlertsView
+        let vc = UINib(nibName: "AlertsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! AlertsView
         vc.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         return vc
     }

@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Consulta.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "Consulta@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Consulta@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "consultar__activo.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

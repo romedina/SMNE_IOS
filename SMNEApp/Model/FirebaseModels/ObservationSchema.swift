@@ -12,3 +12,7 @@ struct ObservationSchema {
     var createdAt: Timestamp
     var content: String
 }
+
+struct ObservationSchemaDeco: Decodable {
+    var content: String
+}

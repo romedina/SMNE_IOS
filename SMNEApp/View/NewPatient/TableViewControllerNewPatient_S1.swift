@@ -18,6 +18,8 @@ class TableViewControllerNewPatient_S1: UITableViewController {
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
+    var patientId = ""
+    
     var delegate: InfoChangedDelegate?
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +67,6 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let step = step1Cells
         let cellInfo = step1Cells[indexPath.row]
         
         if let info = cellInfo as? OpenCell {
@@ -91,13 +92,21 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         } else if let _ = cellInfo as? InfoCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoPatient", for: indexPath) as! TableViewCellInfoPatient
-            
+            cell.setInfo(patientId: self.patientId)
             return cell
         } else if let _ = cellInfo as? RadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellRadioButton
             
             cell.delegate = self
             
+            return cell
+        }  else if let info = cellInfo as? OpenOpenCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "openopen") as! TableViewCellOpenOpen
+            cell.setInfo(t1: info.title1, t2: info.title2, tr1: info.trailing1, tr2: info.trailing2, id1: "name", id2: "lastName")
+            if PatientSelected.shared.patientInfo != nil {
+                cell.setValues(v1: PatientSelected.shared.patientInfo?.name ?? "", v2: PatientSelected.shared.patientInfo?.lastName ?? "")
+            }
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
@@ -157,7 +166,19 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
 }
 
-extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate, RadioRadioDelegate {
+extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate, RadioRadioDelegate, CellInfoChangeDelegate {
+    func infoChange(id: String, info: Float) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: String) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func infoChange(id: String, info: Bool) {
+        delegate?.infoChanged(id: id, info: info)
+    }
+    
     
     func listChanged(id: String, info: String) {
         delegate?.infoChanged(id: id, info: info)

@@ -35,6 +35,18 @@ class ViewControllerPatienInfoEdit: UIViewController {
     @IBAction func returnButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func saveInfoTapped(_ sender: Any) {
+        let firebase = FirebaseViewModel()
+        firebase.updatePatient { (isError) in
+            if isError {
+                AlertToast.show(message: "Hubo un error, intente nuevamente.", controller: self, type: .Error) { }
+            } else {
+                AlertToast.show(message: "Cambios Guardados.", controller: self, type: .Success) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
     
 }
 

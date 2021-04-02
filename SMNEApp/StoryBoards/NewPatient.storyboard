@@ -838,6 +838,87 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="uF5-nL-fIP" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="864" width="414" height="138"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uF5-nL-fIP" id="dFE-Ys-nbX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7h0-HT-YRA">
+                                            <rect key="frame" x="18" y="21" width="378" height="82"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9fw-XR-OkF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="82"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2h-3q-1il">
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                                            <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-7E-Uln" customClass="MDCTextField">
+                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="sr7-sN-rNk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="open1:" destination="uF5-nL-fIP" eventType="editingDidEnd" id="zOM-KG-4WF"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-1k-eZr">
+                                                    <rect key="frame" x="194" y="0.0" width="184" height="82"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-cJ-6He">
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                                            <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-ST-n32" customClass="MDCTextField">
+                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="qsZ-rh-kxo"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="open2:" destination="uF5-nL-fIP" eventType="editingDidEnd" id="oaW-nN-wAT"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qq-TZ-9nu" userLabel="dividerView">
+                                            <rect key="frame" x="0.0" y="133" width="414" height="5"/>
+                                            <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="5" id="keR-08-lf3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7h0-HT-YRA" firstAttribute="bottom" secondItem="7qq-TZ-9nu" secondAttribute="top" constant="-30" id="035-x5-Inu"/>
+                                        <constraint firstItem="7h0-HT-YRA" firstAttribute="leading" secondItem="dFE-Ys-nbX" secondAttribute="leading" constant="18" id="1Sv-Jj-fwA"/>
+                                        <constraint firstItem="7qq-TZ-9nu" firstAttribute="leading" secondItem="dFE-Ys-nbX" secondAttribute="leading" id="T0X-pw-0wQ"/>
+                                        <constraint firstItem="7h0-HT-YRA" firstAttribute="top" secondItem="dFE-Ys-nbX" secondAttribute="topMargin" constant="10" id="dNg-6V-LhN"/>
+                                        <constraint firstAttribute="trailing" secondItem="7qq-TZ-9nu" secondAttribute="trailing" id="ib5-sB-kaZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="7h0-HT-YRA" secondAttribute="trailing" constant="18" id="mvj-9c-rVK"/>
+                                        <constraint firstAttribute="bottom" secondItem="7qq-TZ-9nu" secondAttribute="bottom" id="uoB-Ie-m4T"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="open1Input" destination="xnv-7E-Uln" id="HA5-Vj-cb2"/>
+                                    <outlet property="open2Input" destination="qSH-ST-n32" id="fez-hn-g6I"/>
+                                    <outlet property="title1Label" destination="a2h-3q-1il" id="NwH-2b-t00"/>
+                                    <outlet property="title2Label" destination="VD3-cJ-6He" id="1zy-4W-gMu"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="arn-fo-ikD" id="gcf-MZ-jfO"/>
@@ -1055,19 +1136,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-O1-nf6">
                                             <rect key="frame" x="18" y="264.5" width="378" height="50"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-ie-fNF" customClass="MDCButton">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="n2H-MV-Cqh"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                                    <state key="normal" title="Calcular">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-qd-57b">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su IMC es: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-2O-G9N">
                                                             <rect key="frame" x="20" y="15" width="87" height="20"/>
@@ -1112,7 +1182,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="calcButton" destination="C7n-ie-fNF" id="hEX-Cb-BkY"/>
                                     <outlet property="heightTextInput" destination="poX-rZ-ggz" id="kwA-zH-5A8"/>
                                     <outlet property="imcOutput" destination="aEP-VL-HYD" id="Uwb-4O-Pja"/>
                                     <outlet property="levelstextInput" destination="q0c-b2-WgT" id="NOl-7P-4qx"/>
@@ -1384,10 +1453,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comment" id="a6y-zJ-VTn" customClass="TableViewCellComment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156" width="414" height="162"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6y-zJ-VTn" id="oO1-gl-Di1">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-qH-Bss">
@@ -1399,16 +1468,32 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UIx-gf-dtu">
+                                            <rect key="frame" x="17" y="50" width="380" height="130"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="eH4-d9-Y3a"/>
+                                            </constraints>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="7hI-qH-Bss" firstAttribute="leading" secondItem="oO1-gl-Di1" secondAttribute="leading" constant="18" id="76f-Dz-j4o"/>
-                                        <constraint firstAttribute="bottom" secondItem="7hI-qH-Bss" secondAttribute="bottom" constant="120" id="KF1-C4-7ba"/>
+                                        <constraint firstItem="UIx-gf-dtu" firstAttribute="leading" secondItem="oO1-gl-Di1" secondAttribute="leading" constant="17" id="U2h-6M-MRQ"/>
+                                        <constraint firstItem="UIx-gf-dtu" firstAttribute="top" secondItem="7hI-qH-Bss" secondAttribute="bottom" constant="8" id="Zhf-fL-jqv"/>
+                                        <constraint firstAttribute="bottom" secondItem="UIx-gf-dtu" secondAttribute="bottom" constant="10" id="caL-Nu-5lY"/>
                                         <constraint firstItem="7hI-qH-Bss" firstAttribute="top" secondItem="oO1-gl-Di1" secondAttribute="top" constant="20" id="eHU-aQ-cRz"/>
+                                        <constraint firstAttribute="trailing" secondItem="UIx-gf-dtu" secondAttribute="trailing" constant="17" id="zNQ-b8-jBo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentInput" destination="UIx-gf-dtu" id="qpV-0t-dgJ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="9T7-8t-nEu" customClass="TableViewCellMultiRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="318" width="414" height="89"/>
+                                <rect key="frame" x="0.0" y="346" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9T7-8t-nEu" id="aai-af-A1R">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
@@ -1585,7 +1670,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="4WS-p8-0S8">
-                                <rect key="frame" x="0.0" y="407" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="435" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WS-p8-0S8" id="LZ1-ri-em8">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -1610,7 +1695,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="9wF-S0-pA0" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="527" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="555" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wF-S0-pA0" id="cf7-Bu-r5y">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
@@ -2023,6 +2108,9 @@
         <image name="radioNS" width="18" height="18"/>
         <image name="radioS" width="18" height="18"/>
         <image name="treatmentPage" width="274" height="209"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

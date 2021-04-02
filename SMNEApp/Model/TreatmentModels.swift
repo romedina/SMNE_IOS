@@ -17,9 +17,15 @@ struct Treatment {
 }
 
 
-let treatmentA: [Option] = [Option(treatments: [Treatment(title: "Titular la dosis de metformina ≥ 1,500 mg/día", subtitle: "En caso de intolerancia usar de liberación prolongada")]), Option(treatments: [Treatment(title: "Metformina a dosis máxima tolerada + iDPP4 o iSGLT2 o SU", subtitle: "")]), Option(treatments: [Treatment(title: "Metformina 1,500-2,550 mg/día + SU o Metformina + Insulina basal (0.1-0.2 U/kg)", subtitle: "En caso de pérdida de peso y síntomas de hiperglucemia")])]
+let treatmentA: [Option] = [
+    Option(treatments: [Treatment(title: "Titular la dosis de metformina ≥ 1,500 mg/día", subtitle: "En caso de intolerancia usar de liberación prolongada")]),
+    Option(treatments: [Treatment(title: "Metformina a dosis máxima tolerada + iDPP4 o iSGLT2 o SU", subtitle: "")]),
+    Option(treatments: [Treatment(title: "Metformina 1,500-2,550 mg/día + SU o Metformina + Insulina basal (0.1-0.2 U/kg)", subtitle: "En caso de pérdida de peso y síntomas de hiperglucemia")])]
 
-let treatmentB: [Option] = [Option(treatments: [Treatment(title: "Titular la dosis metformina ≥ 1,500 mg/día", subtitle: "En caso de intolerancia usar de liberación prolongada")]), Option(treatments: [Treatment(title: "Metformina a dosis máxima tolerada + iSGLT2 o arGLP-1 o iDDP4 o SU", subtitle: "")]), Option(treatments: [Treatment(title: "Metformina + SU + (arGLP-1 o iSGLT2 o iDPP4)", subtitle: ""), Treatment(title: "Metformina + insulina basal (0.1-0.2 U/kg)", subtitle: "En caso de pérdida de peso y síntomas de hiperglicemia")])]
+let treatmentB: [Option] = [
+    Option(treatments: [Treatment(title: "Titular la dosis metformina ≥ 1,500 mg/día", subtitle: "En caso de intolerancia usar de liberación prolongada")]),
+    Option(treatments: [Treatment(title: "Metformina a dosis máxima tolerada + iSGLT2 o arGLP-1 o iDDP4 o SU", subtitle: "")]),
+    Option(treatments: [Treatment(title: "Metformina + SU + (arGLP-1 o iSGLT2 o iDPP4)", subtitle: ""), Treatment(title: "Metformina + insulina basal (0.1-0.2 U/kg)", subtitle: "En caso de pérdida de peso y síntomas de hiperglicemia")])]
 
 let treatmentC: [Option] = [
     Option(treatments:

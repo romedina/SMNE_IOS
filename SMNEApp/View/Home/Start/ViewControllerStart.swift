@@ -28,7 +28,8 @@ class ViewControllerStart: UIViewController {
         
     }
     @IBAction func buttonTapped(_ sender: Any) {
-        AlertToast.show(message: "Hola", controller: self, type: .Error)
+//        let firebase = FirebaseViewModel()
+//        firebase.setNewComment(comment: "Prueba de nuevos comentarios.", patientId: "4aJT12O1Nl2MzKuRZOC5")
     }
 }
 

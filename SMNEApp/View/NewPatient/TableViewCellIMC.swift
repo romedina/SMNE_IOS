@@ -18,7 +18,6 @@ class TableViewCellIMC: UITableViewCell {
 
     @IBOutlet weak var weightTextInput: MDCTextField!
     @IBOutlet weak var heightTextInput: MDCTextField!
-    @IBOutlet weak var calcButton: MDCButton!
     @IBOutlet weak var levelstextInput: MDCTextField!
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var imcOutput: UILabel!
@@ -36,9 +35,6 @@ class TableViewCellIMC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        calcButton.setBackgroundColor(.white)
-        calcButton.setTitleColor(.white, for: .normal)
-        calcButton.titleLabel?.text = ""
         parentView.layer.borderColor = UIColor.C00D9CC().cgColor
         parentView.layer.cornerRadius = 5.39
         parentView.layer.borderWidth = 1
@@ -74,28 +70,36 @@ class TableViewCellIMC: UITableViewCell {
         label2.textColor = color
         levelstextInput.trailingViewMode = .always
         levelstextInput.trailingView = label2
+        
+        imcOutput.text = "0.0"
     }
     
     private func calculateIMC() {
-        delegate?.infoChange(id: "IMC", info: height)
+        let imc = weight / (pow(height, 2))
+        if weight == 0.0 || height == 0.0 {
+            imcOutput.text = "0.0"
+            delegate?.infoChange(id: "IMC", info: 0.0)
+        } else {
+            imcOutput.text = "\(imc)"
+            delegate?.infoChange(id: "IMC", info: imc)
+        }
     }
 
     @IBAction func weightChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
         weight = Float(string) ?? 0.0
+        delegate?.infoChange(id: "weight", info: weight)
         calculateIMC()
     }
     @IBAction func heightChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
         height = Float(string) ?? 0.0
+        delegate?.infoChange(id: "height", info: height)
         calculateIMC()
     }
     @IBAction func levelsChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
         levels = Float(string) ?? 0.0
-        calculateIMC()
-    }
-    @IBAction func calculateTapped(_ sender: Any) {
-        delegate?.infoChange(id: "IMC", info: 0.0)
+        delegate?.infoChange(id: "levels", info: levels)
     }
 }

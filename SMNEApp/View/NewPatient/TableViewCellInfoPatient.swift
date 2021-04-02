@@ -20,16 +20,25 @@ class TableViewCellInfoPatient: UITableViewCell {
     }
     
     func setInfo(patientId: String) {
-        patientIDLabel.text = patientId
+        let index = patientId.index(patientId.startIndex, offsetBy: 8)
+        let mySubstring = patientId[..<index] // Hello
+        patientIDLabel.text = "\(String(mySubstring))..."
         
         let today = Date()
-        let formatter1 = DateFormatter()
-        formatter1.dateStyle = .short
-        let dateIng = formatter1.string(from: today)
         
-        let dateSeparated = dateIng.split(separator: "/")
-        let dateMX = "\(dateSeparated[1])/\(dateSeparated[0])/\(dateSeparated[2])"
-        dateLabel.text = dateMX
+        dateLabel.text = today.dateToMxnString()
     }
 
+}
+
+extension Date {
+    func dateToMxnString() -> String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        let dateIng = formatter.string(from: self)
+        let separated = dateIng.split(separator: "/")
+        let dateMX = "\(separated[1])/\(separated[0])/20\(separated[2])"
+        
+        return dateMX
+    }
 }

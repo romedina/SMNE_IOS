@@ -50,7 +50,7 @@ class TableViewCellOpen: UITableViewCell {
             delegate?.openChanged(id: "age", info: sender.text ?? "")
         } else {
             if sender.text!.count > 4 {
-                let last = sender.text?.popLast()
+                let _ = sender.text?.popLast()
             }
             delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
         }

@@ -22,6 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="690-kV-Pqx">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-eJ-eRw">
                     <rect key="frame" x="27" y="12" width="32.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
@@ -29,37 +33,48 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrZ-xb-UMQ">
-                    <rect key="frame" x="27" y="31.5" width="23" height="12.5"/>
+                    <rect key="frame" x="27" y="31" width="334.5" height="13"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="9"/>
                     <color key="textColor" red="0.40000000000000002" green="0.29411764709999999" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ReO-BB-sto">
                     <rect key="frame" x="381.5" y="24" width="8.5" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8.5" id="PIY-Nq-fbv"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-U5-Lfy">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="d9A-0z-BtO"/>
+                    </constraints>
                     <connections>
                         <action selector="revitionTapped:" destination="iN0-l3-epB" eventType="touchDragInside" id="okA-1h-Ws6"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.92941176470588238" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="690-kV-Pqx" secondAttribute="trailing" id="5cA-mv-cU3"/>
                 <constraint firstAttribute="trailing" secondItem="ReO-BB-sto" secondAttribute="trailing" constant="24" id="7IT-Qz-3Vb"/>
+                <constraint firstAttribute="bottom" secondItem="690-kV-Pqx" secondAttribute="bottom" id="8HW-fk-s5b"/>
                 <constraint firstItem="ReO-BB-sto" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BQm-dp-dyu"/>
                 <constraint firstItem="Hyh-eJ-eRw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Git-DQ-h8U"/>
+                <constraint firstItem="690-kV-Pqx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OYq-gi-oAU"/>
+                <constraint firstItem="690-kV-Pqx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Oy0-a4-35E"/>
                 <constraint firstItem="3dc-U5-Lfy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Q9t-5s-VCY"/>
                 <constraint firstItem="3dc-U5-Lfy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SY2-pf-P56"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xrZ-xb-UMQ" secondAttribute="bottom" constant="18" id="ctn-8T-pVq"/>
                 <constraint firstItem="3dc-U5-Lfy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="iFP-9R-zYn"/>
                 <constraint firstItem="xrZ-xb-UMQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="iZ4-mV-BBW"/>
                 <constraint firstItem="Hyh-eJ-eRw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="mft-Fj-v3h"/>
+                <constraint firstItem="ReO-BB-sto" firstAttribute="leading" secondItem="xrZ-xb-UMQ" secondAttribute="trailing" constant="20" id="nrB-qY-Tzz"/>
                 <constraint firstItem="3dc-U5-Lfy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u7l-7T-SEH"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="parentView" destination="690-kV-Pqx" id="gMV-HF-kGu"/>
                 <outlet property="subLabel" destination="xrZ-xb-UMQ" id="6lJ-Oa-A3L"/>
                 <outlet property="titleLabel" destination="Hyh-eJ-eRw" id="c0X-EV-DKs"/>
             </connections>

@@ -20,7 +20,7 @@ class ViewControllerTabBar: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let user = UserDefaults.standard
-        if let email = user.string(forKey: "email") {
+        if let _ = user.string(forKey: "email") {
             
         } else {
             let storyboard = UIStoryboard(name: "LogIn", bundle: nil)

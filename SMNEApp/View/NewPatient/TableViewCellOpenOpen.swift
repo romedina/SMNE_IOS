@@ -18,6 +18,9 @@ class TableViewCellOpenOpen: UITableViewCell {
     var input1Controller: MDCTextInputControllerOutlined?
     var input2Controller: MDCTextInputControllerOutlined?
     
+    var id1 = ""
+    var id2 = ""
+    
     var delegate: CellInfoChangeDelegate?
     
     override func awakeFromNib() {
@@ -30,14 +33,14 @@ class TableViewCellOpenOpen: UITableViewCell {
         input1Controller?.textInput?.textColor = .C052D6C()
         input2Controller?.applyTheme(withScheme: appTheme)
         input2Controller?.textInput?.textColor = .C052D6C()
-        
-        
-        
     }
     
-    func setInfo(t1: String, t2: String, tr1: String, tr2: String) {
+    func setInfo(t1: String, t2: String, tr1: String, tr2: String, id1: String, id2: String) {
         title1Label.text = t1
         title2Label.text = t2
+        
+        self.id1 = id1
+        self.id2 = id2
         
         let color: UIColor = UIColor(red: 0.4, green: 0.29, blue: 0.49, alpha: 1.0)
         let label = UILabel()
@@ -54,16 +57,29 @@ class TableViewCellOpenOpen: UITableViewCell {
         open2Input.trailingViewMode = .always
         open2Input.trailingView = label1
     }
+    
+    func setValues(v1: String, v2: String) {
+        open1Input.text = v1
+        open2Input.text = v2
+    }
 
     @IBAction func open1(_ sender: MDCTextField) {
         let text = sender.text ?? "0"
-        let myFloat = (text as NSString).floatValue
-        delegate?.infoChange(id: "hba1c", info: myFloat)
+        if id1 == "name" {
+            delegate?.infoChange(id: id1, info: text)
+        } else {
+            let myFloat = (text as NSString).floatValue
+            delegate?.infoChange(id: id1, info: myFloat)
+        }
     }
     
     @IBAction func open2(_ sender: MDCTextField) {
         let text = sender.text ?? "0"
-        let myFloat = (text as NSString).floatValue
-        delegate?.infoChange(id: "glucose", info: myFloat)
+        if id2 == "lastName" {
+            delegate?.infoChange(id: id2, info: text)
+        } else {
+            let myFloat = (text as NSString).floatValue
+            delegate?.infoChange(id: id2, info: myFloat)
+        }
     }
 }
