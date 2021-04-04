@@ -84,6 +84,13 @@ class TableViewCellIMC: UITableViewCell {
             delegate?.infoChange(id: "IMC", info: imc)
         }
     }
+    
+    func setValues(height: Double, weight: Double, levels: Double, imc: Double) {
+        heightTextInput.text = "\(height)"
+        weightTextInput.text = "\(weight)"
+        levelstextInput.text = "\(levels)"
+        imcOutput.text = "\(imc)"
+    }
 
     @IBAction func weightChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"

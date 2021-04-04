@@ -33,6 +33,17 @@ class TableViewCellRadioButton: UITableViewCell {
         parentView.layer.borderColor = UIColor.C00D9CC().cgColor
     }
     
+    func setValues(v1: RacialEnum) {
+        switch v1 {
+        case .Afroamericano:
+            radioButtonOne.isSelected = false
+            radioButtonTwo.isSelected = true
+        case .No:
+            radioButtonOne.isSelected = true
+            radioButtonTwo.isSelected = false
+        }
+    }
+    
     @IBAction func radioOneTapped(_ sender: Any) {
         radioButtonOne.isSelected = true
         radioButtonTwo.isSelected = false

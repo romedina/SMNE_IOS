@@ -55,12 +55,15 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             
             cell.setInfo(t1: info.title1, t2: info.title2, tr1: info.trailing1, tr2: info.trailing2, id1: "hba1c", id2: "glucose")
             cell.delegate = self
+            
+            if PatientSelected.shared.patientInfo != nil {
+                cell.setValues(v1: "\(PatientSelected.shared.patientInfo?.evaluations.last?.glycosylatedHemoglobin ?? 0.0)", v2: "\(PatientSelected.shared.patientInfo?.evaluations.last?.fastingGlucose ?? 0.0)")
+            }
 
             return cell
         } else if let _ = cellInfo as? CommentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! TableViewCellComment
             cell.delegate = self
-
             return cell
         } else if let _ = cellInfo as? MultiRadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio

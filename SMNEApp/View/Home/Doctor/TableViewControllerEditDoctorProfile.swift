@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewControllerEditDoctorProfile: UITableViewController {
+class TableViewControllerEditDoctorProfiles: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -27,18 +27,21 @@ class AlertToast {
             parentBackground = UIColor(red: 255/255, green: 228/255, blue: 228/255, alpha: 1)
             imageViewBack = UIColor(red: 250/255, green: 11/255, blue: 11/255, alpha: 1)
             textColor = UIColor(red: 178/255, green: 0, blue: 0, alpha: 1)
+            icon = UIImage(named: "error") ?? UIImage()
             break
         case .Success:
             parentBorder =  UIColor(red: 0.37, green: 0.83, blue: 0.79, alpha: 1)
             parentBackground = UIColor(red: 0.85, green: 0.98, blue: 0.97, alpha: 1)
             imageViewBack = UIColor(red: 0.37, green: 0.83, blue: 0.79, alpha: 1)
             textColor = UIColor(red: 0.23, green: 0.53, blue: 0.5, alpha: 1)
+            icon = UIImage(named: "check") ?? UIImage()
             break
         case .Warning:
             parentBorder = UIColor(red: 214/255, green: 179/255, blue: 45/255, alpha: 1)
             parentBackground = UIColor(red: 252/255, green: 246/255, blue: 223/255, alpha: 1)
             imageViewBack = UIColor(red: 214/255, green: 179/255, blue: 45/255, alpha: 1)
             textColor = UIColor(red: 159/255, green: 132/255, blue: 29/255, alpha: 1)
+            icon = UIImage(named: "warning") ?? UIImage()
             break
         }
         let toastContainer = UIView(frame: CGRect())
@@ -64,6 +67,11 @@ class AlertToast {
         iconView.layer.cornerRadius = 13
         iconView.clipsToBounds = true
         
+        let iconImage = UIImageView(frame: CGRect())
+        iconImage.image = icon
+        iconImage.clipsToBounds = true
+        
+        iconView.addSubview(iconImage)
         toastContainer.addSubview(iconView)
         toastContainer.addSubview(toastLabel)
         controller.view.addSubview(toastContainer)
@@ -71,6 +79,7 @@ class AlertToast {
         toastLabel.translatesAutoresizingMaskIntoConstraints = false
         toastContainer.translatesAutoresizingMaskIntoConstraints = false
         iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconImage.translatesAutoresizingMaskIntoConstraints = false
         
         toastContainer.leadingAnchor.constraint(equalTo: controller.view.leadingAnchor, constant: 20).isActive = true
         toastContainer.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -20).isActive = true
@@ -79,8 +88,13 @@ class AlertToast {
         
         iconView.leadingAnchor.constraint(equalTo: toastContainer.leadingAnchor, constant: 12).isActive = true
         iconView.centerYAnchor.constraint(equalTo: toastContainer.centerYAnchor).isActive = true
-        iconView.heightAnchor.constraint(equalToConstant: 52).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 52).isActive = true
+        iconView.heightAnchor.constraint(equalToConstant: 62).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 62).isActive = true
+        
+        iconImage.centerYAnchor.constraint(equalTo: iconView.centerYAnchor).isActive = true
+        iconImage.centerXAnchor.constraint(equalTo: iconView.centerXAnchor).isActive = true
+        iconImage.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        iconImage.widthAnchor.constraint(equalToConstant: 45).isActive = true
         
         toastLabel.centerYAnchor.constraint(equalTo: toastContainer.centerYAnchor).isActive = true
         toastLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 12).isActive = true

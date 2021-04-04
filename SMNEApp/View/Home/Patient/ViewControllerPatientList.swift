@@ -19,6 +19,7 @@ class ViewControllerPatientList: UIViewController {
     
     var patientsList: [PatientSchema]?
     var patientFiltered: [PatientSchema]?
+    var isNew = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,11 @@ class ViewControllerPatientList: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getData()
+        if !isNew {
+            getData()
+        } else {
+            isNew = false
+        }
     }
     
     func getData() {
@@ -71,14 +76,13 @@ class ViewControllerPatientList: UIViewController {
         for patient in pList {
             if let _ = patient.name.range(of: filter, options: .caseInsensitive) {
                 patientFiltered?.append(patient)
+            } else if let _ = patient.lastName.range(of: filter, options: .caseInsensitive) {
+                patientFiltered?.append(patient)
             } else {
                 if let _ = patient.pId.range(of: filter, options: .caseInsensitive) {
                     patientFiltered?.append(patient)
                 }
             }
-//            if patient.name.contains(filter) || patient.pId.contains(filter) {
-//                patientFiltered?.append(patient)
-//            }
         }
         tableViewList.reloadData()
     }

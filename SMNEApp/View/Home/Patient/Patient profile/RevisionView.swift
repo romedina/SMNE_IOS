@@ -16,6 +16,7 @@ class RevisionView: UIView {
     var index: Int?
     var titleS = ""
     var subtitleS = ""
+    var delegate: RevitionToListDelegate?
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -35,6 +36,7 @@ class RevisionView: UIView {
     }
 
     @IBAction func revitionTapped(_ sender: Any) {
+        delegate?.revitionToList(date: titleS, comment: subtitleS)
         print(index ?? 0)
     }
 }

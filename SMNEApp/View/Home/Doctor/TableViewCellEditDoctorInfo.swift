@@ -11,15 +11,15 @@ import MaterialComponents
 class TableViewCellEditDoctorInfo: UITableViewCell {
     
     
-    @IBOutlet weak var nameInput: MDCTextField!
-    @IBOutlet weak var fSurnameInput: MDCTextField!
-    @IBOutlet weak var sSurnameInput: MDCTextField!
-    @IBOutlet weak var genderInput: MDCTextField!
-    @IBOutlet weak var emailInput: MDCTextField!
-    @IBOutlet weak var cedulaInput: MDCTextField!
-    @IBOutlet weak var espeInput: MDCTextField!
-    @IBOutlet weak var schoolInput: MDCTextField!
-    @IBOutlet weak var countryInput: MDCTextField!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var fSurnameInput: UITextField!
+    @IBOutlet weak var sSurnameInput: UITextField!
+    @IBOutlet weak var genderInput: UITextField!
+    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var cedulaInput: UITextField!
+    @IBOutlet weak var espeInput: UITextField!
+    @IBOutlet weak var schoolInput: UITextField!
+    @IBOutlet weak var countryInput: UITextField!
     
     var nameController: MDCTextInputControllerOutlined?
     var fLastController: MDCTextInputControllerOutlined?
@@ -37,35 +37,15 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        nameController = MDCTextInputControllerOutlined(textInput: nameInput)
-        fLastController = MDCTextInputControllerOutlined(textInput: fSurnameInput)
-        sLastController = MDCTextInputControllerOutlined(textInput: sSurnameInput)
-        genderController = MDCTextInputControllerOutlined(textInput: genderInput)
-        emailController = MDCTextInputControllerOutlined(textInput: emailInput)
-        cedulaController = MDCTextInputControllerOutlined(textInput: cedulaInput)
-        espeController = MDCTextInputControllerOutlined(textInput: espeInput)
-        schoolController = MDCTextInputControllerOutlined(textInput: schoolInput)
-        countryController = MDCTextInputControllerOutlined(textInput: countryInput)
-        
-        nameController?.applyTheme(withScheme: appTheme)
-        fLastController?.applyTheme(withScheme: appTheme)
-        sLastController?.applyTheme(withScheme: appTheme)
-        genderController?.applyTheme(withScheme: appTheme)
-        emailController?.applyTheme(withScheme: appTheme)
-        cedulaController?.applyTheme(withScheme: appTheme)
-        espeController?.applyTheme(withScheme: appTheme)
-        schoolController?.applyTheme(withScheme: appTheme)
-        countryController?.applyTheme(withScheme: appTheme)
-        
-//        setTextBorder(input: nameInput)
-//        setTextBorder(input: fSurnameInput)
-//        setTextBorder(input: sSurnameInput)
-//        setTextBorder(input: genderInput)
-//        setTextBorder(input: emailInput)
-//        setTextBorder(input: cedulaInput)
-//        setTextBorder(input: espeInput)
-//        setTextBorder(input: schoolInput)
-//        setTextBorder(input: countryInput)
+        setTextBorder(input: nameInput)
+        setTextBorder(input: fSurnameInput)
+        setTextBorder(input: sSurnameInput)
+        setTextBorder(input: genderInput)
+        setTextBorder(input: emailInput)
+        setTextBorder(input: cedulaInput)
+        setTextBorder(input: espeInput)
+        setTextBorder(input: schoolInput)
+        setTextBorder(input: countryInput)
         
         setTextInfo()
     }
@@ -74,6 +54,7 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         input.layer.borderColor = UIColor.C5FD6CB().cgColor
         input.layer.borderWidth = 1
         input.layer.cornerRadius = 10
+        input.textColor = .C052D6C()
     }
     
     func setTextInfo() {

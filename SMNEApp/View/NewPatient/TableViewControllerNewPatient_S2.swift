@@ -54,14 +54,16 @@ class TableViewControllerNewPatient_S2: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bool", for: indexPath) as! TableViewCellBool
             
             cell.setInfo(title: info.title, sub: info.sub, id: info.id)
-            cell .delegate = self
+            cell.delegate = self
             
             return cell
         } else if let _ = cellInfo as? IMCCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "imc", for: indexPath) as! TableViewCellIMC
             
             cell.delegate = self
-            
+            if PatientSelected.shared.patientInfo != nil {
+                cell.setValues(height: PatientSelected.shared.patientInfo?.evaluations.last?.height ?? 0.0, weight: PatientSelected.shared.patientInfo?.evaluations.last?.weight ?? 0.0, levels: PatientSelected.shared.patientInfo?.evaluations.last?.creatinineLevels ?? 0.0,  imc:PatientSelected.shared.patientInfo?.evaluations.last?.imc ?? 0.0)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)

@@ -33,8 +33,10 @@ class FirebaseViewModel {
             print("Hubo un error al cargar.")
             return false
         }
-        
-        patientDoc?.setData(info, completion: { (err) in
+        if let pid = PatientSelected.shared.patientInfo?.pId {
+            patientDoc = docRef?.collection("patients").document(pid)
+        }
+        patientDoc?.setData(info, merge: true, completion: { (err) in
             if let err = err {
                 print(err.localizedDescription)
                 return
@@ -46,54 +48,130 @@ class FirebaseViewModel {
     }
     
     func createDictionary(patientInfo: PatientSchema, dose: String) -> [String: Any] {
-        var dict: [String: Any] = [:]
-        let time = Timestamp()
-        dict["age"] = patientInfo.age
-        dict["name"] = patientInfo.name
-        dict["lastName"] = patientInfo.lastName
-        dict["consultationType"] = patientInfo.consultationType.rawValue
-        dict["country"] = patientInfo.country
-        dict["createdAt"] = time
-        dict["diagnosisYear"] = patientInfo.diagnosisYear
-        dict["gender"] = patientInfo.gender.rawValue
-        dict["height"] = patientInfo.evaluations.first?.height ?? 0
-        dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
-        dict["updatedAt"] = patientInfo.updatedAt
-        dict["weight"] = patientInfo.evaluations.first?.weight ?? 0
-        dict["currentEvaluation"] = 1
-        dict["currentTreatment"] = patientInfo.currentTreatment.rawValue
-        dict["dose"] = dose
+        if PatientSelected.shared.patientInfo == nil {
+            var dict: [String: Any] = [:]
+            let time = Timestamp()
+            dict["age"] = patientInfo.age
+            dict["name"] = patientInfo.name
+            dict["lastName"] = patientInfo.lastName
+            dict["consultationType"] = patientInfo.consultationType.rawValue
+            dict["country"] = patientInfo.country
+            dict["createdAt"] = time
+            dict["diagnosisYear"] = patientInfo.diagnosisYear
+            dict["gender"] = patientInfo.gender.rawValue
+            dict["height"] = patientInfo.evaluations.first?.height ?? 0
+            dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
+            dict["updatedAt"] = patientInfo.updatedAt
+            dict["weight"] = patientInfo.evaluations.first?.weight ?? 0
+            dict["currentEvaluation"] = 1
+            dict["currentTreatment"] = patientInfo.currentTreatment.rawValue
+            
+            let patientEv = patientInfo.evaluations[0]
+            var evaluations: [String: Any] = [:]
+            evaluations["age"] = patientEv.age
+            evaluations["cardiovascularComplications"] = patientEv.cardiovascularComplications
+            evaluations["chronicKidneyDisease"] = patientEv.chronicKidneyDisease
+            evaluations["consultationType"] = patientEv.consultationType.rawValue
+            evaluations["createdAt"] = time
+            evaluations["creatinineLevels"] = patientEv.creatinineLevels
+            evaluations["diagnosisYear"] = patientEv.diagnosisYear
+            evaluations["estimatedGlomerularFiltrationRate"] = patientEv.estimatedGlomerularFiltrationRate.rawValue
+            evaluations["fastingGlucose"] = patientEv.fastingGlucose
+            evaluations["gender"] = patientEv.gender.rawValue
+            evaluations["glycosylatedHemoglobin"] = patientEv.glycosylatedHemoglobin
+            evaluations["height"] = patientEv.height
+            evaluations["hypoglycemia"] = patientEv.hypoglycemia
+            evaluations["imc"] = patientEv.imc
+            evaluations["racialAncestry"] = patientEv.racialAncestry.rawValue
+            evaluations["treatment"] = patientEv.treatment.rawValue
+            evaluations["weight"] = patientEv.weight
+            evaluations["dose"] = dose
+            
+            var comment: [String: Any] = [:]
+            comment["createdAt"] = patientEv.observations[0].createdAt
+            comment["content"] = patientEv.observations[0].content
+            
+            evaluations["observations"] = [comment]
+            
+            dict["evaluations"] = [evaluations]
+            return dict
+        } else {
+            guard let pInfo = PatientSelected.shared.patientInfo else { return [:] }
+            var evaluations: [[String: Any]] = []
+            for ev in pInfo.evaluations {
+                var evaluation: [String: Any] = [:]
+                evaluation["age"] = ev.age
+                evaluation["cardiovascularComplications"] = ev.cardiovascularComplications
+                evaluation["chronicKidneyDisease"] = ev.chronicKidneyDisease
+                evaluation["consultationType"] = ev.consultationType.rawValue
+                evaluation["createdAt"] = ev.createdAt
+                evaluation["creatinineLevels"] = ev.creatinineLevels
+                evaluation["diagnosisYear"] = ev.diagnosisYear
+                evaluation["estimatedGlomerularFiltrationRate"] = ev.estimatedGlomerularFiltrationRate.rawValue
+                evaluation["fastingGlucose"] = ev.fastingGlucose
+                evaluation["gender"] = ev.gender.rawValue
+                evaluation["glycosylatedHemoglobin"] = ev.glycosylatedHemoglobin
+                evaluation["height"] = ev.height
+                evaluation["hypoglycemia"] = ev.hypoglycemia
+                evaluation["imc"] = ev.imc
+                evaluation["racialAncestry"] = ev.racialAncestry.rawValue
+                evaluation["treatment"] = ev.treatment.rawValue
+                evaluation["weight"] = ev.weight
+                evaluation["dose"] = ev.dose
+                var comments = [[String: Any]]()
+                for i in ev.observations {
+                    var comment: [String: Any] = [:]
+                    comment["createdAt"] = i.createdAt
+                    comment["content"] = i.content
+                    comments.append(comment)
+                }
+                evaluation["observations"] = comments
+                evaluations.append(evaluation)
+            }
+            guard let patientEv = patientInfo.evaluations.last else { return [:]}
+            var evaluation: [String: Any] = [:]
+            evaluation["age"] = patientEv.age
+            evaluation["cardiovascularComplications"] = patientEv.cardiovascularComplications
+            evaluation["chronicKidneyDisease"] = patientEv.chronicKidneyDisease
+            evaluation["consultationType"] = patientEv.consultationType.rawValue
+            evaluation["createdAt"] = Timestamp()
+            evaluation["creatinineLevels"] = patientEv.creatinineLevels
+            evaluation["diagnosisYear"] = patientEv.diagnosisYear
+            evaluation["estimatedGlomerularFiltrationRate"] = patientEv.estimatedGlomerularFiltrationRate.rawValue
+            evaluation["fastingGlucose"] = patientEv.fastingGlucose
+            evaluation["gender"] = patientEv.gender.rawValue
+            evaluation["glycosylatedHemoglobin"] = patientEv.glycosylatedHemoglobin
+            evaluation["height"] = patientEv.height
+            evaluation["hypoglycemia"] = patientEv.hypoglycemia
+            evaluation["imc"] = patientEv.imc
+            evaluation["racialAncestry"] = patientEv.racialAncestry.rawValue
+            evaluation["treatment"] = patientEv.treatment.rawValue
+            evaluation["weight"] = patientEv.weight
+            evaluation["dose"] = dose
+            var comment: [String: Any] = [:]
+            comment["createdAt"] = patientEv.observations.last?.createdAt
+            comment["content"] = patientEv.observations.last?.content
+            
+            evaluation["observations"] = [comment]
+            
+            evaluations.append(evaluation)
+            
+            var dict: [String: Any] = [:]
+            dict["age"] = patientInfo.age
+            dict["name"] = patientInfo.name
+            dict["lastName"] = patientInfo.lastName
+            dict["consultationType"] = patientInfo.consultationType.rawValue
+            dict["gender"] = patientInfo.gender.rawValue
+            dict["height"] = patientInfo.evaluations.last?.height ?? 0
+            dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
+            dict["updatedAt"] = Timestamp()
+            dict["weight"] = patientInfo.evaluations.last?.weight ?? 0
+            dict["currentEvaluation"] = evaluations.count
+            dict["currentTreatment"] = patientInfo.currentTreatment.rawValue
+            dict["evaluations"] = evaluations
+            return dict
+        }
         
-        let patientEv = patientInfo.evaluations[0]
-        var evaluations: [String: Any] = [:]
-        evaluations["age"] = patientEv.age
-        evaluations["cardiovascularComplications"] = patientEv.cardiovascularComplications
-        evaluations["chronicKidneyDisease"] = patientEv.chronicKidneyDisease
-        evaluations["consultationType"] = patientEv.consultationType.rawValue
-        evaluations["createdAt"] = time
-        evaluations["creatinineLevels"] = patientEv.creatinineLevels
-        evaluations["diagnosisYear"] = patientEv.diagnosisYear
-        evaluations["estimatedGlomerularFiltrationRate"] = patientEv.estimatedGlomerularFiltrationRate.rawValue
-        evaluations["fastingGlucose"] = patientEv.fastingGlucose
-        evaluations["gender"] = patientEv.gender.rawValue
-        evaluations["glycosylatedHemoglobin"] = patientEv.glycosylatedHemoglobin
-        evaluations["height"] = patientEv.height
-        evaluations["hypoglycemia"] = patientEv.hypoglycemia
-        evaluations["imc"] = patientEv.imc
-        evaluations["racialAncestry"] = patientEv.racialAncestry.rawValue
-        evaluations["treatment"] = patientEv.treatment.rawValue
-        evaluations["weight"] = patientEv.weight
-        
-        var comment: [String: Any] = [:]
-        comment["createdAt"] = patientEv.observations[0].createdAt
-        comment["content"] = patientEv.observations[0].content
-        
-        evaluations["observations"] = [comment]
-        
-        dict["evaluations"] = [evaluations]
-        
-        print(dict)
-        return dict
     }
     
     func updatePatient(handler: @escaping (_ isError: Bool) -> Void) {
@@ -135,6 +213,7 @@ class FirebaseViewModel {
                     let revs = data["evaluations"] as! [[String: Any]]
                     
                     var revitions: [EvaluationSchema] = []
+                    var lastDose: String = ""
 //                    var observations: [ObservationSchema] = []
                     for i in revs {
                         var observations = [ObservationSchema]()
@@ -162,6 +241,7 @@ class FirebaseViewModel {
                                                    weight: i["weight"] as? Double ?? 0.0,
                                                    observations: observations)
                         revitions.append(rev)
+                        lastDose = rev.dose
                     }
                     let patient = PatientSchema(pId: i.documentID,
                                                 age: i.get("age") as? Int ?? 0,
@@ -170,7 +250,7 @@ class FirebaseViewModel {
                                                 birthDate: nil,
                                                 consultationType: ConsultationEnum(rawValue: i.get("consultationType") as? String ?? ConsultationEnum.privada.rawValue)!,
                                                 country: i.get("country") as? String ?? "",
-                                                dose: i.get("dose") as? String ?? "",
+                                                dose: lastDose,
                                                 createdAt: i.get("createdAt") as? Timestamp ?? Timestamp(),
                                                 diagnosisYear: i.get("diagnosisYear") as? Int ?? 0,
                                                 gender: GenderEnum(rawValue: i.get("gender") as? String ?? "") ?? GenderEnum.fem,

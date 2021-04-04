@@ -36,6 +36,17 @@ class TableViewCellOpen: UITableViewCell {
     func setInfo(title: String, placeHolder: String) {
         titleLabel.text = title
         openInput.placeholder = placeHolder
+        
+        if PatientSelected.shared.patientInfo != nil {
+            switch title {
+            case "Edad":
+                openInput.text = "\(PatientSelected.shared.patientInfo?.age ?? 0)"
+            case "Año en que se diagnosticó la diabetes":
+                openInput.text = "\(PatientSelected.shared.patientInfo?.diagnosisYear ?? 0)"
+            default:
+                break
+            }
+        }
     }
     @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
         if titleLabel.text == "Edad" {

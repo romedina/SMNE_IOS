@@ -50,6 +50,28 @@ class TableViewCellRadioRadio: UITableViewCell {
         masButton.setImage(selectImage, for: .selected)
     }
     
+    func setValues(v1: ConsultationEnum, v2: GenderEnum) {
+        switch v1 {
+        case .privada:
+            privateButton.isSelected = true
+            publicButton.isSelected = false
+            break
+        case .publica:
+            privateButton.isSelected = false
+            publicButton.isSelected = true
+            break
+        }
+        
+        switch v2 {
+        case .fem:
+            femButton.isSelected = true
+            masButton.isSelected = false
+        case .mas:
+            femButton.isSelected = false
+            masButton.isSelected = true
+        }
+    }
+    
     @IBAction func privateTapped(_ sender: Any) {
         privateButton.isSelected = true
         publicButton.isSelected = false

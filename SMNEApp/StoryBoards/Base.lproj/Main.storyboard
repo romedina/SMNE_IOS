@@ -268,6 +268,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Inicio" image="home" id="tjW-bA-Zeg"/>
                     <connections>
+                        <outlet property="drLabel" destination="Ljs-Gc-Q6C" id="2AK-uP-w8D"/>
                         <outlet property="imageView" destination="FwI-6L-BPN" id="I6n-x0-h3r"/>
                         <outlet property="tableViewOptions" destination="2Oa-gk-uqQ" id="ugt-ib-83W"/>
                         <segue destination="dbb-X0-Eni" kind="presentation" identifier="newPatient" modalPresentationStyle="fullScreen" id="ffa-d0-n8i"/>
@@ -446,20 +447,20 @@
             </objects>
             <point key="canvasLocation" x="-1359" y="-623"/>
         </scene>
-        <!--Table View Controller Edit Doctor Profile-->
+        <!--Table View Controller Edit Doctor Profiles-->
         <scene sceneID="pq8-rf-RC9">
             <objects>
-                <tableViewController id="VGy-Mh-WCK" customClass="TableViewControllerEditDoctorProfile" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="VGy-Mh-WCK" customClass="TableViewControllerEditDoctorProfiles" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="C9n-na-9JH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="tqh-tr-hll" customClass="TableViewCellEditDoctorInfo" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="709.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="837.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqh-tr-hll" id="cBA-8p-HcI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="709.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="837.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos personales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6m-TV-E2K">
@@ -480,19 +481,22 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-CT-hae" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="84" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-CT-hae">
+                                            <rect key="frame" x="17" y="84" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="jjZ-y8-hjG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="nameChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="F4t-6i-gif"/>
                                             </connections>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2XP-LZ-d0O">
-                                            <rect key="frame" x="17" y="135" width="380" height="57.5"/>
+                                            <rect key="frame" x="17" y="151" width="380" height="73.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="wxH-Ig-bo0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="57.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="73.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Paterno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-rL-Jjo">
                                                             <rect key="frame" x="0.0" y="0.0" width="185" height="16.5"/>
@@ -503,9 +507,12 @@
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-cm-5IQ" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="23.5" width="185" height="34"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-cm-5IQ">
+                                                            <rect key="frame" x="0.0" y="23.5" width="185" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="2IH-To-dTi"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
                                                                 <action selector="fSurnameChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="f0F-QL-g22"/>
@@ -514,7 +521,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-Ye-eZN">
-                                                    <rect key="frame" x="195" y="0.0" width="185" height="57.5"/>
+                                                    <rect key="frame" x="195" y="0.0" width="185" height="73.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido materno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk3-da-33C">
                                                             <rect key="frame" x="0.0" y="0.0" width="185" height="16.5"/>
@@ -525,9 +532,12 @@
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-0c-VKh" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="23.5" width="185" height="34"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-0c-VKh">
+                                                            <rect key="frame" x="0.0" y="23.5" width="185" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="13q-zH-heN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
                                                                 <action selector="sSurnameChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="0zs-Wl-7cw"/>
@@ -538,7 +548,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSg-Sl-knM">
-                                            <rect key="frame" x="17" y="209.5" width="380" height="20.5"/>
+                                            <rect key="frame" x="17" y="241.5" width="380" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="EuY-Gu-2Ik"/>
                                             </constraints>
@@ -546,16 +556,19 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-mJ-P6B" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="237" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-mJ-P6B">
+                                            <rect key="frame" x="17" y="269" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="aCd-Id-i7e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="genderChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="X0C-D6-f1e"/>
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgB-iO-h9S">
-                                            <rect key="frame" x="17" y="288" width="380" height="20.5"/>
+                                            <rect key="frame" x="17" y="336" width="380" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="ITU-DK-Y7V"/>
                                             </constraints>
@@ -563,16 +576,19 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="315.5" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx">
+                                            <rect key="frame" x="17" y="363.5" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="amU-0j-WhU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="emailChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="xwG-Sy-3Rm"/>
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cédula profesional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qss-tL-NLc">
-                                            <rect key="frame" x="17" y="366.5" width="380" height="20.5"/>
+                                            <rect key="frame" x="17" y="430.5" width="380" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="cAj-kc-ezM"/>
                                             </constraints>
@@ -580,16 +596,19 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-l6-LVT" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="394" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-l6-LVT">
+                                            <rect key="frame" x="17" y="458" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="nvg-Ad-Ipq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="cedulaChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="VHS-t6-m6U"/>
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especialidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-kb-xO8">
-                                            <rect key="frame" x="17" y="445" width="380" height="20.5"/>
+                                            <rect key="frame" x="17" y="525" width="380" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="d7g-VE-Ehh"/>
                                             </constraints>
@@ -597,16 +616,19 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-6i-ia9" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="472.5" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-6i-ia9">
+                                            <rect key="frame" x="17" y="552.5" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="7bC-AO-ia9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="espeChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="Qck-aZ-y82"/>
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facultad de Medicina donde se graduó" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-48-5yf">
-                                            <rect key="frame" x="17" y="523.5" width="380" height="20.5"/>
+                                            <rect key="frame" x="17" y="619.5" width="380" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="Vh3-ek-n8N"/>
                                             </constraints>
@@ -614,23 +636,29 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-4g-w8D" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="551" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-4g-w8D">
+                                            <rect key="frame" x="17" y="647" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="x1E-uZ-jWN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="schoolChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="2ul-i3-7sU"/>
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-sk-p4j">
-                                            <rect key="frame" x="17" y="602" width="380" height="16.5"/>
+                                            <rect key="frame" x="17" y="714" width="380" height="16.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-Jv-nqv" customClass="MDCTextField">
-                                            <rect key="frame" x="17" y="625.5" width="380" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-Jv-nqv">
+                                            <rect key="frame" x="17" y="737.5" width="380" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="QlM-7k-Cec"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="countryChanged:" destination="tqh-tr-hll" eventType="editingChanged" id="STJ-FS-HeK"/>
@@ -728,7 +756,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-iT-Lgd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-iT-Lgd">
                                 <rect key="frame" x="0.0" y="130" width="414" height="683"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -2013,8 +2041,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wf5-sW-IoX"/>
-        <segue reference="6By-J6-Xqs"/>
+        <segue reference="3u5-hs-73a"/>
+        <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Consulta" width="52" height="41"/>

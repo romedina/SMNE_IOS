@@ -11,6 +11,7 @@ class ViewControllerStart: UIViewController {
     
     @IBOutlet weak var imageView: UIView!
     @IBOutlet weak var tableViewOptions: UITableView!
+    @IBOutlet weak var drLabel: UILabel!
     
     let titles = ["Tratamiento farmacológico DM2", "Consulta de algoritmo para estudio", "Gestión de pacientes"]
     let buttonTitles = ["Iniciar diagnóstico", "Ver algoritmo", "Pacientes"]
@@ -26,10 +27,23 @@ class ViewControllerStart: UIViewController {
         tableViewOptions.delegate = self
         tableViewOptions.dataSource = self
         
+        let user = UserDefaults.standard
+        if let info = user.string(forKey: "lastName") {
+            drLabel.text = "Hola Dr. \(info.capitalized)"
+        } else {
+            drLabel.text = "Hola Dr."
+        }
     }
     @IBAction func buttonTapped(_ sender: Any) {
 //        let firebase = FirebaseViewModel()
 //        firebase.setNewComment(comment: "Prueba de nuevos comentarios.", patientId: "4aJT12O1Nl2MzKuRZOC5")
+//        PopCommentView.show(message: "Prueba", controller: self) { }
+        AlertToast.show(message: "prueba error", controller: self, type: .Error) {
+            AlertToast.show(message: "prueba warning", controller: self, type: .Warning) {
+                AlertToast.show(message: "prueba succes", controller: self, type: .Success) {
+                }
+            }
+        }
     }
 }
 

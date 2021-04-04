@@ -33,7 +33,7 @@ class ViewControllerNPMain: UIViewController {
     
     @IBOutlet weak var exitFlowButton: UIButton!
     
-    var patientShema: PatientSchema?
+    var patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
     var evaluationSchema: EvaluationSchema?
     var commentSchema: ObservationSchema?
     let fireclass = FirebaseViewModel()
@@ -110,25 +110,25 @@ class ViewControllerNPMain: UIViewController {
                                       glucose: Float(pSInfo.evaluations.last!.fastingGlucose),
                                       filterCup: pSInfo.evaluations.last?.estimatedGlomerularFiltrationRate.rawValue ?? FiltrationEnum.na.rawValue,
                                       comment: "")
-            patientShema = PatientSelected.shared.patientInfo
-            evaluationSchema = EvaluationSchema(age: patientShema!.age,
-                                                cardiovascularComplications: patientShema!.evaluations.last!.cardiovascularComplications,
-                                                chronicKidneyDisease: patientShema!.evaluations.last!.chronicKidneyDisease,
-                                                consultationType: patientShema!.consultationType,
-                                                createdAt: patientShema!.createdAt,
-                                                creatinineLevels: patientShema!.evaluations.last!.creatinineLevels,
-                                                diagnosisYear: patientShema!.diagnosisYear,
-                                                dose: patientShema!.evaluations.last!.dose,
-                                                estimatedGlomerularFiltrationRate: patientShema!.evaluations.last!.estimatedGlomerularFiltrationRate,
-                                                fastingGlucose: patientShema!.evaluations.last!.fastingGlucose,
-                                                gender: patientShema!.gender,
-                                                glycosylatedHemoglobin: patientShema!.evaluations.last!.glycosylatedHemoglobin,
-                                                height: patientShema!.evaluations.last!.height,
-                                                hypoglycemia: patientShema!.evaluations.last!.hypoglycemia,
-                                                imc: patientShema!.evaluations.last!.imc,
-                                                racialAncestry: patientShema!.racialAncestry,
-                                                treatment: patientShema!.currentTreatment,
-                                                weight: patientShema!.evaluations.last!.weight,
+            patientShema = PatientSelected.shared.patientInfo!
+            evaluationSchema = EvaluationSchema(age: patientShema.age,
+                                                cardiovascularComplications: patientShema.evaluations.last!.cardiovascularComplications,
+                                                chronicKidneyDisease: patientShema.evaluations.last!.chronicKidneyDisease,
+                                                consultationType: patientShema.consultationType,
+                                                createdAt: patientShema.createdAt,
+                                                creatinineLevels: patientShema.evaluations.last!.creatinineLevels,
+                                                diagnosisYear: patientShema.diagnosisYear,
+                                                dose: patientShema.evaluations.last!.dose,
+                                                estimatedGlomerularFiltrationRate: patientShema.evaluations.last!.estimatedGlomerularFiltrationRate,
+                                                fastingGlucose: patientShema.evaluations.last!.fastingGlucose,
+                                                gender: patientShema.gender,
+                                                glycosylatedHemoglobin: patientShema.evaluations.last!.glycosylatedHemoglobin,
+                                                height: patientShema.evaluations.last!.height,
+                                                hypoglycemia: patientShema.evaluations.last!.hypoglycemia,
+                                                imc: patientShema.evaluations.last!.imc,
+                                                racialAncestry: patientShema.racialAncestry,
+                                                treatment: patientShema.currentTreatment,
+                                                weight: patientShema.evaluations.last!.weight,
                                                 observations: [])
         } else {
             patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
@@ -278,14 +278,14 @@ class ViewControllerNPMain: UIViewController {
                 indexChanged()
             } else if index == 4 {
                 evaluationSchema?.observations.append(commentSchema!)
-                patientShema?.evaluations.append(evaluationSchema!)
+                patientShema.evaluations.append(evaluationSchema!)
                 let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
                 nextVC.setAnim(type: .treatment)
                 let delegate: EndPillAnimationProtocol = nextVC
                 nextVC.modalPresentationStyle = .fullScreen
                 self.present(nextVC, animated: true) { [self] in
                     let dose = createDose()
-                    let dict = fireclass.createDictionary(patientInfo: self.patientShema!, dose: dose)
+                    let dict = fireclass.createDictionary(patientInfo: self.patientShema, dose: dose)
                     fireclass.setPatient(info: dict, patientId: patientInfo.id) { () in
                         delegate.endAnimationWith {
                             self.dismiss(animated: true, completion: nil)
@@ -455,16 +455,16 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         case "age":
             patientInfo.age = Int(info as! String) ?? 0
             mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
-            patientShema?.age = Int(info as! String) ?? 0
+            patientShema.age = Int(info as! String) ?? 0
             evaluationSchema?.age = Int(info as! String) ?? 0
             break
         case "gender":
             patientInfo.gender = info as! String
             if info as! String == "fem" {
-                patientShema?.gender = .fem
+                patientShema.gender = .fem
                 evaluationSchema?.gender = .fem
             } else {
-                patientShema?.gender = .mas
+                patientShema.gender = .mas
                 evaluationSchema?.gender = .mas
             }
             break
@@ -472,18 +472,18 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             let racial =  info as! String == "Afroamericano" ? true : false
             patientInfo.racial = racial
             if info as! String == "Afroamericano" {
-                patientShema?.racialAncestry = .Afroamericano
+                patientShema.racialAncestry = .Afroamericano
                 evaluationSchema?.racialAncestry = .Afroamericano
             } else {
-                patientShema?.racialAncestry = .No
+                patientShema.racialAncestry = .No
                 evaluationSchema?.racialAncestry = .No
             }
             
             break
         case "diabetes":
             patientInfo.diabetesDate = info as! String
-            patientShema?.diagnosisYear = Int(info as! String) ?? 0
-            evaluationSchema?.diagnosisYear = Int(info as! String)!
+            patientShema.diagnosisYear = Int(info as! String) ?? 0
+            evaluationSchema?.diagnosisYear = Int(info as! String) ?? 0
             break
         //S2
         case "IMC":
@@ -508,11 +508,12 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "algorithm":
             patientInfo.algorithID = info as! String
-            patientShema?.currentTreatment = TreatmentEnum(rawValue: info as! String)!
+            patientShema.currentTreatment = TreatmentEnum(rawValue: info as! String)!
             evaluationSchema?.treatment = TreatmentEnum(rawValue: info as! String)!
             break
         case "hba1c":
             patientInfo.hba1c = info as! Float
+            evaluationSchema?.glycosylatedHemoglobin = info as! Float
             break
         case "glucose":
             patientInfo.glucose = info as! Float
@@ -528,11 +529,11 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "name":
             patientInfo.name = info as! String
-            patientShema?.name = info as! String
+            patientShema.name = info as! String
             break
         case "lastName":
             patientInfo.lastName = info as! String
-            patientShema?.lastName = info as! String
+            patientShema.lastName = info as! String
             break
         case "weight":
             evaluationSchema?.weight = Double(info as! Float)

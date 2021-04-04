@@ -7,6 +7,13 @@
 
 import UIKit
 
+protocol RevitionToListDelegate {
+    func revitionToList(date: String, comment: String)
+}
+protocol ListToControllerDelegate {
+    func listToController(date: String, comment: String)
+}
+
 class TableViewCellRevition: UITableViewCell {
     
     @IBOutlet weak var evaluationNumberLabel: UILabel!
@@ -24,6 +31,7 @@ class TableViewCellRevition: UITableViewCell {
     var observationsViews = [RevisionView]()
     
     var observations = [ObservationSchema]()
+    var delegate: ListToControllerDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,6 +71,7 @@ class TableViewCellRevition: UITableViewCell {
             let formatter1 = DateFormatter()
             formatter1.dateStyle = .short
             let rView = UINib(nibName: "RevisionView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RevisionView
+            rView.delegate = self
             rView.setInfo(index: 0, title: formatter1.string(from: today), sub: newRevition.content)
             revitionsStack.addArrangedSubview(rView)
         } else if revitionsStack.arrangedSubviews.count == 0 {
@@ -72,6 +81,7 @@ class TableViewCellRevition: UITableViewCell {
                 formatter1.dateStyle = .short
                 let rView = UINib(nibName: "RevisionView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RevisionView
                 rView.setInfo(index: 0, title: formatter1.string(from: today), sub: newObservation.content)
+                rView.delegate = self
                 revitionsStack.addArrangedSubview(rView)
             }
         }
@@ -97,4 +107,10 @@ class TableViewCellRevition: UITableViewCell {
         }
     }
 
+}
+
+extension TableViewCellRevition: RevitionToListDelegate {
+    func revitionToList(date: String, comment: String) {
+        delegate?.listToController(date: date, comment: comment)
+    }
 }

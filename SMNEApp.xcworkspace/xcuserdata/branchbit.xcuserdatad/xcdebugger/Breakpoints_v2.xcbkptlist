@@ -276,5 +276,117 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C786BD99-F000-49DC-8ECB-E2F34CF46006"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/Home/Patient/ViewControllerPatientList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C786BD99-F000-49DC-8ECB-E2F34CF46006 - 8c9fbbb3b465e4d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.ViewControllerPatientList.getData() -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/ViewControllerPatientList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  uuid = "C786BD99-F000-49DC-8ECB-E2F34CF46006 - c69c917607f1ce41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SMNEApp.PatientSchema&gt;) -&gt; () in SMNEApp.ViewControllerPatientList.getData() -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/ViewControllerPatientList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C4FD522-60C7-4083-9E07-4E921563F1D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/Home/Patient/ViewControllerPatientList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMNEApp/View/Home/Patient/Patient profile/ViewControllerPatientProfile.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "listToController(date:comment:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F - 9fa4eb758740b2cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SMNEApp.ViewControllerPatientProfile.listToController(date: Swift.String, comment: Swift.String) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/Patient%20profile/ViewControllerPatientProfile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F - 17e6ffade779d4d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in SMNEApp.ViewControllerPatientProfile.listToController(date: Swift.String, comment: Swift.String) -&gt; ()"
+                  moduleName = "SMNEApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/Patient%20profile/ViewControllerPatientProfile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

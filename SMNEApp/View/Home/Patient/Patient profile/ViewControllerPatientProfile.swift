@@ -71,6 +71,7 @@ extension ViewControllerPatientProfile: UITableViewDelegate, UITableViewDataSour
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "revition") as! TableViewCellRevition
+            cell.delegate = self
             if let info = evaluations?[indexPath.row - 1] {
                 if info.dose == evaluations!.first?.dose {
                     cell.setInfo(info: info, isLAst: true)
@@ -86,5 +87,11 @@ extension ViewControllerPatientProfile: UITableViewDelegate, UITableViewDataSour
 extension ViewControllerPatientProfile: NewRevitionDelegate {
     func newRevition() {
         self.performSegue(withIdentifier: "newPatient", sender: self)
+    }
+}
+
+extension ViewControllerPatientProfile: ListToControllerDelegate {
+    func listToController(date: String, comment: String) {
+        PopCommentView.show(date: date, message: comment, controller: self) { }
     }
 }

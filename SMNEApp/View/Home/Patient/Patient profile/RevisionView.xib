@@ -50,6 +50,7 @@
                         <constraint firstAttribute="height" constant="62" id="d9A-0z-BtO"/>
                     </constraints>
                     <connections>
+                        <action selector="revitionTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="6M8-h9-hc3"/>
                         <action selector="revitionTapped:" destination="iN0-l3-epB" eventType="touchDragInside" id="okA-1h-Ws6"/>
                     </connections>
                 </button>

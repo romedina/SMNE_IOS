@@ -42,6 +42,40 @@ class TableViewCellBool: UITableViewCell {
             subLabel.isHidden = false
         }
         self.id = id
+        
+        if PatientSelected.shared.patientInfo != nil {
+            switch id {
+            case "renal":
+                let value = PatientSelected.shared.patientInfo?.evaluations.last?.chronicKidneyDisease ?? false
+                if value {
+                    noButton.isSelected = false
+                    yesButton.isSelected = true
+                } else {
+                    yesButton.isSelected = false
+                    noButton.isSelected = true
+                }
+            case "cardio":
+                let value = PatientSelected.shared.patientInfo?.evaluations.last?.cardiovascularComplications ?? false
+                if value {
+                    noButton.isSelected = false
+                    yesButton.isSelected = true
+                } else {
+                    yesButton.isSelected = false
+                    noButton.isSelected = true
+                }
+            case "hipo":
+                let value = PatientSelected.shared.patientInfo?.evaluations.last?.hypoglycemia ?? false
+                if value {
+                    noButton.isSelected = false
+                    yesButton.isSelected = true
+                } else {
+                    yesButton.isSelected = false
+                    noButton.isSelected = true
+                }
+            default:
+                break
+            }
+        }
     }
     
     @IBAction func yesButtonTapped(_ sender: Any) {

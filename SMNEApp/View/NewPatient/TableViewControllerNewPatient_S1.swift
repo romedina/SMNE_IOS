@@ -78,7 +78,9 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         } else if let _ = cellInfo as? RadioRadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio,radio", for: indexPath) as! TableViewCellRadioRadio
-            
+            if PatientSelected.shared.patientInfo != nil {
+                cell.setValues(v1: PatientSelected.shared.patientInfo?.consultationType ?? ConsultationEnum.privada, v2: PatientSelected.shared.patientInfo?.gender ?? GenderEnum.fem)
+            }
             
             cell.delegate = self
             
@@ -96,9 +98,10 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         } else if let _ = cellInfo as? RadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellRadioButton
-            
             cell.delegate = self
-            
+            if let racial = PatientSelected.shared.patientInfo?.racialAncestry {
+                cell.setValues(v1: racial)
+            }
             return cell
         }  else if let info = cellInfo as? OpenOpenCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "openopen") as! TableViewCellOpenOpen

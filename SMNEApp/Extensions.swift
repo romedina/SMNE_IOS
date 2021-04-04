@@ -31,3 +31,13 @@ extension UITextField {
         return emailPred.evaluate(with: text)
     }
 }
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
