@@ -256,22 +256,38 @@ class ViewControllerNPMain: UIViewController {
                     if validationsStep2() {
                         prepareStepThree()
                     } else {
+                        AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+                        }
                         print("Llena todo")
                         return
                     }
                 }
                 if index == 3 {
-                    let prepare5 = ModelViewStep5()
-                    
-                    if algorithmID != "C" {
-                        self.treatment = prepare5.getOptions(algorithm: patientInfo.algorithID, hba1c: patientInfo.hba1c, glucose: patientInfo.glucose)
-                        self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: patientInfo.algorithID, hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, currentEv: PatientSelected.shared.patientInfo?.currentEvaluation ?? 1, prevDose: PatientSelected.shared.patientInfo?.dose, hypoglycemia: patientInfo.hipo)
-                        
+                    if validationsStep4() {
+                        let prepare5 = ModelViewStep5()
+                        var algorithm = patientInfo.algorithID
+                        var hba1c = patientInfo.hba1c
+                        var glucose = patientInfo.glucose
+                        var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 1
+                        var prevD = PatientSelected.shared.patientInfo?.dose ?? ""
+                        var hipo = patientInfo.hipo
+                        var filterCup = patientInfo.filterCup
+                        #warning("Si se cambia de tratamiento se borra o no?")
+                        if algorithmID != "C" {
+                            if let _ = PatientSelected.shared.prevTreatment {
+                                currentEv = 1
+                            }
+                            self.treatment = prepare5.getOptions(algorithm: algorithm, hba1c: hba1c, glucose: glucose)
+                            self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
+                        } else {
+                            self.treatment = prepare5.getOptions(hba1c: hba1c, glucose: glucose, filter: filterCup)
+                            self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup, currentEv: currentEv, prevDose: prevD)
+                        }
+                        prepare5.getStep5(options: self.treatment)
                     } else {
-                        self.treatment = prepare5.getOptions(hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, filter: patientInfo.filterCup)
-                        self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: patientInfo.hba1c, glucose: patientInfo.glucose, filter: patientInfo.filterCup, currentEv: 0, prevDose: nil)
+                        AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+                        }
                     }
-                    prepare5.getStep5(options: self.treatment)
                 }
                 index += 1
                 changeStepperUp()
@@ -294,33 +310,26 @@ class ViewControllerNPMain: UIViewController {
                 }
             }
         } else {
+            AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+            }
             print("Registra todo")
         }
         
     }
     
     func createDose() -> String {
-//        guard let currentEv = patientShema?.currentEvaluation else { return "" }
-//        guard let currentTreatment = patientShema?.currentTreatment else { return ""}
-//
-//        let treatmentList = TreatmentsFromDB().treatmentList
-//
-//        for treatmentInDB in treatmentList {
-//            for i in treatmentInDB {
-//                var count = 0
-//                if i.title == self.treatment.first?.title {
-//                    return "T\(currentTreatment)_E\(currentEv)_D\(count)"
-//                }
-//                count += 1
-//            }
-//        }
-        
         return self.treatmentForDB[0].name
-        
     }
     
     func validationsStep2() -> Bool {
         if patientInfo.IMC != 0.0 && patientInfo.renal != nil && patientInfo.cardio != nil && patientInfo.hipo != nil {
+            return true
+        }
+        return false
+    }
+    
+    func validationsStep4() -> Bool {
+        if patientInfo.comment != "" && patientInfo.hba1c != 0 && patientInfo.glucose != 0 {
             return true
         }
         return false
@@ -432,6 +441,12 @@ class ViewControllerNPMain: UIViewController {
 }
 
 extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
+    func showWarning(handler: @escaping (Bool) -> Void) {
+        AlertToast.show(message: "Esto cambiará el algoritmo seleccionado", controller: self, type: .Warning) { (isOk) in
+            handler(isOk)
+        }
+    }
+    
     func optionDelegate(option: Int, ID: String) {
         print(ID)
         algorithmID = ID

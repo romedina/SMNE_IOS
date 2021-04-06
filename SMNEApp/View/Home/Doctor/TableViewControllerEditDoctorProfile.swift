@@ -2,7 +2,7 @@
 //  TableViewControllerEditDoctorProfile.swift
 //  SMNEApp
 //
-//  Created by Branchbit  on 03/03/21.
+//  Created by Guillermo Saavedra Dorantes on 03/03/21.
 //
 
 import UIKit

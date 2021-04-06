@@ -2,7 +2,7 @@
 //  PopCommentView.swift
 //  SMNEApp
 //
-//  Created by Branchbit  on 02/04/21.
+//  Created by Guillermo Saavedra Dorantes on 02/04/21.
 //
 
 import UIKit

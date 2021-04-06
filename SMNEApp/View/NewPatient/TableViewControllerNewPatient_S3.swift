@@ -10,6 +10,7 @@ import MaterialComponents.MDCButton
 
 protocol OptionSelectedDelegate {
     func optionDelegate(option: Int, ID: String)
+    func showWarning(handler: @escaping (_ flag: Bool) -> Void)
 }
 
 class TableViewControllerNewPatient_S3: UITableViewController {
@@ -62,7 +63,23 @@ class TableViewControllerNewPatient_S3: UITableViewController {
 
 extension TableViewControllerNewPatient_S3: AlgorithmSelectedDelegate {
     func algorithmSelected(option: Int, ID: String) {
-        delegate?.optionDelegate(option: option, ID: ID)
-        delegateInfo?.infoChanged(id: "algorithm", info: ID)
+        if let prevId = PatientSelected.shared.patientInfo?.currentTreatment.rawValue {
+            if prevId != ID {
+                delegate?.showWarning(handler: { (isOk) in
+                    if isOk {
+                        PatientSelected.shared.prevTreatment = prevId
+                        self.delegate?.optionDelegate(option: option, ID: ID)
+                        self.delegateInfo?.infoChanged(id: "algorithm", info: ID)
+                    }
+                })
+            } else {
+                PatientSelected.shared.prevTreatment = nil
+                delegate?.optionDelegate(option: option, ID: ID)
+                delegateInfo?.infoChanged(id: "algorithm", info: ID)
+            }
+        } else {
+            delegate?.optionDelegate(option: option, ID: ID)
+            delegateInfo?.infoChanged(id: "algorithm", info: ID)
+        }
     }
 }

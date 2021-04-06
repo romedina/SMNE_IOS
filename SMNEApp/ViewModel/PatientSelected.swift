@@ -10,6 +10,6 @@ import Foundation
 class PatientSelected {
     static let shared = PatientSelected()
     var patientInfo: PatientSchema?
-    
+    var prevTreatment: String?
     
 }
