@@ -10,6 +10,8 @@
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
 		9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B645C012609774400EA401B /* ViewControllerNreRevition.swift */; };
+		9B6460042625741900DED7F5 /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6460022625741900DED7F5 /* FloatingMenu.swift */; };
+		9B6460052625741900DED7F5 /* FloatingMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6460032625741900DED7F5 /* FloatingMenu.xib */; };
 		9B65B3EC2600925D00917AFA /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3EB2600925D00917AFA /* AlertToast.swift */; };
 		9B65CB1726190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */; };
 		9B66C0C825F9EA6A0004041E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B66C0C725F9EA6A0004041E /* loading.json */; };
@@ -131,6 +133,8 @@
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B645C012609774400EA401B /* ViewControllerNreRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNreRevition.swift; sourceTree = "<group>"; };
+		9B6460022625741900DED7F5 /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
+		9B6460032625741900DED7F5 /* FloatingMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingMenu.xib; sourceTree = "<group>"; };
 		9B65B3EB2600925D00917AFA /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
 		9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
 		9B66C0C725F9EA6A0004041E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
@@ -296,6 +300,15 @@
 			path = PopComment;
 			sourceTree = "<group>";
 		};
+		9B645FF9262573AD00DED7F5 /* Floating menu */ = {
+			isa = PBXGroup;
+			children = (
+				9B6460022625741900DED7F5 /* FloatingMenu.swift */,
+				9B6460032625741900DED7F5 /* FloatingMenu.xib */,
+			);
+			path = "Floating menu";
+			sourceTree = "<group>";
+		};
 		9B6CE73F25ECC72100464AF1 /* Edit profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +321,7 @@
 		9B6CE74A25ECC9B200464AF1 /* Patient profile */ = {
 			isa = PBXGroup;
 			children = (
+				9B645FF9262573AD00DED7F5 /* Floating menu */,
 				9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */,
 				9BCD12F32604798300B0DBF5 /* RevisionView.swift */,
 				9BCD12F8260479F100B0DBF5 /* RevisionView.xib */,
@@ -706,6 +720,7 @@
 				9B66C0C825F9EA6A0004041E /* loading.json in Resources */,
 				B30CDB1E25C2480700B7CECF /* OpenSans-Regular.ttf in Resources */,
 				B30CDB1D25C2480700B7CECF /* OpenSans-BoldItalic.ttf in Resources */,
+				9B6460052625741900DED7F5 /* FloatingMenu.xib in Resources */,
 				B3CC13DC25B8B9FA00CD968E /* Main.storyboard in Resources */,
 				9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */,
 				B31C97F425BF921D006DDCD8 /* NewPatient.storyboard in Resources */,
@@ -894,6 +909,7 @@
 				B304935825DB7FEF0072812C /* TableViewCellOpenOpen.swift in Sources */,
 				9BCD12F42604798300B0DBF5 /* RevisionView.swift in Sources */,
 				B3494A7C25C4828500ACC4DD /* ViewControllerNPMain.swift in Sources */,
+				9B6460042625741900DED7F5 /* FloatingMenu.swift in Sources */,
 				B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
 				9BCDA6AA25EDE69B00AA423C /* DoctorSchema.swift in Sources */,

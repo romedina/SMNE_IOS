@@ -618,5 +618,6 @@ class TreatmentsFromDB {
                                                        description: ["Agregar iDPP4,", "iSGLT2, pioglitazona, arGLP-1 o SU", "(evitar glibenclamida/clorpropamida)", "Agregar: insulina basal (de preferencia análogos de acción prolongada con menor riesgo de hipoglucemia)"]
     )
     ]
+    let TDefault: [TreatmentFromDB] = [TreatmentFromDB(name: "Default", title: "Aún no sabemos que va aquí", description: ["Falta que pases que se hace en el default jeje saludos"])]
     
 }

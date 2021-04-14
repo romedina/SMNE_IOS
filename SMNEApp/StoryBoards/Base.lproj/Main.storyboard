@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKD-ps-7Qb">
-                                        <rect key="frame" x="152.5" y="52.5" width="109.5" height="30"/>
+                                        <rect key="frame" x="158.5" y="54.5" width="97" height="26"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -239,7 +239,7 @@
                                     <constraint firstItem="FwI-6L-BPN" firstAttribute="top" secondItem="SZU-OK-jcs" secondAttribute="top" constant="50" id="wkV-wA-y0U"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-6N-h6P">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-6N-h6P">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -1232,7 +1232,7 @@
                                                                 <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="TwW-Fz-4Wg" kind="presentation" modalPresentationStyle="fullScreen" id="Vmg-Pd-g0i"/>
+                                                                <segue destination="TwW-Fz-4Wg" kind="presentation" identifier="newRevition" modalPresentationStyle="fullScreen" id="Vmg-Pd-g0i"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No altera el tratamiento del paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-XR-gvw">
@@ -1293,16 +1293,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-eq-o3G">
+                                <rect key="frame" x="303" y="763" width="79" height="79"/>
+                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="dMf-jZ-yQZ"/>
+                                    <constraint firstAttribute="width" constant="79" id="sFN-D9-IWG"/>
+                                </constraints>
+                                <state key="normal" image="plusButton"/>
+                                <connections>
+                                    <action selector="floatingTapped:" destination="iSM-IZ-79q" eventType="touchUpInside" id="Hw4-8x-r7r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTf-w0-9G0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MiQ-hi-ALc" firstAttribute="leading" secondItem="qTf-w0-9G0" secondAttribute="leading" id="9dJ-lc-2cq"/>
                             <constraint firstItem="qTf-w0-9G0" firstAttribute="trailing" secondItem="Kav-eo-0ca" secondAttribute="trailing" id="A5M-nO-byX"/>
+                            <constraint firstItem="qTf-w0-9G0" firstAttribute="bottom" secondItem="TaP-eq-o3G" secondAttribute="bottom" constant="20" id="Fch-ux-i7e"/>
                             <constraint firstItem="XoX-tl-TV1" firstAttribute="top" secondItem="MiQ-hi-ALc" secondAttribute="bottom" id="Krm-hk-XtB"/>
                             <constraint firstItem="MiQ-hi-ALc" firstAttribute="trailing" secondItem="qTf-w0-9G0" secondAttribute="trailing" id="RZb-7M-NaL"/>
                             <constraint firstItem="MiQ-hi-ALc" firstAttribute="top" secondItem="qTf-w0-9G0" secondAttribute="top" id="XkF-eG-FZK"/>
                             <constraint firstItem="XoX-tl-TV1" firstAttribute="trailing" secondItem="qTf-w0-9G0" secondAttribute="trailing" id="cTD-ag-WZV"/>
+                            <constraint firstItem="qTf-w0-9G0" firstAttribute="trailing" secondItem="TaP-eq-o3G" secondAttribute="trailing" constant="32" id="d5o-OS-MUp"/>
                             <constraint firstItem="qTf-w0-9G0" firstAttribute="bottom" secondItem="Kav-eo-0ca" secondAttribute="bottom" id="iYN-5G-v9L"/>
                             <constraint firstItem="Kav-eo-0ca" firstAttribute="leading" secondItem="qTf-w0-9G0" secondAttribute="leading" id="jyw-Hp-fSQ"/>
                             <constraint firstItem="Kav-eo-0ca" firstAttribute="top" secondItem="XoX-tl-TV1" secondAttribute="bottom" id="ozN-CL-UkH"/>
@@ -1310,6 +1324,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="floatingButton" destination="TaP-eq-o3G" id="ZHM-pu-9Mn"/>
                         <outlet property="iconView" destination="beL-Xc-MNl" id="sxr-gv-bTp"/>
                         <outlet property="pageTitle" destination="xun-w7-JEf" id="fAd-3k-Gn3"/>
                         <outlet property="patientIdLabel" destination="UtG-kI-uza" id="R8P-Zt-l6a"/>
@@ -2041,7 +2056,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3u5-hs-73a"/>
+        <segue reference="Wf5-sW-IoX"/>
         <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2058,6 +2073,7 @@
         <image name="paciente_activo" width="52" height="41"/>
         <image name="phone" width="122" height="221.5"/>
         <image name="pildora" width="50" height="40"/>
+        <image name="plusButton" width="34" height="34.5"/>
         <image name="radioNS" width="18" height="18"/>
         <image name="radioS" width="18" height="18"/>
         <systemColor name="systemBackgroundColor">

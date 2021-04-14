@@ -265,28 +265,31 @@ class ViewControllerNPMain: UIViewController {
                 if index == 3 {
                     if validationsStep4() {
                         let prepare5 = ModelViewStep5()
-                        var algorithm = patientInfo.algorithID
-                        var hba1c = patientInfo.hba1c
-                        var glucose = patientInfo.glucose
+                        let algorithm = patientInfo.algorithID
+                        let hba1c = patientInfo.hba1c
+                        let glucose = patientInfo.glucose
                         var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 1
-                        var prevD = PatientSelected.shared.patientInfo?.dose ?? ""
-                        var hipo = patientInfo.hipo
-                        var filterCup = patientInfo.filterCup
-                        #warning("Si se cambia de tratamiento se borra o no?")
+                        if let _ = PatientSelected.shared.prevTreatment {
+                            currentEv = 1
+                        } else {
+                            currentEv *= 2
+                        }
+                        let prevD = PatientSelected.shared.patientInfo?.dose ?? ""
+                        let hipo = patientInfo.hipo
+                        let filterCup = patientInfo.filterCup
                         if algorithmID != "C" {
-                            if let _ = PatientSelected.shared.prevTreatment {
-                                currentEv = 1
-                            }
+                            patientInfo.filterCup = nil
                             self.treatment = prepare5.getOptions(algorithm: algorithm, hba1c: hba1c, glucose: glucose)
                             self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
                         } else {
-                            self.treatment = prepare5.getOptions(hba1c: hba1c, glucose: glucose, filter: filterCup)
-                            self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup, currentEv: currentEv, prevDose: prevD)
+                            self.treatment = prepare5.getOptions(hba1c: hba1c, glucose: glucose, filter: filterCup!)
+                            self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup!, currentEv: currentEv, prevDose: prevD)
                         }
-                        prepare5.getStep5(options: self.treatment)
+                        prepare5.getStep5(options: self.treatmentForDB)
                     } else {
                         AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
                         }
+                        return
                     }
                 }
                 index += 1
@@ -302,8 +305,9 @@ class ViewControllerNPMain: UIViewController {
                 self.present(nextVC, animated: true) { [self] in
                     let dose = createDose()
                     let dict = fireclass.createDictionary(patientInfo: self.patientShema, dose: dose)
-                    fireclass.setPatient(info: dict, patientId: patientInfo.id) { () in
+                    let _ = fireclass.setPatient(info: dict, patientId: patientInfo.id) { () in
                         delegate.endAnimationWith {
+                            PatientSelected.shared.hasChanged = true
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
@@ -535,7 +539,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             evaluationSchema?.fastingGlucose = Double(info as! Float)
             break
         case "filter":
-            patientInfo.filterCup = info as! String
+            patientInfo.filterCup = info as? String
             evaluationSchema?.estimatedGlomerularFiltrationRate = FiltrationEnum(rawValue: info as! String)!
             break
         case "comment":

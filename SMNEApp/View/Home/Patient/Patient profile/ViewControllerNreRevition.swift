@@ -36,13 +36,18 @@ class ViewControllerNreRevition: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let pId = PatientSelected.shared.patientInfo?.pId else { return }
         if observationInput.text != "" {
+            returnButton.isEnabled = false
+            saveButton.isEnabled = false
             let firebase = FirebaseViewModel()
-            firebase.setNewComment(comment: observationInput.text, patientId: pId) { (isError) in
+            firebase.setNewComment(comment: observationInput.text, patientId: pId) { [weak self] (isError) in
                 if isError {
-                    AlertToast.show(message: "Hubo un error, intente nuevamente.", controller: self, type: .Error) { }
+                    AlertToast.show(message: "Hubo un error, intente nuevamente.", controller: self!, type: .Error) { }
+                    self?.returnButton.isEnabled = true
+                    self?.saveButton.isEnabled = true
                 } else {
-                    AlertToast.show(message: "Revisión guardada con éxito.", controller: self, type: .Success) {
-                        self.dismiss(animated: true, completion: nil)
+                    AlertToast.show(message: "Revisión guardada con éxito.", controller: self!, type: .Success) {
+                        PatientSelected.shared.hasChanged = true
+                        self?.dismiss(animated: true, completion: nil)
                     }
                 }
             }

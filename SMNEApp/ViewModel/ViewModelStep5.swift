@@ -33,7 +33,7 @@ class ModelViewStep5 {
                 }
             case 2:
                 if hba1c < 6.5 && !hypoglycemia! { return prevDoseFromDB }
-                if hba1c < 8 && hba1c > 6.5 && prevDose == "TA_E1_D1" {
+                if hba1c < 8 && hba1c >= 6.5 && prevDose == "TA_E1_D1" {
                     return TreatmentsFromDB().TA_E2_D1
                 } else if hba1c >= 8 && hba1c < 10 && (prevDose == "TA_E1_D2" || prevDose == "TA_E1_D3") {
                     return TreatmentsFromDB().TA_E2_D2
@@ -42,7 +42,7 @@ class ModelViewStep5 {
                 }
             default:
                 if hba1c > 5.6 && hba1c < 6.5 && !hypoglycemia! { return prevDoseFromDB }
-                if hba1c < 8 && hba1c > 6.5 && (prevDose == "TA_E2_D1" || prevDose == "TA_E2_D2") {
+                if hba1c < 8 && hba1c >= 6.5 && (prevDose == "TA_E2_D1" || prevDose == "TA_E2_D2") {
                     return TreatmentsFromDB().TA_E3_D1
                 } else if hba1c >= 8 && prevDose == "TA_E2_D3" {
                     return TreatmentsFromDB().TA_E3_D2
@@ -68,15 +68,25 @@ class ModelViewStep5 {
                     return TreatmentsFromDB().TB_E2_D3
                 }
             default:
-                if hba1c < 6.5 && !hypoglycemia! { return prevDoseFromDB }
-                if hba1c > 6.5 && hba1c < 8 && (prevDose == "TB_E2_D2" || prevDose == "TB_E2_D3") {
+                if hba1c < 6.5 {
                     return TreatmentsFromDB().TB_E3_D1
-                    #warning("que pasa aquí, nunca entraría o si? abajo")
-                } else if hba1c > 6.5 && hba1c < 8 && prevDose == "TB_E2_D3" {
+                } else if hba1c >= 6.5 && hba1c <= 8 {
                     return TreatmentsFromDB().TB_E3_D2
-                } else if hba1c > 10 && prevDose == "TB_E2_D3" {
+                } else {
                     return TreatmentsFromDB().TB_E3_D3
                 }
+//                if hba1c < 6.5 && !hypoglycemia! { return prevDoseFromDB }
+//                if hba1c < 6.5 && (prevDose == "TB_E2_D1") {
+//                    return TreatmentsFromDB().TB_E3_D1
+//                    #warning("que pasa aquí, nunca entraría o si? abajo")
+//                } else if hba1c > 6.5 && hba1c < 8 && (prevDose == "TB_E2_D2" || prevDose == "TB_E2_D3") {
+//                    return TreatmentsFromDB().TB_E3_D1
+//                    #warning("que pasa aquí, nunca entraría o si? abajo")
+//                } else if hba1c > 6.5 && hba1c < 8 && prevDose == "TB_E2_D3" {
+//                    return TreatmentsFromDB().TB_E3_D2
+//                } else if hba1c > 10 && prevDose == "TB_E2_D3" {
+//                    return TreatmentsFromDB().TB_E3_D3
+//                }
             }
         case "D":
             switch currentEv {
@@ -114,7 +124,7 @@ class ModelViewStep5 {
                 }
             default:
                 #warning("Aquí va con lo de meta")
-                break
+                return TreatmentsFromDB().TDefault
             }
         case "F":
             switch currentEv {
@@ -155,7 +165,17 @@ class ModelViewStep5 {
             }
             break
         default:
-            #warning("Aquí va con lo de meta")
+            if hba1c < 7 && (filter == "44 - 30" || filter == "59 - 45") {
+                return TreatmentsFromDB().TC_E2_D1
+            } else if (hba1c >= 7 && hba1c <= 8) && (filter == "44 - 30" || filter == "59 - 45") {
+                return TreatmentsFromDB().TC_E2_D4
+            } else if hba1c < 7.5 && filter == "29 - 15" {
+                return TreatmentsFromDB().TC_E2_D2
+            } else if hba1c < 7.5 && filter == "<15" {
+                return TreatmentsFromDB().TC_E2_D3
+            } else if (hba1c >= 7.5 && hba1c <= 8.4) && (filter == "29 - 15" || filter == "<15") {
+                return TreatmentsFromDB().TC_E2_D5
+            }
             break
         }
         
@@ -199,9 +219,8 @@ class ModelViewStep5 {
         case "F":
             return treatmentF[0].treatments
         default:
-            break
+            return [Treatment(title: "Default", subtitle: "Default treatment")]
         }
-        return []
     }
     
     func getOptions(hba1c: Float, glucose: Float, filter: String) -> [Treatment] {
@@ -244,11 +263,20 @@ class ModelViewStep5 {
         return []
     }
     
-    func getStep5(options: [Treatment]) {
-        for i in options {
-            print(i)
+    func getStep5(options: [TreatmentFromDB]) {
+        var newOptions = [Treatment]()
+        for op in options {
+            for description in op.description {
+                if description == op.description.first {
+                    let option = Treatment(title: op.title, subtitle: description)
+                    newOptions.append(option)
+                } else {
+                    let option = Treatment(title: "", subtitle: description)
+                    newOptions.append(option)
+                }
+            }
         }
-        stepFive[2] = TreatmentCell(options: Option(treatments: options))
+        stepFive[2] = TreatmentCell(options: Option(treatments: newOptions))
         reinitS5()
     }
     

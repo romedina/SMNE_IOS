@@ -163,6 +163,6 @@ struct PatientInfo {
     var algorithID: String
     var hba1c: Float
     var glucose: Float
-    var filterCup: String
+    var filterCup: String?
     var comment: String
 }

@@ -11,5 +11,5 @@ class PatientSelected {
     static let shared = PatientSelected()
     var patientInfo: PatientSchema?
     var prevTreatment: String?
-    
+    var hasChanged: Bool = false
 }

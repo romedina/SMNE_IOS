@@ -18,6 +18,7 @@ class ViewControllerPatientProfile: UIViewController {
     @IBOutlet weak var tableViewEvaluations: UITableView!
     @IBOutlet weak var iconView: UIView!
     @IBOutlet weak var pageTitle: UILabel!
+    @IBOutlet weak var floatingButton: UIButton!
     
     var patientId: String?
     
@@ -40,11 +41,17 @@ class ViewControllerPatientProfile: UIViewController {
         
         pageTitle.text = "\(patientInfo?.name ?? "") \(patientInfo?.lastName ?? "")"
         evaluations?.reverse()
+        floatingButton.layer.cornerRadius = 27
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableViewEvaluations.reloadData()
+        if PatientSelected.shared.hasChanged {
+            PatientSelected.shared.hasChanged = false
+            evaluations = PatientSelected.shared.patientInfo?.evaluations
+            evaluations?.reverse()
+            tableViewEvaluations.reloadData()
+        }
     }
     
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -56,6 +63,13 @@ class ViewControllerPatientProfile: UIViewController {
 //        evaluations = PatientSelected.shared.patientInfo?.evaluations.count
 //        self.tableViewEvaluations.reloadData()
 //    }
+    
+    @IBAction func floatingTapped(_ sender: Any) {
+        let floatingMenu = FloatingMenu(nibName: "FloatingMenu", bundle: nil)
+        floatingMenu.modalPresentationStyle = .overFullScreen
+        floatingMenu.delegate = self
+        self.present(floatingMenu, animated: true, completion: nil)
+    }
     
 }
 
@@ -93,5 +107,19 @@ extension ViewControllerPatientProfile: NewRevitionDelegate {
 extension ViewControllerPatientProfile: ListToControllerDelegate {
     func listToController(date: String, comment: String) {
         PopCommentView.show(date: date, message: comment, controller: self) { }
+    }
+}
+
+extension ViewControllerPatientProfile: FloatingMenuDelegate {
+    func goToNextEv() {
+        self.performSegue(withIdentifier: "newPatient", sender: self)
+    }
+    
+    func goToNewRev() {
+        self.performSegue(withIdentifier: "newRevition", sender: self)
+    }
+    
+    func goToFEv() {
+        print("Nueva primer evaluación")
     }
 }

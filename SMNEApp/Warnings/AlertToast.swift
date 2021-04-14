@@ -200,7 +200,7 @@ class AlertToast {
                 wtoastContainer.removeFromSuperview()
                 backView.removeFromSuperview()
             }
-            handler(false)
+            handler(true)
         }
         
         let noButton = UIButton(frame: CGRect())
