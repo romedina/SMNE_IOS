@@ -29,10 +29,23 @@ class ViewControllerPillAnimation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        anim = .init(name: "loading")
-        anim?.frame = view.bounds
+        if animationName == nil {
+            return
+        }
+        anim = .init(name: animationName!)
         anim?.loopMode = .loop
+        anim?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(anim!)
+        anim?.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        anim?.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        if animationName == "loading" {
+            anim?.widthAnchor.constraint(equalToConstant: 180).isActive = true
+            anim?.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        } else {
+            anim?.widthAnchor.constraint(equalToConstant: 300).isActive = true
+            anim?.heightAnchor.constraint(equalToConstant: 450).isActive = true
+            self.view.backgroundColor = .C00D9CC()
+        }
         anim?.play(completion: { (flag) in
             if flag {
                 self.dismiss(animated: true, completion: nil)

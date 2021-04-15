@@ -9,11 +9,24 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
+import MaterialComponents
 
 class ViewControllerLogin: UIViewController {
 
-    @IBOutlet weak var tableViewLogin: UITableView!
     @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var emailField: MDCTextField!
+    @IBOutlet weak var passwordField: MDCTextField!
+    
+    @IBOutlet weak var loginButton: MDCButton!
+    @IBOutlet weak var appleLogin: MDCButton!
+    @IBOutlet weak var gmailLogin: MDCButton!
+    @IBOutlet weak var faceLogin: MDCButton!
+    
+    var emailController: MDCTextInputControllerOutlined?
+    var passController: MDCTextInputControllerOutlined?
+    let rightButton = UIButton(type: .custom)
+    
+    var flags = [false, false]
     
     var email = ""
     var pass = ""
@@ -22,34 +35,95 @@ class ViewControllerLogin: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableViewLogin.delegate = self
-        tableViewLogin.dataSource = self
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
+        
+        emailController = MDCTextInputControllerOutlined(textInput: emailField)
+        passController = MDCTextInputControllerOutlined(textInput: passwordField)
+        
+        emailController?.applyTheme(withScheme: appTheme)
+        passController?.applyTheme(withScheme: appTheme)
+        
+        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
+        rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
+        rightButton.tintColor = .C052D6C()
+        
+        passwordField.trailingView = rightButton
+        passwordField.trailingViewMode = .always
+        
+        loginButton.layer.cornerRadius = 8
+        
+        appleLogin.setBackgroundColor(.white)
+        appleLogin.setBorderWidth(1.0, for: .normal)
+        appleLogin.setBorderColor(.C00D9CC(), for: .normal)
+        appleLogin.layer.cornerRadius = 8
+        appleLogin.setImage(#imageLiteral(resourceName: "apple"), for: .normal)
+        appleLogin.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        
+        gmailLogin.setBackgroundColor(.white)
+        gmailLogin.setBorderWidth(1.0, for: .normal)
+        gmailLogin.setBorderColor(.C00D9CC(), for: .normal)
+        gmailLogin.layer.cornerRadius = 8
+        gmailLogin.setImage(#imageLiteral(resourceName: "google"), for: .normal)
+        gmailLogin.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        
+        faceLogin.setBackgroundColor(.white)
+        faceLogin.setBorderWidth(1.0, for: .normal)
+        faceLogin.setBorderColor(.C00D9CC(), for: .normal)
+        faceLogin.layer.cornerRadius = 8
+        faceLogin.setImage(#imageLiteral(resourceName: "facebook"), for: .normal)
+        faceLogin.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        
+        validateTextNotEmpty()
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-}
-
-extension ViewControllerLogin: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    @objc func passChangeView() {
+        passwordField.isSecureTextEntry.toggle()
+        if passwordField.isSecureTextEntry {
+            rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
+        } else {
+            rightButton.setImage(#imageLiteral(resourceName: "crossEye"), for: .normal)
+        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCellLogin
-        cell.delegate = self
-        return cell
+    func validateTextNotEmpty() {
+        if flags[0] && flags[1] {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor?.withAlphaComponent(1.0)
+            infoChanged(email: emailField.text!, pass: passwordField.text!)
+        } else {
+            loginButton.backgroundColor?.withAlphaComponent(0.61)
+            loginButton.isEnabled = false
+        }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.layer.bounds.height - 150
+    @IBAction func emailChanged(_ sender: MDCTextField) {
+        if sender.text != "" && sender.text != nil {
+            flags[0] = true
+        } else {
+            flags[0] = false
+        }
+        validateTextNotEmpty()
     }
     
+    @IBAction func passChanged(_ sender: MDCTextField) {
+        if sender.text != "" && sender.text != nil {
+            flags[1] = true
+        } else {
+            flags[1] = false
+        }
+        validateTextNotEmpty()
+    }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        loginTapped()
+    }
 }
 
 extension ViewControllerLogin: LoginCellDelegate {

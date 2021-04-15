@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerPillAnimation" customModule="SMNEApp" customModuleProvider="target">
             <connections>
+                <outlet property="animationView" destination="OLE-WV-1SU" id="htq-3Q-M2M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLE-WV-1SU" customClass="AnimationView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OLE-WV-1SU" secondAttribute="bottom" id="90u-CB-RmQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OLE-WV-1SU" secondAttribute="trailing" id="PXH-pe-Tdc"/>
+                <constraint firstItem="OLE-WV-1SU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hbq-af-yrM"/>
+                <constraint firstItem="OLE-WV-1SU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o9B-J3-OvY"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="93"/>
         </view>
     </objects>
