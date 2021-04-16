@@ -144,7 +144,7 @@ class ModelViewStep5 {
     func getOptionsFromDB(hba1c: Float, glucose: Float, filter: String, currentEv: Int, prevDose: String?) -> [TreatmentFromDB] {
         switch currentEv {
         case 1:
-            if glucose < 250 || (hba1c > 8 && hba1c < 10) {
+            if glucose < 250 || hba1c < 10 {
                 if filter == "59 - 45" || filter == "44 - 30" {
                     return TreatmentsFromDB().TC_E1_D1
                 } else if filter == "29 - 15" {
@@ -152,6 +152,7 @@ class ModelViewStep5 {
                 } else if filter == "<15" {
                     return TreatmentsFromDB().TC_E1_D3
                 }
+                //16/04/2021
             }
             
             if glucose > 250 || hba1c > 10 {
