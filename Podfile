@@ -16,6 +16,7 @@ pod 'MaterialComponents'
 pod 'Firebase/Firestore'
 pod 'lottie-ios'
 pod 'FacebookLogin'
+pod 'IQKeyboardManagerSwift'
 
 
   target 'SMNEAppTests' do

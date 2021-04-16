@@ -364,6 +364,7 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - leveldb-library (1.22)
   - lottie-ios (3.2.1)
   - MaterialComponents (120.0.0):
@@ -1021,6 +1022,7 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Firebase/Firestore
   - GoogleSignIn
+  - IQKeyboardManagerSwift
   - lottie-ios
   - MaterialComponents
 
@@ -1049,6 +1051,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - leveldb-library
     - lottie-ios
     - MaterialComponents
@@ -1083,6 +1086,7 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   MaterialComponents: 1f521dc333679daf0a397fe9dafe1e26ae13da78
@@ -1093,6 +1097,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: f2cd611768d6e90d5ead3080edb6d73218e25937
+PODFILE CHECKSUM: 8147cd511d6bd067527373a62977d2d8130ad13c
 
 COCOAPODS: 1.10.1

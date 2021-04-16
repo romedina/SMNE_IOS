@@ -110,8 +110,8 @@
             filePath = "SMNEApp/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -344,7 +344,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SMNEApp/View/Home/Patient/Patient profile/ViewControllerPatientProfile.swift"
@@ -352,40 +352,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "listToController(date:comment:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F - 9fa4eb758740b2cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SMNEApp.ViewControllerPatientProfile.listToController(date: Swift.String, comment: Swift.String) -&gt; ()"
-                  moduleName = "SMNEApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/Patient%20profile/ViewControllerPatientProfile.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "58">
-               </Location>
-               <Location
-                  uuid = "EFB0AB83-DDF5-44BB-9274-2AB4630DAB6F - 17e6ffade779d4d9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in SMNEApp.ViewControllerPatientProfile.listToController(date: Swift.String, comment: Swift.String) -&gt; ()"
-                  moduleName = "SMNEApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/SSDThemem12%20-%20Datos/Users/themem12/Desktop/SMNE/SMNE_IOS/SMNEApp/View/Home/Patient/Patient%20profile/ViewControllerPatientProfile.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

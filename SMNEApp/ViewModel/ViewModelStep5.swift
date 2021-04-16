@@ -141,6 +141,7 @@ class ModelViewStep5 {
         return []
     }
     
+    //Flow for algorithm C
     func getOptionsFromDB(hba1c: Float, glucose: Float, filter: String, currentEv: Int, prevDose: String?) -> [TreatmentFromDB] {
         switch currentEv {
         case 1:
@@ -152,7 +153,6 @@ class ModelViewStep5 {
                 } else if filter == "<15" {
                     return TreatmentsFromDB().TC_E1_D3
                 }
-                //16/04/2021
             }
             
             if glucose > 250 || hba1c > 10 {
@@ -166,11 +166,32 @@ class ModelViewStep5 {
             }
             break
         default:
-            if hba1c < 7 && (filter == "44 - 30" || filter == "59 - 45") {
+            if prevDose == "TC_D1_E1" && filter == "44 - 30" && hba1c > 7 {
                 return TreatmentsFromDB().TC_E2_D1
-            } else if (hba1c >= 7 && hba1c <= 8) && (filter == "44 - 30" || filter == "59 - 45") {
+            } else if prevDose == "TC_D1_E2" && filter == "59 - 45" && hba1c >= 7 {
+                return TreatmentsFromDB().TC_E2_D2
+            } else if prevDose == "TC_D1_E3" && filter == "29 - 15" && hba1c >= 7.5 {
+                return TreatmentsFromDB().TC_E2_D3
+            } else if prevDose == "TC_D1_E4" && filter == "<15" && hba1c >= 7.5 {
                 return TreatmentsFromDB().TC_E2_D4
-            } else if hba1c < 7.5 && filter == "29 - 15" {
+            } else if prevDose == "TC_D1_E5" && filter == "59 - 45" && hba1c >= 8 {
+                return TreatmentsFromDB().TC_E2_D5
+            } else if prevDose == "TC_D1_E6" && filter == "44 - 30" && hba1c >= 8 {
+//                return TreatmentsFromDB().TC_E2_D6
+            } else if prevDose == "TC_D1_E7" && filter == "29 - 15" && hba1c >= 8.4 {
+//                return TreatmentsFromDB().TC_E2_D7
+            } else if prevDose == "TC_D1_E8" && filter == "<15" && hba1c >= 8.4 {
+//                return TreatmentsFromDB().TC_E2_D8
+            } else {
+                return TreatmentsFromDB().TDefault
+            }
+            #warning("hay que cambiar todas los return para que regrese las imagenes")
+            
+            if (filter == "44 - 30" || filter == "59 - 45") && hba1c > 7 {
+                return TreatmentsFromDB().TC_E2_D1
+            } else if (filter == "44 - 30" || filter == "59 - 45") && hba1c >= 8{
+                return TreatmentsFromDB().TC_E2_D4
+            } else if filter == "29 - 15" && hba1c > 7.5 {
                 return TreatmentsFromDB().TC_E2_D2
             } else if hba1c < 7.5 && filter == "<15" {
                 return TreatmentsFromDB().TC_E2_D3
