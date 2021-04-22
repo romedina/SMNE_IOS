@@ -76,7 +76,7 @@ var step4Cells: [Any] = {
 var step5Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepFive {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else if let name = cell as? String { } else {
             cells.append(cell)
         }
     }

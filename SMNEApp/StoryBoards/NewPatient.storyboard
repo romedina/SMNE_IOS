@@ -1052,10 +1052,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imc" id="WZm-Ta-NBK" customClass="TableViewCellIMC" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="266" width="414" height="380.5"/>
+                                <rect key="frame" x="0.0" y="266" width="414" height="395.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZm-Ta-NBK" id="QFq-b9-Mok">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="380.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="395.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Índice de masa corporal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-pY-ec5">
@@ -1065,21 +1065,21 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-Pl-wmV">
-                                            <rect key="frame" x="18" y="41.5" width="378" height="102"/>
+                                            <rect key="frame" x="18" y="41.5" width="378" height="112"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-9I-DOP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="102"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="112"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQd-7f-kKE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="27"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-K1-Mxp" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="22" width="184" height="80"/>
+                                                            <rect key="frame" x="0.0" y="27" width="184" height="85"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="Vj7-cL-CL2"/>
+                                                                <constraint firstAttribute="height" constant="85" id="Vj7-cL-CL2"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1090,18 +1090,18 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xmX-Po-B1x">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="102"/>
+                                                    <rect key="frame" x="194" y="0.0" width="184" height="112"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ql-TD-rvh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="27"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poX-rZ-ggz" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="22" width="184" height="80"/>
+                                                            <rect key="frame" x="0.0" y="27" width="184" height="85"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="DZm-cd-wps"/>
+                                                                <constraint firstAttribute="height" constant="85" id="DZm-cd-wps"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1113,19 +1113,19 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="102" id="QqH-Mf-6HI"/>
+                                                <constraint firstAttribute="height" constant="112" id="QqH-Mf-6HI"/>
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveles de Creatinina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-bJ-aJA">
-                                            <rect key="frame" x="18" y="172.5" width="171" height="22"/>
+                                            <rect key="frame" x="18" y="182.5" width="171" height="22"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-b2-WgT" customClass="MDCTextField">
-                                            <rect key="frame" x="18" y="204.5" width="378" height="80"/>
+                                            <rect key="frame" x="18" y="214.5" width="378" height="85"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="GhQ-iG-lWv"/>
+                                                <constraint firstAttribute="height" constant="85" id="GhQ-iG-lWv"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1134,7 +1134,7 @@
                                             </connections>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-O1-nf6">
-                                            <rect key="frame" x="18" y="314.5" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="329.5" width="378" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-qd-57b">
                                                     <rect key="frame" x="0.0" y="0.0" width="378" height="50"/>
@@ -1190,7 +1190,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="Ugl-Li-GjD">
-                                <rect key="frame" x="0.0" y="646.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="661.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugl-Li-GjD" id="gOZ-Hv-SZO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -1797,200 +1797,39 @@
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="treatment" id="JEQ-Rj-eXf" customClass="TableViewCellTreatment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="1153"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEQ-Rj-eXf" id="iXu-dv-d1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1153"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7x-l7-Z7h">
-                                            <rect key="frame" x="55" y="1037.5" width="304" height="20"/>
-                                            <color key="backgroundColor" red="0.0" green="0.43137254901960786" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="MOy-xT-qgj"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfA-rf-r6Y">
-                                            <rect key="frame" x="38" y="31" width="338" height="1016.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ru2-IQ-uHd">
-                                                    <rect key="frame" x="18" y="20" width="302" height="98.5"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6N-P0-y1u">
-                                                    <rect key="frame" x="18" y="128.5" width="302" height="44"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-WU-Gvr">
-                                                    <rect key="frame" x="18" y="327.5" width="302" height="679"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2x-IX-vsM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-NC-MyU">
-                                                            <rect key="frame" x="0.0" y="57" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-TB-mYE">
-                                                            <rect key="frame" x="0.0" y="114" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-JP-tQ2">
-                                                            <rect key="frame" x="0.0" y="171" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-TE-TvI">
-                                                            <rect key="frame" x="0.0" y="228" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJz-kX-GAY">
-                                                            <rect key="frame" x="0.0" y="285" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-6j-VAo">
-                                                            <rect key="frame" x="0.0" y="342" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-dn-wkr">
-                                                            <rect key="frame" x="0.0" y="399" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-8M-Tou">
-                                                            <rect key="frame" x="0.0" y="456" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-DZ-P4Y">
-                                                            <rect key="frame" x="0.0" y="513" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titular la dosis de metformina &gt;1,500 mg/día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65q-3N-oGH">
-                                                            <rect key="frame" x="0.0" y="570" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de intolerancia usar de liberación prolongada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2d-Kz-3rx">
-                                                            <rect key="frame" x="0.0" y="627" width="302" height="52"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLF-T8-39V">
-                                                    <rect key="frame" x="20" y="182.5" width="298" height="135"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pillcan" translatesAutoresizingMaskIntoConstraints="NO" id="v0O-6Y-aiq">
-                                                            <rect key="frame" x="76.5" y="1" width="65" height="93"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="93" id="D3O-A6-yVQ"/>
-                                                                <constraint firstAttribute="width" constant="65" id="fv3-Pi-E9q"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills" translatesAutoresizingMaskIntoConstraints="NO" id="C94-ux-yov">
-                                                            <rect key="frame" x="117.5" y="46.5" width="143" height="82"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="143" id="OMX-Mw-ic4"/>
-                                                                <constraint firstAttribute="height" constant="82" id="nEn-zo-oL2"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="v0O-6Y-aiq" firstAttribute="centerY" secondItem="kLF-T8-39V" secondAttribute="centerY" constant="-20" id="7jl-nc-HPt"/>
-                                                        <constraint firstItem="C94-ux-yov" firstAttribute="centerX" secondItem="kLF-T8-39V" secondAttribute="centerX" constant="40" id="FyW-j9-5vj"/>
-                                                        <constraint firstItem="v0O-6Y-aiq" firstAttribute="centerX" secondItem="kLF-T8-39V" secondAttribute="centerX" constant="-40" id="IsY-RY-uez"/>
-                                                        <constraint firstAttribute="height" constant="135" id="cdM-FJ-QB9"/>
-                                                        <constraint firstItem="C94-ux-yov" firstAttribute="centerY" secondItem="kLF-T8-39V" secondAttribute="centerY" constant="20" id="zeq-Ap-Sfc"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="Vaf-WU-Gvr" firstAttribute="top" secondItem="kLF-T8-39V" secondAttribute="bottom" constant="10" id="41i-ec-faE"/>
-                                                <constraint firstItem="Ru2-IQ-uHd" firstAttribute="top" secondItem="pfA-rf-r6Y" secondAttribute="top" constant="20" id="Ex1-v1-RLQ"/>
-                                                <constraint firstItem="r6N-P0-y1u" firstAttribute="top" secondItem="Ru2-IQ-uHd" secondAttribute="bottom" constant="10" id="RfV-h2-3o0"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ru2-IQ-uHd" secondAttribute="trailing" constant="18" id="WNV-Jp-c2Q"/>
-                                                <constraint firstAttribute="trailing" secondItem="kLF-T8-39V" secondAttribute="trailing" constant="20" id="WSK-tX-q0A"/>
-                                                <constraint firstItem="Vaf-WU-Gvr" firstAttribute="centerX" secondItem="pfA-rf-r6Y" secondAttribute="centerX" id="XqN-yA-gUd"/>
-                                                <constraint firstAttribute="trailing" secondItem="Vaf-WU-Gvr" secondAttribute="trailing" constant="18" id="b9o-YS-Fbe"/>
-                                                <constraint firstAttribute="trailing" secondItem="r6N-P0-y1u" secondAttribute="trailing" constant="18" id="cL9-Ad-JXN"/>
-                                                <constraint firstItem="kLF-T8-39V" firstAttribute="top" secondItem="r6N-P0-y1u" secondAttribute="bottom" constant="10" id="cSN-AO-vPY"/>
-                                                <constraint firstItem="Vaf-WU-Gvr" firstAttribute="leading" secondItem="pfA-rf-r6Y" secondAttribute="leading" constant="18" id="mC3-fS-PBn"/>
-                                                <constraint firstItem="Ru2-IQ-uHd" firstAttribute="leading" secondItem="pfA-rf-r6Y" secondAttribute="leading" constant="18" id="mb1-96-aIX"/>
-                                                <constraint firstItem="r6N-P0-y1u" firstAttribute="leading" secondItem="pfA-rf-r6Y" secondAttribute="leading" constant="18" id="mgP-Qj-U97"/>
-                                                <constraint firstItem="r6N-P0-y1u" firstAttribute="centerX" secondItem="pfA-rf-r6Y" secondAttribute="centerX" id="rEF-VY-NP1"/>
-                                                <constraint firstAttribute="bottom" secondItem="Vaf-WU-Gvr" secondAttribute="bottom" constant="10" id="sge-Q9-vOZ"/>
-                                                <constraint firstItem="kLF-T8-39V" firstAttribute="leading" secondItem="pfA-rf-r6Y" secondAttribute="leading" constant="20" id="vL4-Hq-QJh"/>
-                                            </constraints>
-                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se recomienda evaluar la relación albúmina creatinina en una muestra de orina al azar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-sH-jcq">
-                                            <rect key="frame" x="38" y="1067.5" width="338" height="65.5"/>
+                                            <rect key="frame" x="18" y="0.0" width="378" height="44"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-6t-ejh">
+                                            <rect key="frame" x="18" y="0.0" width="378" height="0.0"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="pfA-rf-r6Y" secondAttribute="trailing" constant="18" id="Cvq-PI-axP"/>
-                                        <constraint firstItem="Ui6-sH-jcq" firstAttribute="top" secondItem="pfA-rf-r6Y" secondAttribute="bottom" constant="20" id="EeB-Ge-FFR"/>
+                                        <constraint firstItem="lEQ-6t-ejh" firstAttribute="leading" secondItem="iXu-dv-d1k" secondAttribute="leading" constant="18" id="F1C-Oa-P7V"/>
                                         <constraint firstAttribute="bottom" secondItem="Ui6-sH-jcq" secondAttribute="bottom" constant="20" id="Imr-wG-IUN"/>
-                                        <constraint firstItem="pfA-rf-r6Y" firstAttribute="top" secondItem="iXu-dv-d1k" secondAttribute="topMargin" constant="20" id="Jqq-ZI-qsh"/>
-                                        <constraint firstItem="Ui6-sH-jcq" firstAttribute="width" secondItem="pfA-rf-r6Y" secondAttribute="width" id="V7k-CG-l5g"/>
-                                        <constraint firstItem="e7x-l7-Z7h" firstAttribute="centerY" secondItem="pfA-rf-r6Y" secondAttribute="bottom" id="YFE-ZT-m8f"/>
+                                        <constraint firstItem="Ui6-sH-jcq" firstAttribute="width" secondItem="lEQ-6t-ejh" secondAttribute="width" id="J83-RV-xqA"/>
+                                        <constraint firstItem="Ui6-sH-jcq" firstAttribute="top" secondItem="lEQ-6t-ejh" secondAttribute="bottom" id="NkN-i3-65h"/>
                                         <constraint firstItem="Ui6-sH-jcq" firstAttribute="centerX" secondItem="iXu-dv-d1k" secondAttribute="centerX" id="bcQ-sJ-Enz"/>
-                                        <constraint firstItem="e7x-l7-Z7h" firstAttribute="width" secondItem="pfA-rf-r6Y" secondAttribute="width" multiplier="0.9" id="kE9-P9-Ntd"/>
-                                        <constraint firstItem="e7x-l7-Z7h" firstAttribute="centerX" secondItem="pfA-rf-r6Y" secondAttribute="centerX" id="ljA-gD-SWj"/>
-                                        <constraint firstItem="pfA-rf-r6Y" firstAttribute="leading" secondItem="iXu-dv-d1k" secondAttribute="leadingMargin" constant="18" id="vc0-RP-RF6"/>
+                                        <constraint firstItem="lEQ-6t-ejh" firstAttribute="top" secondItem="iXu-dv-d1k" secondAttribute="top" id="eCE-RE-mj7"/>
+                                        <constraint firstAttribute="trailing" secondItem="lEQ-6t-ejh" secondAttribute="trailing" constant="18" id="jSM-DV-gtn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="parentShadowView" destination="e7x-l7-Z7h" id="mcb-yZ-WC7"/>
-                                    <outlet property="parentView" destination="pfA-rf-r6Y" id="idx-lF-o4P"/>
-                                    <outlet property="stl2" destination="C7M-NC-MyU" id="gFN-Uq-IMr"/>
-                                    <outlet property="stl3" destination="Mub-JP-tQ2" id="OGr-oi-TAv"/>
-                                    <outlet property="stl4" destination="NJz-kX-GAY" id="S4s-YY-SxB"/>
-                                    <outlet property="stl5" destination="wLR-dn-wkr" id="lve-EB-rNQ"/>
-                                    <outlet property="stl6" destination="YeY-DZ-P4Y" id="L9V-7c-wQy"/>
-                                    <outlet property="stl7" destination="H2d-Kz-3rx" id="THB-gt-23X"/>
-                                    <outlet property="subTitleLabel" destination="r6N-P0-y1u" id="CAr-bE-YnE"/>
-                                    <outlet property="titleLabel" destination="Ru2-IQ-uHd" id="F7f-w4-wCK"/>
-                                    <outlet property="tl2" destination="D2x-IX-vsM" id="YNE-Xc-qp0"/>
-                                    <outlet property="tl3" destination="9nq-TB-mYE" id="GiA-OJ-0Eq"/>
-                                    <outlet property="tl4" destination="2KY-TE-TvI" id="zjG-X2-uOn"/>
-                                    <outlet property="tl5" destination="8Ab-6j-VAo" id="JVl-O5-l62"/>
-                                    <outlet property="tl6" destination="vS5-8M-Tou" id="rYi-ET-q1F"/>
-                                    <outlet property="tl7" destination="65q-3N-oGH" id="nUk-DS-ecf"/>
+                                    <outlet property="treatmentImageView" destination="lEQ-6t-ejh" id="RgK-EZ-lSb"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tcD-At-dfV">
-                                <rect key="frame" x="0.0" y="1181" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcD-At-dfV" id="c9n-zV-tzH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -2103,8 +1942,6 @@
     <resources>
         <image name="Paciente" width="31" height="34"/>
         <image name="arrowL" width="29" height="29"/>
-        <image name="pillcan" width="66" height="97.5"/>
-        <image name="pills" width="144" height="83"/>
         <image name="radioNS" width="18" height="18"/>
         <image name="radioS" width="18" height="18"/>
         <image name="treatmentPage" width="274" height="209"/>

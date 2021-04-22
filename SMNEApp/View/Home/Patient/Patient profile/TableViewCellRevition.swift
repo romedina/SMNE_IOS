@@ -20,11 +20,8 @@ class TableViewCellRevition: UITableViewCell {
     @IBOutlet weak var algorithmNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var evaluationBackView: UIView!
-    @IBOutlet weak var evaluationFrontView: UIView!
     @IBOutlet weak var revitionsStack: UIStackView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var treatmentStack: UIStackView!
+    @IBOutlet weak var treatmentImageView: UIImageView!
     @IBOutlet weak var applyRevitionButton: UIButton!
     
     var infoForCell: EvaluationSchema?
@@ -37,7 +34,6 @@ class TableViewCellRevition: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         evaluationBackView.layer.cornerRadius = 27
-        evaluationFrontView.layer.cornerRadius = 19
     }
     
     func setInfo(info: EvaluationSchema, isLAst: Bool) {
@@ -46,19 +42,8 @@ class TableViewCellRevition: UITableViewCell {
         infoForCell = info
         let dose = info.dose.split(separator: "_")
         var number = dose[1]
-        let treatmentList = TreatmentsFromDB()
-        for treatment in treatmentList.treatmentList {
-            if treatment.first?.name == info.dose {
-                titleLabel.text = treatment.first?.title
-                if let descriptionsList = treatment.first?.description {
-                    var descriptionCom = ""
-                    for desc in descriptionsList {
-                        descriptionCom.append("\(desc) \n")
-                    }
-                    subtitleLabel.text = descriptionCom
-                }
-            }
-        }
+        let image = UIImage(named: info.dose)
+        treatmentImageView.image = image
         evaluationNumberLabel.text = "Evaluación \(number.popLast()!)"
         algorithmNameLabel.text = getAlgorithmName(algorithmId: String(dose[0]))
         let date = info.createdAt.dateValue()

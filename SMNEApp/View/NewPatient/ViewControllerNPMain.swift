@@ -268,12 +268,8 @@ class ViewControllerNPMain: UIViewController {
                         let algorithm = patientInfo.algorithID
                         let hba1c = patientInfo.hba1c
                         let glucose = patientInfo.glucose
-                        var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 1
-                        if let _ = PatientSelected.shared.prevTreatment {
-                            currentEv = 1
-                        } else {
-                            currentEv *= 2
-                        }
+                        var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 0
+                        currentEv += 1
                         let prevD = PatientSelected.shared.patientInfo?.dose ?? ""
                         let hipo = patientInfo.hipo
                         let filterCup = patientInfo.filterCup

@@ -78,8 +78,10 @@ class TableViewControllerNewPatient_S5: UITableViewController {
         } else if let info = cellInfo as? TreatmentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "treatment", for: indexPath) as! TableViewCellTreatment
             print(info.options)
-            cell.setInfo(options: info.options)
-
+            guard let name = stepFive.last as? String else {
+                return UITableViewCell()
+            }
+            cell.setInfo(imageName: name)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)

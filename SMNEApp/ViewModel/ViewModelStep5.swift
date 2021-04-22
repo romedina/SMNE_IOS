@@ -291,6 +291,7 @@ class ModelViewStep5 {
             for description in op.description {
                 if description == op.description.first {
                     let option = Treatment(title: op.title, subtitle: description)
+                    stepFive.append(op.name)
                     newOptions.append(option)
                 } else {
                     let option = Treatment(title: "", subtitle: description)
