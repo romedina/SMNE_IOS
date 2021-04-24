@@ -63,19 +63,7 @@ class TableViewControllerNewPatient_S5: UITableViewController {
         
         let cellInfo = step5Cells[indexPath.row]
         
-        if let info = cellInfo as? TitleCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
-
-            cell.setInfo(title: info.title, subtitle: info.subtitle)
-
-            return cell
-        } else if let info = cellInfo as? StepperCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
-
-            cell.setInfo(page: info.page)
-
-            return cell
-        } else if let info = cellInfo as? TreatmentCell {
+        if let info = cellInfo as? TreatmentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "treatment", for: indexPath) as! TableViewCellTreatment
             print(info.options)
             guard let name = stepFive.last as? String else {

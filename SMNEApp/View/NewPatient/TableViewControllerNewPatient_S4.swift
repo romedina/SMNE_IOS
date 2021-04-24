@@ -38,19 +38,7 @@ class TableViewControllerNewPatient_S4: UITableViewController {
         
         let cellInfo = step4Cells[indexPath.row]
         
-        if let info = cellInfo as? TitleCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
-
-            cell.setInfo(title: info.title, subtitle: info.subtitle)
-
-            return cell
-        } else if let info = cellInfo as? StepperCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
-
-            cell.setInfo(page: info.page)
-
-            return cell
-        } else if let info = cellInfo as? OpenOpenCell {
+        if let info = cellInfo as? OpenOpenCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "openopen", for: indexPath) as! TableViewCellOpenOpen
             
             cell.setInfo(t1: info.title1, t2: info.title2, tr1: info.trailing1, tr2: info.trailing2, id1: "hba1c", id2: "glucose")

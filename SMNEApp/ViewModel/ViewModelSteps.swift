@@ -10,7 +10,7 @@ import Foundation
 let step1Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepOne {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+        if let _ = cell as? TitleCell { } else {
             cells.append(cell)
         }
     }
@@ -20,7 +20,7 @@ let step1Cells: [Any] = {
 let step2Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepTwo {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+        if let _ = cell as? TitleCell { } else {
             cells.append(cell)
         }
     }
@@ -32,7 +32,7 @@ class ReinitStepCells {
         step3Cells = {
             var cells: [Any] = []
             for cell in stepThree {
-                if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+                if let _ = cell as? TitleCell { } else {
                     cells.append(cell)
                 }
             }
@@ -44,7 +44,7 @@ class ReinitStepCells {
         step4Cells = {
             var cells: [Any] = []
             for cell in stepFour {
-                if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+                if let _ = cell as? TitleCell { } else {
                     cells.append(cell)
                 }
             }
@@ -56,7 +56,7 @@ class ReinitStepCells {
 var step3Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepThree {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+        if let _ = cell as? TitleCell { } else {
             cells.append(cell)
         }
     }
@@ -66,7 +66,7 @@ var step3Cells: [Any] = {
 var step4Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepFour {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+        if let _ = cell as? TitleCell { } else {
             cells.append(cell)
         }
     }
@@ -76,7 +76,7 @@ var step4Cells: [Any] = {
 var step5Cells: [Any] = {
     var cells: [Any] = []
     for cell in stepFive {
-        if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else if let name = cell as? String { } else {
+        if let _ = cell as? TitleCell { } else if let name = cell as? String { } else {
             cells.append(cell)
         }
     }

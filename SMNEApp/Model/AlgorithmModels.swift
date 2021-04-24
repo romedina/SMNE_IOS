@@ -13,6 +13,15 @@ struct Algorithm {
     let title: String
 }
 
+struct Option {
+    let treatments: [Treatment]
+}
+
+struct Treatment {
+    let title: String
+    let subtitle: String
+}
+
 let A = Algorithm(ID: "A", title: "Algortimo de tratamiento en DM2 con diagnóstico reciente, sin complicaciones cardiovasculares o renales con IMC < 30 kg/m2")
 let B = Algorithm(ID: "B", title: "Algoritmo de tratamiento en DM2 sin complicaciones cardiovasculares o renales con IMC > 30 kg/m2")
 let C = Algorithm(ID: "C", title: "Algoritmo de tratamiento de la DM2 con enfermedad renal crónica (ERC)")
@@ -58,10 +67,6 @@ let algorithmsMatch: [String: [Algorithm]] = [
 struct TitleCell {
     let title: String
     let subtitle: String
-}
-
-struct StepperCell {
-    let page: Int
 }
 
 struct InfoCell {
@@ -136,15 +141,15 @@ struct MultiRadioCell {
     let title: String
 }
 
-let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), StepperCell(page: 1), InfoCell(title: ""), OpenOpenCell(title1: "Nombre", title2: "Apellido Paterno", trailing1: "", trailing2: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
+let stepOne: [Any] = [TitleCell(title: "Crear un nuevo Paciente", subtitle: "Necesitamos un poco de información de tu paciente."), InfoCell(title: ""), OpenOpenCell(title1: "Nombre", title2: "Apellido Paterno", trailing1: "", trailing2: ""), RadioRadioCell(title: "Tipo y género"), OpenCell(title: "Edad", placeHolder: ""), RadioCell(title: "Racial"), OpenCell(title: "Año en que se diagnosticó la diabetes", placeHolder: "")]
 
-let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), StepperCell(page: 2), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: "", id: "renal"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)", id: "cardio"), BoolCell(title: "Tiene hipoglucemia?", sub: "", id: "hipo")]
+let stepTwo: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Vamos a crear su historial clínico"), IMCCell(title: ""), BoolCell(title: "¿Tiene enfermedad renal crónica?", sub: "", id: "renal"), BoolCell(title: "¿Sufre de complicaciones cardiovasculares?", sub: "(Infarto al miocardio, accidente cerebrovascular, falla cardiaca o enfermedad arterial periferica)", id: "cardio"), BoolCell(title: "Tiene hipoglucemia?", sub: "", id: "hipo")]
 
-var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
+var stepThree: [Any] = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: "")]
 
-var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), CommentCell(title: "Observaciones")]
+var stepFour: [Any] = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg"), CommentCell(title: "Observaciones")]
 
-var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), StepperCell(page: 5), TreatmentCell(options: Option(treatments: [Treatment(title: "", subtitle: "")]))]
+var stepFive: [Any] = [TitleCell(title: "Tratamiento asignado", subtitle: ""), TreatmentCell(options: Option(treatments: [Treatment(title: "", subtitle: "")]))]
 
 struct PatientInfo {
     var id: String

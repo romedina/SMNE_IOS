@@ -18,7 +18,7 @@ class ModelViewStep5 {
                     }
                 }
             }
-            return [TreatmentFromDB(name: "", title: "", description: [])]
+            return [TreatmentFromDB(name: "")]//, title: "", description: [])]
         }()
         switch algorithm {
         case "A":
@@ -166,7 +166,7 @@ class ModelViewStep5 {
             }
             break
         default:
-            if prevDose == "TC_D1_E1" && filter == "44 - 30" && hba1c > 7 {
+            if prevDose == "TC_D1_E1" && filter == "44 - 30" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D1
             } else if prevDose == "TC_D1_E2" && filter == "59 - 45" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D2
@@ -177,129 +177,20 @@ class ModelViewStep5 {
             } else if prevDose == "TC_D1_E5" && filter == "59 - 45" && hba1c >= 8 {
                 return TreatmentsFromDB().TC_E2_D5
             } else if prevDose == "TC_D1_E6" && filter == "44 - 30" && hba1c >= 8 {
-//                return TreatmentsFromDB().TC_E2_D6
+                return TreatmentsFromDB().TC_E2_D6
             } else if prevDose == "TC_D1_E7" && filter == "29 - 15" && hba1c >= 8.4 {
-//                return TreatmentsFromDB().TC_E2_D7
+                return TreatmentsFromDB().TC_E2_D7
             } else if prevDose == "TC_D1_E8" && filter == "<15" && hba1c >= 8.4 {
-//                return TreatmentsFromDB().TC_E2_D8
+                return TreatmentsFromDB().TC_E2_D8
             } else {
                 return TreatmentsFromDB().TDefault
             }
-            #warning("hay que cambiar todas los return para que regrese las imagenes")
-            
-            if (filter == "44 - 30" || filter == "59 - 45") && hba1c > 7 {
-                return TreatmentsFromDB().TC_E2_D1
-            } else if (filter == "44 - 30" || filter == "59 - 45") && hba1c >= 8{
-                return TreatmentsFromDB().TC_E2_D4
-            } else if filter == "29 - 15" && hba1c > 7.5 {
-                return TreatmentsFromDB().TC_E2_D2
-            } else if hba1c < 7.5 && filter == "<15" {
-                return TreatmentsFromDB().TC_E2_D3
-            } else if (hba1c >= 7.5 && hba1c <= 8.4) && (filter == "29 - 15" || filter == "<15") {
-                return TreatmentsFromDB().TC_E2_D5
-            }
-            break
         }
         
         return []
     }
-    
-    func getOptions(algorithm: String, hba1c: Float, glucose: Float) -> [Treatment]{
-        switch algorithm {
-        case "A":
-            if glucose < 200 || hba1c < 8 {
-                return treatmentA[0].treatments
-            } else if glucose > 250 || hba1c > 10 {
-                return treatmentA[2].treatments
-            } else {
-                return treatmentA[1].treatments
-            }
-        case "B":
-            if glucose < 200 || hba1c < 8 {
-                return treatmentB[0].treatments
-            } else if glucose > 250 || hba1c > 10 {
-                return treatmentB[1].treatments
-            } else {
-                return treatmentB[2].treatments
-            }
-        case "D":
-            if glucose < 200 || hba1c < 8 {
-                return treatmentD[0].treatments
-            } else if glucose > 250 || hba1c > 10 {
-                return treatmentD[1].treatments
-            } else {
-                return treatmentD[2].treatments
-            }
-        case "E":
-            if glucose < 200 || hba1c < 8 {
-                return treatmentE[0].treatments
-            } else if glucose > 250 || hba1c > 10 {
-                return treatmentE[1].treatments
-            } else {
-                return treatmentE[2].treatments
-            }
-        case "F":
-            return treatmentF[0].treatments
-        default:
-            return [Treatment(title: "Default", subtitle: "Default treatment")]
-        }
-    }
-    
-    func getOptions(hba1c: Float, glucose: Float, filter: String) -> [Treatment] {
-        if glucose < 250 {
-            if filter == "59 - 45" || filter == "44 - 30" {
-                return treatmentC[0].treatments
-            } else if filter == "29 - 15" {
-                return treatmentC[1].treatments
-            } else if filter == "<15" {
-                return treatmentC[2].treatments
-            }
-        } else if hba1c > 8 && hba1c < 10 {
-            if filter == "59 - 45" || filter == "44 - 30" {
-                return treatmentC[0].treatments
-            } else if filter == "29 - 15" {
-                return treatmentC[1].treatments
-            } else if filter == "<15" {
-                return treatmentC[2].treatments
-            }
-        }
-        
-        if glucose > 250 {
-            if filter == "59 - 45" || filter == "44 - 30" {
-                return treatmentC[3].treatments
-            } else if filter == "29 - 15" {
-                return treatmentC[4].treatments
-            } else if filter == "<15" {
-                return treatmentC[5].treatments
-            }
-        } else if hba1c > 10 {
-            if filter == "59 - 45" || filter == "44 - 30" {
-                return treatmentC[3].treatments
-            } else if filter == "29 - 15" {
-                return treatmentC[4].treatments
-            } else if filter == "<15" {
-                return treatmentC[5].treatments
-            }
-        }
-        
-        return []
-    }
-    
     func getStep5(options: [TreatmentFromDB]) {
-        var newOptions = [Treatment]()
-        for op in options {
-            for description in op.description {
-                if description == op.description.first {
-                    let option = Treatment(title: op.title, subtitle: description)
-                    stepFive.append(op.name)
-                    newOptions.append(option)
-                } else {
-                    let option = Treatment(title: "", subtitle: description)
-                    newOptions.append(option)
-                }
-            }
-        }
-        stepFive[2] = TreatmentCell(options: Option(treatments: newOptions))
+        stepFive.append(options.first!.name)
         reinitS5()
     }
     
@@ -307,7 +198,7 @@ class ModelViewStep5 {
         step5Cells = {
             var cells: [Any] = []
             for cell in stepFive {
-                if let _ = cell as? TitleCell { } else if let _ = cell as? StepperCell { } else {
+                if let _ = cell as? TitleCell { } else {
                     cells.append(cell)
                 }
             }

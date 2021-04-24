@@ -43,7 +43,6 @@ class ViewControllerNPMain: UIViewController {
     var patientInfo: PatientInfo = PatientInfo(id: "",name: "", lastName: "", date: "", type: "", age: 0, gender: "", racial: false, diabetesDate: "", IMC: 0.0, algorithID: "", hba1c: 0.0, glucose: 0.0, filterCup: "", comment: "")
     var map = "00000"
     var algorithmID = ""
-    var treatment: [Treatment] = []
     var treatmentForDB: [TreatmentFromDB] = []
     
     var featherImage = #imageLiteral(resourceName: "feather")
@@ -213,9 +212,9 @@ class ViewControllerNPMain: UIViewController {
         
         guard let algorithms = algorithmsMatch[map] else { return }
         if algorithms.count > 1 {
-            stepThree = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: ""), StepperCell(page: 3)]
+            stepThree = [TitleCell(title: "Con base en los datos de tu paciente existen 2 posibles alternativas", subtitle: "")]
         } else {
-            stepThree = [TitleCell(title: "Con base en los datos de tu paciente, este es el algoritmo que le corresponde", subtitle: ""), StepperCell(page: 3)]
+            stepThree = [TitleCell(title: "Con base en los datos de tu paciente, este es el algoritmo que le corresponde", subtitle: "")]
         }
         
         for index in 0...algorithms.count - 1 {
@@ -231,7 +230,7 @@ class ViewControllerNPMain: UIViewController {
     
     private func prepareStepFour() {
         
-        stepFour = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), StepperCell(page: 4), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg")]
+        stepFour = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg")]
         if algorithmID == "C" {
             stepFour.append(MultiRadioCell(title: ""))
         }
@@ -275,10 +274,8 @@ class ViewControllerNPMain: UIViewController {
                         let filterCup = patientInfo.filterCup
                         if algorithmID != "C" {
                             patientInfo.filterCup = nil
-                            self.treatment = prepare5.getOptions(algorithm: algorithm, hba1c: hba1c, glucose: glucose)
                             self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
                         } else {
-                            self.treatment = prepare5.getOptions(hba1c: hba1c, glucose: glucose, filter: filterCup!)
                             self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup!, currentEv: currentEv, prevDose: prevD)
                         }
                         prepare5.getStep5(options: self.treatmentForDB)

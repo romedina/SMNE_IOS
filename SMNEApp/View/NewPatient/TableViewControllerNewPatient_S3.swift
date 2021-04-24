@@ -35,19 +35,7 @@ class TableViewControllerNewPatient_S3: UITableViewController {
         
         let cellInfo = step3Cells[indexPath.row]
         
-        if let info = cellInfo as? TitleCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TableViewCellTitle
-
-            cell.setInfo(title: info.title, subtitle: info.subtitle)
-
-            return cell
-        } else if let info = cellInfo as? StepperCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "stepper", for: indexPath) as! TableViewCellStepper
-
-            cell.setInfo(page: info.page)
-
-            return cell
-        } else if let info = cellInfo as? AlgorithmCell {
+        if let info = cellInfo as? AlgorithmCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "algorithm", for: indexPath) as! TableViewCellAlgorithmSelection
             cell.setInfo(algorithm: info.title, backColor: info.backColor, textColor: info.textColor, viewController: self, indexP: indexPath.row, ID: info.id)
             cell.delegate = self
