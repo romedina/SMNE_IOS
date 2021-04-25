@@ -41,10 +41,9 @@ class TableViewCellRevition: UITableViewCell {
         applyRevitionButton.isEnabled = isLAst
         infoForCell = info
         let dose = info.dose.split(separator: "_")
-        var number = dose[1]
         let image = UIImage(named: info.dose)
         treatmentImageView.image = image
-        evaluationNumberLabel.text = "Evaluación \(number.popLast()!)"
+        evaluationNumberLabel.text = "Evaluación \(info.evaluationNumber)"
         algorithmNameLabel.text = getAlgorithmName(algorithmId: String(dose[0]))
         let date = info.createdAt.dateValue()
         dateLabel.text = "\(date.dateToMxnString())"

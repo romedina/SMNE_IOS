@@ -21,16 +21,6 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
     @IBOutlet weak var schoolInput: UITextField!
     @IBOutlet weak var countryInput: UITextField!
     
-    var nameController: MDCTextInputControllerOutlined?
-    var fLastController: MDCTextInputControllerOutlined?
-    var sLastController: MDCTextInputControllerOutlined?
-    var genderController: MDCTextInputControllerOutlined?
-    var emailController: MDCTextInputControllerOutlined?
-    var cedulaController: MDCTextInputControllerOutlined?
-    var espeController: MDCTextInputControllerOutlined?
-    var schoolController: MDCTextInputControllerOutlined?
-    var countryController: MDCTextInputControllerOutlined?
-    
     let user = UserDefaults.standard
     
     override func awakeFromNib() {

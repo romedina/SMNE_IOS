@@ -21,6 +21,7 @@
 		9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */; };
 		9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */; };
 		9B80722E25F3412100D23519 /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B80722D25F3412100D23519 /* coffee.json */; };
+		9BCCC0862633B089000C3F51 /* TableViewCellDeterioration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCC0852633B089000C3F51 /* TableViewCellDeterioration.swift */; };
 		9BCD12F42604798300B0DBF5 /* RevisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD12F32604798300B0DBF5 /* RevisionView.swift */; };
 		9BCD12F9260479F100B0DBF5 /* RevisionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD12F8260479F100B0DBF5 /* RevisionView.xib */; };
 		9BCD130126047EA900B0DBF5 /* TableViewCellRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD130026047EA900B0DBF5 /* TableViewCellRevition.swift */; };
@@ -142,6 +143,7 @@
 		9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPillAnimation.swift; sourceTree = "<group>"; };
 		9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerPillAnimation.xib; sourceTree = "<group>"; };
 		9B80722D25F3412100D23519 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
+		9BCCC0852633B089000C3F51 /* TableViewCellDeterioration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDeterioration.swift; sourceTree = "<group>"; };
 		9BCD12F32604798300B0DBF5 /* RevisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionView.swift; sourceTree = "<group>"; };
 		9BCD12F8260479F100B0DBF5 /* RevisionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevisionView.xib; sourceTree = "<group>"; };
 		9BCD130026047EA900B0DBF5 /* TableViewCellRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRevition.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 				B31C10CE25D4A33A00233AE1 /* TableViewCellRadioRadio.swift */,
 				B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */,
 				B317F14625E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift */,
+				9BCCC0852633B089000C3F51 /* TableViewCellDeterioration.swift */,
 			);
 			path = NewPatient;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 				9BCD130B2604847500B0DBF5 /* PatientSelected.swift in Sources */,
 				B3E9C34325E1FEDF0072F92A /* ViewModelStep5.swift in Sources */,
 				B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */,
+				9BCCC0862633B089000C3F51 /* TableViewCellDeterioration.swift in Sources */,
 				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				9B65CB1726190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,

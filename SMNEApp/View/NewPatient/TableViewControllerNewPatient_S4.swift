@@ -57,6 +57,10 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio
             cell.delegate = self
             return cell
+        } else if let _ = cellInfo as? DeteriorationCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "deterioration", for: indexPath) as! TableViewCellDeterioration
+            cell.delegate = self
+            return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
 

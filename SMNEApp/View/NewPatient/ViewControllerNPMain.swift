@@ -118,6 +118,7 @@ class ViewControllerNPMain: UIViewController {
                                                 creatinineLevels: patientShema.evaluations.last!.creatinineLevels,
                                                 diagnosisYear: patientShema.diagnosisYear,
                                                 dose: patientShema.evaluations.last!.dose,
+                                                evaluationNumber: patientShema.evaluations.last!.evaluationNumber,
                                                 estimatedGlomerularFiltrationRate: patientShema.evaluations.last!.estimatedGlomerularFiltrationRate,
                                                 fastingGlucose: patientShema.evaluations.last!.fastingGlucose,
                                                 gender: patientShema.gender,
@@ -129,9 +130,14 @@ class ViewControllerNPMain: UIViewController {
                                                 treatment: patientShema.currentTreatment,
                                                 weight: patientShema.evaluations.last!.weight,
                                                 observations: [])
+            mapAssign(index: 0, flag: patientInfo.renal!)
+            mapAssign(index: 1, flag: patientInfo.cardio!)
+            mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
+            mapAssign(index: 3, flag: patientInfo.hipo!)
+            mapAssign(index: 4, flag: patientInfo.IMC >= 30 ? true : false)
         } else {
             patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
-            evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
+            evaluationSchema = EvaluationSchema(age: 0, cardiovascularComplications: false, chronicKidneyDisease: false, consultationType: .privada, createdAt: Timestamp(), creatinineLevels: 0.0, diagnosisYear: 0, dose: "", evaluationNumber: 0, estimatedGlomerularFiltrationRate: .uno, fastingGlucose: 0.0, gender: .fem, glycosylatedHemoglobin: 0.0, height: 0.0, hypoglycemia: false, imc: 0.0, racialAncestry: .No, treatment: .A, weight: 0.0, observations: [])
         }
         commentSchema = ObservationSchema(createdAt: Timestamp(), content: "")
     }
@@ -231,8 +237,13 @@ class ViewControllerNPMain: UIViewController {
     private func prepareStepFour() {
         
         stepFour = [TitleCell(title: "Tratamiento farmacológico DM2", subtitle: "Ya casi terminamos."), OpenOpenCell(title1: "Niveles de HbA1c", title2: "Glucosa de ayuno", trailing1: "%", trailing2: "mg")]
+        patientInfo.meta = nil
         if algorithmID == "C" {
             stepFour.append(MultiRadioCell(title: ""))
+        } else if algorithmID == "E" && patientShema.evaluations.count > 0 {
+            stepFour.append(DeteriorationCell(title: ""))
+            print("agregar el currazo ese de la tabla punk")
+            patientInfo.meta = -1
         }
         stepFour.append(CommentCell(title: ""))
         let reinitClass = ReinitStepCells()
@@ -249,7 +260,7 @@ class ViewControllerNPMain: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: MDCButton) {
         print(patientInfo)
-        if patientInfo.age != 0 && patientInfo.diabetesDate != "" {
+        if validationsStep1() {
             if index < 4 {
                 if index == 1 {
                     if validationsStep2() {
@@ -269,16 +280,24 @@ class ViewControllerNPMain: UIViewController {
                         let glucose = patientInfo.glucose
                         var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 0
                         currentEv += 1
+                        evaluationSchema?.evaluationNumber = currentEv
                         let prevD = PatientSelected.shared.patientInfo?.dose ?? ""
                         let hipo = patientInfo.hipo
                         let filterCup = patientInfo.filterCup
                         if algorithmID != "C" {
                             patientInfo.filterCup = nil
                             self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
+                        } else if algorithmID == "E" {
+                            
                         } else {
                             self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup!, currentEv: currentEv, prevDose: prevD)
                         }
-                        prepare5.getStep5(options: self.treatmentForDB)
+                        if self.treatmentForDB.first!.name == TreatmentsFromDB().TDefault.first!.name {
+                            AlertToast.show(message: "Los valores están fuera de rango.", controller: self, type: .Error) { }
+                            return
+                        } else {
+                            prepare5.getStep5(options: self.treatmentForDB)
+                        }
                     } else {
                         AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
                         }
@@ -318,6 +337,13 @@ class ViewControllerNPMain: UIViewController {
         return self.treatmentForDB[0].name
     }
     
+    func validationsStep1() -> Bool {
+        if patientInfo.age != 0 && patientInfo.diabetesDate != "" && patientInfo.type != "" && patientInfo.gender != "" {
+            return true
+        }
+        return false
+    }
+    
     func validationsStep2() -> Bool {
         if patientInfo.IMC != 0.0 && patientInfo.renal != nil && patientInfo.cardio != nil && patientInfo.hipo != nil {
             return true
@@ -326,7 +352,7 @@ class ViewControllerNPMain: UIViewController {
     }
     
     func validationsStep4() -> Bool {
-        if patientInfo.comment != "" && patientInfo.hba1c != 0 && patientInfo.glucose != 0 {
+        if patientInfo.comment != "" && patientInfo.hba1c != 0 && patientInfo.glucose != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
             return true
         }
         return false
@@ -555,6 +581,9 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "levels":
             evaluationSchema?.creatinineLevels = Double(info as! Float)
+            break
+        case "meta":
+            patientInfo.meta = Double(info as! Float)
             break
         default:
             break

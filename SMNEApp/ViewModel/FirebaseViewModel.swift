@@ -86,6 +86,7 @@ class FirebaseViewModel {
             evaluations["treatment"] = patientEv.treatment.rawValue
             evaluations["weight"] = patientEv.weight
             evaluations["dose"] = dose
+            evaluations["evaluationNumber"] = patientEv.evaluationNumber
             
             var comment: [String: Any] = [:]
             comment["createdAt"] = patientEv.observations[0].createdAt
@@ -229,6 +230,7 @@ class FirebaseViewModel {
                                                    creatinineLevels: i["creatinineLevels"] as? Double ?? 0.0,
                                                    diagnosisYear: i["diagnosisYear"] as? Int ?? 0,
                                                    dose: i["dose"] as? String ?? "",
+                                                   evaluationNumber: i["evaluationNumber"] as? Int ?? 0,
                                                    estimatedGlomerularFiltrationRate: FiltrationEnum(rawValue: i["estimatedGlomerularFiltrationRate"] as? String ?? "NA") ?? .na,
                                                    fastingGlucose: i["fastingGlucose"] as? Double ?? 0.0,
                                                    gender: GenderEnum(rawValue: i["gender"] as? String ?? "male") ?? .mas,

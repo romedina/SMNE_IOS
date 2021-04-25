@@ -17,6 +17,7 @@ struct EvaluationSchema {
     var creatinineLevels: Double
     var diagnosisYear: Int
     var dose: String
+    var evaluationNumber: Int
     var estimatedGlomerularFiltrationRate: FiltrationEnum
     var fastingGlucose: Double
     var gender: GenderEnum

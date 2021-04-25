@@ -576,7 +576,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx">
                                             <rect key="frame" x="17" y="363.5" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="amU-0j-WhU"/>
@@ -904,8 +904,8 @@
                                                     <action selector="searchPatientChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="dfF-P0-qxw"/>
                                                 </connections>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-kH-Qkg">
-                                                <rect key="frame" x="19" y="19" width="16" height="14"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lupa" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-kH-Qkg">
+                                                <rect key="frame" x="19" y="18" width="16" height="16"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="2Kh-jT-OXm"/>
@@ -2023,7 +2023,7 @@
         <image name="arrow" width="8.5" height="14.5"/>
         <image name="arrowL" width="29" height="29"/>
         <image name="home" width="52" height="41"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="lupa" width="17" height="17"/>
         <image name="mas" width="52" height="41"/>
         <image name="newPatient" width="34.5" height="42.5"/>
         <image name="paciente_activo" width="52" height="41"/>

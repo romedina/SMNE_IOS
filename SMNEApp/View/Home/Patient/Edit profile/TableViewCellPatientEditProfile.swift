@@ -43,6 +43,15 @@ class TableViewCellPatientEditProfile: UITableViewCell {
         racialView.layer.borderWidth = 1
         racialView.layer.borderColor = UIColor.C5FD6CB().cgColor
         racialView.layer.cornerRadius = 8
+        
+        setBorder(field: nameInput)
+        setBorder(field: lastNameInput)
+        setBorder(field: ageInput)
+        setBorder(field: yearInput)
+        setBorder(field: weitghtInput)
+        setBorder(field: heightInput)
+        setBorder(field: countryInput)
+        setBorder(field: birthdayInput)
     }
     
     func setInfo() {
@@ -77,6 +86,13 @@ class TableViewCellPatientEditProfile: UITableViewCell {
         } else {
             birthdayInput.text = ""
         }
+    }
+    
+    func setBorder(field: UITextField) {
+        field.layer.borderColor = UIColor.C5FD6CB().cgColor
+        field.layer.borderWidth = 1
+        field.layer.cornerRadius = 10
+        field.textColor = .C052D6C()
     }
     
     @IBAction func publicTapped(_ sender: Any) {
