@@ -120,6 +120,7 @@ extension ViewControllerPatientProfile: FloatingMenuDelegate {
     }
     
     func goToFEv() {
-        print("Nueva primer evaluación")
+        self.performSegue(withIdentifier: "newPatient", sender: self)
+        PatientSelected.shared.isFromFirst = true
     }
 }

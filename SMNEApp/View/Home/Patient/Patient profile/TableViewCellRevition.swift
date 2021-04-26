@@ -30,6 +30,9 @@ class TableViewCellRevition: UITableViewCell {
     var observations = [ObservationSchema]()
     var delegate: ListToControllerDelegate?
     
+    private var info: EvaluationSchema?
+    private var isLast = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,6 +40,8 @@ class TableViewCellRevition: UITableViewCell {
     }
     
     func setInfo(info: EvaluationSchema, isLAst: Bool) {
+        self.info = info
+        self.isLast = isLAst
         applyRevitionButton.isHidden = !isLAst
         applyRevitionButton.isEnabled = isLAst
         infoForCell = info
@@ -46,8 +51,11 @@ class TableViewCellRevition: UITableViewCell {
         evaluationNumberLabel.text = "Evaluación \(info.evaluationNumber)"
         algorithmNameLabel.text = getAlgorithmName(algorithmId: String(dose[0]))
         let date = info.createdAt.dateValue()
-        dateLabel.text = "\(date.dateToMxnString())"
+        dateLabel.text = "\(date.dateToMxnString2())"
         
+        for view in revitionsStack.arrangedSubviews {
+            revitionsStack.removeArrangedSubview(view)
+        }
         
         if revitionsStack.arrangedSubviews.count != 0 && revitionsStack.arrangedSubviews.count < info.observations.count {
             guard let newRevition = info.observations.last else { return }
@@ -69,6 +77,11 @@ class TableViewCellRevition: UITableViewCell {
                 revitionsStack.addArrangedSubview(rView)
             }
         }
+    }
+    
+    override func prepareForReuse() {
+        guard let infoForCell = info else { return }
+        setInfo(info: infoForCell, isLAst: isLast)
     }
     
     func getAlgorithmName(algorithmId: String) -> String {

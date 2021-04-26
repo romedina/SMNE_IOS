@@ -12,4 +12,5 @@ class PatientSelected {
     var patientInfo: PatientSchema?
     var prevTreatment: String?
     var hasChanged: Bool = false
+    var isFromFirst: Bool = false
 }

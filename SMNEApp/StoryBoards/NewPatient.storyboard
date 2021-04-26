@@ -30,10 +30,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-Zi-ddk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="155"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="121.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJz-b9-Wi8" userLabel="stepperView">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="55"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="414" height="55"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Ib-zs7">
                                                 <rect key="frame" x="18" y="0.0" width="378" height="55"/>
@@ -140,6 +140,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.8784313725490196" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="3cB-2f-fIW"/>
                                             <constraint firstAttribute="trailing" secondItem="Wgr-Ib-zs7" secondAttribute="trailing" constant="18" id="U8A-QD-Yx9"/>
                                             <constraint firstItem="Wgr-Ib-zs7" firstAttribute="top" secondItem="MJz-b9-Wi8" secondAttribute="top" id="cvT-Wb-5HB"/>
                                             <constraint firstItem="Wgr-Ib-zs7" firstAttribute="leading" secondItem="MJz-b9-Wi8" secondAttribute="leading" constant="18" id="nZh-pC-Gyt"/>
@@ -147,22 +148,22 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XT-h3-259" userLabel="titleView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="66.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear un nuevo paciente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-z4-kB9">
-                                                <rect key="frame" x="48" y="36.5" width="318" height="27.5"/>
+                                                <rect key="frame" x="48" y="10" width="318" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-TV-u7Y">
-                                                <rect key="frame" x="48" y="69" width="318" height="22"/>
+                                                <rect key="frame" x="48" y="38.5" width="318" height="19"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-bR-kII">
-                                                <rect key="frame" x="18" y="35.5" width="30" height="29"/>
+                                                <rect key="frame" x="18" y="19" width="30" height="29"/>
                                                 <state key="normal" image="arrowL"/>
                                                 <connections>
                                                     <action selector="exitButtonTapped:" destination="bxa-Ve-VdF" eventType="touchUpInside" id="gGF-Oq-biQ"/>
@@ -176,7 +177,7 @@
                                             <constraint firstAttribute="bottom" secondItem="fkY-TV-u7Y" secondAttribute="bottom" constant="9" id="D4v-0g-xW7"/>
                                             <constraint firstItem="cSo-bR-kII" firstAttribute="centerY" secondItem="2XT-h3-259" secondAttribute="centerY" id="UVL-3h-RJA"/>
                                             <constraint firstItem="Kun-z4-kB9" firstAttribute="leading" secondItem="cSo-bR-kII" secondAttribute="trailing" id="fW7-GL-c70"/>
-                                            <constraint firstAttribute="height" constant="100" id="liN-Mv-MaE"/>
+                                            <constraint firstItem="Kun-z4-kB9" firstAttribute="top" secondItem="2XT-h3-259" secondAttribute="top" constant="10" id="ipP-0H-P2r"/>
                                             <constraint firstItem="fkY-TV-u7Y" firstAttribute="leading" secondItem="2XT-h3-259" secondAttribute="leading" constant="48" id="oDF-53-ni0"/>
                                             <constraint firstAttribute="trailing" secondItem="fkY-TV-u7Y" secondAttribute="trailing" constant="48" id="qLZ-zh-HEQ"/>
                                             <constraint firstItem="fkY-TV-u7Y" firstAttribute="centerX" secondItem="2XT-h3-259" secondAttribute="centerX" id="qcL-5w-DoX"/>
@@ -188,7 +189,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MJz-b9-Wi8" secondAttribute="trailing" id="9l5-Qr-rI1"/>
-                                    <constraint firstAttribute="height" constant="155" id="FlV-fe-SNu"/>
                                     <constraint firstItem="MJz-b9-Wi8" firstAttribute="top" secondItem="2XT-h3-259" secondAttribute="bottom" id="LvM-pt-Pvy"/>
                                     <constraint firstItem="2XT-h3-259" firstAttribute="top" secondItem="ytT-Zi-ddk" secondAttribute="top" id="Rnm-Ff-Ihg"/>
                                     <constraint firstItem="MJz-b9-Wi8" firstAttribute="leading" secondItem="ytT-Zi-ddk" secondAttribute="leading" id="aNa-Ce-CaY"/>
@@ -198,7 +198,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igF-lb-6ex">
-                                <rect key="frame" x="0.0" y="199" width="414" height="593"/>
+                                <rect key="frame" x="0.0" y="165.5" width="414" height="626.5"/>
                                 <connections>
                                     <segue destination="ntm-TT-dQm" kind="embed" identifier="PVCMainSegue" id="p2V-gi-soy"/>
                                 </connections>
@@ -244,15 +244,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-tm-eYJ">
+                                <rect key="frame" x="0.0" y="792" width="414" height="4"/>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.97254901960784312" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="TAn-1E-BtC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="akc-vq-Thi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="igF-lb-6ex" firstAttribute="top" secondItem="ytT-Zi-ddk" secondAttribute="bottom" id="36u-Ic-pSN"/>
                             <constraint firstItem="igF-lb-6ex" firstAttribute="leading" secondItem="akc-vq-Thi" secondAttribute="leading" id="3hG-hr-yBS"/>
+                            <constraint firstItem="NlJ-tm-eYJ" firstAttribute="top" secondItem="igF-lb-6ex" secondAttribute="bottom" id="4oF-Kq-5LQ"/>
                             <constraint firstItem="ytT-Zi-ddk" firstAttribute="leading" secondItem="akc-vq-Thi" secondAttribute="leading" id="5Mn-aT-DGG"/>
                             <constraint firstItem="ytT-Zi-ddk" firstAttribute="top" secondItem="akc-vq-Thi" secondAttribute="top" id="9zb-aB-POb"/>
                             <constraint firstItem="akc-vq-Thi" firstAttribute="trailing" secondItem="igF-lb-6ex" secondAttribute="trailing" id="D7G-rn-8bP"/>
+                            <constraint firstItem="NlJ-tm-eYJ" firstAttribute="trailing" secondItem="akc-vq-Thi" secondAttribute="trailing" id="LNE-Zf-Gjr"/>
+                            <constraint firstItem="NlJ-tm-eYJ" firstAttribute="leading" secondItem="akc-vq-Thi" secondAttribute="leading" id="Oaw-Le-OsQ"/>
                             <constraint firstItem="H6V-6J-Ull" firstAttribute="centerX" secondItem="EUQ-a9-3QJ" secondAttribute="centerX" id="PCr-8V-Vuw"/>
                             <constraint firstItem="H6V-6J-Ull" firstAttribute="leading" secondItem="akc-vq-Thi" secondAttribute="leading" constant="18" id="Wub-dP-MWL"/>
                             <constraint firstItem="akc-vq-Thi" firstAttribute="bottom" secondItem="igF-lb-6ex" secondAttribute="bottom" constant="70" id="cwz-yS-bDt"/>
@@ -289,7 +299,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="S1" id="arn-fo-ikD" customClass="TableViewControllerNewPatient_S1" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ckK-9d-g06">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -547,15 +557,20 @@
                                         <constraint firstItem="2uj-ff-sv2" firstAttribute="leading" secondItem="fjZ-4d-8bi" secondAttribute="trailing" constant="20" id="CTz-Mw-PH2"/>
                                         <constraint firstItem="PeV-7s-t2E" firstAttribute="leading" secondItem="2uj-ff-sv2" secondAttribute="leading" id="Eg7-Bo-WKz"/>
                                         <constraint firstItem="anV-3W-RDW" firstAttribute="centerY" secondItem="fjZ-4d-8bi" secondAttribute="centerY" id="F3u-Af-ixS"/>
-                                        <constraint firstItem="anV-3W-RDW" firstAttribute="leading" secondItem="PeV-7s-t2E" secondAttribute="trailing" constant="45" id="Rv1-Kt-cVZ"/>
+                                        <constraint firstItem="anV-3W-RDW" firstAttribute="leading" relation="lessThanOrEqual" secondItem="PeV-7s-t2E" secondAttribute="trailing" constant="45" id="Rv1-Kt-cVZ"/>
                                         <constraint firstAttribute="trailing" secondItem="56a-BM-b0v" secondAttribute="trailing" id="TuO-dv-9Wh"/>
+                                        <constraint firstItem="uVQ-S2-JOj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="anV-3W-RDW" secondAttribute="trailing" constant="39" id="W10-mP-Duq"/>
                                         <constraint firstAttribute="bottom" secondItem="56a-BM-b0v" secondAttribute="bottom" id="WMT-MQ-HJF"/>
+                                        <constraint firstItem="anV-3W-RDW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PeV-7s-t2E" secondAttribute="trailing" constant="10" id="Wk1-xt-F4E"/>
+                                        <constraint firstItem="Qxh-kZ-4wD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2uj-ff-sv2" secondAttribute="trailing" constant="10" id="XoC-94-9Ij"/>
                                         <constraint firstItem="2uj-ff-sv2" firstAttribute="top" secondItem="fjZ-4d-8bi" secondAttribute="top" constant="15" id="YNF-sf-Y8Y"/>
-                                        <constraint firstItem="uVQ-S2-JOj" firstAttribute="leading" secondItem="2uj-ff-sv2" secondAttribute="trailing" constant="90" id="YRk-zi-U4N"/>
+                                        <constraint firstItem="uVQ-S2-JOj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="2uj-ff-sv2" secondAttribute="trailing" constant="90" id="YRk-zi-U4N"/>
                                         <constraint firstItem="fjZ-4d-8bi" firstAttribute="leading" secondItem="pG3-Qk-0aR" secondAttribute="leading" constant="18" id="bS7-5r-5PZ"/>
                                         <constraint firstItem="56a-BM-b0v" firstAttribute="leading" secondItem="pG3-Qk-0aR" secondAttribute="leading" id="dqe-rr-mvH"/>
+                                        <constraint firstItem="uVQ-S2-JOj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="anV-3W-RDW" secondAttribute="trailing" constant="10" id="hrC-4U-jtT"/>
                                         <constraint firstItem="Qxh-kZ-4wD" firstAttribute="top" secondItem="uVQ-S2-JOj" secondAttribute="bottom" id="mI0-h6-L5D"/>
                                         <constraint firstItem="Qxh-kZ-4wD" firstAttribute="leading" secondItem="uVQ-S2-JOj" secondAttribute="leading" id="q0A-7h-OAt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Qxh-kZ-4wD" secondAttribute="trailing" constant="23" id="rEM-QD-ZOU"/>
                                         <constraint firstItem="anV-3W-RDW" firstAttribute="height" secondItem="fjZ-4d-8bi" secondAttribute="height" id="rmD-bn-lza"/>
                                         <constraint firstItem="uVQ-S2-JOj" firstAttribute="top" secondItem="2uj-ff-sv2" secondAttribute="top" id="yYO-kP-8La"/>
                                     </constraints>
@@ -936,25 +951,25 @@
             <objects>
                 <tableViewController storyboardIdentifier="S2" id="NTT-bX-OYZ" customClass="TableViewControllerNewPatient_S2" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mls-ua-XQH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bool" id="BA1-Bm-8Kc" customClass="TableViewCellBool" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="124.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BA1-Bm-8Kc" id="KJA-eY-Q1d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-fP-mfi">
-                                            <rect key="frame" x="18" y="15" width="43.5" height="22"/>
+                                            <rect key="frame" x="18" y="15" width="39.5" height="19"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LyO-1S-308">
-                                            <rect key="frame" x="18" y="47" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="44" width="378" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-Or-BZ8" customClass="MDCButton">
                                                     <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
@@ -984,10 +999,10 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AUX-OC-6nE">
-                                            <rect key="frame" x="18" y="102" width="378" height="18"/>
+                                            <rect key="frame" x="18" y="99" width="378" height="15.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM0-kB-lLV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                     <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1015,7 +1030,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="Kxs-7s-cRS" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="158" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="152.5" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kxs-7s-cRS" id="JcN-Kn-CuY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -1052,10 +1067,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imc" id="WZm-Ta-NBK" customClass="TableViewCellIMC" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="266" width="414" height="395.5"/>
+                                <rect key="frame" x="0.0" y="260.5" width="414" height="392.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZm-Ta-NBK" id="QFq-b9-Mok">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="395.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="392.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Índice de masa corporal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-pY-ec5">
@@ -1117,13 +1132,13 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveles de Creatinina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-bJ-aJA">
-                                            <rect key="frame" x="18" y="182.5" width="171" height="22"/>
+                                            <rect key="frame" x="18" y="182.5" width="151.5" height="19"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-b2-WgT" customClass="MDCTextField">
-                                            <rect key="frame" x="18" y="214.5" width="378" height="85"/>
+                                            <rect key="frame" x="18" y="211.5" width="378" height="85"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="85" id="GhQ-iG-lWv"/>
                                             </constraints>
@@ -1134,7 +1149,7 @@
                                             </connections>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-O1-nf6">
-                                            <rect key="frame" x="18" y="329.5" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="326.5" width="378" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-qd-57b">
                                                     <rect key="frame" x="0.0" y="0.0" width="378" height="50"/>
@@ -1190,7 +1205,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="Ugl-Li-GjD">
-                                <rect key="frame" x="0.0" y="661.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="653" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugl-Li-GjD" id="gOZ-Hv-SZO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -1231,28 +1246,28 @@
             <objects>
                 <tableViewController storyboardIdentifier="S3" id="a9p-uN-4e9" customClass="TableViewControllerNewPatient_S3" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7CJ-X8-wsb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="algorithm" id="DPb-uq-CrT" customClass="TableViewCellAlgorithmSelection" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="223.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="209"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPb-uq-CrT" id="wbS-OF-dCH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="223.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syV-kN-hV5">
-                                            <rect key="frame" x="18" y="10" width="378" height="203.5"/>
+                                            <rect key="frame" x="18" y="10" width="378" height="189"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algoritmo de tratamiento de la DM2 con enfermedad renal crónica (ERC) af bgdb andga dga dg " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX1-UJ-EBq">
-                                                    <rect key="frame" x="22" y="20" width="255" height="98.5"/>
+                                                    <rect key="frame" x="22" y="20" width="255" height="84"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-Ck-9a4" customClass="MDCButton">
-                                                    <rect key="frame" x="22" y="138.5" width="158" height="45"/>
+                                                    <rect key="frame" x="22" y="124" width="158" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="158" id="URl-5w-s4z"/>
                                                         <constraint firstAttribute="height" constant="45" id="n29-M2-H15"/>
@@ -1266,7 +1281,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treatmentPage" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-Fx-7Xb">
-                                                    <rect key="frame" x="218" y="28.5" width="160" height="147"/>
+                                                    <rect key="frame" x="218" y="21" width="160" height="147"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="147" id="D7u-Ti-78n"/>
                                                         <constraint firstAttribute="width" constant="160" id="rhQ-F8-u7V"/>
@@ -1302,7 +1317,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tng-Yp-gSJ">
-                                <rect key="frame" x="0.0" y="251.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="237" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tng-Yp-gSJ" id="9jv-Jn-bi7">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -1344,15 +1359,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="S4" id="REV-Xp-brX" customClass="TableViewControllerNewPatient_S4" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R3W-uu-juR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deterioration" id="r95-10-51y" customClass="TableViewCellDeterioration" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="531"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="530.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r95-10-51y" id="yuE-zI-88R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="531"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="530.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gua-zd-OFy">
@@ -1374,8 +1389,8 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-05-j8Z">
-                                                            <rect key="frame" x="54" y="9.5" width="32" height="19"/>
-                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                                                            <rect key="frame" x="54" y="9.5" width="34.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1383,7 +1398,7 @@
                                                             <rect key="frame" x="54" y="32.5" width="306" height="65"/>
                                                             <string key="text">Sin comorbilidad
 1-2 enfermedades crónicas además de la diabetes sin necesitar ayuda en la vida diaria.</string>
-                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1428,15 +1443,15 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-Jx-eLT">
-                                                            <rect key="frame" x="54" y="9.5" width="72" height="19"/>
-                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                                                            <rect key="frame" x="54" y="9.5" width="74" height="19"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-8f-X5X">
                                                             <rect key="frame" x="54" y="32.5" width="306" height="65"/>
                                                             <string key="text">&gt; 2 enfermedades crónicas además de la diabetes y/o Deterioro cognitivo moderado o demencia leve Necesita ayuda en la vida diaria.</string>
-                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1481,8 +1496,8 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-le-gmp">
-                                                            <rect key="frame" x="54" y="9.5" width="42" height="19"/>
-                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                                                            <rect key="frame" x="54" y="9.5" width="43" height="19"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1490,7 +1505,7 @@
                                                             <rect key="frame" x="54" y="32.5" width="306" height="75"/>
                                                             <string key="text">Cualquiera de los siguientes
 Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo en la vida diaria.</string>
-                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1518,26 +1533,26 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica el deterioro de salud del paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBI-xh-foG">
-                                            <rect key="frame" x="20" y="11" width="374" height="19.5"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="19"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tratamiento actual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-h8-Gah">
-                                            <rect key="frame" x="20" y="421.5" width="357" height="19.5"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                            <rect key="frame" x="20" y="421.5" width="357" height="19"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Guv-5t-gVm">
-                                            <rect key="frame" x="17" y="446" width="380" height="60"/>
+                                            <rect key="frame" x="17" y="445.5" width="380" height="60"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xJj-zE-X70">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="FVh-bo-V6S"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="Tratamiento de bajo riesgo de hipoglucemia">
                                                         <color key="titleColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -1550,7 +1565,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="nVH-Gp-IUq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="Fármacos que producen hipoglucemia">
                                                         <color key="titleColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -1561,7 +1576,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-qZ-K4S" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="516" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="515.5" width="414" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="2nw-hr-7hp"/>
@@ -1599,20 +1614,20 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="slider" id="bcW-Ww-LMr" customClass="TableViewCellSlider" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="559" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="558.5" width="414" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcW-Ww-LMr" id="mG7-Fi-R0T">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveles de HbA1c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOc-18-efK">
-                                            <rect key="frame" x="18" y="31" width="137.5" height="22"/>
+                                            <rect key="frame" x="18" y="31" width="128" height="19"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="V0O-FM-pyN" customClass="CustomSlide" customModule="SMNEApp" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="73" width="382" height="31"/>
+                                            <rect key="frame" x="16" y="70" width="382" height="31"/>
                                             <color key="minimumTrackTintColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="maximumTrackTintColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="thumbTintColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1626,19 +1641,19 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jy-Mw-73j">
-                                            <rect key="frame" x="18" y="103" width="8" height="19.5"/>
+                                            <rect key="frame" x="18" y="100" width="8" height="16.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-j5-8sD">
-                                            <rect key="frame" x="380" y="103" width="16" height="19.5"/>
+                                            <rect key="frame" x="380" y="100" width="16" height="16.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="de7-Ap-6oJ" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="123" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="120" width="414" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="o2r-iq-ZOs"/>
@@ -1651,13 +1666,13 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     <rect key="frame" x="11" y="-10.5" width="48" height="58"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et6-e8-8wW">
-                                                            <rect key="frame" x="0.0" y="18" width="19" height="22"/>
+                                                            <rect key="frame" x="0.0" y="19.5" width="19" height="19"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m2v-6L-dwd">
-                                                            <rect key="frame" x="29" y="18" width="19" height="22"/>
+                                                            <rect key="frame" x="29" y="19.5" width="19" height="19"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1703,14 +1718,14 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comment" id="a6y-zJ-VTn" customClass="TableViewCellComment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="687" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="683.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6y-zJ-VTn" id="oO1-gl-Di1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-qH-Bss">
-                                            <rect key="frame" x="18" y="20" width="117.5" height="22"/>
+                                            <rect key="frame" x="18" y="20" width="107" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="VCj-Wy-oOQ"/>
                                             </constraints>
@@ -1743,7 +1758,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="9T7-8t-nEu" customClass="TableViewCellMultiRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="877" width="414" height="66"/>
+                                <rect key="frame" x="0.0" y="873.5" width="414" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9T7-8t-nEu" id="aai-af-A1R">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -1757,7 +1772,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasa de Filtrado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-AG-xBR">
-                                            <rect key="frame" x="20" y="11" width="127" height="22"/>
+                                            <rect key="frame" x="20" y="11" width="113.5" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="64K-kD-xiG"/>
                                             </constraints>
@@ -1920,7 +1935,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="4WS-p8-0S8">
-                                <rect key="frame" x="0.0" y="943" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="939.5" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WS-p8-0S8" id="LZ1-ri-em8">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -1945,26 +1960,26 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="9wF-S0-pA0" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1063" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="1059.5" width="414" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wF-S0-pA0" id="cf7-Bu-r5y">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-WW-zHt">
-                                            <rect key="frame" x="18" y="21" width="378" height="82"/>
+                                            <rect key="frame" x="18" y="21" width="378" height="79"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Drz-OL-2kf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="79"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-gf-YBd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="19"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-7e-gng" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="29" width="184" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="3FT-e9-OZ0"/>
                                                             </constraints>
@@ -1977,16 +1992,16 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-MC-6uV">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="194" y="0.0" width="184" height="79"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDw-ez-URg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="19"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqg-zt-h4P" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="29" width="184" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="7wx-Ig-sZQ"/>
                                                             </constraints>
@@ -2001,7 +2016,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-jS-1eX" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="133" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="130" width="414" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="PTL-IG-XFN"/>
@@ -2042,19 +2057,19 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
             <objects>
                 <tableViewController storyboardIdentifier="S5" id="D0z-aZ-VAN" customClass="TableViewControllerNewPatient_S5" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Prg-tI-MqN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="treatment" id="JEQ-Rj-eXf" customClass="TableViewCellTreatment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="57.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEQ-Rj-eXf" id="iXu-dv-d1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se recomienda evaluar la relación albúmina creatinina en una muestra de orina al azar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-sH-jcq">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="44"/>
+                                            <rect key="frame" x="18" y="0.0" width="378" height="37.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -2079,7 +2094,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tcD-At-dfV">
-                                <rect key="frame" x="0.0" y="92" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="85.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcD-At-dfV" id="c9n-zV-tzH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>

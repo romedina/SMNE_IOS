@@ -119,6 +119,7 @@ class FirebaseViewModel {
                 evaluation["treatment"] = ev.treatment.rawValue
                 evaluation["weight"] = ev.weight
                 evaluation["dose"] = ev.dose
+                evaluation["evaluationNumber"] = ev.evaluationNumber
                 var comments = [[String: Any]]()
                 for i in ev.observations {
                     var comment: [String: Any] = [:]
@@ -149,6 +150,7 @@ class FirebaseViewModel {
             evaluation["treatment"] = patientEv.treatment.rawValue
             evaluation["weight"] = patientEv.weight
             evaluation["dose"] = dose
+            evaluation["evaluationNumber"] = patientEv.evaluationNumber
             var comment: [String: Any] = [:]
             comment["createdAt"] = patientEv.observations.last?.createdAt
             comment["content"] = patientEv.observations.last?.content
@@ -167,7 +169,7 @@ class FirebaseViewModel {
             dict["racialAncestry"] = patientInfo.racialAncestry.rawValue
             dict["updatedAt"] = Timestamp()
             dict["weight"] = patientInfo.evaluations.last?.weight ?? 0
-            dict["currentEvaluation"] = evaluations.count
+            dict["currentEvaluation"] = patientEv.evaluationNumber
             dict["currentTreatment"] = patientInfo.currentTreatment.rawValue
             dict["evaluations"] = evaluations
             return dict

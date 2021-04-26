@@ -33,6 +33,8 @@ class ViewControllerNPMain: UIViewController {
     
     @IBOutlet weak var exitFlowButton: UIButton!
     
+    var currentEv = 0
+    
     var patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
     var evaluationSchema: EvaluationSchema?
     var commentSchema: ObservationSchema?
@@ -240,9 +242,8 @@ class ViewControllerNPMain: UIViewController {
         patientInfo.meta = nil
         if algorithmID == "C" {
             stepFour.append(MultiRadioCell(title: ""))
-        } else if algorithmID == "E" && patientShema.evaluations.count > 0 {
+        } else if algorithmID == "E" && patientShema.evaluations.count > 0 && PatientSelected.shared.isFromFirst != true {
             stepFour.append(DeteriorationCell(title: ""))
-            print("agregar el currazo ese de la tabla punk")
             patientInfo.meta = -1
         }
         stepFour.append(CommentCell(title: ""))
@@ -278,17 +279,22 @@ class ViewControllerNPMain: UIViewController {
                         let algorithm = patientInfo.algorithID
                         let hba1c = patientInfo.hba1c
                         let glucose = patientInfo.glucose
-                        var currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 0
+                        currentEv = PatientSelected.shared.patientInfo?.currentEvaluation ?? 0
                         currentEv += 1
+                        if PatientSelected.shared.isFromFirst {
+                            currentEv = 1
+                        }
                         evaluationSchema?.evaluationNumber = currentEv
                         let prevD = PatientSelected.shared.patientInfo?.dose ?? ""
                         let hipo = patientInfo.hipo
                         let filterCup = patientInfo.filterCup
                         if algorithmID != "C" {
-                            patientInfo.filterCup = nil
-                            self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
-                        } else if algorithmID == "E" {
-                            
+                            if algorithmID == "E" {
+                                self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup ?? "", currentEv: currentEv, prevDose: prevD, meta: self.patientInfo.meta)
+                            } else {
+                                patientInfo.filterCup = nil
+                                self.treatmentForDB = prepare5.getOptionsFromDB(algorithm: algorithm, hba1c: hba1c, glucose: glucose, currentEv: currentEv, prevDose: prevD, hypoglycemia: hipo)
+                            }
                         } else {
                             self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup!, currentEv: currentEv, prevDose: prevD)
                         }
@@ -320,6 +326,8 @@ class ViewControllerNPMain: UIViewController {
                     let _ = fireclass.setPatient(info: dict, patientId: patientInfo.id) { () in
                         delegate.endAnimationWith {
                             PatientSelected.shared.hasChanged = true
+                            PatientSelected.shared.isFromFirst = false
+                            PatientSelected.shared.patientInfo?.evaluations.append(self.evaluationSchema!)
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
@@ -368,6 +376,7 @@ class ViewControllerNPMain: UIViewController {
     
     @IBAction func exitButtonTapped(_ sender: Any) {
         if index == 0 {
+            PatientSelected.shared.isFromFirst = false
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -583,7 +592,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             evaluationSchema?.creatinineLevels = Double(info as! Float)
             break
         case "meta":
-            patientInfo.meta = Double(info as! Float)
+            patientInfo.meta = (info as! Float)
             break
         default:
             break

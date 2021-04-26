@@ -174,5 +174,5 @@ struct PatientInfo {
     var glucose: Float
     var filterCup: String?
     var comment: String
-    var meta: Double?
+    var meta: Float?
 }
