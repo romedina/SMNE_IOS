@@ -1149,17 +1149,17 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pendiente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-th-ofg">
-                                                    <rect key="frame" x="322" y="22.5" width="70" height="16.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pendiente" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-th-ofg">
+                                                    <rect key="frame" x="292" y="22.5" width="100" height="16.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="myo-E2-w9c"/>
+                                                        <constraint firstAttribute="width" constant="100" id="myo-E2-w9c"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fM-Dr-PBJ">
-                                                    <rect key="frame" x="20" y="44" width="282" height="16.5"/>
+                                                    <rect key="frame" x="20" y="44" width="252" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2023,7 +2023,7 @@
         <image name="arrow" width="8.5" height="14.5"/>
         <image name="arrowL" width="29" height="29"/>
         <image name="home" width="52" height="41"/>
-        <image name="lupa" width="17" height="17"/>
+        <image name="lupa" width="16.5" height="16.5"/>
         <image name="mas" width="52" height="41"/>
         <image name="newPatient" width="34.5" height="42.5"/>
         <image name="paciente_activo" width="52" height="41"/>

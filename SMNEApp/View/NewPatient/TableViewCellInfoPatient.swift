@@ -26,7 +26,7 @@ class TableViewCellInfoPatient: UITableViewCell {
         
         let today = Date()
         
-        dateLabel.text = today.dateToMxnString2()
+        dateLabel.text = today.dateToMxnString3()
     }
 
 }
@@ -44,7 +44,17 @@ extension Date {
     
     func dateToMxnString2() -> String{
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.dateFormat = "dd/MMMM/YYYY"
+        formatter.locale = Locale(identifier: "es_MX")
+        let dateIng = formatter.string(from: self)
+        
+        return dateIng
+    }
+    
+    func dateToMxnString3() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        formatter.locale = Locale(identifier: "es_MX")
         let dateIng = formatter.string(from: self)
         
         return dateIng

@@ -69,7 +69,13 @@ class TableViewCellOpenOpen: UITableViewCell {
             delegate?.infoChange(id: id1, info: text)
         } else {
             let myFloat = (text as NSString).floatValue
-            delegate?.infoChange(id: id1, info: myFloat)
+            if myFloat < 4.5 || myFloat > 20 {
+                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+                input1Controller?.errorColor = .red
+            } else {
+                input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+                delegate?.infoChange(id: id1, info: myFloat)
+            }
         }
     }
     
@@ -79,7 +85,13 @@ class TableViewCellOpenOpen: UITableViewCell {
             delegate?.infoChange(id: id2, info: text)
         } else {
             let myFloat = (text as NSString).floatValue
-            delegate?.infoChange(id: id2, info: myFloat)
+            if myFloat < 20 || myFloat > 1000 {
+                input2Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+                input2Controller?.errorColor = .red
+            } else {
+                input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+                delegate?.infoChange(id: id2, info: myFloat)
+            }
         }
     }
 }

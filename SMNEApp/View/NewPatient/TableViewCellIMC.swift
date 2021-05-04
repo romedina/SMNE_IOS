@@ -98,7 +98,13 @@ class TableViewCellIMC: UITableViewCell {
     @IBAction func weightChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
         weight = Float(string) ?? 0.0
-        delegate?.infoChange(id: "weight", info: weight)
+        if weight < 30 || weight > 200 {
+            weightController?.errorColor = .red
+            weightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
+        } else {
+            weightController?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.infoChange(id: "weight", info: weight)
+        }
         calculateIMC()
     }
     @IBAction func heightChanged(_ sender: UITextField) {
@@ -123,10 +129,10 @@ class TableViewCellIMC: UITableViewCell {
         } else {
             heightController?.errorColor = .red
             heightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
+            delegate?.infoChange(id: "height", info: height)
         }
         sender.text = String(format: "%.2f", floatValue)
         height = Float(sender.text ?? "") ?? 0.0
-        delegate?.infoChange(id: "height", info: height)
         calculateIMC()
     }
     @IBAction func levelsChanged(_ sender: UITextField) {
@@ -138,7 +144,6 @@ class TableViewCellIMC: UITableViewCell {
         } else {
             levelController?.errorColor = .red
             levelController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
-            
         }
     }
 }
