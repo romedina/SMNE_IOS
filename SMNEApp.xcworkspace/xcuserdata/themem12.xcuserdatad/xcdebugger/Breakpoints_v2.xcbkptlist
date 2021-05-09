@@ -286,8 +286,8 @@
             filePath = "SMNEApp/View/Home/Patient/Patient profile/TableViewCellRevition.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "setInfo(info:isLAst:)"
             landmarkType = "7">
          </BreakpointContent>

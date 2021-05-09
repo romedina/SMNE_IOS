@@ -46,8 +46,11 @@ class TableViewCellRevition: UITableViewCell {
         applyRevitionButton.isEnabled = isLAst
         infoForCell = info
         let dose = info.dose.split(separator: "_")
-        let image = UIImage(named: info.dose)
-        treatmentImageView.image = image
+        if let image = UIImage(named: info.dose) {
+            treatmentImageView.image = image
+            
+        }
+        
         evaluationNumberLabel.text = "Evaluación \(info.evaluationNumber)"
         algorithmNameLabel.text = getAlgorithmName(algorithmId: String(dose[0]))
         let date = info.createdAt.dateValue()
@@ -77,6 +80,7 @@ class TableViewCellRevition: UITableViewCell {
                 revitionsStack.addArrangedSubview(rView)
             }
         }
+        print("height:", treatmentImageView.frame.size.height)
     }
     
     override func prepareForReuse() {

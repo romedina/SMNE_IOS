@@ -1134,10 +1134,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="revition" id="CF1-6c-U2o" customClass="TableViewCellRevition" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="146" width="414" height="135.5"/>
+                                        <rect key="frame" x="0.0" y="146" width="414" height="366"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CF1-6c-U2o" id="xyl-Zq-HWL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJU-6s-HIa">
@@ -1165,19 +1165,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42e-VK-AJf">
-                                                    <rect key="frame" x="20" y="67.5" width="374" height="57"/>
+                                                    <rect key="frame" x="20" y="67.5" width="374" height="287.5"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-Wv-OwW">
-                                                            <rect key="frame" x="10" y="0.0" width="354" height="0.0"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TA_E1_D1" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-Wv-OwW">
+                                                            <rect key="frame" x="18.5" y="10" width="337" height="210.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revisiones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-89-740">
-                                                            <rect key="frame" x="18" y="0.0" width="242" height="22"/>
+                                                            <rect key="frame" x="18" y="230.5" width="242" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jh-g8-epi">
-                                                            <rect key="frame" x="260" y="0.0" width="94" height="17"/>
+                                                            <rect key="frame" x="260" y="230.5" width="94" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="Iny-PW-fGn"/>
                                                                 <constraint firstAttribute="width" constant="94" id="hPF-XA-lWl"/>
@@ -1191,13 +1191,13 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No altera el tratamiento del paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-XR-gvw">
-                                                            <rect key="frame" x="19" y="22" width="337" height="15"/>
+                                                            <rect key="frame" x="19" y="252.5" width="337" height="15"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="11"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fo7-op-CMZ">
-                                                            <rect key="frame" x="18" y="47" width="338" height="0.0"/>
+                                                            <rect key="frame" x="18" y="277.5" width="338" height="0.0"/>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1206,17 +1206,17 @@
                                                         <constraint firstItem="GwH-Wv-OwW" firstAttribute="centerX" secondItem="Fo7-op-CMZ" secondAttribute="centerX" id="2uB-P9-jJb"/>
                                                         <constraint firstItem="2Jh-g8-epi" firstAttribute="leading" secondItem="ldZ-89-740" secondAttribute="trailing" id="4Tf-tY-O1d"/>
                                                         <constraint firstAttribute="trailing" secondItem="Fo7-op-CMZ" secondAttribute="trailing" constant="18" id="CtD-db-WY2"/>
-                                                        <constraint firstItem="GwH-Wv-OwW" firstAttribute="top" secondItem="42e-VK-AJf" secondAttribute="top" id="DuK-tN-jLN"/>
+                                                        <constraint firstItem="GwH-Wv-OwW" firstAttribute="top" secondItem="42e-VK-AJf" secondAttribute="top" constant="10" id="DuK-tN-jLN"/>
                                                         <constraint firstItem="ldZ-89-740" firstAttribute="leading" secondItem="42e-VK-AJf" secondAttribute="leading" constant="18" id="E94-9h-snV"/>
                                                         <constraint firstItem="Fo7-op-CMZ" firstAttribute="top" secondItem="QSa-XR-gvw" secondAttribute="bottom" constant="10" id="GfJ-j0-DdN"/>
                                                         <constraint firstItem="Fo7-op-CMZ" firstAttribute="leading" secondItem="42e-VK-AJf" secondAttribute="leading" constant="18" id="GwQ-iy-713"/>
                                                         <constraint firstAttribute="bottom" secondItem="Fo7-op-CMZ" secondAttribute="bottom" constant="10" id="Sdg-Jq-enL"/>
-                                                        <constraint firstItem="ldZ-89-740" firstAttribute="top" secondItem="GwH-Wv-OwW" secondAttribute="bottom" id="TBT-oM-E3a"/>
+                                                        <constraint firstItem="ldZ-89-740" firstAttribute="top" secondItem="GwH-Wv-OwW" secondAttribute="bottom" constant="10" id="TBT-oM-E3a"/>
                                                         <constraint firstAttribute="trailing" secondItem="2Jh-g8-epi" secondAttribute="trailing" constant="20" id="VCR-R6-weC"/>
                                                         <constraint firstItem="QSa-XR-gvw" firstAttribute="top" secondItem="ldZ-89-740" secondAttribute="bottom" id="WhS-tC-Xcp"/>
                                                         <constraint firstItem="QSa-XR-gvw" firstAttribute="leading" secondItem="42e-VK-AJf" secondAttribute="leading" constant="19" id="bLq-Am-Rj3"/>
-                                                        <constraint firstItem="2Jh-g8-epi" firstAttribute="top" secondItem="GwH-Wv-OwW" secondAttribute="bottom" id="cRT-7J-7ue"/>
-                                                        <constraint firstItem="GwH-Wv-OwW" firstAttribute="leading" secondItem="42e-VK-AJf" secondAttribute="leading" constant="10" id="fiA-Us-Nfe"/>
+                                                        <constraint firstItem="2Jh-g8-epi" firstAttribute="top" secondItem="GwH-Wv-OwW" secondAttribute="bottom" constant="10" id="cRT-7J-7ue"/>
+                                                        <constraint firstItem="GwH-Wv-OwW" firstAttribute="width" secondItem="42e-VK-AJf" secondAttribute="width" multiplier="0.9" id="zOQ-CZ-0R4"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -2020,6 +2020,7 @@
         <image name="Grupo 654" width="60" height="67"/>
         <image name="Logo SMNE Blanco" width="115.5" height="114.5"/>
         <image name="Paciente" width="31" height="34"/>
+        <image name="TA_E1_D1" width="564" height="211"/>
         <image name="arrow" width="8.5" height="14.5"/>
         <image name="arrowL" width="29" height="29"/>
         <image name="home" width="52" height="41"/>

@@ -18,9 +18,9 @@ class PopCommentView {
         var parentBorder = UIColor()
         var textColor = UIColor()
         
-        parentBorder =  UIColor(red: 0.37, green: 0.83, blue: 0.79, alpha: 1)
+        parentBorder =  UIColor(red: 5/255, green: 45/255, blue: 108/255, alpha: 1)
         parentBackground = .white
-        textColor = UIColor(red: 0.23, green: 0.53, blue: 0.5, alpha: 1)
+        textColor = UIColor(red: 5/255, green: 45/255, blue: 108/255, alpha: 1)
         
         toastContainer = UIView(frame: CGRect())
         toastContainer.backgroundColor = parentBackground

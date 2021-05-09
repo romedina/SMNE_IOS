@@ -2059,20 +2059,20 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="treatment" id="JEQ-Rj-eXf" customClass="TableViewCellTreatment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="275"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEQ-Rj-eXf" id="iXu-dv-d1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se recomienda evaluar la relación albúmina creatinina en una muestra de orina al azar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-sH-jcq">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="44"/>
+                                            <rect key="frame" x="18" y="211" width="378" height="44"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-6t-ejh">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="0.0"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TA_E1_D1" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-6t-ejh">
+                                            <rect key="frame" x="18" y="0.0" width="378" height="211"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2091,7 +2091,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tcD-At-dfV">
-                                <rect key="frame" x="0.0" y="92" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="303" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcD-At-dfV" id="c9n-zV-tzH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -2203,6 +2203,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
     </scenes>
     <resources>
         <image name="Paciente" width="31" height="34"/>
+        <image name="TA_E1_D1" width="564" height="211"/>
         <image name="arrowL" width="29" height="29"/>
         <image name="radioNS" width="18" height="18"/>
         <image name="radioS" width="18" height="18"/>

@@ -501,7 +501,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "age":
             patientInfo.age = Int(info as! String) ?? 0
-            mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
+            mapAssign(index: 2, flag: patientInfo.age > 64 ? true : false)
             patientShema.age = Int(info as! String) ?? 0
             evaluationSchema?.age = Int(info as! String) ?? 0
             break

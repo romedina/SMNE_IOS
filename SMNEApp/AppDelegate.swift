@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import IQKeyboardManagerSwift
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,9 +31,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        return GIDSignIn.sharedInstance()?.handle(url) ??  false
+        return GIDSignIn.sharedInstance()?.handle(url) ??  false ||
+            ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
-
+//    #warning("cambios")
+//    FlagFetcher.fetchFlags { result in
+//        if case let .success(flags) = result,
+//          flags.contains("use_facebook") {
+//            // Initialize the SDK
+//            ApplicationDelegate.shared.application(
+//                application,
+//                didFinishLaunchingWithOptions: launchOptions
+//            )
+//        }
+//    }
+//    
+//    
+//    
+//    // Swift
+//    //
+//    // AppDelegate.swift
+//    import UIKit
+//    import FBSDKCoreKit
+//
+//    @UIApplicationMain
+//    class AppDelegate: UIResponder, UIApplicationDelegate {
+//        
+//        func application(
+//            _ application: UIApplication,
+//            didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+//        ) -> Bool {
+//              
+//            
+//
+//            return true
+//        }
+//        
+//        / Swift
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//
+//            if let token = AccessToken.current,
+//                !token.isExpired {
+//                // User is logged in, do work such as go to next view controller.
+//            }
+//        }
+//        
+//        / Swift
+//        //
+//        // Extend the code sample from 6a. Add Facebook Login to Your Code
+//        // Add to your viewDidLoad method:
+//        loginButton.permissions = ["public_profile", "email"]
+     
     // MARK: UISceneSession Lifecycle
 
 //    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

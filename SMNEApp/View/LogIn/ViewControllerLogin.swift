@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
+import FacebookLogin
 import MaterialComponents
 
 class ViewControllerLogin: UIViewController {
@@ -122,7 +123,20 @@ class ViewControllerLogin: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        UserDefaults.standard.set("basic", forKey: "provider")
         loginTapped()
+    }
+    
+    @IBAction func appleLoginTapped(_ sender: Any) {
+        otherLogin(type: .apple)
+    }
+    
+    @IBAction func gmailLoginTapped(_ sender: Any) {
+        otherLogin(type: .google)
+    }
+    
+    @IBAction func faceLoginTapped(_ sender: Any) {
+        otherLogin(type: .facebook)
     }
 }
 
@@ -130,12 +144,18 @@ extension ViewControllerLogin: LoginCellDelegate {
     func otherLogin(type: TableViewCellLogin.LoginType) {
         switch type {
         case .apple:
+            UserDefaults.standard.set("apple", forKey: "provider")
             break
         case .google:
+            UserDefaults.standard.set("google", forKey: "provider")
+            firebaseLogOut()
             GIDSignIn.sharedInstance()?.signOut()
             GIDSignIn.sharedInstance()?.signIn()
             break
         case .facebook:
+            UserDefaults.standard.set("facebook", forKey: "provider")
+            firebaseLogOut()
+            faceBookLogin()
             break
         }
     }
@@ -143,6 +163,31 @@ extension ViewControllerLogin: LoginCellDelegate {
     func infoChanged(email: String, pass: String) {
         self.email = email
         self.pass = pass
+    }
+    
+    func faceBookLogin() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        loginManager.logIn(permissions: [.email, .publicProfile], viewController: self) { (result) in
+            switch result {
+            case .success(granted: _, declined: _, token: let token):
+                let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+                let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+                nextVC.setAnim(type: .loading)
+                let delegate: EndPillAnimationProtocol = nextVC
+                nextVC.modalPresentationStyle = .fullScreen
+                self.present(nextVC, animated: true) {
+                    self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
+                }
+            case .cancelled:
+                break
+            case .failed(_):
+                let warning = UIAlertController(title: "Error al iniciar sesión", message: "Intente nuevamente.", preferredStyle: .alert)
+                warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                self.present(warning, animated: true, completion: nil)
+                break
+            }
+        }
     }
     
     func loginTapped() {
@@ -170,6 +215,93 @@ extension ViewControllerLogin: LoginCellDelegate {
             }
         }
     }
+    
+    func firebaseLogOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            
+        }
+    }
+    
+    func loginAndSaveToFirebase(credential: AuthCredential, delegate: EndPillAnimationProtocol) {
+        Auth.auth().signIn(with: credential) { (result, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            }
+            if let result = result {
+                
+                let db = Firestore.firestore()
+                let docRef = db.collection("doctors").document(result.user.uid)
+                
+                docRef.getDocument { (doc, err) in
+                    if doc == nil {
+                        let complete = result.user.displayName?.split(separator: " ")
+                        var name = ""
+                        var lastName = ""
+                        for i in complete! {
+                            if i == complete?.first {
+                                name = String(i)
+                            } else {
+                                lastName.append("\(String(i)) ")
+                            }
+                        }
+                        var info: [String: Any] = [:]
+                        info["createdAt"] = Timestamp()
+                        info["name"] = name
+                        info["lastName"] = lastName
+                        info["email"] = result.user.email
+                        info["updatedAt"] = Timestamp()
+                        docRef.setData(info) { (err) in
+                            if let err = err {
+                                GIDSignIn.sharedInstance()?.signOut()
+                                print(err.localizedDescription)
+                            } else {
+                                let user = UserDefaults.standard
+                                user.set(self.email, forKey: "email")
+                                user.set(name, forKey: "name")
+                                user.set(result.user.uid, forKey: "uId")
+                                user.set(lastName, forKey: "lastName")
+                                user.synchronize()
+                                delegate.endAnimation()
+                            }
+                        }
+                    } else {
+                        //doc isnt nil
+                        let user = UserDefaults.standard
+                        if let name = doc?.get("name") as? String {
+                            user.set(name, forKey: "name")
+                        }
+                        if let email = doc?.get("email") as? String {
+                            user.set(email, forKey: "email")
+                        }
+                        if let lastName = doc?.get("lastName") as? String {
+                            user.set(lastName, forKey: "lastName")
+                        }
+                        if let lastName = doc?.get("country") as? String {
+                            user.set(lastName, forKey: "country")
+                        }
+                        if let lastName = doc?.get("gender") as? String {
+                            user.set(lastName, forKey: "gender")
+                        }
+                        if let lastName = doc?.get("professionalLicense") as? String {
+                            user.set(lastName, forKey: "cedula")
+                        }
+                        if let lastName = doc?.get("specialty") as? String {
+                            user.set(lastName, forKey: "espe")
+                        }
+                        if let lastName = doc?.get("MedicineSchool") as? String {
+                            user.set(lastName, forKey: "school")
+                        }
+                        
+                        user.set(result.user.uid, forKey: "uId")
+                        user.synchronize()
+                        delegate.endAnimation()
+                    }
+                }
+            }
+        }
+    }
 }
 
 extension ViewControllerLogin:  GIDSignInDelegate {
@@ -182,82 +314,7 @@ extension ViewControllerLogin:  GIDSignInDelegate {
         if error == nil && user != nil {
             self.present(nextVC, animated: true) {
                 let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
-                Auth.auth().signIn(with: credential) { (result, err) in
-                    if let err = err {
-                        print(err.localizedDescription)
-                    }
-                    if let result = result {
-                        
-                        let db = Firestore.firestore()
-                        let docRef = db.collection("doctors").document(result.user.uid)
-                        
-                        docRef.getDocument { (doc, err) in
-                            if doc == nil {
-                                let complete = result.user.displayName?.split(separator: " ")
-                                var name = ""
-                                var lastName = ""
-                                for i in complete! {
-                                    if i == complete?.first {
-                                        name = String(i)
-                                    } else {
-                                        lastName.append("\(String(i)) ")
-                                    }
-                                }
-                                var info: [String: Any] = [:]
-                                info["createdAt"] = Timestamp()
-                                info["name"] = name
-                                info["lastName"] = lastName
-                                info["email"] = result.user.email
-                                info["updatedAt"] = Timestamp()
-                                docRef.setData(info) { (err) in
-                                    if let err = err {
-                                        GIDSignIn.sharedInstance()?.signOut()
-                                        print(err.localizedDescription)
-                                    } else {
-                                        let user = UserDefaults.standard
-                                        user.set(self.email, forKey: "email")
-                                        user.set(name, forKey: "name")
-                                        user.set(result.user.uid, forKey: "uId")
-                                        user.set(lastName, forKey: "lastName")
-                                        user.synchronize()
-                                        delegate.endAnimation()
-                                    }
-                                }
-                            } else {
-                                //doc isnt nil
-                                let user = UserDefaults.standard
-                                if let name = doc?.get("name") as? String {
-                                    user.set(name, forKey: "name")
-                                }
-                                if let email = doc?.get("email") as? String {
-                                    user.set(email, forKey: "email")
-                                }
-                                if let lastName = doc?.get("lastName") as? String {
-                                    user.set(lastName, forKey: "lastName")
-                                }
-                                if let lastName = doc?.get("country") as? String {
-                                    user.set(lastName, forKey: "country")
-                                }
-                                if let lastName = doc?.get("gender") as? String {
-                                    user.set(lastName, forKey: "gender")
-                                }
-                                if let lastName = doc?.get("professionalLicense") as? String {
-                                    user.set(lastName, forKey: "cedula")
-                                }
-                                if let lastName = doc?.get("specialty") as? String {
-                                    user.set(lastName, forKey: "espe")
-                                }
-                                if let lastName = doc?.get("MedicineSchool") as? String {
-                                    user.set(lastName, forKey: "school")
-                                }
-                                
-                                user.set(result.user.uid, forKey: "uId")
-                                user.synchronize()
-                                delegate.endAnimation()
-                            }
-                        }
-                    }
-                }
+                self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
             }
         }
     }
