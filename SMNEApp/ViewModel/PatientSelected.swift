@@ -10,6 +10,7 @@ import Foundation
 class PatientSelected {
     static let shared = PatientSelected()
     var patientInfo: PatientSchema?
+    var patientDet: Bool?
     var prevTreatment: String?
     var hasChanged: Bool = false
     var isFromFirst: Bool = false

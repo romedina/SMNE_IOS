@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configure GoogleLogin
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
     }
     

@@ -185,7 +185,7 @@ class AlertToast {
         
         let yesButton = UIButton(frame: CGRect())
         yesButton.clipsToBounds = true
-        yesButton.setTitle("Si", for: .normal)
+        yesButton.setTitle("Aceptar", for: .normal)
         yesButton.titleLabel?.font = UIFont(name: "OpenSans-Bold", size: 14.0)
         yesButton.titleLabel?.font.withSize(14.0)
         yesButton.setTitleColor(UIColor(red: 0.62, green: 0.51, blue: 0.11, alpha: 1), for: .normal)
@@ -205,7 +205,7 @@ class AlertToast {
         
         let noButton = UIButton(frame: CGRect())
         noButton.clipsToBounds = true
-        noButton.setTitle("No", for: .normal)
+        noButton.setTitle("Cancelar", for: .normal)
         noButton.titleLabel?.font = UIFont(name: "OpenSans-Bold", size: 14.0)
         noButton.titleLabel?.font.withSize(14.0)
         noButton.setTitleColor(UIColor(red: 0.62, green: 0.51, blue: 0.11, alpha: 1), for: .normal)

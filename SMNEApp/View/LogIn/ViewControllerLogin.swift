@@ -235,7 +235,7 @@ extension ViewControllerLogin: LoginCellDelegate {
                 let docRef = db.collection("doctors").document(result.user.uid)
                 
                 docRef.getDocument { (doc, err) in
-                    if doc == nil {
+                    if doc?.data() == nil {
                         let complete = result.user.displayName?.split(separator: " ")
                         var name = ""
                         var lastName = ""

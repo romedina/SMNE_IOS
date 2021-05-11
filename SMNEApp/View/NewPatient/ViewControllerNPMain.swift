@@ -474,7 +474,7 @@ class ViewControllerNPMain: UIViewController {
 
 extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     func showWarning(handler: @escaping (Bool) -> Void) {
-        AlertToast.show(message: "Esto cambiará el algoritmo seleccionado", controller: self, type: .Warning) { (isOk) in
+        AlertToast.show(message: "Las condiciones del paciente cambiaron. Sugerimos realizar una valoración inicial.", controller: self, type: .Warning) { (isOk) in
             handler(isOk)
         }
     }

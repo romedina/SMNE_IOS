@@ -43,12 +43,15 @@ class TableViewCellDeterioration: UITableViewCell {
         switch sender {
         case lowDButton:
             map[0] = 0
+            PatientSelected.shared.patientDet = nil
             break
         case mediumDButton:
             map[0] = 1
+            PatientSelected.shared.patientDet = true
             break
         case highDButton:
             map[0] = 2
+            PatientSelected.shared.patientDet = nil
             break
         default:
             break
