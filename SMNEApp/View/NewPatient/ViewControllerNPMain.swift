@@ -93,24 +93,6 @@ class ViewControllerNPMain: UIViewController {
     func initSchemas() {
         if PatientSelected.shared.patientInfo != nil {
             guard let pSInfo = PatientSelected.shared.patientInfo else { return }
-            patientInfo = PatientInfo(id: pSInfo.pId,
-                                      name: pSInfo.name,
-                                      lastName: pSInfo.lastName,
-                                      date: pSInfo.birthDate?.dateToMxnString() ?? "",
-                                      type: pSInfo.consultationType.rawValue,
-                                      age: pSInfo.age,
-                                      gender: pSInfo.gender.rawValue,
-                                      racial: pSInfo.racialAncestry == .Afroamericano ? true:false,
-                                      diabetesDate: "\(pSInfo.diagnosisYear)",
-                                      IMC: Float(pSInfo.evaluations.last!.imc),
-                                      renal: pSInfo.evaluations.last?.chronicKidneyDisease,
-                                      cardio: pSInfo.evaluations.last?.cardiovascularComplications,
-                                      hipo: pSInfo.evaluations.last?.hypoglycemia,
-                                      algorithID: pSInfo.currentTreatment.rawValue,
-                                      hba1c: pSInfo.evaluations.last!.glycosylatedHemoglobin,
-                                      glucose: Float(pSInfo.evaluations.last!.fastingGlucose),
-                                      filterCup: pSInfo.evaluations.last?.estimatedGlomerularFiltrationRate.rawValue ?? FiltrationEnum.na.rawValue,
-                                      comment: "")
             patientShema = PatientSelected.shared.patientInfo!
             evaluationSchema = EvaluationSchema(age: patientShema.age,
                                                 cardiovascularComplications: patientShema.evaluations.last!.cardiovascularComplications,
@@ -132,6 +114,24 @@ class ViewControllerNPMain: UIViewController {
                                                 treatment: patientShema.currentTreatment,
                                                 weight: patientShema.evaluations.last!.weight,
                                                 observations: [])
+            patientInfo = PatientInfo(id: pSInfo.pId,
+                                      name: pSInfo.name,
+                                      lastName: pSInfo.lastName,
+                                      date: pSInfo.birthDate?.dateToMxnString() ?? "",
+                                      type: pSInfo.consultationType.rawValue,
+                                      age: pSInfo.age,
+                                      gender: pSInfo.gender.rawValue,
+                                      racial: pSInfo.racialAncestry == .Afroamericano ? true:false,
+                                      diabetesDate: "\(pSInfo.diagnosisYear)",
+                                      IMC: Float(pSInfo.evaluations.last!.imc),
+                                      renal: pSInfo.evaluations.last?.chronicKidneyDisease,
+                                      cardio: pSInfo.evaluations.last?.cardiovascularComplications,
+                                      hipo: pSInfo.evaluations.last?.hypoglycemia,
+                                      algorithID: pSInfo.currentTreatment.rawValue,
+                                      hba1c: pSInfo.evaluations.last!.glycosylatedHemoglobin,
+                                      glucose: Float(pSInfo.evaluations.last!.fastingGlucose),
+                                      filterCup: pSInfo.evaluations.last?.estimatedGlomerularFiltrationRate.rawValue ?? FiltrationEnum.na.rawValue,
+                                      comment: "")
             mapAssign(index: 0, flag: patientInfo.renal!)
             mapAssign(index: 1, flag: patientInfo.cardio!)
             mapAssign(index: 2, flag: patientInfo.age > 65 ? true : false)
@@ -363,8 +363,14 @@ class ViewControllerNPMain: UIViewController {
     }
     
     func validationsStep4() -> Bool {
-        if patientInfo.comment != "" && patientInfo.hba1c != 0 && patientInfo.glucose != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
-            return true
+        if evaluationSchema?.evaluationNumber == 1 {
+            if patientInfo.comment != "" && (patientInfo.hba1c != 0 || patientInfo.glucose != 0) && (patientInfo.meta == nil || patientInfo.meta != -1) {
+                return true
+            }
+        } else {
+            if patientInfo.comment != "" && patientInfo.hba1c != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
+                return true
+            }
         }
         return false
     }
