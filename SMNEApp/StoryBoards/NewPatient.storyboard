@@ -1957,17 +1957,17 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="9wF-S0-pA0" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1065.5" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="1065.5" width="414" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wF-S0-pA0" id="cf7-Bu-r5y">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-WW-zHt">
-                                            <rect key="frame" x="18" y="21" width="378" height="82"/>
+                                            <rect key="frame" x="18" y="21" width="378" height="117"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Drz-OL-2kf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-gf-YBd">
                                                             <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
@@ -1976,9 +1976,9 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-7e-gng" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="184" height="85"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="3FT-e9-OZ0"/>
+                                                                <constraint firstAttribute="height" constant="85" id="3FT-e9-OZ0"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1989,7 +1989,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-MC-6uV">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="194" y="0.0" width="184" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDw-ez-URg">
                                                             <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
@@ -1998,9 +1998,9 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqg-zt-h4P" customClass="MDCTextField">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="184" height="85"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="7wx-Ig-sZQ"/>
+                                                                <constraint firstAttribute="height" constant="85" id="7wx-Ig-sZQ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -2013,7 +2013,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-jS-1eX" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="133" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="168" width="414" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="PTL-IG-XFN"/>

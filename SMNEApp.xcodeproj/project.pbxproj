@@ -20,6 +20,9 @@
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
 		9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */; };
 		9B71EBF8265DED620049B2B8 /* ViewControllerForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */; };
+		9B71EC69265E19F40049B2B8 /* ViewControllerDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC68265E19F40049B2B8 /* ViewControllerDirectory.swift */; };
+		9B71EC6E265E1A020049B2B8 /* ViewControllerPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC6D265E1A020049B2B8 /* ViewControllerPrivacy.swift */; };
+		9B71EC73265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC72265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift */; };
 		9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */; };
 		9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */; };
 		9B80722E25F3412100D23519 /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B80722D25F3412100D23519 /* coffee.json */; };
@@ -144,6 +147,9 @@
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
 		9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGetDocument.swift; sourceTree = "<group>"; };
 		9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForgotPassword.swift; sourceTree = "<group>"; };
+		9B71EC68265E19F40049B2B8 /* ViewControllerDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDirectory.swift; sourceTree = "<group>"; };
+		9B71EC6D265E1A020049B2B8 /* ViewControllerPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPrivacy.swift; sourceTree = "<group>"; };
+		9B71EC72265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPDFViewer.swift; sourceTree = "<group>"; };
 		9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPillAnimation.swift; sourceTree = "<group>"; };
 		9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerPillAnimation.xib; sourceTree = "<group>"; };
 		9B80722D25F3412100D23519 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
@@ -338,8 +344,18 @@
 			isa = PBXGroup;
 			children = (
 				9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */,
+				9B71EC72265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift */,
 			);
 			path = GetDoc;
+			sourceTree = "<group>";
+		};
+		9B71EC64265E19A60049B2B8 /* OtherOptions */ = {
+			isa = PBXGroup;
+			children = (
+				9B71EC68265E19F40049B2B8 /* ViewControllerDirectory.swift */,
+				9B71EC6D265E1A020049B2B8 /* ViewControllerPrivacy.swift */,
+			);
+			path = OtherOptions;
 			sourceTree = "<group>";
 		};
 		9B8071EC25F3385000D23519 /* Animations */ = {
@@ -514,6 +530,7 @@
 		B36BE16925E74CBC00DDFD22 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				9B71EC64265E19A60049B2B8 /* OtherOptions */,
 				B36BE16125E74CA800DDFD22 /* ViewControllerMore.swift */,
 			);
 			path = More;
@@ -924,6 +941,7 @@
 				B356BFE625CDE3310025F62A /* ViewControllerStart.swift in Sources */,
 				B3CC13D925B8B9FA00CD968E /* ViewController.swift in Sources */,
 				9BCDA6AA25EDE69B00AA423C /* DoctorSchema.swift in Sources */,
+				9B71EC73265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift in Sources */,
 				B30CDAF425C1FB0500B7CECF /* TableViewCellAlgorithmSelection.swift in Sources */,
 				B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */,
 				B3494A8625C4A7A600ACC4DD /* AlgorithmModels.swift in Sources */,
@@ -951,7 +969,9 @@
 				9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
 				9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */,
+				9B71EC6E265E1A020049B2B8 /* ViewControllerPrivacy.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
+				9B71EC69265E19F40049B2B8 /* ViewControllerDirectory.swift in Sources */,
 				B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */,
 				9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */,
 				B3F8118A25D4681F00323534 /* IntroModels.swift in Sources */,
@@ -1166,7 +1186,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1189,7 +1209,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 499H3YDN7T;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
