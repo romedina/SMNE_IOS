@@ -459,6 +459,9 @@
                                                 <state key="normal" title="¿Olvidaste tu contraseña?">
                                                     <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="cvV-ds-aRF" kind="presentation" modalPresentationStyle="fullScreen" id="Upy-0e-qRX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBt-A1-Dl4" customClass="MDCButton">
                                                 <rect key="frame" x="28" y="370" width="358" height="50"/>
@@ -638,6 +641,99 @@
             </objects>
             <point key="canvasLocation" x="1057.9710144927537" y="-246.42857142857142"/>
         </scene>
+        <!--View Controller Forgot Password-->
+        <scene sceneID="msm-OV-C5N">
+            <objects>
+                <viewController id="cvV-ds-aRF" customClass="ViewControllerForgotPassword" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lUs-8C-hKO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08q-wH-wO1">
+                                <rect key="frame" x="20" y="64" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Pti-hc-itz"/>
+                                    <constraint firstAttribute="height" constant="29" id="qKh-jf-o8f"/>
+                                </constraints>
+                                <state key="normal" image="arrowL"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="cvV-ds-aRF" eventType="touchUpInside" id="TxJ-uT-BsE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidaste tu contraseña?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8h-Nv-uOe">
+                                <rect key="frame" x="103.5" y="67.5" width="207" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.71764705880000002" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para poder recuperar tu contraseña, es necesario ingresar tu email." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-1v-i3k">
+                                <rect key="frame" x="33" y="139.5" width="348" height="114.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Te enviaremos un correo electrónico con los pasos que debes seguir." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57j-de-B21">
+                                <rect key="frame" x="33" y="264" width="348" height="44"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-Nr-RSy" customClass="MDCTextField">
+                                <rect key="frame" x="33" y="328" width="348" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gsR-KW-NtN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <action selector="emailChanged:" destination="cvV-ds-aRF" eventType="editingChanged" id="WTY-7P-oJY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-H7-Dq7" customClass="MDCButton">
+                                <rect key="frame" x="217" y="782" width="164" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yOA-in-Z5E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendTapped:" destination="cvV-ds-aRF" eventType="touchUpInside" id="WL5-b4-cCn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yS1-zo-KD1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gTG-Nr-RSy" firstAttribute="top" secondItem="57j-de-B21" secondAttribute="bottom" constant="20" id="1qY-RU-vP6"/>
+                            <constraint firstItem="gTG-Nr-RSy" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="BJy-9q-yex"/>
+                            <constraint firstItem="ZDL-H7-Dq7" firstAttribute="leading" secondItem="lUs-8C-hKO" secondAttribute="centerX" constant="10" id="DQj-LN-IqJ"/>
+                            <constraint firstItem="9nl-1v-i3k" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="Jk1-KH-n14"/>
+                            <constraint firstItem="d8h-Nv-uOe" firstAttribute="centerY" secondItem="08q-wH-wO1" secondAttribute="centerY" id="JmY-y2-NVx"/>
+                            <constraint firstItem="57j-de-B21" firstAttribute="top" secondItem="9nl-1v-i3k" secondAttribute="bottom" constant="10" id="RbU-3p-Ilv"/>
+                            <constraint firstItem="9nl-1v-i3k" firstAttribute="top" secondItem="d8h-Nv-uOe" secondAttribute="bottom" constant="50" id="T8P-Ph-dgG"/>
+                            <constraint firstAttribute="trailing" secondItem="gTG-Nr-RSy" secondAttribute="trailing" constant="33" id="TOL-ld-NKC"/>
+                            <constraint firstItem="yS1-zo-KD1" firstAttribute="trailing" secondItem="ZDL-H7-Dq7" secondAttribute="trailing" constant="33" id="UEF-yR-83t"/>
+                            <constraint firstItem="d8h-Nv-uOe" firstAttribute="centerX" secondItem="lUs-8C-hKO" secondAttribute="centerX" id="UsP-nE-dxR"/>
+                            <constraint firstItem="yS1-zo-KD1" firstAttribute="trailing" secondItem="9nl-1v-i3k" secondAttribute="trailing" constant="33" id="V0B-rB-phU"/>
+                            <constraint firstItem="08q-wH-wO1" firstAttribute="top" secondItem="yS1-zo-KD1" secondAttribute="top" constant="20" id="jtu-KY-gq9"/>
+                            <constraint firstItem="57j-de-B21" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="s4q-Zh-MIz"/>
+                            <constraint firstItem="yS1-zo-KD1" firstAttribute="bottom" secondItem="ZDL-H7-Dq7" secondAttribute="bottom" constant="30" id="sgJ-y7-cZ3"/>
+                            <constraint firstItem="08q-wH-wO1" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="20" id="uOk-w3-JGr"/>
+                            <constraint firstAttribute="trailing" secondItem="57j-de-B21" secondAttribute="trailing" constant="33" id="zVn-nJ-vcR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="gTG-Nr-RSy" id="MK6-Kr-cVd"/>
+                        <outlet property="sendButton" destination="ZDL-H7-Dq7" id="Olo-tR-TXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPj-aQ-38o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="-246"/>
+        </scene>
         <!--Main-->
         <scene sceneID="Xkd-eQ-u10">
             <objects>
@@ -649,7 +745,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="odf-Oh-Enx"/>
-        <segue reference="Lx7-T9-nkj"/>
+        <segue reference="qSw-1t-rBj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE" width="157" height="155.5"/>

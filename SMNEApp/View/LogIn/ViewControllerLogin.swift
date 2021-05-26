@@ -55,6 +55,7 @@ class ViewControllerLogin: UIViewController {
         passwordField.trailingViewMode = .always
         
         loginButton.layer.cornerRadius = 8
+        loginButton.setTitleColor(.white, for: .normal)
         
         appleLogin.setBackgroundColor(.white)
         appleLogin.setBorderWidth(1.0, for: .normal)
@@ -228,6 +229,18 @@ extension ViewControllerLogin: LoginCellDelegate {
         Auth.auth().signIn(with: credential) { (result, err) in
             if let err = err {
                 print(err.localizedDescription)
+                delegate.endAnimationWith {
+                    if err.localizedDescription.contains("account already exists") {
+                        let warning = UIAlertController(title: "Error al iniciar sesión", message: "Ese correo ya está siendo utilizado con otra forma de ingreso.", preferredStyle: .alert)
+                        warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                        self.present(warning, animated: true, completion: nil)
+                    } else {
+                        let warning = UIAlertController(title: "Error al iniciar sesión", message: "Intente nuevamente.", preferredStyle: .alert)
+                        warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                        self.present(warning, animated: true, completion: nil)
+                    }
+                }
+                return
             }
             if let result = result {
                 

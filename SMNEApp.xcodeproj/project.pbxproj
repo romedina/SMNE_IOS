@@ -18,6 +18,8 @@
 		9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B675901260FB04400C50151 /* TreatmentFromDB.swift */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
+		9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */; };
+		9B71EBF8265DED620049B2B8 /* ViewControllerForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */; };
 		9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */; };
 		9B8071F725F3396200D23519 /* ViewControllerPillAnimation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */; };
 		9B80722E25F3412100D23519 /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B80722D25F3412100D23519 /* coffee.json */; };
@@ -140,6 +142,8 @@
 		9B675901260FB04400C50151 /* TreatmentFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentFromDB.swift; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
+		9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGetDocument.swift; sourceTree = "<group>"; };
+		9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForgotPassword.swift; sourceTree = "<group>"; };
 		9B8071F425F3396200D23519 /* ViewControllerPillAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPillAnimation.swift; sourceTree = "<group>"; };
 		9B8071F525F3396200D23519 /* ViewControllerPillAnimation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerPillAnimation.xib; sourceTree = "<group>"; };
 		9B80722D25F3412100D23519 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
@@ -330,6 +334,14 @@
 			path = "Patient profile";
 			sourceTree = "<group>";
 		};
+		9B71EBEE265DED310049B2B8 /* GetDoc */ = {
+			isa = PBXGroup;
+			children = (
+				9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */,
+			);
+			path = GetDoc;
+			sourceTree = "<group>";
+		};
 		9B8071EC25F3385000D23519 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +481,7 @@
 		B356BFC525CDCCEF0025F62A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9B71EBEE265DED310049B2B8 /* GetDoc */,
 				B371AE8C25E61A56001377BA /* Doctor */,
 				B356BFE425CDE2FD0025F62A /* Start */,
 				B356BFCF25CDD48C0025F62A /* Patient */,
@@ -524,6 +537,7 @@
 				B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */,
 				B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */,
 				B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */,
+				9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -924,6 +938,7 @@
 				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
 				9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
+				9B71EBF8265DED620049B2B8 /* ViewControllerForgotPassword.swift in Sources */,
 				9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
 				B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */,
@@ -938,6 +953,7 @@
 				9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
 				B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */,
+				9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */,
 				B3F8118A25D4681F00323534 /* IntroModels.swift in Sources */,
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,

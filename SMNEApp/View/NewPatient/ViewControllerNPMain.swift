@@ -298,6 +298,9 @@ class ViewControllerNPMain: UIViewController {
                         } else {
                             self.treatmentForDB = prepare5.getOptionsFromDB(hba1c: hba1c, glucose: glucose, filter: filterCup!, currentEv: currentEv, prevDose: prevD)
                         }
+                        if treatmentForDB.first?.name == prevD {
+                            currentEv -= 1
+                        }
                         if self.treatmentForDB.first!.name == TreatmentsFromDB().TDefault.first!.name {
                             AlertToast.show(message: "Los valores están fuera de rango.", controller: self, type: .Error) { }
                             return

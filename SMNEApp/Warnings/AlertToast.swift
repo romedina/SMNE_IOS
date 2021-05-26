@@ -23,6 +23,7 @@ class AlertToast {
         var imageViewBack = UIColor()
         var textColor = UIColor()
         var icon = UIImage()
+        var time = 1.5
         
         switch type {
         case .Error:
@@ -31,6 +32,7 @@ class AlertToast {
             imageViewBack = UIColor(red: 250/255, green: 11/255, blue: 11/255, alpha: 1)
             textColor = UIColor(red: 178/255, green: 0, blue: 0, alpha: 1)
             icon = UIImage(named: "error") ?? UIImage()
+            time = 3.0
             break
         case .Success:
             parentBorder =  UIColor(red: 0.37, green: 0.83, blue: 0.79, alpha: 1)
@@ -106,7 +108,7 @@ class AlertToast {
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
             toastContainer.alpha = 1.0
         }, completion: { _ in
-            UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: time, options: .curveEaseOut, animations: {
                 toastContainer.alpha = 0.0
             }, completion: {_ in
                 toastContainer.removeFromSuperview()

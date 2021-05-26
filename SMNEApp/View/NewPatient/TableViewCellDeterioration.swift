@@ -47,11 +47,11 @@ class TableViewCellDeterioration: UITableViewCell {
             break
         case mediumDButton:
             map[0] = 1
-            PatientSelected.shared.patientDet = true
+            PatientSelected.shared.patientDet = 1
             break
         case highDButton:
             map[0] = 2
-            PatientSelected.shared.patientDet = nil
+            PatientSelected.shared.patientDet = 2
             break
         default:
             break

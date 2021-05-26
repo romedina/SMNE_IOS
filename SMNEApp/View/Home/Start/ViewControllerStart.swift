@@ -38,12 +38,9 @@ class ViewControllerStart: UIViewController {
 //        let firebase = FirebaseViewModel()
 //        firebase.setNewComment(comment: "Prueba de nuevos comentarios.", patientId: "4aJT12O1Nl2MzKuRZOC5")
 //        PopCommentView.show(message: "Prueba", controller: self) { }
-//        AlertToast.show(message: "prueba error", controller: self, type: .Error) {
-//            AlertToast.show(message: "prueba warning", controller: self, type: .Warning) {
-//                AlertToast.show(message: "prueba succes", controller: self, type: .Success) {
-//                }
-//            }
-//        }
+        AlertToast.show(message: "prueba error", controller: self, type: .Error) {
+            
+        }
 //        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
 //        nextVC.setAnim(type: .treatment)
 //        nextVC.modalPresentationStyle = .formSheet

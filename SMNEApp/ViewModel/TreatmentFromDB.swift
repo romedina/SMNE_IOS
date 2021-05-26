@@ -39,6 +39,7 @@ class TreatmentsFromDB {
         treatmentList.append(TB_E3_D1)
         treatmentList.append(TB_E3_D2)
         treatmentList.append(TB_E3_D3)
+        treatmentList.append(TB_Insulina)
         //MARK:-Algorithm C
         treatmentList.append(TC_E1_D1)
         treatmentList.append(TC_E1_D2)
@@ -70,6 +71,7 @@ class TreatmentsFromDB {
         treatmentList.append(TE_E2_D4)
         treatmentList.append(TE_E2_D5)
         treatmentList.append(TE_E2_D6)
+        treatmentList.append(TE_Sugerencia)
         //MARK:-Algorithm F
         treatmentList.append(TF_E1_D1)
         treatmentList.append(TF_E1_D2)
@@ -84,6 +86,7 @@ class TreatmentsFromDB {
     let TA_E2_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TA_E2_D3")]
     let TA_E3_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TA_E3_D1")]
     let TA_E3_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TA_E3_D2")]
+    
     let TB_E1_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E1_D1")]
     let TB_E1_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E1_D2")]
     let TB_E1_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E1_D3")]
@@ -93,6 +96,8 @@ class TreatmentsFromDB {
     let TB_E3_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E3_D1")]
     let TB_E3_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E3_D2")]
     let TB_E3_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TB_E3_D3")]
+    let TB_Insulina: [TreatmentFromDB] = [TreatmentFromDB(name: "insulina")]
+    
     let TC_E1_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E1_D1")]
     let TC_E1_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E1_D2")]
     let TC_E1_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E1_D3")]
@@ -107,6 +112,7 @@ class TreatmentsFromDB {
     let TC_E2_D6: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E2_D6")]
     let TC_E2_D7: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E2_D7")]
     let TC_E2_D8: [TreatmentFromDB] = [TreatmentFromDB(name: "TC_E2_D8")]
+    
     let TD_E1_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E1_D1")]
     let TD_E1_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E1_D2")]
     let TD_E1_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E1_D3")]
@@ -115,6 +121,7 @@ class TreatmentsFromDB {
     let TD_E2_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E2_D3")]
     let TD_E2_D4: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E2_D4")]
     let TD_E2_D5: [TreatmentFromDB] = [TreatmentFromDB(name: "TD_E2_D5")]
+    
     let TE_E1_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E1_D1")]
     let TE_E1_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E1_D2")]
     let TE_E1_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E1_D3")]
@@ -124,8 +131,11 @@ class TreatmentsFromDB {
     let TE_E2_D4: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E2_D4")]
     let TE_E2_D5: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E2_D5")]
     let TE_E2_D6: [TreatmentFromDB] = [TreatmentFromDB(name: "TE_E2_D6")]
+    let TE_Sugerencia: [TreatmentFromDB] = [TreatmentFromDB(name: "sugerencia")]
+    
     let TF_E1_D1: [TreatmentFromDB] = [TreatmentFromDB(name: "TF_E1_D1")]
     let TF_E1_D2: [TreatmentFromDB] = [TreatmentFromDB(name: "TF_E1_D2")]
     let TF_E1_D3: [TreatmentFromDB] = [TreatmentFromDB(name: "TF_E1_D3")]
+    
     let TDefault: [TreatmentFromDB] = [TreatmentFromDB(name: "Default")]
 }

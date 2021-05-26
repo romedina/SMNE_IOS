@@ -24,14 +24,26 @@ class ModelViewStep5 {
         case "A":
             switch currentEv {
             case 1:
-                if glucose < 200 || hba1c < 8 {
-                    return TreatmentsFromDB().TA_E1_D1
-                } else if glucose < 250 || hba1c < 10 {
-                    return TreatmentsFromDB().TA_E1_D2
-                } else if glucose >= 250 || hba1c >= 10 {
-                    return TreatmentsFromDB().TA_E1_D3
+                if hba1c != 0 {
+                    if hba1c < 8 {
+                        return TreatmentsFromDB().TA_E1_D1
+                    } else if hba1c < 10 {
+                        return TreatmentsFromDB().TA_E1_D2
+                    } else if hba1c >= 10 {
+                        return TreatmentsFromDB().TA_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TDefault
+                    }
                 } else {
-                    return TreatmentsFromDB().TDefault
+                    if glucose < 200 {
+                        return TreatmentsFromDB().TA_E1_D1
+                    } else if glucose < 250 {
+                        return TreatmentsFromDB().TA_E1_D2
+                    } else if glucose >= 250 {
+                        return TreatmentsFromDB().TA_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TDefault
+                    }
                 }
                 
             case 2:
@@ -58,12 +70,22 @@ class ModelViewStep5 {
         case "B":
             switch currentEv {
             case 1:
-                if glucose < 200 || hba1c < 8 {
-                    return TreatmentsFromDB().TB_E1_D1
-                } else if glucose > 250 || hba1c > 10 {
-                    return TreatmentsFromDB().TB_E1_D3
+                if hba1c != 0 {
+                    if hba1c < 8 {
+                        return TreatmentsFromDB().TB_E1_D1
+                    } else if hba1c > 10 {
+                        return TreatmentsFromDB().TB_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TB_E1_D2
+                    }
                 } else {
-                    return TreatmentsFromDB().TB_E1_D2
+                    if glucose < 200 {
+                        return TreatmentsFromDB().TB_E1_D1
+                    } else if glucose > 250 {
+                        return TreatmentsFromDB().TB_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TB_E1_D2
+                    }
                 }
             case 2:
                 if hba1c < 6.5 && !hypoglycemia! { return prevDoseFromDB }
@@ -77,25 +99,37 @@ class ModelViewStep5 {
                     return TreatmentsFromDB().TDefault
                 }
             default:
-                if hba1c < 6.5 {
-                    return TreatmentsFromDB().TB_E3_D1
-                } else if hba1c >= 6.5 && hba1c <= 8 {
-                    return TreatmentsFromDB().TB_E3_D2
+                if hba1c > 6.5 && hba1c < 8 {
+                    return prevDoseFromDB
+                } else if hba1c >= 8 {
+                    return TreatmentsFromDB().TB_Insulina
                 } else {
-                    return TreatmentsFromDB().TB_E3_D3
+                    return TreatmentsFromDB().TDefault
                 }
             }
         case "D":
             switch currentEv {
             case 1:
-                if glucose < 200 || hba1c < 8 {
-                    return TreatmentsFromDB().TD_E1_D1
-                } else if glucose < 250 || hba1c < 10 {
-                    return TreatmentsFromDB().TD_E1_D2
-                } else if glucose >= 250 || hba1c >= 10 {
-                    return TreatmentsFromDB().TD_E1_D3
+                if hba1c != 0 {
+                    if hba1c < 8 {
+                        return TreatmentsFromDB().TD_E1_D1
+                    } else if hba1c < 10 {
+                        return TreatmentsFromDB().TD_E1_D2
+                    } else if hba1c >= 10 {
+                        return TreatmentsFromDB().TD_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TDefault
+                    }
                 } else {
-                    return TreatmentsFromDB().TDefault
+                    if glucose < 200 {
+                        return TreatmentsFromDB().TD_E1_D1
+                    } else if glucose < 250 {
+                        return TreatmentsFromDB().TD_E1_D2
+                    } else if glucose >= 250 {
+                        return TreatmentsFromDB().TD_E1_D3
+                    } else {
+                        return TreatmentsFromDB().TDefault
+                    }
                 }
             default:
                 if hba1c > 7 && hba1c < 8  && prevDose == "TD_E1_D1" {
@@ -131,23 +165,64 @@ class ModelViewStep5 {
     func getOptionsFromDB(hba1c: Float, glucose: Float, filter: String, currentEv: Int, prevDose: String?) -> [TreatmentFromDB] {
         switch currentEv {
         case 1:
-            if glucose < 250 || hba1c < 10 && hba1c > 8{
-                if filter == "59 - 45" || filter == "44 - 30" {
-                    return TreatmentsFromDB().TC_E1_D1
-                } else if filter == "29 - 15" {
-                    return TreatmentsFromDB().TC_E1_D2
-                } else if filter == "<15" {
-                    return TreatmentsFromDB().TC_E1_D3
+            if filter == "29 - 15" || filter == "<15" {
+                if glucose != 0 {
+                    if glucose < 250{
+                        if filter == "29 - 15" {
+                            return TreatmentsFromDB().TC_E1_D2
+                        } else if filter == "<15" {
+                            return TreatmentsFromDB().TC_E1_D3
+                        }
+                    }
+                    
+                    if glucose >= 250 {
+                        if filter == "29 - 15" {
+                            return TreatmentsFromDB().TC_E1_D5
+                        } else if filter == "<15" {
+                            return TreatmentsFromDB().TC_E1_D6
+                        }
+                    }
                 }
             }
-            
-            if glucose >= 250 || hba1c >= 10 {
-                if filter == "59 - 45" || filter == "44 - 30" {
-                    return TreatmentsFromDB().TC_E1_D4
-                } else if filter == "29 - 15" {
-                    return TreatmentsFromDB().TC_E1_D5
-                } else if filter == "<15" {
-                    return TreatmentsFromDB().TC_E1_D6
+            if hba1c != 0 {
+                if hba1c < 10 && hba1c > 8{
+                    if filter == "59 - 45" || filter == "44 - 30" {
+                        return TreatmentsFromDB().TC_E1_D1
+                    } else if filter == "29 - 15" {
+                        return TreatmentsFromDB().TC_E1_D2
+                    } else if filter == "<15" {
+                        return TreatmentsFromDB().TC_E1_D3
+                    }
+                }
+                
+                if hba1c >= 10 {
+                    if filter == "59 - 45" || filter == "44 - 30" {
+                        return TreatmentsFromDB().TC_E1_D4
+                    } else if filter == "29 - 15" {
+                        return TreatmentsFromDB().TC_E1_D5
+                    } else if filter == "<15" {
+                        return TreatmentsFromDB().TC_E1_D6
+                    }
+                }
+            } else {
+                if glucose < 250{
+                    if filter == "59 - 45" || filter == "44 - 30" {
+                        return TreatmentsFromDB().TC_E1_D1
+                    } else if filter == "29 - 15" {
+                        return TreatmentsFromDB().TC_E1_D2
+                    } else if filter == "<15" {
+                        return TreatmentsFromDB().TC_E1_D3
+                    }
+                }
+                
+                if glucose >= 250 {
+                    if filter == "59 - 45" || filter == "44 - 30" {
+                        return TreatmentsFromDB().TC_E1_D4
+                    } else if filter == "29 - 15" {
+                        return TreatmentsFromDB().TC_E1_D5
+                    } else if filter == "<15" {
+                        return TreatmentsFromDB().TC_E1_D6
+                    }
                 }
             }
             return TreatmentsFromDB().TDefault
@@ -178,18 +253,50 @@ class ModelViewStep5 {
     func getOptionsFromDB(hba1c: Float, glucose: Float, filter: String, currentEv: Int, prevDose: String?, meta: Float?) -> [TreatmentFromDB] {
         switch currentEv {
         case 1:
-            if glucose < 200 || hba1c < 8 {
-                return TreatmentsFromDB().TE_E1_D1
-            } else if glucose < 250 || hba1c < 10 {
-                return TreatmentsFromDB().TE_E1_D2
-            } else if glucose >= 250 || hba1c >= 10 {
-                return TreatmentsFromDB().TE_E1_D3
+            if hba1c != 0 {
+                if hba1c < 8 {
+                    return TreatmentsFromDB().TE_E1_D1
+                } else if hba1c < 10 {
+                    return TreatmentsFromDB().TE_E1_D2
+                } else if hba1c >= 10 {
+                    return TreatmentsFromDB().TE_E1_D3
+                } else {
+                    return TreatmentsFromDB().TDefault
+                }
             } else {
-                return TreatmentsFromDB().TDefault
+                if glucose < 200 {
+                    return TreatmentsFromDB().TE_E1_D1
+                } else if glucose < 250 {
+                    return TreatmentsFromDB().TE_E1_D2
+                } else if glucose >= 250 {
+                    return TreatmentsFromDB().TE_E1_D3
+                } else {
+                    return TreatmentsFromDB().TDefault
+                }
             }
             
         default:
             guard let meta = meta else { return [] }
+            if PatientSelected.shared.patientDet == 1 {
+                if prevDose == "TE_E1_D1" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D1
+                } else if prevDose == "TE_E1_D2" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D2
+                } else if prevDose == "TE_E1_D2" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D3
+                } else if prevDose == "TE_E1_D3" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D4
+                } else if prevDose == "TE_E1_D3" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D5
+                } else if prevDose == "TE_E1_D3" && hba1c < 8 {
+                    return TreatmentsFromDB().TE_E2_D6
+                } else {
+                    return TreatmentsFromDB().TDefault
+                }
+            }
+            if PatientSelected.shared.patientDet == 2 {
+                return TreatmentsFromDB().TE_Sugerencia
+            }
             if prevDose == "TE_E1_D1" && hba1c > meta && hba1c < 8 {
                 return TreatmentsFromDB().TE_E2_D1
             } else if prevDose == "TE_E1_D2" && hba1c > meta && hba1c < 8 {
