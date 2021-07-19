@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class ViewControllerTabBar: UITabBarController {
+class ViewControllerTabBar: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,10 @@ class ViewControllerTabBar: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let user = UserDefaults.standard
+        self.delegate = self
         if let _ = user.string(forKey: "email") {
-            
+            let delegate = SingletonForDelegate.shared
+            delegate.delegate = self
         } else {
             let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
 
@@ -29,5 +31,14 @@ class ViewControllerTabBar: UITabBarController {
             initialViewController.modalPresentationStyle = .fullScreen
             self.present(initialViewController, animated: false, completion: nil)
         }
+    }
+}
+
+extension ViewControllerTabBar: ChangeViewInMainTabDelegate {
+    func changeView() {
+        if SingletonForDelegate.shared.needToChange {
+            self.tabBarController?.selectedIndex = 2
+        }
+        print("Aquí no cambia perrro")
     }
 }

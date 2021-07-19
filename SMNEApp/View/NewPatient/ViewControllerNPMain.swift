@@ -331,7 +331,13 @@ class ViewControllerNPMain: UIViewController {
                             PatientSelected.shared.hasChanged = true
                             PatientSelected.shared.isFromFirst = false
                             PatientSelected.shared.patientInfo?.evaluations.append(self.evaluationSchema!)
-                            self.dismiss(animated: true, completion: nil)
+                            self.dismiss(animated: true) {
+                                let delegate = SingletonForDelegate.shared
+                                if evaluationSchema?.treatment == .D {
+                                    delegate.needToChange = true
+                                }
+                                delegate.delegate?.changeView()
+                            }
                         }
                     }
                 }

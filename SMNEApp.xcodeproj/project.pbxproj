@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987605FB26983FDD009303E8 /* SingletonForDelegate.swift */; };
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
 		9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B645C012609774400EA401B /* ViewControllerNreRevition.swift */; };
@@ -134,6 +135,7 @@
 		52A3A334AFE4930E3F2EA5E0 /* Pods-SMNEApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.release.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.release.xcconfig"; sourceTree = "<group>"; };
 		5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMNEApp_SMNEAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		987605FB26983FDD009303E8 /* SingletonForDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForDelegate.swift; sourceTree = "<group>"; };
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B645C012609774400EA401B /* ViewControllerNreRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNreRevition.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */,
 				9BCD130A2604847500B0DBF5 /* PatientSelected.swift */,
 				9B675901260FB04400C50151 /* TreatmentFromDB.swift */,
+				987605FB26983FDD009303E8 /* SingletonForDelegate.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -971,6 +974,7 @@
 				9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */,
 				9B71EC6E265E1A020049B2B8 /* ViewControllerPrivacy.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
+				987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */,
 				9B71EC69265E19F40049B2B8 /* ViewControllerDirectory.swift in Sources */,
 				B36BE16225E74CA800DDFD22 /* ViewControllerMore.swift in Sources */,
 				9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */,

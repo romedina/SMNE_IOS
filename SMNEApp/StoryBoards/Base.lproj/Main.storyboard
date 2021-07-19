@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQU-iH-Xsj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQU-iH-Xsj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,7 +112,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="option" id="4bN-ti-Xli" customClass="TableViewCellStartOption" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="235"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="235"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bN-ti-Xli" id="xqD-GY-Nfj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
@@ -679,7 +679,7 @@ Hugo Laviada Molina</string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-ig-3b1">
                                                 <rect key="frame" x="39" y="45" width="336" height="1046"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus est, in scelerisque massa malesuada vitae. Nulla vel tortor ornare, semper ligula at, condimentum ante. Nunc auctor euismod lorem, pharetra gravida sapien. Nullam congue venenatis leo eu commodo. Nam fermentum at sem at finibus. In luctus, turpis facilisis ultricies iaculis, ex velit sodales orci, id consequat purus metus rutrum neque. In enim ex, congue vitae sem ac, gravida faucibus erat. Sed nibh purus, cursus vitae urna quis, consequat maximus orci. Duis iaculis mattis lectus, eget commodo metus dictum et. Vestibulum vehicula sem tempor erat aliquam, nec aliquam purus ornare. Nullam nunc ipsum, hendrerit non scelerisque eget, feugiat ac enim. Vestibulum non faucibus nisi. Sed neque purus, hendrerit at suscipit quis, placerat vitae erat. Nunc facilisis elit erat, vel convallis dolor viverra nec. Sed luctus ornare odio, id vulputate est rhoncus at. Nam efficitur et mi iaculis lobortis. Aenean et diam vitae arcu sodales aliquam quis id tortor. Sed malesuada purus nec nisi sagittis, sed convallis nulla tincidunt. Cras porttitor odio id sem pharetra semper. Vestibulum egestas ligula non commodo tincidunt. Nam consectetur, felis vel hendrerit tincidunt, ligula sapien dignissim est, ac scelerisque velit purus scelerisque mi. Morbi vel ultricies neque, non feugiat nisi. Nullam sem ex, malesuada sed venenatis quis, tincidunt egestas lacus. Cras tristique, turpis quis aliquam tempor, magna mauris venenatis massa, eget tincidunt nunc quam sit amet nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet nisl vitae ligula mollis iaculis. Duis nisl nisl, pretium non massa nec, sagittis tincidunt mauris. Donec eget urna ut eros rhoncus consequat. Curabitur varius, ipsum imperdiet venenatis dapibus, diam lorem bibendum enim, ac egestas lorem eros ut mi. Proin in nunc pulvinar, sagittis nunc eu, sodales nisl. Nam ac accumsan eros.</mutableString>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus est, in scelerisque massa malesuada vitae. Nulla vel tortor ornare, semper ligula at, condimentum ante. Nunc auctor euismod lorem, pharetra gravida sapien. Nullam congue venenatis leo eu commodo. Nam fermentum at sem at finibus. In luctus, turpis facilisis ultricies iaculis, ex velit sodales orci, id consequat purus metus rutrum neque. In enim ex, congue vitae sem ac, gravida faucibus erat. Sed nibh purus, cursus vitae urna quis, consequat maximus orci. Duis iaculis mattis lectus, eget commodo metus dictum et. Vestibulum vehicula sem tempor erat aliquam, nec aliquam purus ornare. Nullam nunc ipsum, hendrerit non scelerisque eget, feugiat ac enim. Vestibulum non faucibus nisi. Sed neque purus, hendrerit at suscipit quis, placerat vitae erat. Nunc facilisis elit erat, vel convallis dolor viverra nec. Sed luctus ornare odio, id vulputate est rhoncus at. Nam efficitur et mi iaculis lobortis. Aenean et diam vitae arcu sodales aliquam quis id tortor. Sed malesuada purus nec nisi sagittis, sed convallis nulla tincidunt. Cras porttitor odio id sem pharetra semper. Vestibulum egestas ligula non commodo tincidunt. Nam consectetur, felis vel hendrerit tincidunt, ligula sapien dignissim est, ac scelerisque velit purus scelerisque mi. Morbi vel ultricies neque, non feugiat nisi. Nullam sem ex, malesuada sed venenatis quis, tincidunt egestas lacus. Cras tristique, turpis quis aliquam tempor, magna mauris venenatis massa, eget tincidunt nunc quam sit amet nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet nisl vitae ligula mollis iaculis. Duis nisl nisl, pretium non massa nec, sagittis tincidunt mauris. Donec eget urna ut eros rhoncus consequat. Curabitur varius, ipsum imperdiet venenatis dapibus, diam lorem bibendum enim, ac egestas lorem eros ut mi. Proin in nunc pulvinar, sagittis nunc eu, sodales nisl. Nam ac accumsan eros.</string>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -752,7 +752,7 @@ Hugo Laviada Molina</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="tqh-tr-hll" customClass="TableViewCellEditDoctorInfo" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="837.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="837.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqh-tr-hll" id="cBA-8p-HcI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="837.5"/>
@@ -1056,7 +1056,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="title" id="E3Z-hB-bBi" customClass="TableViewCellPatientListTitle" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E3Z-hB-bBi" id="DPz-XW-Mt3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
@@ -1078,7 +1078,7 @@ Hugo Laviada Molina</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="patient" id="fyt-j0-sJY" customClass="TableViewCellPatientList" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fyt-j0-sJY" id="U3F-0I-QNS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
@@ -1378,7 +1378,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="new" id="1N1-wi-veL" customClass="TableViewCellNewRevition" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1N1-wi-veL" id="gZc-3c-jXf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
@@ -1429,7 +1429,7 @@ Hugo Laviada Molina</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="revition" id="CF1-6c-U2o" customClass="TableViewCellRevition" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="146" width="414" height="155.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="414" height="155.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CF1-6c-U2o" id="xyl-Zq-HWL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155.5"/>
@@ -1755,7 +1755,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="edu-D3-C0E" customClass="TableViewCellPatientEditProfile" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="739"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="739"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edu-D3-C0E" id="5Gp-Z0-zZv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="739"/>
