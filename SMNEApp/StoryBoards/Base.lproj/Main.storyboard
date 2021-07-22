@@ -287,58 +287,178 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luN-Ep-dM1">
-                                <rect key="frame" x="17" y="318.5" width="380" height="259.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-dU-mUO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes consultar el documento oficial de los algoritmos de estudio." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5l-fj-kpH">
-                                        <rect key="frame" x="22" y="100" width="336" height="49.5"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
-                                        <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-4I-15d">
-                                        <rect key="frame" x="22" y="179.5" width="336" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-d0-1JJ">
+                                        <rect key="frame" x="0.0" y="52" width="414" height="704"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luN-Ep-dM1">
+                                                <rect key="frame" x="22" y="114.5" width="370" height="579.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes consultar el documento oficial de los algoritmos de estudio." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5l-fj-kpH">
+                                                        <rect key="frame" x="22" y="100" width="326" height="49.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                                        <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="owd-KU-A1Q">
+                                                        <rect key="frame" x="17" y="159.5" width="336" height="410"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-4I-15d">
+                                                                <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="doa-O6-gva"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="8DY-dH-c0K"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-2t-KKA">
+                                                                <rect key="frame" x="0.0" y="60" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="aNU-fp-1jV"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo A">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="0pb-hu-ess"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-6c-yEc">
+                                                                <rect key="frame" x="0.0" y="120" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="21U-tW-ChV"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo B">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="TnC-4n-aiw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-wr-fwm">
+                                                                <rect key="frame" x="0.0" y="180" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="kY5-Ws-4bc"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo C">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="S1u-tH-o2G"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Ye-C9x">
+                                                                <rect key="frame" x="0.0" y="240" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="sxo-xS-KBh"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo D">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="pp1-Xu-xbg"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yni-ho-vfM">
+                                                                <rect key="frame" x="0.0" y="300" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="YeH-2I-Ifn"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo E">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="jnB-Cu-LtS"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-VR-j5n">
+                                                                <rect key="frame" x="0.0" y="360" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="8eA-8u-Gby"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                                <state key="normal" title="Descargar PDF Algoritmo F">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="fiJ-mQ-e8G"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="l5l-fj-kpH" firstAttribute="top" secondItem="luN-Ep-dM1" secondAttribute="top" constant="100" id="5EA-ZS-n8p"/>
+                                                    <constraint firstAttribute="bottom" secondItem="owd-KU-A1Q" secondAttribute="bottom" constant="10" id="7sX-Zl-3TC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l5l-fj-kpH" secondAttribute="trailing" constant="22" id="dJb-Sa-w7i"/>
+                                                    <constraint firstItem="owd-KU-A1Q" firstAttribute="leading" secondItem="luN-Ep-dM1" secondAttribute="leading" constant="17" id="eca-eq-BDm"/>
+                                                    <constraint firstItem="owd-KU-A1Q" firstAttribute="top" secondItem="l5l-fj-kpH" secondAttribute="bottom" constant="10" id="jH3-kA-MfQ"/>
+                                                    <constraint firstItem="l5l-fj-kpH" firstAttribute="leading" secondItem="luN-Ep-dM1" secondAttribute="leading" constant="22" id="mNY-z1-ray"/>
+                                                    <constraint firstAttribute="trailing" secondItem="owd-KU-A1Q" secondAttribute="trailing" constant="17" id="nSk-kk-Au5"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treatmentPage" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-Yq-vOd">
+                                                <rect key="frame" x="70" y="10" width="274" height="209"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="doa-O6-gva"/>
+                                            <constraint firstAttribute="trailing" secondItem="luN-Ep-dM1" secondAttribute="trailing" constant="22" id="0Kc-2n-Ngd"/>
+                                            <constraint firstItem="1Pt-Yq-vOd" firstAttribute="top" secondItem="H0g-d0-1JJ" secondAttribute="top" constant="10" id="6i0-J6-Gad"/>
+                                            <constraint firstItem="1Pt-Yq-vOd" firstAttribute="centerX" secondItem="luN-Ep-dM1" secondAttribute="centerX" id="OVP-6t-KVZ"/>
+                                            <constraint firstItem="1Pt-Yq-vOd" firstAttribute="centerY" secondItem="luN-Ep-dM1" secondAttribute="top" id="P7z-sf-4EM"/>
+                                            <constraint firstItem="luN-Ep-dM1" firstAttribute="leading" secondItem="H0g-d0-1JJ" secondAttribute="leading" constant="22" id="mdJ-xb-Us9"/>
+                                            <constraint firstAttribute="bottom" secondItem="luN-Ep-dM1" secondAttribute="bottom" constant="10" id="x7c-x6-EH8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                        <state key="normal" title="Descargar PDF">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="8DY-dH-c0K"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="l5l-fj-kpH" firstAttribute="top" secondItem="luN-Ep-dM1" secondAttribute="top" constant="100" id="5EA-ZS-n8p"/>
-                                    <constraint firstItem="FSw-4I-15d" firstAttribute="top" secondItem="l5l-fj-kpH" secondAttribute="bottom" constant="30" id="5vv-eZ-IuV"/>
-                                    <constraint firstAttribute="trailing" secondItem="FSw-4I-15d" secondAttribute="trailing" constant="22" id="DRy-jq-KPI"/>
-                                    <constraint firstAttribute="bottom" secondItem="FSw-4I-15d" secondAttribute="bottom" constant="30" id="JwJ-lG-nU9"/>
-                                    <constraint firstItem="FSw-4I-15d" firstAttribute="leading" secondItem="luN-Ep-dM1" secondAttribute="leading" constant="22" id="Scc-XK-CT2"/>
-                                    <constraint firstAttribute="trailing" secondItem="l5l-fj-kpH" secondAttribute="trailing" constant="22" id="dJb-Sa-w7i"/>
-                                    <constraint firstItem="l5l-fj-kpH" firstAttribute="leading" secondItem="luN-Ep-dM1" secondAttribute="leading" constant="22" id="mNY-z1-ray"/>
+                                    <constraint firstAttribute="bottom" secondItem="H0g-d0-1JJ" secondAttribute="bottom" id="HQM-kz-9cE"/>
+                                    <constraint firstAttribute="trailing" secondItem="H0g-d0-1JJ" secondAttribute="trailing" id="spU-jp-PCy"/>
+                                    <constraint firstItem="H0g-d0-1JJ" firstAttribute="leading" secondItem="J6z-dU-mUO" secondAttribute="leading" id="t3W-4b-CYs"/>
+                                    <constraint firstItem="H0g-d0-1JJ" firstAttribute="top" secondItem="J6z-dU-mUO" secondAttribute="topMargin" id="wlG-up-QZE"/>
                                 </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treatmentPage" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-Yq-vOd">
-                                <rect key="frame" x="70" y="214" width="274" height="209"/>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bjc-ug-oeJ"/>
                         <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1Pt-Yq-vOd" firstAttribute="centerY" secondItem="luN-Ep-dM1" secondAttribute="top" id="3Pf-ds-ohq"/>
-                            <constraint firstItem="1Pt-Yq-vOd" firstAttribute="centerX" secondItem="luN-Ep-dM1" secondAttribute="centerX" id="575-5b-CjZ"/>
-                            <constraint firstItem="luN-Ep-dM1" firstAttribute="leading" secondItem="bjc-ug-oeJ" secondAttribute="leading" constant="17" id="Hh4-eO-vN0"/>
-                            <constraint firstItem="luN-Ep-dM1" firstAttribute="centerY" secondItem="erm-J7-vXr" secondAttribute="centerY" id="Zh0-xv-AEb"/>
-                            <constraint firstItem="bjc-ug-oeJ" firstAttribute="trailing" secondItem="luN-Ep-dM1" secondAttribute="trailing" constant="17" id="wxv-X5-Zqt"/>
+                            <constraint firstAttribute="bottom" secondItem="J6z-dU-mUO" secondAttribute="bottom" id="4ZZ-6E-nnX"/>
+                            <constraint firstItem="J6z-dU-mUO" firstAttribute="top" secondItem="erm-J7-vXr" secondAttribute="top" id="5P1-eA-PUj"/>
+                            <constraint firstItem="J6z-dU-mUO" firstAttribute="leading" secondItem="erm-J7-vXr" secondAttribute="leading" id="8lb-gQ-Q51"/>
+                            <constraint firstItem="H0g-d0-1JJ" firstAttribute="width" secondItem="erm-J7-vXr" secondAttribute="width" id="gHi-rX-x4A"/>
+                            <constraint firstAttribute="trailing" secondItem="J6z-dU-mUO" secondAttribute="trailing" id="jG5-DN-nrR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Consultar" image="Consulta" id="aji-I9-tTh"/>
                     <connections>
+                        <outlet property="downloadA" destination="lo8-2t-KKA" id="dC3-UA-E4i"/>
+                        <outlet property="downloadB" destination="6MW-6c-yEc" id="OUM-UM-F0o"/>
                         <outlet property="downloadButton" destination="FSw-4I-15d" id="E3Z-iV-XWn"/>
+                        <outlet property="downloadC" destination="Ly7-wr-fwm" id="WmH-IX-A3V"/>
+                        <outlet property="downloadD" destination="ZBH-Ye-C9x" id="ZUu-XJ-quB"/>
+                        <outlet property="downloadE" destination="Yni-ho-vfM" id="ctH-J7-QDR"/>
+                        <outlet property="downloadF" destination="ugi-VR-j5n" id="UU1-nu-OaQ"/>
                         <outlet property="parentView" destination="luN-Ep-dM1" id="Pdb-Hk-tWo"/>
                         <segue destination="ueY-0R-Tfn" kind="presentation" identifier="pdfViewer" modalPresentationStyle="fullScreen" id="bCC-Qz-wmF"/>
                     </connections>
@@ -1462,7 +1582,7 @@ Hugo Laviada Molina</string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42e-VK-AJf">
                                                     <rect key="frame" x="20" y="67.5" width="374" height="77"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-Wv-OwW">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-Wv-OwW">
                                                             <rect key="frame" x="18.5" y="10" width="337" height="0.0"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revisiones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-89-740">
@@ -2370,7 +2490,7 @@ Hugo Laviada Molina</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ffa-d0-n8i"/>
+        <segue reference="Wf5-sW-IoX"/>
         <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>
