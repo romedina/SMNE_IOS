@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreTelephony
 import WebKit
 
 class ViewControllerPDFViewer: UIViewController, WKNavigationDelegate {
@@ -58,8 +59,8 @@ extension ViewControllerPDFViewer : URLSessionDownloadDelegate {
             let fileManager = FileManager.default
             if fileManager.fileExists(atPath: filePath) {
                 print("-------FILE EXIST-------")
-                let complete = "file://\(filePath)"
-                self.pdfUrl = URL(string: complete)
+                let complete = "\(filePath)"
+                self.pdfUrl = URL(fileURLWithPath: complete)
                 self.downloadFinished()
                 return
             }
