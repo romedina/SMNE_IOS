@@ -16,6 +16,7 @@ class ViewControllerPatientList: UIViewController {
     @IBOutlet weak var searchPatientView: UIView!
     
     @IBOutlet weak var searchPatientInput: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var patientsList: [PatientSchema]?
     var patientFiltered: [PatientSchema]?
@@ -54,6 +55,7 @@ class ViewControllerPatientList: UIViewController {
         firebase.getPatients { (patients) in
             self.patientsList = patients
             self.tableViewList.reloadData()
+            self.activityIndicator.stopAnimating()
         }
     }
     

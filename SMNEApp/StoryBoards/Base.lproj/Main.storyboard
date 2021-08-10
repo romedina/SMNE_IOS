@@ -1348,16 +1348,21 @@ Hugo Laviada Molina</string>
                                     <constraint firstItem="6en-nM-cdg" firstAttribute="leading" secondItem="jcm-pd-eNS" secondAttribute="leading" constant="17" id="uEk-Zt-3Zj"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zon-U0-988">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zon-U0-988" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3JB-AQ-fdc"/>
                             <constraint firstItem="Drw-TF-rid" firstAttribute="top" secondItem="7f3-Bv-41t" secondAttribute="top" constant="15" id="4Q1-Ft-iNd"/>
                             <constraint firstItem="jcm-pd-eNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7XT-Cm-8PE"/>
                             <constraint firstItem="tC2-iT-Lgd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J1Q-4m-vwF"/>
                             <constraint firstItem="mxa-TI-moT" firstAttribute="centerX" secondItem="7f3-Bv-41t" secondAttribute="centerX" id="M3t-pd-cER"/>
                             <constraint firstItem="jcm-pd-eNS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NJ7-ZX-IKk"/>
                             <constraint firstItem="7f3-Bv-41t" firstAttribute="bottom" secondItem="mxa-TI-moT" secondAttribute="bottom" constant="15" id="Ndu-zv-AG2"/>
+                            <constraint firstItem="zon-U0-988" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a13-FS-1fc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jcm-pd-eNS" secondAttribute="trailing" id="alS-KM-Onm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7f3-Bv-41t" secondAttribute="bottom" constant="15" id="cl6-Hv-Xyl"/>
                             <constraint firstItem="tC2-iT-Lgd" firstAttribute="top" secondItem="jcm-pd-eNS" secondAttribute="bottom" id="gsJ-Rt-KOB"/>
@@ -1369,6 +1374,7 @@ Hugo Laviada Molina</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pacientes" image="paciente_activo" id="dhE-H1-Wu4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="zon-U0-988" id="SWA-Ti-wwO"/>
                         <outlet property="newPatientButton" destination="7f3-Bv-41t" id="abL-qK-bZB"/>
                         <outlet property="searchPatientInput" destination="btR-uj-3zQ" id="tP8-MQ-HdN"/>
                         <outlet property="searchPatientView" destination="6en-nM-cdg" id="jf0-Yq-h3E"/>
@@ -1717,7 +1723,16 @@ Hugo Laviada Molina</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-OY-c1B">
                                 <rect key="frame" x="0.0" y="142" width="414" height="720"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XjW-9z-9k6">
+                                        <rect key="frame" x="188.5" y="341.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XjW-9z-9k6" firstAttribute="centerY" secondItem="O8k-OY-c1B" secondAttribute="centerY" id="aJL-dy-Zon"/>
+                                    <constraint firstItem="XjW-9z-9k6" firstAttribute="centerX" secondItem="O8k-OY-c1B" secondAttribute="centerX" id="lzO-UE-SNi"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-Wh-j4s">
                                 <rect key="frame" x="0.0" y="44" width="414" height="98"/>
@@ -1763,6 +1778,7 @@ Hugo Laviada Molina</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="XjW-9z-9k6" id="7dW-dV-LjG"/>
                         <outlet property="parentView" destination="O8k-OY-c1B" id="c2h-ab-kgP"/>
                     </connections>
                 </viewController>
@@ -2490,7 +2506,7 @@ Hugo Laviada Molina</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wf5-sW-IoX"/>
+        <segue reference="3u5-hs-73a"/>
         <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>

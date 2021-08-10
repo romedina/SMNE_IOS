@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVW-pU-hGl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVW-pU-hGl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,7 +76,7 @@
                                                 </connections>
                                             </button>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OTM-OI-1Xm">
-                                                <rect key="frame" x="146" y="447" width="122.5" height="30"/>
+                                                <rect key="frame" x="146.5" y="447" width="121.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="lmc-A6-NKQ"/>
                                                 </constraints>
@@ -227,7 +227,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eaK-4h-Af4" customClass="TableViewCellRegister" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="672"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="672"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaK-4h-Af4" id="zdm-v0-EWW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
@@ -294,7 +294,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="bcg-ho-kPL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     <connections>
                                                         <action selector="passChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="izG-Ae-7wT"/>
                                                     </connections>
@@ -305,7 +305,7 @@
                                                         <constraint firstAttribute="height" constant="90" id="cJD-aT-iVg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     <connections>
                                                         <action selector="confPassChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="Sc0-Mo-3YN"/>
                                                     </connections>
@@ -744,7 +744,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="odf-Oh-Enx"/>
+        <segue reference="nuG-el-YJB"/>
         <segue reference="qSw-1t-rBj"/>
     </inferredMetricsTieBreakers>
     <resources>
