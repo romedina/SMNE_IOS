@@ -22,11 +22,32 @@ class ViewControllerPDFViewer: UIViewController, WKNavigationDelegate {
         // Do any additional setup after loading the view.
         
         guard let url = URL(string: url) else { return }
-        let urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
-        let downloadTask = urlSession.downloadTask(with: url)
-        downloadTask.resume()
+        if !docExist(url: url) {
+            let urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
+            let downloadTask = urlSession.downloadTask(with: url)
+            downloadTask.resume()
+        } else {
+            downloadFinished()
+        }
         
 //        let url: URL! = URL(string: url)
+    }
+    
+    private func docExist(url: URL) -> Bool {
+        let docsPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let urlC = NSURL(fileURLWithPath: docsPath.absoluteString)
+        if let pathComponent = urlC.appendingPathComponent("\(url.lastPathComponent)") {
+            let filePath = pathComponent.path
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: filePath) {
+                print("-------FILE EXIST-------")
+                let complete = "\(filePath)"
+                self.pdfUrl = URL(fileURLWithPath: complete)
+                self.downloadFinished()
+                return true
+            }
+        }
+        return false
     }
     
     private func downloadFinished() {
@@ -53,18 +74,6 @@ extension ViewControllerPDFViewer : URLSessionDownloadDelegate {
         }
         
         let docsPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-        let urlC = NSURL(fileURLWithPath: docsPath.absoluteString)
-        if let pathComponent = urlC.appendingPathComponent("\(url.lastPathComponent)") {
-            let filePath = pathComponent.path
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: filePath) {
-                print("-------FILE EXIST-------")
-                let complete = "\(filePath)"
-                self.pdfUrl = URL(fileURLWithPath: complete)
-                self.downloadFinished()
-                return
-            }
-        }
         
         let destinationPath = docsPath.appendingPathComponent(url.lastPathComponent)
         
