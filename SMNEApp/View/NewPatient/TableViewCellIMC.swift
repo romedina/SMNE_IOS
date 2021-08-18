@@ -80,8 +80,9 @@ class TableViewCellIMC: UITableViewCell {
             imcOutput.text = "0.0"
             delegate?.infoChange(id: "IMC", info: 0.0)
         } else {
-            imcOutput.text = "\(imc)"
-            delegate?.infoChange(id: "IMC", info: imc)
+            let roundedIMC = (imc * 100).rounded() / 100
+            imcOutput.text = "\(roundedIMC)"
+            delegate?.infoChange(id: "IMC", info: roundedIMC)
         }
     }
     

@@ -43,7 +43,7 @@ class TableViewCellStartOption: UITableViewCell {
         imageViewImage.image = image
         if buttonTitle == "Iniciar diagnóstico" {
             self.option = .Diagnostic
-        } else if buttonTitle == "Ver algoritmo" {
+        } else if buttonTitle == "Ver documento" {
             self.option = .Algorithm
         } else {
             self.option = .Patients

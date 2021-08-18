@@ -204,9 +204,15 @@ class ViewControllerNPMain: UIViewController {
             nextButton.isHidden = false
             placeHolderButton.isHidden = true
             stepperView.backgroundColor = .CE0F5F8()
+            nextButton.setTitle("Siguiente", for: .normal)
+            nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
+            nextButton.isUppercaseTitle = false
             break
         case 4:
             let info = stepFive[0] as! TitleCell
+            nextButton.setTitle("Terminar", for: .normal)
+            nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
+            nextButton.isUppercaseTitle = false
             stepTitleLabel.text = info.title
             stepSubtitleLabel.text = info.subtitle
             stepperView.backgroundColor = .C052D6C()

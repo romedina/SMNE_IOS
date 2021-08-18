@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxa-Ve-VdF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxa-Ve-VdF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -304,7 +304,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio,radio" rowHeight="150" id="UoN-9o-oss" customClass="TableViewCellRadioRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoN-9o-oss" id="cOU-F3-ITM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -496,7 +496,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoPatient" id="u6I-8Y-LMF" customClass="TableViewCellInfoPatient" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="174.5" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="178" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6I-8Y-LMF" id="pG3-Qk-0aR">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -582,7 +582,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="list" id="G4Z-C2-wEV" customClass="TableViewCellList" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="282.5" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="286" width="414" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4Z-C2-wEV" id="CPC-9T-TIq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
@@ -616,7 +616,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open,list" id="qqn-gB-1Mh" customClass="TableViewCellOpenList" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="430.5" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="434" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qqn-gB-1Mh" id="qoi-XC-0nT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -685,7 +685,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="jDZ-se-hp2" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="560.5" width="414" height="98"/>
+                                <rect key="frame" x="0.0" y="564" width="414" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jDZ-se-hp2" id="VMZ-Hp-3HM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
@@ -725,7 +725,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="qhO-yX-BEC" customClass="TableViewCellRadioButton" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="658.5" width="414" height="116"/>
+                                <rect key="frame" x="0.0" y="662" width="414" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qhO-yX-BEC" id="qXc-NZ-N4C">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
@@ -826,7 +826,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="HM4-Xg-AwH">
-                                <rect key="frame" x="0.0" y="774.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="778" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HM4-Xg-AwH" id="54P-Yc-TwI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -851,7 +851,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="uF5-nL-fIP" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="844.5" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="848" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uF5-nL-fIP" id="dFE-Ys-nbX">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
@@ -953,7 +953,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bool" id="BA1-Bm-8Kc" customClass="TableViewCellBool" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BA1-Bm-8Kc" id="KJA-eY-Q1d">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -1027,7 +1027,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="Kxs-7s-cRS" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="154.5" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="158" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kxs-7s-cRS" id="JcN-Kn-CuY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -1064,7 +1064,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imc" id="WZm-Ta-NBK" customClass="TableViewCellIMC" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="262.5" width="414" height="395.5"/>
+                                <rect key="frame" x="0.0" y="266" width="414" height="395.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZm-Ta-NBK" id="QFq-b9-Mok">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="395.5"/>
@@ -1202,7 +1202,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="Ugl-Li-GjD">
-                                <rect key="frame" x="0.0" y="658" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="661.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugl-Li-GjD" id="gOZ-Hv-SZO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -1248,7 +1248,7 @@
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="algorithm" id="DPb-uq-CrT" customClass="TableViewCellAlgorithmSelection" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="223.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="223.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPb-uq-CrT" id="wbS-OF-dCH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="223.5"/>
@@ -1314,7 +1314,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tng-Yp-gSJ">
-                                <rect key="frame" x="0.0" y="248" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="251.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tng-Yp-gSJ" id="9jv-Jn-bi7">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -1361,7 +1361,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deterioration" id="r95-10-51y" customClass="TableViewCellDeterioration" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="533.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="533.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r95-10-51y" id="yuE-zI-88R">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="533.5"/>
@@ -1611,7 +1611,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="slider" id="bcW-Ww-LMr" customClass="TableViewCellSlider" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="558" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="561.5" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcW-Ww-LMr" id="mG7-Fi-R0T">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -1715,7 +1715,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comment" id="a6y-zJ-VTn" customClass="TableViewCellComment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="686" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="689.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6y-zJ-VTn" id="oO1-gl-Di1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
@@ -1755,7 +1755,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="9T7-8t-nEu" customClass="TableViewCellMultiRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="876" width="414" height="66"/>
+                                <rect key="frame" x="0.0" y="879.5" width="414" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9T7-8t-nEu" id="aai-af-A1R">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -1932,7 +1932,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="4WS-p8-0S8">
-                                <rect key="frame" x="0.0" y="942" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="945.5" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WS-p8-0S8" id="LZ1-ri-em8">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -1957,7 +1957,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="9wF-S0-pA0" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1062" width="414" height="173"/>
+                                <rect key="frame" x="0.0" y="1065.5" width="414" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wF-S0-pA0" id="cf7-Bu-r5y">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
@@ -2059,10 +2059,10 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="treatment" id="JEQ-Rj-eXf" customClass="TableViewCellTreatment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="275"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="357"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEQ-Rj-eXf" id="iXu-dv-d1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se recomienda evaluar la relación albúmina creatinina en una muestra de orina al azar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-sH-jcq">
@@ -2074,14 +2074,81 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TA_E1_D1" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-6t-ejh">
                                             <rect key="frame" x="18" y="0.0" width="378" height="211"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDA-Ed-LoH">
+                                            <rect key="frame" x="18" y="265" width="378" height="82"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="iSGLT2">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="OpenSans-Bold"/>
+                                                        <font key="NSOriginalFont" size="14" name="OpenSans-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">: dapaglifozina, empaglifozina, canaglifozina 
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="OpenSans-Semibold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="iDPP4">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="OpenSans-Bold"/>
+                                                        <font key="NSOriginalFont" size="14" name="OpenSans-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">: sitagliptina,vildagliptina, alogliptina, linagliptina 
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="OpenSans-Semibold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="SU">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="OpenSans-Bold"/>
+                                                        <font key="NSOriginalFont" size="14" name="OpenSans-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">: glibenclamida, glimepirida, gliclazida 
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="OpenSans-Semibold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="aGLP-1">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="OpenSans-Bold"/>
+                                                        <font key="NSOriginalFont" size="14" name="OpenSans-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=": liraglutide, lixisenatide, semaglutide">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="OpenSans-Semibold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="lEQ-6t-ejh" firstAttribute="leading" secondItem="iXu-dv-d1k" secondAttribute="leading" constant="18" id="F1C-Oa-P7V"/>
-                                        <constraint firstAttribute="bottom" secondItem="Ui6-sH-jcq" secondAttribute="bottom" constant="20" id="Imr-wG-IUN"/>
                                         <constraint firstItem="Ui6-sH-jcq" firstAttribute="width" secondItem="lEQ-6t-ejh" secondAttribute="width" id="J83-RV-xqA"/>
+                                        <constraint firstItem="TDA-Ed-LoH" firstAttribute="leading" secondItem="Ui6-sH-jcq" secondAttribute="leading" id="Msc-e1-yhI"/>
                                         <constraint firstItem="Ui6-sH-jcq" firstAttribute="top" secondItem="lEQ-6t-ejh" secondAttribute="bottom" id="NkN-i3-65h"/>
+                                        <constraint firstItem="TDA-Ed-LoH" firstAttribute="top" secondItem="Ui6-sH-jcq" secondAttribute="bottom" constant="10" id="Zo4-ds-Ity"/>
+                                        <constraint firstAttribute="bottom" secondItem="TDA-Ed-LoH" secondAttribute="bottom" constant="10" id="aLK-DE-Obm"/>
                                         <constraint firstItem="Ui6-sH-jcq" firstAttribute="centerX" secondItem="iXu-dv-d1k" secondAttribute="centerX" id="bcQ-sJ-Enz"/>
+                                        <constraint firstItem="TDA-Ed-LoH" firstAttribute="trailing" secondItem="Ui6-sH-jcq" secondAttribute="trailing" id="cRu-s0-Y9M"/>
                                         <constraint firstItem="lEQ-6t-ejh" firstAttribute="top" secondItem="iXu-dv-d1k" secondAttribute="top" id="eCE-RE-mj7"/>
                                         <constraint firstAttribute="trailing" secondItem="lEQ-6t-ejh" secondAttribute="trailing" constant="18" id="jSM-DV-gtn"/>
                                     </constraints>
@@ -2091,7 +2158,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tcD-At-dfV">
-                                <rect key="frame" x="0.0" y="299.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="385" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcD-At-dfV" id="c9n-zV-tzH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>

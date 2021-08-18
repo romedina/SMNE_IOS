@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQU-iH-Xsj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQU-iH-Xsj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,7 +112,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="option" id="4bN-ti-Xli" customClass="TableViewCellStartOption" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="235"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="235"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bN-ti-Xli" id="xqD-GY-Nfj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
@@ -497,18 +497,8 @@
                                     <segue destination="i1f-3b-DhE" kind="presentation" modalPresentationStyle="fullScreen" id="KRE-vw-lPx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmm-5D-r91">
-                                <rect key="frame" x="25" y="355" width="364" height="30"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                                <state key="normal" title="Acerca del proyecto">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="aboutTapped:" destination="ZiM-9j-APo" eventType="touchUpInside" id="UnJ-sz-1RC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw9-AR-W8f">
-                                <rect key="frame" x="25" y="414" width="364" height="30"/>
+                                <rect key="frame" x="25" y="355" width="364" height="30"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Aviso de Privacidad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -519,7 +509,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apv-jw-vTV">
-                                <rect key="frame" x="25" y="473" width="364" height="30"/>
+                                <rect key="frame" x="25" y="414" width="364" height="30"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Cerrar sesión">
                                     <color key="titleColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -549,15 +539,8 @@
                                     <constraint firstAttribute="width" constant="22" id="n8h-iE-hu8"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="c5k-cT-WEl">
-                                <rect key="frame" x="367" y="359" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="9h7-41-hRY"/>
-                                    <constraint firstAttribute="width" constant="22" id="dI0-QP-hpE"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="jgd-lM-ZKf">
-                                <rect key="frame" x="367" y="418" width="22" height="22"/>
+                                <rect key="frame" x="367" y="359" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fOx-em-MBJ"/>
                                     <constraint firstAttribute="width" constant="22" id="ns7-CB-1OC"/>
@@ -567,27 +550,22 @@
                         <viewLayoutGuide key="safeArea" id="N62-3D-aWa"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="N62-3D-aWa" firstAttribute="trailing" secondItem="mmm-5D-r91" secondAttribute="trailing" constant="25" id="4Gm-l3-vFm"/>
+                            <constraint firstItem="Vw9-AR-W8f" firstAttribute="top" secondItem="47O-6Q-fIU" secondAttribute="bottom" constant="29" id="699-fK-8Qg"/>
                             <constraint firstItem="N62-3D-aWa" firstAttribute="trailing" secondItem="Vw9-AR-W8f" secondAttribute="trailing" constant="25" id="7St-Fg-ePc"/>
                             <constraint firstItem="mua-zG-maS" firstAttribute="centerX" secondItem="bV7-DT-ZWP" secondAttribute="centerX" id="C0q-7c-pwh"/>
-                            <constraint firstItem="c5k-cT-WEl" firstAttribute="trailing" secondItem="mmm-5D-r91" secondAttribute="trailing" id="EH9-sm-C7d"/>
                             <constraint firstItem="6QO-Wi-izM" firstAttribute="top" secondItem="47O-6Q-fIU" secondAttribute="bottom" constant="-26" id="Fzk-Iy-aQp"/>
                             <constraint firstItem="d6U-DC-yjZ" firstAttribute="centerY" secondItem="CB9-oe-ESX" secondAttribute="centerY" id="GLT-Ks-ilQ"/>
-                            <constraint firstItem="mmm-5D-r91" firstAttribute="leading" secondItem="bV7-DT-ZWP" secondAttribute="leading" constant="25" id="H2E-9p-5ek"/>
                             <constraint firstItem="apv-jw-vTV" firstAttribute="leading" secondItem="N62-3D-aWa" secondAttribute="leading" constant="25" id="JWs-7B-7P6"/>
                             <constraint firstItem="apv-jw-vTV" firstAttribute="top" secondItem="Vw9-AR-W8f" secondAttribute="bottom" constant="29" id="LAn-Q8-DnU"/>
                             <constraint firstItem="CB9-oe-ESX" firstAttribute="top" secondItem="mua-zG-maS" secondAttribute="bottom" constant="72" id="LZK-0m-X4G"/>
                             <constraint firstItem="d6U-DC-yjZ" firstAttribute="trailing" secondItem="CB9-oe-ESX" secondAttribute="trailing" id="Pp4-jc-A80"/>
                             <constraint firstItem="47O-6Q-fIU" firstAttribute="top" secondItem="CB9-oe-ESX" secondAttribute="bottom" constant="29" id="SGk-Gu-9NQ"/>
                             <constraint firstItem="Vw9-AR-W8f" firstAttribute="leading" secondItem="bV7-DT-ZWP" secondAttribute="leading" constant="25" id="VO7-yn-5Mx"/>
-                            <constraint firstItem="c5k-cT-WEl" firstAttribute="top" secondItem="mmm-5D-r91" secondAttribute="bottom" constant="-26" id="XDt-E9-WEb"/>
                             <constraint firstItem="47O-6Q-fIU" firstAttribute="leading" secondItem="bV7-DT-ZWP" secondAttribute="leading" constant="25" id="XxN-4u-5cK"/>
                             <constraint firstItem="CB9-oe-ESX" firstAttribute="leading" secondItem="N62-3D-aWa" secondAttribute="leading" constant="25" id="YAV-KI-eEv"/>
                             <constraint firstItem="jgd-lM-ZKf" firstAttribute="trailing" secondItem="Vw9-AR-W8f" secondAttribute="trailing" id="Z2m-A6-7on"/>
                             <constraint firstItem="N62-3D-aWa" firstAttribute="trailing" secondItem="apv-jw-vTV" secondAttribute="trailing" constant="25" id="eLd-j3-4bC"/>
                             <constraint firstItem="6QO-Wi-izM" firstAttribute="trailing" secondItem="47O-6Q-fIU" secondAttribute="trailing" id="iMN-2H-oHm"/>
-                            <constraint firstItem="mmm-5D-r91" firstAttribute="top" secondItem="47O-6Q-fIU" secondAttribute="bottom" constant="29" id="oME-fW-D2l"/>
-                            <constraint firstItem="Vw9-AR-W8f" firstAttribute="top" secondItem="mmm-5D-r91" secondAttribute="bottom" constant="29" id="pEt-Ab-hKy"/>
                             <constraint firstItem="N62-3D-aWa" firstAttribute="trailing" secondItem="CB9-oe-ESX" secondAttribute="trailing" constant="25" id="vzz-Bz-tdb"/>
                             <constraint firstItem="mua-zG-maS" firstAttribute="top" secondItem="N62-3D-aWa" secondAttribute="top" constant="40" id="x8P-Ua-pUt"/>
                             <constraint firstItem="N62-3D-aWa" firstAttribute="trailing" secondItem="47O-6Q-fIU" secondAttribute="trailing" constant="25" id="xy7-39-Woo"/>
@@ -872,7 +850,7 @@ Hugo Laviada Molina</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="tqh-tr-hll" customClass="TableViewCellEditDoctorInfo" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="837.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="837.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqh-tr-hll" id="cBA-8p-HcI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="837.5"/>
@@ -1176,7 +1154,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="title" id="E3Z-hB-bBi" customClass="TableViewCellPatientListTitle" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E3Z-hB-bBi" id="DPz-XW-Mt3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
@@ -1198,7 +1176,7 @@ Hugo Laviada Molina</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="patient" id="fyt-j0-sJY" customClass="TableViewCellPatientList" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66.5" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="70" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fyt-j0-sJY" id="U3F-0I-QNS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
@@ -1504,7 +1482,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="new" id="1N1-wi-veL" customClass="TableViewCellNewRevition" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="118"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1N1-wi-veL" id="gZc-3c-jXf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
@@ -1555,7 +1533,7 @@ Hugo Laviada Molina</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="revition" id="CF1-6c-U2o" customClass="TableViewCellRevition" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="142.5" width="414" height="155.5"/>
+                                        <rect key="frame" x="0.0" y="146" width="414" height="155.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CF1-6c-U2o" id="xyl-Zq-HWL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155.5"/>
@@ -1738,13 +1716,13 @@ Hugo Laviada Molina</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algoritmos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-ED-31q">
-                                        <rect key="frame" x="147" y="52" width="120.5" height="30"/>
+                                        <rect key="frame" x="154" y="56" width="106" height="26"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="137-4t-hc3">
-                                        <rect key="frame" x="10" y="52.5" width="29" height="29"/>
+                                        <rect key="frame" x="10" y="54.5" width="29" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="5Vi-2g-8hH"/>
                                             <constraint firstAttribute="width" constant="29" id="jQb-Pq-vEF"/>
@@ -1891,7 +1869,7 @@ Hugo Laviada Molina</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="edu-D3-C0E" customClass="TableViewCellPatientEditProfile" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="739"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="739"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edu-D3-C0E" id="5Gp-Z0-zZv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="739"/>
@@ -2507,7 +2485,7 @@ Hugo Laviada Molina</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="3u5-hs-73a"/>
-        <segue reference="mOW-nE-Tke"/>
+        <segue reference="6By-J6-Xqs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Consulta" width="52" height="41"/>
