@@ -194,8 +194,9 @@ class ViewControllerNPMain: UIViewController {
             nextButton.isHidden = true
             placeHolderButton.isHidden = false
             stepperView.backgroundColor = .C052D6C()
-            print(map)
-            print(algorithmsMatch[map] as Any)
+            nextButton.setTitle("Siguiente", for: .normal)
+            nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
+            nextButton.isUppercaseTitle = false
             break
         case 3:
             let info = stepFour[0] as! TitleCell

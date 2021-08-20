@@ -25,6 +25,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.backgroundColor = .C00D9CC()
+        nextButton.isUppercaseTitle = false
         nextButton.setTitle("Siguiente", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
