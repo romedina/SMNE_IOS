@@ -291,10 +291,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-d0-1JJ">
-                                        <rect key="frame" x="0.0" y="52" width="414" height="704"/>
+                                        <rect key="frame" x="0.0" y="52" width="414" height="788"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luN-Ep-dM1">
-                                                <rect key="frame" x="22" y="114.5" width="370" height="579.5"/>
+                                                <rect key="frame" x="22" y="114.5" width="370" height="663.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes consultar el documento oficial de los algoritmos de estudio." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5l-fj-kpH">
                                                         <rect key="frame" x="22" y="100" width="326" height="49.5"/>
@@ -302,102 +302,105 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="owd-KU-A1Q">
-                                                        <rect key="frame" x="17" y="159.5" width="336" height="410"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="owd-KU-A1Q">
+                                                        <rect key="frame" x="17" y="159.5" width="336" height="494"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-4I-15d">
                                                                 <rect key="frame" x="0.0" y="0.0" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="doa-O6-gva"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                                 <state key="normal" title="Descargar PDF">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="8DY-dH-c0K"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-2t-KKA">
-                                                                <rect key="frame" x="0.0" y="60" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="50" id="aNU-fp-1jV"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulta de algoritmos individuales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBU-25-fBk">
+                                                                <rect key="frame" x="0.0" y="60" width="336" height="34.5"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                                                <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-2t-KKA">
+                                                                <rect key="frame" x="0.0" y="104.5" width="336" height="89.5"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo A">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Diagnótico reciente, sin complicaciones cardiovasculares o renales con IMC &lt; 30 kg/m2">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="0pb-hu-ess"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-6c-yEc">
-                                                                <rect key="frame" x="0.0" y="120" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-6c-yEc">
+                                                                <rect key="frame" x="0.0" y="204" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="21U-tW-ChV"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo B">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Sin complicaciones cardiovasculares o renales con IMC &gt; 30 kg/m2">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="TnC-4n-aiw"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-wr-fwm">
-                                                                <rect key="frame" x="0.0" y="180" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="264" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="kY5-Ws-4bc"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo C">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Con enfermedad renal crónica (ERC)">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="S1u-tH-o2G"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Ye-C9x">
-                                                                <rect key="frame" x="0.0" y="240" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="324" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="sxo-xS-KBh"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo D">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Con insuficiencia cardiaca o IM/ACV">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="pp1-Xu-xbg"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yni-ho-vfM">
-                                                                <rect key="frame" x="0.0" y="300" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="384" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="YeH-2I-Ifn"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo E">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Mayores de 65 años">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="jnB-Cu-LtS"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-VR-j5n">
-                                                                <rect key="frame" x="0.0" y="360" width="336" height="50"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="444" width="336" height="50"/>
+                                                                <color key="backgroundColor" red="0.83921568629999999" green="0.97647058819999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="8eA-8u-Gby"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                <state key="normal" title="Descargar PDF Algoritmo F">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Con hipoglucemia">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="downloadTapped:" destination="Jvx-LR-DLT" eventType="touchUpInside" id="fiJ-mQ-e8G"/>
@@ -2484,8 +2487,8 @@ Hugo Laviada Molina</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3u5-hs-73a"/>
-        <segue reference="6By-J6-Xqs"/>
+        <segue reference="ffa-d0-n8i"/>
+        <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Consulta" width="52" height="41"/>

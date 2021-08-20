@@ -32,6 +32,28 @@ class ViewControllerGetDocument: UIViewController {
         downloadE.layer.cornerRadius = 8
         downloadF.layer.cornerRadius = 8
         
+        downloadButton.layer.borderWidth = 1
+        downloadButton.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadA.layer.borderWidth = 1
+        downloadA.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadB.layer.borderWidth = 1
+        downloadB.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadC.layer.borderWidth = 1
+        downloadC.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadD.layer.borderWidth = 1
+        downloadD.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadE.layer.borderWidth = 1
+        downloadE.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        downloadF.layer.borderWidth = 1
+        downloadF.layer.borderColor = UIColor(red: 0, green: 147/255, blue: 1, alpha: 1).cgColor
+        
+        
     }
     
     @IBAction func downloadTapped(_ sender: UIButton) {
