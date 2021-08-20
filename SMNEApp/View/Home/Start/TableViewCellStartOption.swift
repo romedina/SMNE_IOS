@@ -36,6 +36,7 @@ class TableViewCellStartOption: UITableViewCell {
     }
     
     func setInfo(titleText: String, buttonTitle: String, textColor: UIColor, backColor: UIColor, image: UIImage) {
+        optionButton.isUppercaseTitle = false
         titleLabel.text = titleText
         optionButton.setTitle(buttonTitle, for: .normal)
         titleLabel.textColor = textColor

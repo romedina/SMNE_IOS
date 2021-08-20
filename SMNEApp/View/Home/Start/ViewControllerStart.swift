@@ -70,6 +70,7 @@ extension ViewControllerStart: StartOptionDelegate {
         } else if option == "algorithm" {
             tabBarController?.selectedIndex = 2
         } else {
+            PatientSelected.shared.patientInfo = nil
             self.performSegue(withIdentifier: "newPatient", sender: self)
         }
     }
