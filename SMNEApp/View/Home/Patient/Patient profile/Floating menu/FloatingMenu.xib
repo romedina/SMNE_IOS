@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6l-Js-BYw">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="741"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                     <state key="normal">
                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,7 +79,7 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j6l-Js-BYw" secondAttribute="trailing" id="S9P-Wb-ps2"/>
                 <constraint firstAttribute="bottom" secondItem="dlw-LW-N5Q" secondAttribute="bottom" id="V6q-Ta-ENs"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j6l-Js-BYw" secondAttribute="bottom" id="bhZ-CO-F2P"/>
+                <constraint firstItem="dlw-LW-N5Q" firstAttribute="top" secondItem="j6l-Js-BYw" secondAttribute="bottom" id="bhZ-CO-F2P"/>
                 <constraint firstItem="dlw-LW-N5Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d3H-bs-uJx"/>
                 <constraint firstAttribute="top" secondItem="j6l-Js-BYw" secondAttribute="top" id="nUe-jz-jzG"/>
                 <constraint firstItem="j6l-Js-BYw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tz1-08-6pY"/>
