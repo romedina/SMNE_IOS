@@ -27,9 +27,9 @@ class ModelViewStep5 {
                 if hba1c != 0 {
                     if hba1c < 8 {
                         return TreatmentsFromDB().TA_E1_D1
-                    } else if hba1c < 10 {
+                    } else if hba1c <= 10 {
                         return TreatmentsFromDB().TA_E1_D2
-                    } else if hba1c >= 10 {
+                    } else if hba1c > 10 {
                         return TreatmentsFromDB().TA_E1_D3
                     } else {
                         return TreatmentsFromDB().TDefault
@@ -37,9 +37,9 @@ class ModelViewStep5 {
                 } else {
                     if glucose < 200 {
                         return TreatmentsFromDB().TA_E1_D1
-                    } else if glucose < 250 {
+                    } else if glucose <= 250 {
                         return TreatmentsFromDB().TA_E1_D2
-                    } else if glucose >= 250 {
+                    } else if glucose > 250 {
                         return TreatmentsFromDB().TA_E1_D3
                     } else {
                         return TreatmentsFromDB().TDefault

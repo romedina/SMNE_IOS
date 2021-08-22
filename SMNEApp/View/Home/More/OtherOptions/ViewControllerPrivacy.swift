@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewControllerPrivacy: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let myURL = URL(string: "https://smne-beta.web.app/privacity")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
     
     @IBAction func backTapped(_ sender: Any) {
