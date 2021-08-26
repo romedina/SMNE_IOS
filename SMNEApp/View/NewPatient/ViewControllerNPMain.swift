@@ -51,6 +51,7 @@ class ViewControllerNPMain: UIViewController {
     
     var featherImage = #imageLiteral(resourceName: "feather")
     var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
+    var s4Delegate: Step4Delegate?
     
 
     override func viewDidLoad() {
@@ -88,7 +89,7 @@ class ViewControllerNPMain: UIViewController {
         
         let S4 = pageViewCotroller.subViewControllers[3] as! TableViewControllerNewPatient_S4
         S4.delegate = self
-        
+        self.s4Delegate = S4
         
         
     }
@@ -380,11 +381,11 @@ class ViewControllerNPMain: UIViewController {
     
     func validationsStep4() -> Bool {
         if evaluationSchema?.evaluationNumber == 1 {
-            if patientInfo.comment != "" && (patientInfo.hba1c != 0 || patientInfo.glucose != 0) && (patientInfo.meta == nil || patientInfo.meta != -1) {
+            if (patientInfo.hba1c != 0 || patientInfo.glucose != 0) && (patientInfo.meta == nil || patientInfo.meta != -1) {
                 return true
             }
         } else {
-            if patientInfo.comment != "" && patientInfo.hba1c != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
+            if patientInfo.hba1c != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
                 return true
             }
         }
@@ -506,6 +507,9 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     
     func optionDelegate(option: Int, ID: String) {
         print(ID)
+        if algorithmID != ID {
+            s4Delegate?.needReload()
+        }
         algorithmID = ID
         if index == 2 {
             prepareStepFour()

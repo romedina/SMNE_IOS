@@ -208,21 +208,21 @@ class ModelViewStep5 {
             }
             return TreatmentsFromDB().TDefault
         default:
-            if prevDose == "TC_D1_E1" && filter == "30-44" && hba1c >= 7 {
+            if prevDose == "TC_E1_D1" && filter == "30-44" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D1
-            } else if prevDose == "TC_D1_E2" && filter == "45-59" && hba1c >= 7 {
+            } else if prevDose == "TC_E1_D2" && filter == "45-59" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D2
-            } else if prevDose == "TC_D1_E3" && filter == "15-29" && hba1c >= 7.5 {
+            } else if prevDose == "TC_E1_D3" && filter == "15-29" && hba1c >= 7.5 {
                 return TreatmentsFromDB().TC_E2_D3
-            } else if prevDose == "TC_D1_E4" && filter == "<15" && hba1c >= 7.5 {
+            } else if prevDose == "TC_E1_D4" && filter == "<15" && hba1c >= 7.5 {
                 return TreatmentsFromDB().TC_E2_D4
-            } else if prevDose == "TC_D1_E5" && filter == "45-59" && hba1c >= 8 {
+            } else if prevDose == "TC_E1_D5" && filter == "45-59" && hba1c >= 8 {
                 return TreatmentsFromDB().TC_E2_D5
-            } else if prevDose == "TC_D1_E6" && filter == "30-44" && hba1c >= 8 {
+            } else if prevDose == "TC_E1_D6" && filter == "30-44" && hba1c >= 8 {
                 return TreatmentsFromDB().TC_E2_D6
-            } else if prevDose == "TC_D1_E7" && filter == "15-29" && hba1c >= 8.4 {
+            } else if prevDose == "TC_E1_D7" && filter == "15-29" && hba1c >= 8.4 {
                 return TreatmentsFromDB().TC_E2_D7
-            } else if prevDose == "TC_D1_E8" && filter == "<15" && hba1c >= 8.4 {
+            } else if prevDose == "TC_E1_D8" && filter == "<15" && hba1c >= 8.4 {
                 return TreatmentsFromDB().TC_E2_D8
             } else {
                 return TreatmentsFromDB().TDefault

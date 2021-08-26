@@ -8,6 +8,10 @@
 import UIKit
 import MaterialComponents.MDCButton
 
+protocol Step4Delegate {
+    func needReload()
+}
+
 class TableViewControllerNewPatient_S4: UITableViewController {
     
     let nextButton = MDCButton()
@@ -15,10 +19,14 @@ class TableViewControllerNewPatient_S4: UITableViewController {
     let buttonsStack = UIStackView()
     
     var delegate: InfoChangedDelegate?
+    var needsReload = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        if needsReload {
+            tableView.reloadData()
+            needsReload = false
+        }
     }
     
     override func viewDidLoad() {
@@ -70,7 +78,11 @@ class TableViewControllerNewPatient_S4: UITableViewController {
 
 }
 
-extension TableViewControllerNewPatient_S4: CellInfoChangeDelegate {
+extension TableViewControllerNewPatient_S4: CellInfoChangeDelegate, Step4Delegate {
+    func needReload() {
+        needsReload = true
+    }
+    
     func infoChange(id: String, info: Float) {
         delegate?.infoChanged(id: id, info: info)
     }

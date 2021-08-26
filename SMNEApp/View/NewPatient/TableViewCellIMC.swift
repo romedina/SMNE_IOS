@@ -87,13 +87,13 @@ class TableViewCellIMC: UITableViewCell {
     }
     
     func setValues(height: Double, weight: Double, levels: Double, imc: Double) {
-        heightTextInput.text = "\(height)"
-        self.height = Float(height)
-        weightTextInput.text = "\(weight)"
-        self.weight = Float(weight)
-        levelstextInput.text = "\(levels)"
-        self.levels = Float(levels)
-        imcOutput.text = "\(imc)"
+        heightTextInput.text = String(format: "%.2f", height)
+        self.height = Float(String(format: "%.2f", height)) ?? 0.0
+        weightTextInput.text = String(format: "%.2f", weight)
+        self.weight = Float(String(format: "%.2f", weight)) ?? 0.0
+        levelstextInput.text = String(format: "%.2f", levels)
+        self.levels = Float(String(format: "%.2f", levels)) ?? 0.0
+        imcOutput.text = String(format: "%.2f", imc)
     }
 
     @IBAction func weightChanged(_ sender: UITextField) {
