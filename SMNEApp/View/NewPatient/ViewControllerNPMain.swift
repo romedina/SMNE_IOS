@@ -33,6 +33,8 @@ class ViewControllerNPMain: UIViewController {
     
     @IBOutlet weak var exitFlowButton: UIButton!
     
+    var delegateS2: MainToS2Delegate?
+    
     var currentEv = 0
     
     var patientShema = PatientSchema(pId: "", age: 0, name: "", lastName: "", birthDate: nil, consultationType: .privada, country: "México", dose: "", createdAt: Timestamp(), diagnosisYear: 0, gender: .fem, height: 0.0, racialAncestry: .No, updatedAt: Timestamp(), weight: 0.0, currentEvaluation: 0, currentTreatment: .A, evaluations: [])
@@ -78,6 +80,7 @@ class ViewControllerNPMain: UIViewController {
         
         let S2 = pageViewCotroller.subViewControllers[1] as! TableViewControllerNewPatient_S2
         S2.delegate = self
+        delegateS2 = S2
         
         let S3 = pageViewCotroller.subViewControllers[2] as! TableViewControllerNewPatient_S3
         S3.delegate = self
@@ -612,6 +615,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             break
         case "levels":
             evaluationSchema?.creatinineLevels = Double(info as! Float)
+            hasERC()
             break
         case "meta":
             patientInfo.meta = (info as! Float)
@@ -619,6 +623,53 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         default:
             break
         }
+    }
+    
+    private func hasERC() {
+        var erc = false
+        let creatinineLevels = Float(evaluationSchema?.creatinineLevels ?? 0)
+        let age = evaluationSchema?.age ?? 0
+        let gender = evaluationSchema?.gender
+        let isAfro = evaluationSchema?.racialAncestry
+        
+        debugPrint(":::Creatinine", creatinineLevels)
+        debugPrint(":::age", age)
+        debugPrint(":::gender", gender)
+        debugPrint(":::isAfro", isAfro)
+        
+        struct Constants {
+            let A: Float
+            let B: Float
+            let C: Float
+        }
+        
+        let constants: Constants = {
+            if gender == .fem && creatinineLevels <= 0.7 {
+                return Constants(A: 144, B: 0.7, C: -0.329)
+            }
+            
+            if gender == .fem && creatinineLevels > 0.7 {
+                return Constants(A: 144, B: 0.7, C: -1.209)
+            }
+            
+            if gender == .mas && creatinineLevels <= 0.9 {
+                return Constants(A: 141, B: 0.9, C: -0.411)
+            }
+            
+            if gender == .mas && creatinineLevels > 0.9 {
+                return Constants(A: 141, B: 0.9, C: -1.209)
+            }
+            
+            return Constants(A: 0, B: 0, C: 0)
+        }()
+        
+        var result = constants.A * pow((creatinineLevels / constants.B), constants.C) * (pow(0.993, Float(age)))
+        
+        if isAfro == .Afroamericano { result *= 1.159 }
+        debugPrint(":::RESULT: ", result)
+        if result > 60 { erc = true }
+        
+        delegateS2?.changeERC(hasERC: erc)
     }
     
     func mapAssign(index: Int, flag: Bool) {

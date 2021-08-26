@@ -64,9 +64,22 @@ class TableViewCellOpenOpen: UITableViewCell {
     }
 
     @IBAction func open1(_ sender: MDCTextField) {
-        let text = sender.text ?? "0"
+        var text = sender.text ?? "0"
         if id1 == "name" {
             delegate?.infoChange(id: id1, info: text)
+        } else if id1 == "hba1c" {
+            if text.last == "." {
+                let _ = text.removeLast()
+                sender.text = text
+            }
+            let myFloat = (text as NSString).floatValue
+            if myFloat < 4.5 || myFloat > 20 {
+                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+                input1Controller?.errorColor = .red
+            } else {
+                input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+                delegate?.infoChange(id: id1, info: myFloat)
+            }
         } else {
             let myFloat = (text as NSString).floatValue
             if myFloat < 4.5 || myFloat > 20 {

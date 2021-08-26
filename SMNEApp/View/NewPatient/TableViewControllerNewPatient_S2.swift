@@ -8,13 +8,19 @@
 import UIKit
 import MaterialComponents.MDCButton
 
-class TableViewControllerNewPatient_S2: UITableViewController {
+protocol MainToS2Delegate {
+    func changeERC(hasERC: Bool)
+}
+
+class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate {
     
     let nextButton = MDCButton()
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
     
     var delegate: InfoChangedDelegate?
+    
+    var subToCell: SubToCellDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +35,7 @@ class TableViewControllerNewPatient_S2: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("=====Aquí")
         
         let cellInfo = step2Cells[indexPath.row]
         if let info = cellInfo as? OpenCell {
@@ -42,6 +49,10 @@ class TableViewControllerNewPatient_S2: UITableViewController {
             
             cell.setInfo(title: info.title, sub: info.sub, id: info.id)
             cell.delegate = self
+            
+            if info.id == "renal" {
+                subToCell = cell
+            }
             
             return cell
         } else if let _ = cellInfo as? IMCCell {
@@ -57,6 +68,11 @@ class TableViewControllerNewPatient_S2: UITableViewController {
 
             return cell
         }
+    }
+    
+    func changeERC(hasERC: Bool) {
+        print("=====Si cambia jajaja saludos")
+        subToCell?.changeERC(hasERC)
     }
 }
 

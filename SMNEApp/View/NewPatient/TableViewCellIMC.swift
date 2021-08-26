@@ -130,10 +130,10 @@ class TableViewCellIMC: UITableViewCell {
         } else {
             heightController?.errorColor = .red
             heightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
-            delegate?.infoChange(id: "height", info: height)
         }
         sender.text = String(format: "%.2f", floatValue)
         height = Float(sender.text ?? "") ?? 0.0
+        delegate?.infoChange(id: "height", info: height)
         calculateIMC()
     }
     @IBAction func levelsChanged(_ sender: UITextField) {

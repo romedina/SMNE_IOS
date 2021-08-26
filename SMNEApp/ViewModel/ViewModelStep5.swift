@@ -165,30 +165,11 @@ class ModelViewStep5 {
     func getOptionsFromDB(hba1c: Float, glucose: Float, filter: String, currentEv: Int, prevDose: String?) -> [TreatmentFromDB] {
         switch currentEv {
         case 1:
-            if filter == "29 - 15" || filter == "<15" {
-                if glucose != 0 {
-                    if glucose < 250{
-                        if filter == "29 - 15" {
-                            return TreatmentsFromDB().TC_E1_D2
-                        } else if filter == "<15" {
-                            return TreatmentsFromDB().TC_E1_D3
-                        }
-                    }
-                    
-                    if glucose >= 250 {
-                        if filter == "29 - 15" {
-                            return TreatmentsFromDB().TC_E1_D5
-                        } else if filter == "<15" {
-                            return TreatmentsFromDB().TC_E1_D6
-                        }
-                    }
-                }
-            }
             if hba1c != 0 {
                 if hba1c < 10 && hba1c > 8{
-                    if filter == "59 - 45" || filter == "44 - 30" {
+                    if filter == "45-59" || filter == "30-44" {
                         return TreatmentsFromDB().TC_E1_D1
-                    } else if filter == "29 - 15" {
+                    } else if filter == "15-29" {
                         return TreatmentsFromDB().TC_E1_D2
                     } else if filter == "<15" {
                         return TreatmentsFromDB().TC_E1_D3
@@ -196,9 +177,9 @@ class ModelViewStep5 {
                 }
                 
                 if hba1c >= 10 {
-                    if filter == "59 - 45" || filter == "44 - 30" {
+                    if filter == "45-59" || filter == "30-44" {
                         return TreatmentsFromDB().TC_E1_D4
-                    } else if filter == "29 - 15" {
+                    } else if filter == "15-29" {
                         return TreatmentsFromDB().TC_E1_D5
                     } else if filter == "<15" {
                         return TreatmentsFromDB().TC_E1_D6
@@ -206,9 +187,9 @@ class ModelViewStep5 {
                 }
             } else {
                 if glucose < 250{
-                    if filter == "59 - 45" || filter == "44 - 30" {
+                    if filter == "45-59" || filter == "30-44" {
                         return TreatmentsFromDB().TC_E1_D1
-                    } else if filter == "29 - 15" {
+                    } else if filter == "15-29" {
                         return TreatmentsFromDB().TC_E1_D2
                     } else if filter == "<15" {
                         return TreatmentsFromDB().TC_E1_D3
@@ -216,9 +197,9 @@ class ModelViewStep5 {
                 }
                 
                 if glucose >= 250 {
-                    if filter == "59 - 45" || filter == "44 - 30" {
+                    if filter == "45-59" || filter == "30-44" {
                         return TreatmentsFromDB().TC_E1_D4
-                    } else if filter == "29 - 15" {
+                    } else if filter == "15-29" {
                         return TreatmentsFromDB().TC_E1_D5
                     } else if filter == "<15" {
                         return TreatmentsFromDB().TC_E1_D6
@@ -227,19 +208,19 @@ class ModelViewStep5 {
             }
             return TreatmentsFromDB().TDefault
         default:
-            if prevDose == "TC_D1_E1" && filter == "44 - 30" && hba1c >= 7 {
+            if prevDose == "TC_D1_E1" && filter == "30-44" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D1
-            } else if prevDose == "TC_D1_E2" && filter == "59 - 45" && hba1c >= 7 {
+            } else if prevDose == "TC_D1_E2" && filter == "45-59" && hba1c >= 7 {
                 return TreatmentsFromDB().TC_E2_D2
-            } else if prevDose == "TC_D1_E3" && filter == "29 - 15" && hba1c >= 7.5 {
+            } else if prevDose == "TC_D1_E3" && filter == "15-29" && hba1c >= 7.5 {
                 return TreatmentsFromDB().TC_E2_D3
             } else if prevDose == "TC_D1_E4" && filter == "<15" && hba1c >= 7.5 {
                 return TreatmentsFromDB().TC_E2_D4
-            } else if prevDose == "TC_D1_E5" && filter == "59 - 45" && hba1c >= 8 {
+            } else if prevDose == "TC_D1_E5" && filter == "45-59" && hba1c >= 8 {
                 return TreatmentsFromDB().TC_E2_D5
-            } else if prevDose == "TC_D1_E6" && filter == "44 - 30" && hba1c >= 8 {
+            } else if prevDose == "TC_D1_E6" && filter == "30-44" && hba1c >= 8 {
                 return TreatmentsFromDB().TC_E2_D6
-            } else if prevDose == "TC_D1_E7" && filter == "29 - 15" && hba1c >= 8.4 {
+            } else if prevDose == "TC_D1_E7" && filter == "15-29" && hba1c >= 8.4 {
                 return TreatmentsFromDB().TC_E2_D7
             } else if prevDose == "TC_D1_E8" && filter == "<15" && hba1c >= 8.4 {
                 return TreatmentsFromDB().TC_E2_D8

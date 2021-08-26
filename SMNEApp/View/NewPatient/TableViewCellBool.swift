@@ -8,7 +8,11 @@
 import UIKit
 import MaterialComponents.MDCButton
 
-class TableViewCellBool: UITableViewCell {
+protocol SubToCellDelegate {
+    func changeERC(_ has: Bool)
+}
+
+class TableViewCellBool: UITableViewCell, SubToCellDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
@@ -91,6 +95,20 @@ class TableViewCellBool: UITableViewCell {
             noButton.isSelected = true
             yesButton.isSelected = false
             delegate?.infoChange(id: id, info: false)
+        }
+    }
+    
+    func changeERC(_ has: Bool) {
+        if id == "renal" {
+            if has {
+                yesButton.isSelected = true
+                noButton.isSelected = false
+                delegate?.infoChange(id: id, info: true)
+            } else {
+                yesButton.isSelected = false
+                noButton.isSelected = true
+                delegate?.infoChange(id: id, info: false)
+            }
         }
     }
     
