@@ -75,21 +75,25 @@ class TableViewCellRadioRadio: UITableViewCell {
     @IBAction func privateTapped(_ sender: Any) {
         privateButton.isSelected = true
         publicButton.isSelected = false
+        typeView.layer.borderColor = UIColor.C00D9CC().cgColor
         delegate?.radioChanged(id: "type", info: "private")
     }
     @IBAction func publicTapped(_ sender: Any) {
         privateButton.isSelected = false
         publicButton.isSelected = true
+        typeView.layer.borderColor = UIColor.C00D9CC().cgColor
         delegate?.radioChanged(id: "type", info: "public")
     }
     @IBAction func femTapped(_ sender: Any) {
         femButton.isSelected = true
         masButton.isSelected = false
+        genderView.layer.borderColor = UIColor.C00D9CC().cgColor
         delegate?.radioChanged(id: "gender", info: "fem")
     }
     @IBAction func masTapped(_ sender: Any) {
         femButton.isSelected = false
         masButton.isSelected = true
+        genderView.layer.borderColor = UIColor.C00D9CC().cgColor
         delegate?.radioChanged(id: "gender", info: "mas")
     }
     

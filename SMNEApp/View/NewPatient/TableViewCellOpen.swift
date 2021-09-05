@@ -49,6 +49,7 @@ class TableViewCellOpen: UITableViewCell {
         }
     }
     @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
+        openController?.setErrorText(nil, errorAccessibilityValue: nil)
         if titleLabel.text == "Edad" {
             if sender.text!.count > 3 {
                 let _ = sender.text?.popLast()
@@ -58,12 +59,13 @@ class TableViewCellOpen: UITableViewCell {
             if sender.text!.count > 4 {
                 let _ = sender.text?.popLast()
             }
+            openController?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
             if sender.text?.count ?? 0 < 4 {
-                openController?.setErrorText("Valor inválido", errorAccessibilityValue: nil)
-                openController?.errorColor = .red
+//                openController?.setErrorText("Valor inválido", errorAccessibilityValue: nil)
+//                openController?.errorColor = .red
             } else {
-                openController?.setErrorText(nil, errorAccessibilityValue: nil)
-                delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
+                
             }
         }
     }

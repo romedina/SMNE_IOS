@@ -14,6 +14,16 @@ protocol InfoChangedDelegate {
 
 class TableViewControllerNewPatient_S1: UITableViewController {
     
+    public enum StepOneValues {
+        case name
+        case lastName
+        case type
+        case gender
+        case age
+        case ascendant
+        case diabetesYear
+    }
+    
     let nextButton = MDCButton()
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
@@ -118,6 +128,47 @@ class TableViewControllerNewPatient_S1: UITableViewController {
             return cell
         }
         
+    }
+    
+    public func setErrorTo(value: StepOneValues, mensaje: String) {
+        switch value {
+        case .name:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
+            cell.input1Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.input1Controller?.errorColor = .red
+            print("Nombre")
+            break
+        case .lastName:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
+            cell.input2Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.input2Controller?.errorColor = .red
+            print("Apellido")
+            break
+        case .type:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TableViewCellRadioRadio else { return }
+            print("Tipo")
+            cell.typeView.layer.borderColor = UIColor.red.cgColor
+            break
+        case .gender:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TableViewCellRadioRadio else { return }
+            print("Genero")
+            cell.genderView.layer.borderColor = UIColor.red.cgColor
+            break
+        case .age:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TableViewCellOpen else { return }
+            print("Edad")
+            cell.openController?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.openController?.errorColor = .red
+            break
+        case .ascendant:
+            break
+        case .diabetesYear:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? TableViewCellOpen else { return }
+            print("Año diabetes")
+            cell.openController?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.openController?.errorColor = .red
+            break
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

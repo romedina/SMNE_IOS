@@ -190,6 +190,9 @@ class ViewControllerNPMain: UIViewController {
             nextButton.isHidden = false
             placeHolderButton.isHidden = true
             stepperView.backgroundColor = .CE0F5F8()
+            nextButton.isUppercaseTitle = false
+            nextButton.setTitle("Siguiente", for: .normal)
+            nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
             break
         case 2:
             let info = stepThree[0] as! TitleCell
@@ -272,20 +275,24 @@ class ViewControllerNPMain: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: MDCButton) {
         print(patientInfo)
-        if validationsStep1() {
+        var message: String?
+        message = validationsStep1()
+        if message == nil {
             if index < 4 {
                 if index == 1 {
-                    if validationsStep2() {
+                    message = validationsStep2()
+                    if message == nil {
                         prepareStepThree()
                     } else {
-                        AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+                        AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) {
                         }
                         print("Llena todo")
                         return
                     }
                 }
                 if index == 3 {
-                    if validationsStep4() {
+                    message = validationsStep4()
+                    if message == nil {
                         let prepare5 = ModelViewStep5()
                         let algorithm = patientInfo.algorithID
                         let hba1c = patientInfo.hba1c
@@ -319,7 +326,7 @@ class ViewControllerNPMain: UIViewController {
                             prepare5.getStep5(options: self.treatmentForDB)
                         }
                     } else {
-                        AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+                        AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) {
                         }
                         return
                     }
@@ -354,7 +361,7 @@ class ViewControllerNPMain: UIViewController {
                 }
             }
         } else {
-            AlertToast.show(message: "Registra todo", controller: self, type: .Error) {
+            AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) {
             }
             print("Registra todo")
         }
@@ -365,31 +372,154 @@ class ViewControllerNPMain: UIViewController {
         return self.treatmentForDB[0].name
     }
     
-    func validationsStep1() -> Bool {
-        if patientInfo.age != 0 && patientInfo.diabetesDate != "" && patientInfo.type != "" && patientInfo.gender != "" {
-            return true
+    func validationsStep1() -> String? {
+        if patientInfo.age != 0 && patientInfo.diabetesDate != "" && patientInfo.type != "" && patientInfo.gender != "" && patientInfo.name != "" && patientInfo.lastName != "" {
+            return nil
         }
-        return false
+        
+        var result = ""
+        let s1 = pageViewCotroller.subViewControllers[0] as! TableViewControllerNewPatient_S1
+        if patientInfo.age == 0 {
+            s1.setErrorTo(value: .age, mensaje: "")
+            result = "La edad del paciente es requerida"
+        }
+        if patientInfo.diabetesDate == "" {
+            s1.setErrorTo(value: .diabetesYear, mensaje: "")
+            result = "Año de diagnostico no válido"
+        }
+        if patientInfo.type == "" {
+            s1.setErrorTo(value: .type, mensaje: "")
+            result = "El tipo de consulta es requerida"
+        }
+        if patientInfo.gender == "" {
+            s1.setErrorTo(value: .gender, mensaje: "")
+            result = "El genero del paciente es requerida"
+        }
+        if patientInfo.name == "" {
+            s1.setErrorTo(value: .name, mensaje: "")
+            result = "El nombre es requerido"
+        }
+        if patientInfo.lastName == "" {
+            s1.setErrorTo(value: .lastName, mensaje: "")
+            result = "Los apellidos son requeridos"
+        }
+        
+        if patientInfo.age == 0 && patientInfo.diabetesDate == "" && patientInfo.type == "" && patientInfo.gender == "" && patientInfo.name == "" && patientInfo.lastName == "" {
+            result = "Registra todo"
+        }
+        
+        return result
     }
     
-    func validationsStep2() -> Bool {
-        if patientInfo.IMC != 0.0 && patientInfo.renal != nil && patientInfo.cardio != nil && patientInfo.hipo != nil {
-            return true
+    func validationsStep2() -> String? {
+        if patientInfo.IMC != 0.0 && patientInfo.renal != nil && patientInfo.cardio != nil && patientInfo.hipo != nil &&
+            (evaluationSchema?.height != 0.0 && evaluationSchema?.height ?? 0.0 >= 1.29 && evaluationSchema?.height ?? 0.0 <= 2.1) &&
+            (evaluationSchema?.weight != 0.0 && evaluationSchema?.weight ?? 0.0 >= 30 && evaluationSchema?.weight ?? 0.0 <= 200) &&
+            (evaluationSchema?.creatinineLevels != 0.0 && evaluationSchema?.creatinineLevels ?? 0.0 > 0 && evaluationSchema?.creatinineLevels ?? 0.0 < 5) {
+            return nil
         }
-        return false
+        var result = "Registra todo"
+        let s2 = pageViewCotroller.subViewControllers[1] as! TableViewControllerNewPatient_S2
+        
+        if patientInfo.renal == nil {
+            s2.setErrorTo(value: .renal, mensaje: "")
+        }
+        if patientInfo.cardio == nil {
+            s2.setErrorTo(value: .erc, mensaje: "")
+        }
+        if patientInfo.hipo == nil {
+            s2.setErrorTo(value: .hipo, mensaje: "")
+        }
+        if evaluationSchema?.height == 0.0 {
+            s2.setErrorTo(value: .height, mensaje: "")
+            result = "La estatura no es válida"
+        } else if evaluationSchema?.height ?? 0.0 < 1.29 || evaluationSchema?.height ?? 0.0 > 2.1 {
+            s2.setErrorTo(value: .height, mensaje: "Valor fuera de rango")
+            result = "La estatura no es válida"
+        }
+        if evaluationSchema?.weight == 0.0 {
+            s2.setErrorTo(value: .weight, mensaje: "")
+            result = "El peso no es válido"
+        } else if evaluationSchema?.weight ?? 0.0 < 30 || evaluationSchema?.weight ?? 0.0 > 200 {
+            s2.setErrorTo(value: .weight, mensaje: "Valor fuera de rango")
+            result = "El peso no es válido"
+        }
+        if evaluationSchema?.creatinineLevels == 0.0 {
+            s2.setErrorTo(value: .levels, mensaje: "")
+            result = "Los niveles de creatinina no son válidos"
+        } else if evaluationSchema?.creatinineLevels ?? 0.0 <= 0 || evaluationSchema?.creatinineLevels ?? 0.0 >= 5 {
+            s2.setErrorTo(value: .levels, mensaje: "Valor fuera de rango")
+            result = "Los niveles de creatinina no son válidos"
+        }
+        
+        if evaluationSchema?.height == 0.0 && evaluationSchema?.weight == 0.0 && evaluationSchema?.creatinineLevels == 0.0 {
+            result = "Registra todo"
+        }
+        
+        return result
     }
     
-    func validationsStep4() -> Bool {
+    func validationsStep4() -> String? {
+        var result = ""
         if evaluationSchema?.evaluationNumber == 1 {
-            if (patientInfo.hba1c != 0 || patientInfo.glucose != 0) && (patientInfo.meta == nil || patientInfo.meta != -1) {
-                return true
+            if patientInfo.hba1c != 0 && patientInfo.glucose != 0 {
+                if ((patientInfo.hba1c >= 4.5 && patientInfo.hba1c <= 20) && (patientInfo.glucose >= 20 && patientInfo.glucose <= 1000)) && (patientInfo.meta == nil || patientInfo.meta != -1) && patientInfo.filterCup != "" {
+                    return nil
+                }
+            } else if ((patientInfo.hba1c != 0 && patientInfo.hba1c >= 4.5 && patientInfo.hba1c <= 20) || (patientInfo.glucose != 0 && patientInfo.glucose >= 20 && patientInfo.glucose <= 1000)) && (patientInfo.meta == nil || patientInfo.meta != -1) && patientInfo.filterCup != "" {
+                return nil
             }
+            
+            let s4 = pageViewCotroller.subViewControllers[3] as! TableViewControllerNewPatient_S4
+            if patientInfo.hba1c == 0 {
+                s4.setErrorTo(value: .hba1c, mensaje: "")
+                result = "Niveles de HbA1c no válido"
+            } else if patientInfo.hba1c > 20 || patientInfo.hba1c < 4.5 {
+                s4.setErrorTo(value: .hba1c, mensaje: "Valor fuera de rango")
+                result = "Niveles de HbA1c no válido"
+            }
+            
+            if patientInfo.glucose == 0 {
+                s4.setErrorTo(value: .glucose, mensaje: "")
+                result = "Glucosa de ayuno no válido"
+            } else if patientInfo.glucose < 20 || patientInfo.glucose > 1000 {
+                s4.setErrorTo(value: .glucose, mensaje: "Valor fuera de rango")
+                result = "Glucosa de ayuno no válido"
+            }
+            
+            
         } else {
-            if patientInfo.hba1c != 0 && (patientInfo.meta == nil || patientInfo.meta != -1) {
-                return true
+            if patientInfo.hba1c != 0 && patientInfo.glucose != 0 {
+                if (patientInfo.hba1c != 0 && patientInfo.hba1c >= 4.5 && patientInfo.hba1c <= 20) && (patientInfo.glucose >= 20 && patientInfo.glucose <= 1000) && (patientInfo.meta == nil || patientInfo.meta != -1) {
+                    return nil
+                }
+            } else if (patientInfo.hba1c != 0 && patientInfo.hba1c >= 4.5 && patientInfo.hba1c <= 20) && (patientInfo.meta == nil || patientInfo.meta != -1) {
+                return nil
+            }
+            
+            let s4 = pageViewCotroller.subViewControllers[3] as! TableViewControllerNewPatient_S4
+            if patientInfo.hba1c == 0 {
+                s4.setErrorTo(value: .hba1c, mensaje: "")
+                result = "Niveles de HbA1c no válido"
+            } else if patientInfo.hba1c > 20 || patientInfo.hba1c < 4.5 {
+                s4.setErrorTo(value: .hba1c, mensaje: "Valor fuera de rango")
+                result = "Niveles de HbA1c no válido"
+            }
+            
+            if patientInfo.glucose == 0 {
+                s4.setErrorTo(value: .glucose, mensaje: "")
+                result = "Glucosa de ayuno no válido"
+            } else if patientInfo.glucose < 20 || patientInfo.glucose > 1000 {
+                s4.setErrorTo(value: .glucose, mensaje: "Valor fuera de rango")
+                result = "Glucosa de ayuno no válido"
             }
         }
-        return false
+        
+        if patientInfo.hba1c == 0 && patientInfo.glucose == 0 {
+            result = "Registra todo"
+        }
+        
+        return result
     }
     
     @IBAction func returnButtonTapped(_ sender: MDCButton) {
@@ -443,6 +573,7 @@ class ViewControllerNPMain: UIViewController {
             s4Button.setTitle("4", for: .normal)
             s5Button.backgroundColor = .white
             s5Button.setTitleColor(.C9FDDF9(), for: .normal)
+            evaluationSchema?.evaluationNumber -= 1
             break
         default:
             break

@@ -98,14 +98,16 @@ class TableViewCellIMC: UITableViewCell {
 
     @IBAction func weightChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
+        weightController?.setErrorText(nil, errorAccessibilityValue: nil)
         weight = Float(string) ?? 0.0
         if weight < 30 || weight > 200 {
-            weightController?.errorColor = .red
-            weightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
+//            weightController?.errorColor = .red
+//            weightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
         } else {
-            weightController?.setErrorText(nil, errorAccessibilityValue: nil)
-            delegate?.infoChange(id: "weight", info: weight)
+            
         }
+        weightController?.setErrorText(nil, errorAccessibilityValue: nil)
+        delegate?.infoChange(id: "weight", info: weight)
         calculateIMC()
     }
     @IBAction func heightChanged(_ sender: UITextField) {
@@ -125,11 +127,12 @@ class TableViewCellIMC: UITableViewCell {
         }
         guard var floatValue = Float(string) else { return }
         floatValue /= 100
+        heightController?.setErrorText(nil, errorAccessibilityValue: nil)
         if floatValue > 1.29 && floatValue < 2.1 {
             heightController?.setErrorText(nil, errorAccessibilityValue: nil)
         } else {
-            heightController?.errorColor = .red
-            heightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
+//            heightController?.errorColor = .red
+//            heightController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
         }
         sender.text = String(format: "%.2f", floatValue)
         height = Float(sender.text ?? "") ?? 0.0
@@ -138,13 +141,15 @@ class TableViewCellIMC: UITableViewCell {
     }
     @IBAction func levelsChanged(_ sender: UITextField) {
         let string = sender.text ?? "0"
+        levelController?.setErrorText(nil, errorAccessibilityValue: nil)
         levels = Float(string) ?? 0.0
+        levelController?.setErrorText(nil, errorAccessibilityValue: nil)
+        delegate?.infoChange(id: "levels", info: levels)
+        
         if levels <= 5 && levels >= 0 {
-            levelController?.setErrorText(nil, errorAccessibilityValue: nil)
-            delegate?.infoChange(id: "levels", info: levels)
         } else {
-            levelController?.errorColor = .red
-            levelController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
+//            levelController?.errorColor = .red
+//            levelController?.setErrorText("Valores fuera de rango", errorAccessibilityValue: nil)
         }
     }
 }

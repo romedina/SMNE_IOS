@@ -66,28 +66,30 @@ class TableViewCellOpenOpen: UITableViewCell {
     @IBAction func open1(_ sender: MDCTextField) {
         var text = sender.text ?? "0"
         if id1 == "name" {
+            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             delegate?.infoChange(id: id1, info: text)
         } else if id1 == "hba1c" {
+            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             if text.last == "." {
                 let _ = text.removeLast()
                 sender.text = text
             }
             let myFloat = (text as NSString).floatValue
             if myFloat < 4.5 || myFloat > 20 {
-                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
-                input1Controller?.errorColor = .red
+//                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+//                input1Controller?.errorColor = .red
             } else {
-                input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
-                delegate?.infoChange(id: id1, info: myFloat)
             }
+            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.infoChange(id: id1, info: myFloat)
         } else {
             let myFloat = (text as NSString).floatValue
+            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.infoChange(id: id1, info: myFloat)
             if myFloat < 4.5 || myFloat > 20 {
-                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
-                input1Controller?.errorColor = .red
+//                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+//                input1Controller?.errorColor = .red
             } else {
-                input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
-                delegate?.infoChange(id: id1, info: myFloat)
             }
         }
     }
@@ -95,15 +97,17 @@ class TableViewCellOpenOpen: UITableViewCell {
     @IBAction func open2(_ sender: MDCTextField) {
         let text = sender.text ?? "0"
         if id2 == "lastName" {
+            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             delegate?.infoChange(id: id2, info: text)
         } else {
             let myFloat = (text as NSString).floatValue
+            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            delegate?.infoChange(id: id2, info: myFloat)
             if myFloat < 20 || myFloat > 1000 {
-                input2Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
-                input2Controller?.errorColor = .red
+//                input2Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+//                input2Controller?.errorColor = .red
             } else {
-                input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
-                delegate?.infoChange(id: id2, info: myFloat)
             }
         }
     }

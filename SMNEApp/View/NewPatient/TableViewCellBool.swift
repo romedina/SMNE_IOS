@@ -83,6 +83,8 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
     }
     
     @IBAction func yesButtonTapped(_ sender: Any) {
+        yesButton.setBorderColor(.C00D9CC(), for: .normal)
+        noButton.setBorderColor(.C00D9CC(), for: .normal)
         if !yesButton.isSelected {
             yesButton.isSelected = true
             noButton.isSelected = false
@@ -91,6 +93,8 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
+        yesButton.setBorderColor(.C00D9CC(), for: .normal)
+        noButton.setBorderColor(.C00D9CC(), for: .normal)
         if !noButton.isSelected {
             noButton.isSelected = true
             yesButton.isSelected = false
@@ -100,6 +104,8 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
     
     func changeERC(_ has: Bool) {
         if id == "renal" {
+            yesButton.setBorderColor(.C00D9CC(), for: .normal)
+            noButton.setBorderColor(.C00D9CC(), for: .normal)
             if has {
                 yesButton.isSelected = true
                 noButton.isSelected = false

@@ -14,6 +14,13 @@ protocol Step4Delegate {
 
 class TableViewControllerNewPatient_S4: UITableViewController {
     
+    public enum StepFourValues {
+        case hba1c
+        case glucose
+        case filter
+        case deterioration
+    }
+    
     let nextButton = MDCButton()
     let returnButton = MDCButton()
     let buttonsStack = UIStackView()
@@ -64,6 +71,11 @@ class TableViewControllerNewPatient_S4: UITableViewController {
         } else if let _ = cellInfo as? MultiRadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio
             cell.delegate = self
+            cell.delegate?.infoChange(id: "filter", info: "<15")
+            cell.op1Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+            cell.op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
+            cell.op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
+            cell.op4Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             return cell
         } else if let _ = cellInfo as? DeteriorationCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "deterioration", for: indexPath) as! TableViewCellDeterioration
@@ -73,6 +85,31 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "space", for: indexPath)
 
             return cell
+        }
+    }
+    
+    public func setErrorTo(value: StepFourValues, mensaje: String) {
+        switch value {
+        case .hba1c:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellOpenOpen else { return }
+            cell.input1Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.input1Controller?.errorColor = .red
+            break
+        case .glucose:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellOpenOpen else { return }
+            cell.input2Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
+            cell.input2Controller?.errorColor = .red
+            break
+        case .filter:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellMultiRadio else { return }
+            cell.op1View.layer.borderColor = UIColor.red.cgColor
+            cell.op2View.layer.borderColor = UIColor.red.cgColor
+            cell.op3View.layer.borderColor = UIColor.red.cgColor
+            cell.op4View.layer.borderColor = UIColor.red.cgColor
+            break
+        case .deterioration:
+            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellDeterioration else { return }
+            break
         }
     }
 
