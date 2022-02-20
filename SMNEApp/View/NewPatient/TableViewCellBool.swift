@@ -10,6 +10,7 @@ import MaterialComponents.MDCButton
 
 protocol SubToCellDelegate {
     func changeERC(_ has: Bool)
+    func changeHipo(_ has: Bool)
 }
 
 class TableViewCellBool: UITableViewCell, SubToCellDelegate {
@@ -20,6 +21,7 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
     @IBOutlet weak var noButton: MDCButton!
     
     var delegate: CellInfoChangeDelegate?
+    var openModalDelegate: OpenFromLabelDelegate?
     var id: String = ""
     
     override func awakeFromNib() {
@@ -43,6 +45,9 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
         if sub == "" {
             subLabel.isHidden = true
         } else {
+            if id == "hipo" {
+                setLabelAction(simpleText: sub)
+            }
             subLabel.isHidden = false
         }
         self.id = id
@@ -82,6 +87,44 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
         }
     }
     
+    public func disableButtons() {
+        yesButton.isUserInteractionEnabled = false
+        noButton.isUserInteractionEnabled = false
+    }
+    
+    private func setLabelAction(simpleText: String) {
+        let splittedText = simpleText.split(separator: "/")
+        let firstString = NSMutableAttributedString(
+            string: String(splittedText[0]),
+            attributes: [
+                .font: UIFont(name: "Open Sans Regular", size: 13.0) ?? UIFont.systemFont(ofSize: 15.0),
+                .foregroundColor: UIColor.C707070()
+            ]
+        )
+        
+        let attributeString = NSMutableAttributedString(
+            string: String(splittedText[1]),
+            attributes: [
+                .font: UIFont(name: "Open Sans Regular", size: 13.0) ?? UIFont.systemFont(ofSize: 15.0),
+                .foregroundColor: UIColor.C00D9CC(),
+                .underlineStyle: NSUnderlineStyle.single.rawValue,
+            ]
+        )
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        let mString = NSMutableAttributedString()
+        mString.append(firstString)
+        mString.append(attributeString)
+        
+        subLabel.attributedText = mString
+        subLabel.isUserInteractionEnabled = true
+        subLabel.addGestureRecognizer(tap)
+    }
+    
+    @objc private func labelTapped() {
+        openModalDelegate?.openModal()
+    }
+    
     @IBAction func yesButtonTapped(_ sender: Any) {
         yesButton.setBorderColor(.C00D9CC(), for: .normal)
         noButton.setBorderColor(.C00D9CC(), for: .normal)
@@ -118,4 +161,19 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
         }
     }
     
+    func changeHipo(_ has: Bool) {
+        if id == "hipo" {
+            yesButton.setBorderColor(.C00D9CC(), for: .normal)
+            noButton.setBorderColor(.C00D9CC(), for: .normal)
+            if has {
+                yesButton.isSelected = true
+                noButton.isSelected = false
+                delegate?.infoChange(id: id, info: true)
+            } else {
+                yesButton.isSelected = false
+                noButton.isSelected = true
+                delegate?.infoChange(id: id, info: false)
+            }
+        }
+    }
 }

@@ -664,6 +664,8 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             mapAssign(index: 2, flag: patientInfo.age > 64 ? true : false)
             patientShema.age = Int(info as! String) ?? 0
             evaluationSchema?.age = Int(info as! String) ?? 0
+            let userD = UserDefaults.standard
+            userD.setValue(patientInfo.age > 64, forKey: "older")
             break
         case "gender":
             patientInfo.gender = info as! String
@@ -802,8 +804,8 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         
         if isAfro == .Afroamericano { result *= 1.159 }
         debugPrint(":::RESULT: ", result)
-        if result > 60 { erc = true }
-        
+        if result < 60 { erc = true }
+        delegateS2?.changeHipo(filt: result)
         delegateS2?.changeERC(hasERC: erc)
     }
     

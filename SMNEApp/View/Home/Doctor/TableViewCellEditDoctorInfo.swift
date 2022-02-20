@@ -14,12 +14,13 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var fSurnameInput: UITextField!
     @IBOutlet weak var sSurnameInput: UITextField!
-    @IBOutlet weak var genderInput: UITextField!
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var cedulaInput: UITextField!
     @IBOutlet weak var espeInput: UITextField!
     @IBOutlet weak var schoolInput: UITextField!
     @IBOutlet weak var countryInput: UITextField!
+    @IBOutlet weak var femButton: UIButton!
+    @IBOutlet weak var maleButton: UIButton!
     
     let user = UserDefaults.standard
     
@@ -30,7 +31,6 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         setTextBorder(input: nameInput)
         setTextBorder(input: fSurnameInput)
         setTextBorder(input: sSurnameInput)
-        setTextBorder(input: genderInput)
         setTextBorder(input: emailInput)
         setTextBorder(input: cedulaInput)
         setTextBorder(input: espeInput)
@@ -71,7 +71,14 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         }
         if let info = user.string(forKey: "gender") {
             user.set(info, forKey: "newgender")
-            genderInput.text = info
+            switch info {
+            case "female":
+                femButton.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+            case "male":
+                maleButton.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+            default:
+                break
+            }
         }
         if let info = user.string(forKey: "cedula") {
             user.set(info, forKey: "newCedula")
@@ -91,32 +98,39 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         }
     }
     
-    @IBAction func nameChanged(_ sender: MDCTextField) {
+    @IBAction func nameChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newName")
     }
-    @IBAction func fSurnameChanged(_ sender: MDCTextField) {
+    @IBAction func fSurnameChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newfSur")
     }
-    @IBAction func sSurnameChanged(_ sender: MDCTextField) {
+    @IBAction func sSurnameChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newsSur")
     }
-    @IBAction func genderChanged(_ sender: MDCTextField) {
-        user.set(sender.text ?? "", forKey: "newgender")
-    }
-    @IBAction func emailChanged(_ sender: MDCTextField) {
+    @IBAction func emailChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newemail")
     }
-    @IBAction func cedulaChanged(_ sender: MDCTextField) {
+    @IBAction func cedulaChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newCedula")
     }
-    @IBAction func espeChanged(_ sender: MDCTextField) {
+    @IBAction func espeChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newespe")
     }
-    @IBAction func schoolChanged(_ sender: MDCTextField) {
+    @IBAction func schoolChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newschool")
     }
-    @IBAction func countryChanged(_ sender: MDCTextField) {
+    @IBAction func countryChanged(_ sender: UITextField) {
         user.set(sender.text ?? "", forKey: "newCountry")
+    }
+    @IBAction func femTapped(_ sender: Any) {
+        user.set("female", forKey: "newgender")
+        femButton.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+        maleButton.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
+    }
+    @IBAction func maleTapped(_ sender: Any) {
+        user.set("male", forKey: "newgender")
+        maleButton.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+        femButton.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
     }
     
 

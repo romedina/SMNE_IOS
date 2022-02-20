@@ -71,26 +71,28 @@ class TableViewCellOpenOpen: UITableViewCell {
         } else if id1 == "hba1c" {
             input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             if text.last == "." {
-                let _ = text.removeLast()
-                sender.text = text
+                let _ = String(text.removeLast())
+                if text.contains(".") {
+                    sender.text = text
+                }
             }
             let myFloat = (text as NSString).floatValue
-            if myFloat < 4.5 || myFloat > 20 {
-//                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
-//                input1Controller?.errorColor = .red
-            } else {
-            }
+//            if myFloat < 4.5 || myFloat > 20 {
+////                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+////                input1Controller?.errorColor = .red
+//            } else {
+//            }
             input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             delegate?.infoChange(id: id1, info: myFloat)
         } else {
             let myFloat = (text as NSString).floatValue
             input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
             delegate?.infoChange(id: id1, info: myFloat)
-            if myFloat < 4.5 || myFloat > 20 {
-//                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
-//                input1Controller?.errorColor = .red
-            } else {
-            }
+//            if myFloat < 4.5 || myFloat > 20 {
+////                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
+////                input1Controller?.errorColor = .red
+//            } else {
+//            }
         }
     }
     

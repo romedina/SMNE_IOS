@@ -10,6 +10,11 @@ import MaterialComponents.MDCButton
 
 protocol MainToS2Delegate {
     func changeERC(hasERC: Bool)
+    func changeHipo(filt: Float)
+}
+
+protocol OpenFromLabelDelegate {
+    func openModal()
 }
 
 class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate {
@@ -30,6 +35,7 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
     var delegate: InfoChangedDelegate?
     
     var subToCell: SubToCellDelegate?
+    var subToCellHipo: SubToCellDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +64,18 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
             
             cell.setInfo(title: info.title, sub: info.sub, id: info.id)
             cell.delegate = self
+            cell.openModalDelegate = self
             
             if info.id == "renal" {
                 subToCell = cell
+            }
+            
+            if info.id == "hipo" {
+                subToCellHipo = cell
+            }
+            
+            if info.id != "cardio" {
+                cell.disableButtons()
             }
             
             return cell
@@ -82,6 +97,22 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
     func changeERC(hasERC: Bool) {
         print("=====Si cambia jajaja saludos")
         subToCell?.changeERC(hasERC)
+    }
+    
+    func changeHipo(filt: Float) {
+        if filt < 15 {
+            delegate?.infoChanged(id: "filter", info: "<15")
+        } else if filt < 30 {
+            delegate?.infoChanged(id: "filter", info: "15-29")
+        }
+        else if filt < 45 {
+           delegate?.infoChanged(id: "filter", info: "30-44")
+       } else {
+           delegate?.infoChanged(id: "filter", info: "45-59")
+       }
+        let userD = UserDefaults.standard
+        let isOlder = userD.bool(forKey: "older")
+        subToCellHipo?.changeHipo(filt < 60 || isOlder)
     }
     
     public func setErrorTo(value: StepTwoValues, mensaje: String) {
@@ -115,7 +146,7 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
     }
 }
 
-extension TableViewControllerNewPatient_S2: CellInfoChangeDelegate {
+extension TableViewControllerNewPatient_S2: CellInfoChangeDelegate, OpenFromLabelDelegate {
     func infoChange(id: String, info: Float) {
         delegate?.infoChanged(id: id, info: info)
     }
@@ -126,5 +157,11 @@ extension TableViewControllerNewPatient_S2: CellInfoChangeDelegate {
     
     func infoChange(id: String, info: Bool) {
         delegate?.infoChanged(id: id, info: info)
+    }
+    
+    func openModal() {
+        let view = CriteriaModalViewController()
+        view.modalPresentationStyle = .overFullScreen
+        self.present(view, animated: true)
     }
 }

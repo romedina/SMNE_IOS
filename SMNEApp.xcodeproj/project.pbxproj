@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987605FB26983FDD009303E8 /* SingletonForDelegate.swift */; };
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
+		9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
 		9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B645C012609774400EA401B /* ViewControllerNreRevition.swift */; };
 		9B6460042625741900DED7F5 /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6460022625741900DED7F5 /* FloatingMenu.swift */; };
 		9B6460052625741900DED7F5 /* FloatingMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6460032625741900DED7F5 /* FloatingMenu.xib */; };
+		9B65405027BE269B008142D6 /* CriteriaModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65404F27BE269B008142D6 /* CriteriaModalViewController.swift */; };
 		9B65B3EC2600925D00917AFA /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65B3EB2600925D00917AFA /* AlertToast.swift */; };
 		9B65CB1726190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */; };
 		9B66C0C825F9EA6A0004041E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B66C0C725F9EA6A0004041E /* loading.json */; };
@@ -137,10 +139,12 @@
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		987605FB26983FDD009303E8 /* SingletonForDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForDelegate.swift; sourceTree = "<group>"; };
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
+		9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B645C012609774400EA401B /* ViewControllerNreRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNreRevition.swift; sourceTree = "<group>"; };
 		9B6460022625741900DED7F5 /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
 		9B6460032625741900DED7F5 /* FloatingMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingMenu.xib; sourceTree = "<group>"; };
+		9B65404F27BE269B008142D6 /* CriteriaModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaModalViewController.swift; sourceTree = "<group>"; };
 		9B65B3EB2600925D00917AFA /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
 		9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
 		9B66C0C725F9EA6A0004041E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				B31C97F825BF9248006DDCD8 /* NewPatient */,
 				B356BFC925CDCD620025F62A /* ViewControllerTabBar.swift */,
 				B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */,
+				9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */,
 				B317F14625E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift */,
 				9BCCC0852633B089000C3F51 /* TableViewCellDeterioration.swift */,
+				9B65404F27BE269B008142D6 /* CriteriaModalViewController.swift */,
 			);
 			path = NewPatient;
 			sourceTree = "<group>";
@@ -989,6 +995,7 @@
 				9B8071F625F3396200D23519 /* ViewControllerPillAnimation.swift in Sources */,
 				9BCDA6B725EDE8EB00AA423C /* EvaluationSchema.swift in Sources */,
 				9BCD130626047EBC00B0DBF5 /* TableViewCellNewRevition.swift in Sources */,
+				9B65405027BE269B008142D6 /* CriteriaModalViewController.swift in Sources */,
 				B31C10CF25D4A33A00233AE1 /* TableViewCellRadioRadio.swift in Sources */,
 				9BCDA6B225EDE7F200AA423C /* PatientSchema.swift in Sources */,
 				B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */,
@@ -1007,6 +1014,7 @@
 				9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */,
 				B3B67BD625E4AE500035916B /* Extensions.swift in Sources */,
 				B395716525D2092E00E89EB5 /* TableViewCellLogin.swift in Sources */,
+				9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */,
 				9BCD130126047EA900B0DBF5 /* TableViewCellRevition.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
 				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,

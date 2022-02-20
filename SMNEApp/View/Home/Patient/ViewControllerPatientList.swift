@@ -93,9 +93,9 @@ class ViewControllerPatientList: UIViewController {
 extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if patientFiltered != nil {
-            return patientFiltered!.count + 1
+            return patientFiltered!.count + 2
         } else if patientsList != nil {
-            return patientsList!.count + 1
+            return patientsList!.count + 2
         } else {
             return 1
         }
@@ -107,12 +107,20 @@ extension ViewControllerPatientList: UITableViewDelegate, UITableViewDataSource 
             return cell
         } else {
             if patientFiltered != nil {
+                if indexPath.row == patientFiltered!.count + 1 {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "space") else { return UITableViewCell() }
+                    return cell
+                }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "patient", for: indexPath) as! TableViewCellPatientList
                 if let info = patientFiltered?[indexPath.row - 1] {
                     cell.setInfo(info: info)
                 }
                 return cell
             } else {
+                if let list = patientsList, indexPath.row == list.count + 1 {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "space") else { return UITableViewCell() }
+                    return cell
+                }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "patient", for: indexPath) as! TableViewCellPatientList
                 if let info = patientsList?[indexPath.row - 1] {
                     cell.setInfo(info: info)

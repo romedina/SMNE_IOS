@@ -21,7 +21,7 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var loginButton: MDCButton!
     @IBOutlet weak var appleLogin: MDCButton!
     @IBOutlet weak var gmailLogin: MDCButton!
-    @IBOutlet weak var faceLogin: MDCButton!
+    @IBOutlet weak var googleInfoLabel: UILabel!
     
     var emailController: MDCTextInputControllerOutlined?
     var passController: MDCTextInputControllerOutlined?
@@ -48,7 +48,8 @@ class ViewControllerLogin: UIViewController {
         
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
-        rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
+        rightButton.setImage(UIImage(named: "eye"), for: .normal)
+        rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.tintColor = .C052D6C()
         
         passwordField.trailingView = rightButton
@@ -71,14 +72,37 @@ class ViewControllerLogin: UIViewController {
         gmailLogin.setImage(#imageLiteral(resourceName: "google"), for: .normal)
         gmailLogin.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         
-        faceLogin.setBackgroundColor(.white)
-        faceLogin.setBorderWidth(1.0, for: .normal)
-        faceLogin.setBorderColor(.C00D9CC(), for: .normal)
-        faceLogin.layer.cornerRadius = 8
-        faceLogin.setImage(#imageLiteral(resourceName: "facebook"), for: .normal)
-        faceLogin.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        let firstString = NSMutableAttributedString(
+            string: "Al registrarse con gmail estas aceptando nuestros ",
+            attributes: [
+                .font: UIFont(name: "Open Sans Bold", size: 14.0) ?? UIFont.systemFont(ofSize: 15.0),
+                .foregroundColor: UIColor.C00D9CC()
+            ]
+        )
+        
+        let attributeString = NSMutableAttributedString(
+            string: "términos y condiciones",
+            attributes: [
+                .font: UIFont(name: "Open Sans Bold", size: 14.0) ?? UIFont.systemFont(ofSize: 15.0),
+                .foregroundColor: UIColor.C00D9CC(),
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        )
+        let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        let mString = NSMutableAttributedString()
+        mString.append(firstString)
+        mString.append(attributeString)
+        googleInfoLabel.isUserInteractionEnabled = true
+        googleInfoLabel.addGestureRecognizer(tap)
+        googleInfoLabel.attributedText = mString
         
         validateTextNotEmpty()
+    }
+    
+    @objc func labelTapped() {
+        let terms = TermsConditionsViewController()
+        terms.modalPresentationStyle = .fullScreen
+        self.present(terms, animated: true)
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -88,7 +112,7 @@ class ViewControllerLogin: UIViewController {
     @objc func passChangeView() {
         passwordField.isSecureTextEntry.toggle()
         if passwordField.isSecureTextEntry {
-            rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
+            rightButton.setImage(UIImage(named: "eye"), for: .normal)
         } else {
             rightButton.setImage(#imageLiteral(resourceName: "crossEye"), for: .normal)
         }

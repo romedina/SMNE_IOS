@@ -76,6 +76,7 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             cell.op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             cell.op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             cell.op4Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
+            cell.isUserInteractionEnabled = false
             return cell
         } else if let _ = cellInfo as? DeteriorationCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "deterioration", for: indexPath) as! TableViewCellDeterioration

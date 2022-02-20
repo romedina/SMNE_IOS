@@ -12,6 +12,8 @@ import FirebaseFirestore
 
 protocol RegisterDelegate {
     func infoChanged(id: String, data: String)
+    func activeRegisterButton(isActive: Bool)
+    func openTerms()
 }
 
 class ViewControllerRegister: UIViewController {
@@ -19,6 +21,7 @@ class ViewControllerRegister: UIViewController {
     @IBOutlet weak var tableViewRegister: UITableView!
     
     @IBOutlet weak var privacyButton: MDCButton!
+    @IBOutlet weak var registerButton: MDCButton!
     
     var name = ""
     var lastName = ""
@@ -32,6 +35,7 @@ class ViewControllerRegister: UIViewController {
         tableViewRegister.dataSource = self
         tableViewRegister.delegate = self
         privacyButton.setBackgroundColor(.white)
+        registerButton.backgroundColor = UIColor.C00D9CC().withAlphaComponent(0.5)
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -129,5 +133,14 @@ extension ViewControllerRegister: RegisterDelegate {
         }
     }
     
+    func activeRegisterButton(isActive: Bool) {
+        registerButton.backgroundColor = UIColor.C00D9CC().withAlphaComponent(isActive ? 1.0 : 0.5)
+        registerButton.isUserInteractionEnabled = isActive
+    }
     
+    func openTerms() {
+        let terms = TermsConditionsViewController()
+        terms.modalPresentationStyle = .fullScreen
+        self.present(terms, animated: true)
+    }
 }
