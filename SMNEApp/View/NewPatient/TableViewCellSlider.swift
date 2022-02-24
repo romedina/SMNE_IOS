@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 class TableViewCellSlider: UITableViewCell {
 

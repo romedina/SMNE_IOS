@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 class TableViewControllerNewPatient_S5: UITableViewController {
     
-    let nextButton = MDCButton()
-    let returnButton = MDCButton()
+    let nextButton = SMNEButton()
+    let returnButton = SMNEButton()
     let buttonsStack = UIStackView()
 
     override func viewDidLoad() {
@@ -19,7 +18,6 @@ class TableViewControllerNewPatient_S5: UITableViewController {
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.backgroundColor = .C00D9CC()
-        nextButton.isUppercaseTitle = false
         nextButton.setTitle("Terminar", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         

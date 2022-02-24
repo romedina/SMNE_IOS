@@ -6,14 +6,13 @@
 //
 
 import UIKit
-import MaterialComponents
 
 class ViewControllerPatienInfoEdit: UIViewController {
     
     @IBOutlet weak var idPatientLabel: UILabel!
     @IBOutlet weak var patientInfoTable: UITableView!
-    @IBOutlet weak var returnButton: MDCButton!
-    @IBOutlet weak var saveButton: MDCButton!
+    @IBOutlet weak var returnButton: SMNEButton!
+    @IBOutlet weak var saveButton: SMNEButton!
     @IBOutlet weak var iconView: UIView!
     
     override func viewDidLoad() {

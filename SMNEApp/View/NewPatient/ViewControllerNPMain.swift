@@ -6,16 +6,15 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 import FirebaseFirestore
 import Firebase
 
 class ViewControllerNPMain: UIViewController {
     
     var pageViewCotroller: ViewControllerNPPageView!
-    @IBOutlet weak var returnButton: MDCButton!
-    @IBOutlet weak var nextButton: MDCButton!
-    @IBOutlet weak var placeHolderButton: MDCButton!
+    @IBOutlet weak var returnButton: SMNEButton!
+    @IBOutlet weak var nextButton: SMNEButton!
+    @IBOutlet weak var placeHolderButton: SMNEButton!
     
     @IBOutlet weak var stepTitleLabel: UILabel!
     @IBOutlet weak var stepSubtitleLabel: UILabel!
@@ -190,7 +189,6 @@ class ViewControllerNPMain: UIViewController {
             nextButton.isHidden = false
             placeHolderButton.isHidden = true
             stepperView.backgroundColor = .CE0F5F8()
-            nextButton.isUppercaseTitle = false
             nextButton.setTitle("Siguiente", for: .normal)
             nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
             break
@@ -203,7 +201,6 @@ class ViewControllerNPMain: UIViewController {
             stepperView.backgroundColor = .C052D6C()
             nextButton.setTitle("Siguiente", for: .normal)
             nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
-            nextButton.isUppercaseTitle = false
             break
         case 3:
             let info = stepFour[0] as! TitleCell
@@ -214,13 +211,11 @@ class ViewControllerNPMain: UIViewController {
             stepperView.backgroundColor = .CE0F5F8()
             nextButton.setTitle("Siguiente", for: .normal)
             nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
-            nextButton.isUppercaseTitle = false
             break
         case 4:
             let info = stepFive[0] as! TitleCell
             nextButton.setTitle("Terminar", for: .normal)
             nextButton.setTitle(nextButton.title(for: .normal)?.capitalizingFirstLetter(), for: .normal)
-            nextButton.isUppercaseTitle = false
             stepTitleLabel.text = info.title
             stepSubtitleLabel.text = info.subtitle
             stepperView.backgroundColor = .C052D6C()
@@ -273,7 +268,7 @@ class ViewControllerNPMain: UIViewController {
         }
     }
     
-    @IBAction func nextButtonTapped(_ sender: MDCButton) {
+    @IBAction func nextButtonTapped(_ sender: SMNEButton) {
         print(patientInfo)
         var message: String?
         message = validationsStep1()
@@ -522,7 +517,7 @@ class ViewControllerNPMain: UIViewController {
         return result
     }
     
-    @IBAction func returnButtonTapped(_ sender: MDCButton) {
+    @IBAction func returnButtonTapped(_ sender: SMNEButton) {
         if index > 0 {
             index -= 1
             changeStepperDown()

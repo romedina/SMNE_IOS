@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import MaterialComponents
 import Firebase
 
 class ViewControllerForgotPassword: UIViewController {
 
     @IBOutlet weak var emailField: SMNETextField!
-    @IBOutlet weak var sendButton: MDCButton!
+    @IBOutlet weak var sendButton: SMNEButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

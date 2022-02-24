@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 protocol LoginCellDelegate {
     func loginTapped()
@@ -20,12 +19,12 @@ class TableViewCellLogin: UITableViewCell {
     @IBOutlet weak var emailInput: SMNETextField!
     @IBOutlet weak var passwordInput: SMNETextField!
     
-    @IBOutlet weak var forgotPassButton: MDCButton!
-    @IBOutlet weak var registerButton: MDCButton!
-    @IBOutlet weak var appleLoginButton: MDCButton!
-    @IBOutlet weak var gmailLoginButton: MDCButton!
-    @IBOutlet weak var facebookLoginButton: MDCButton!
-    @IBOutlet weak var loginButton: MDCButton!
+    @IBOutlet weak var forgotPassButton: SMNEButton!
+    @IBOutlet weak var registerButton: SMNEButton!
+    @IBOutlet weak var appleLoginButton: SMNEButton!
+    @IBOutlet weak var gmailLoginButton: SMNEButton!
+    @IBOutlet weak var facebookLoginButton: SMNEButton!
+    @IBOutlet weak var loginButton: SMNEButton!
     
     let rightButton = UIButton(type: .custom)
     

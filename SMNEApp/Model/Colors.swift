@@ -43,10 +43,3 @@ extension UIColor {
         return UIColor(red: 0.43, green: 0.43, blue: 0.43, alpha: 1.0)
     }
 }
-
-let appTheme: MDCContainerScheme = {
-    let theme = MDCContainerScheme()
-    theme.colorScheme.primaryColor = .C00D9CC()
-    theme.colorScheme.onSurfaceColor = .C00D9CC()
-    return theme
-}()

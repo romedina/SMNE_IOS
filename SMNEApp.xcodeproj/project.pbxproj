@@ -10,6 +10,7 @@
 		987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987605FB26983FDD009303E8 /* SingletonForDelegate.swift */; };
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
 		9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */; };
+		9B6445A427C707BD002E4A04 /* SMNEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6445A327C707BD002E4A04 /* SMNEButton.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
 		9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B645C012609774400EA401B /* ViewControllerNreRevition.swift */; };
 		9B6460042625741900DED7F5 /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6460022625741900DED7F5 /* FloatingMenu.swift */; };
@@ -78,7 +79,6 @@
 		B34C459025C0EB8800EBE1BC /* TableViewCellStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */; };
 		B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C459425C0EEC600EBE1BC /* Colors.swift */; };
 		B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */; };
-		B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */; };
 		B34C45A725C100D800EBE1BC /* TableViewCellOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */; };
 		B34C45AC25C1011F00EBE1BC /* TableViewCellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */; };
 		B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */; };
@@ -141,6 +141,7 @@
 		987605FB26983FDD009303E8 /* SingletonForDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForDelegate.swift; sourceTree = "<group>"; };
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
 		9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		9B6445A327C707BD002E4A04 /* SMNEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEButton.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
 		9B645C012609774400EA401B /* ViewControllerNreRevition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNreRevition.swift; sourceTree = "<group>"; };
 		9B6460022625741900DED7F5 /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
@@ -208,7 +209,6 @@
 		B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellStepper.swift; sourceTree = "<group>"; };
 		B34C459425C0EEC600EBE1BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellInfoPatient.swift; sourceTree = "<group>"; };
-		B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenList.swift; sourceTree = "<group>"; };
 		B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpen.swift; sourceTree = "<group>"; };
 		B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellList.swift; sourceTree = "<group>"; };
 		B34F78C125DA287A0056542B /* ViewControllerLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLaunch.swift; sourceTree = "<group>"; };
@@ -410,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD3417A27C495E700F9553B /* SMNETextField.swift */,
+				9B6445A327C707BD002E4A04 /* SMNEButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -492,7 +493,6 @@
 				B34C458A25C0EA5F00EBE1BC /* TableViewCellTitle.swift */,
 				B34C458F25C0EB8800EBE1BC /* TableViewCellStepper.swift */,
 				B34C459C25C1007400EBE1BC /* TableViewCellInfoPatient.swift */,
-				B34C45A125C100B200EBE1BC /* TableViewCellOpenList.swift */,
 				B34C45A625C100D800EBE1BC /* TableViewCellOpen.swift */,
 				B34C45AB25C1011F00EBE1BC /* TableViewCellList.swift */,
 				B30CDAE925C1ED5400B7CECF /* TableViewCellBool.swift */,
@@ -969,7 +969,6 @@
 				B3E9C34325E1FEDF0072F92A /* ViewModelStep5.swift in Sources */,
 				B34F78C225DA287A0056542B /* ViewControllerLaunch.swift in Sources */,
 				9BCCC0862633B089000C3F51 /* TableViewCellDeterioration.swift in Sources */,
-				B34C45A225C100B200EBE1BC /* TableViewCellOpenList.swift in Sources */,
 				9B65CB1726190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift in Sources */,
 				B30CDB2325C24CC200B7CECF /* TableViewControllerNewPatient_S5.swift in Sources */,
 				B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */,
@@ -989,6 +988,7 @@
 				9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
 				9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */,
+				9B6445A427C707BD002E4A04 /* SMNEButton.swift in Sources */,
 				9B71EC6E265E1A020049B2B8 /* ViewControllerPrivacy.swift in Sources */,
 				B34C459525C0EEC600EBE1BC /* Colors.swift in Sources */,
 				987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */,

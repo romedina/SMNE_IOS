@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 protocol StartOptionDelegate {
     func optionSelected(option: String)
@@ -25,7 +24,7 @@ class TableViewCellStartOption: UITableViewCell {
 
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var optionButton: MDCButton!
+    @IBOutlet weak var optionButton: SMNEButton!
     @IBOutlet weak var imageViewImage: UIImageView!
     
     override func awakeFromNib() {
@@ -36,7 +35,6 @@ class TableViewCellStartOption: UITableViewCell {
     }
     
     func setInfo(titleText: String, buttonTitle: String, textColor: UIColor, backColor: UIColor, image: UIImage) {
-        optionButton.isUppercaseTitle = false
         titleLabel.text = titleText
         optionButton.setTitle(buttonTitle, for: .normal)
         titleLabel.textColor = textColor

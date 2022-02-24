@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 protocol OptionSelectedDelegate {
     func optionDelegate(option: Int, ID: String)
@@ -15,7 +14,7 @@ protocol OptionSelectedDelegate {
 
 class TableViewControllerNewPatient_S3: UITableViewController {
     
-    let returnButton = MDCButton()
+    let returnButton = SMNEButton()
     var delegate: OptionSelectedDelegate?
     var delegateInfo: InfoChangedDelegate?
     

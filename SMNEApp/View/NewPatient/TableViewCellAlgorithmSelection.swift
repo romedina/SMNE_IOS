@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 protocol AlgorithmSelectedDelegate {
     func algorithmSelected(option: Int, ID: String)
@@ -15,7 +14,7 @@ class TableViewCellAlgorithmSelection: UITableViewCell {
 
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var algorithmLabel: UILabel!
-    @IBOutlet weak var selectButton: MDCButton!
+    @IBOutlet weak var selectButton: SMNEButton!
     var superV: TableViewControllerNewPatient_S3!
     var row = 0
     var algorithmID = ""
@@ -26,7 +25,7 @@ class TableViewCellAlgorithmSelection: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         parentView.layer.cornerRadius = 10
-        selectButton.setBackgroundColor(.white, for: .normal)
+        selectButton.setBackgroundColor(.white)
         superV = TableViewControllerNewPatient_S3()
     }
     

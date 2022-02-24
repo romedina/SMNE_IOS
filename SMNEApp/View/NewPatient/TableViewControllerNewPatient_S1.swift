@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 protocol InfoChangedDelegate {
     func infoChanged(id: String, info: Any)
@@ -24,8 +23,8 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         case diabetesYear
     }
     
-    let nextButton = MDCButton()
-    let returnButton = MDCButton()
+    let nextButton = SMNEButton()
+    let returnButton = SMNEButton()
     let buttonsStack = UIStackView()
     
     var patientId = ""
@@ -35,7 +34,6 @@ class TableViewControllerNewPatient_S1: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.backgroundColor = .C00D9CC()
-        nextButton.isUppercaseTitle = false
         nextButton.setTitle("Siguiente", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
@@ -174,7 +172,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         return tableView.rowHeight
     }
     
-    @objc func nextButtonTapped(_ sender: MDCButton) {
+    @objc func nextButtonTapped(_ sender: SMNEButton) {
         if let navCon = self.navigationController {
             let viewController = navCon.topViewController
             if let _ = viewController as? TableViewControllerNewPatient_S1 {
@@ -195,7 +193,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         }
     }
     
-    @objc func returnButtonTapped(_ sender: MDCButton) {
+    @objc func returnButtonTapped(_ sender: SMNEButton) {
         if let navCon = self.navigationController {
             let viewController = navCon.topViewController
             if let _ = viewController as? TableViewControllerNewPatient_S1 {
@@ -217,7 +215,7 @@ class TableViewControllerNewPatient_S1: UITableViewController {
 
 }
 
-extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDelegate, OpenCellDelegate, ListCellDelegate, RadioRadioDelegate, CellInfoChangeDelegate {
+extension TableViewControllerNewPatient_S1: RadioCellDelegate, OpenCellDelegate, ListCellDelegate, RadioRadioDelegate, CellInfoChangeDelegate {
     func infoChange(id: String, info: Float) {
         delegate?.infoChanged(id: id, info: info)
     }
@@ -240,14 +238,6 @@ extension TableViewControllerNewPatient_S1: OpenListCellDelegate, RadioCellDeleg
     }
     
     func radioChanged(id: String, info: String) {
-        delegate?.infoChanged(id: id, info: info)
-    }
-    
-    func openChanged(id: String, info: String) {
-        delegate?.infoChanged(id: id, info: info)
-    }
-    
-    func listChange(id: String, info: String) {
         delegate?.infoChanged(id: id, info: info)
     }
 }

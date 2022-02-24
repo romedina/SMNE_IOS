@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 protocol OpenCellDelegate {
     func openChanged(id: String, info: Any)
@@ -41,7 +40,7 @@ class TableViewCellOpen: UITableViewCell {
             }
         }
     }
-    @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
+    @IBAction func openChanged(_ sender: SMNETextField) {
         openInput.setNormal()
         if titleLabel.text == "Edad" {
             if sender.text!.count > 3 {

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 protocol SubToCellDelegate {
     func changeERC(_ has: Bool)
@@ -17,8 +16,8 @@ class TableViewCellBool: UITableViewCell, SubToCellDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
-    @IBOutlet weak var yesButton: MDCButton!
-    @IBOutlet weak var noButton: MDCButton!
+    @IBOutlet weak var yesButton: SMNEButton!
+    @IBOutlet weak var noButton: SMNEButton!
     
     var delegate: CellInfoChangeDelegate?
     var openModalDelegate: OpenFromLabelDelegate?

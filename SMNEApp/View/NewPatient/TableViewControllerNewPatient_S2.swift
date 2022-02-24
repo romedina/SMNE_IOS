@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 protocol MainToS2Delegate {
     func changeERC(hasERC: Bool)
@@ -28,8 +27,8 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
         case hipo
     }
     
-    let nextButton = MDCButton()
-    let returnButton = MDCButton()
+    let nextButton = SMNEButton()
+    let returnButton = SMNEButton()
     let buttonsStack = UIStackView()
     
     var delegate: InfoChangedDelegate?

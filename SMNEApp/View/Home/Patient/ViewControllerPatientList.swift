@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import MaterialComponents
 import Firebase
 
 class ViewControllerPatientList: UIViewController {
     
     @IBOutlet weak var tableViewList: UITableView!
-    @IBOutlet weak var newPatientButton: MDCButton!
+    @IBOutlet weak var newPatientButton: SMNEButton!
     @IBOutlet weak var searchPatientView: UIView!
     
     @IBOutlet weak var searchPatientInput: UITextField!

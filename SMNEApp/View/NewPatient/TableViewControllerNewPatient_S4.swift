@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents.MDCButton
 
 protocol Step4Delegate {
     func needReload()
@@ -21,8 +20,8 @@ class TableViewControllerNewPatient_S4: UITableViewController {
         case deterioration
     }
     
-    let nextButton = MDCButton()
-    let returnButton = MDCButton()
+    let nextButton = SMNEButton()
+    let returnButton = SMNEButton()
     let buttonsStack = UIStackView()
     
     var delegate: InfoChangedDelegate?

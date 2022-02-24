@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -20,8 +19,8 @@ class ViewControllerRegister: UIViewController {
 
     @IBOutlet weak var tableViewRegister: UITableView!
     
-    @IBOutlet weak var privacyButton: MDCButton!
-    @IBOutlet weak var registerButton: MDCButton!
+    @IBOutlet weak var privacyButton: SMNEButton!
+    @IBOutlet weak var registerButton: SMNEButton!
     
     var name = ""
     var lastName = ""
@@ -35,6 +34,7 @@ class ViewControllerRegister: UIViewController {
         tableViewRegister.dataSource = self
         tableViewRegister.delegate = self
         privacyButton.setBackgroundColor(.white)
+        privacyButton.addTarget(self, action: #selector(openTerms), for: .touchUpInside)
         registerButton.backgroundColor = UIColor.C00D9CC().withAlphaComponent(0.5)
     }
 
@@ -138,7 +138,7 @@ extension ViewControllerRegister: RegisterDelegate {
         registerButton.isUserInteractionEnabled = isActive
     }
     
-    func openTerms() {
+    @objc func openTerms() {
         let terms = TermsConditionsViewController()
         terms.modalPresentationStyle = .fullScreen
         self.present(terms, animated: true)

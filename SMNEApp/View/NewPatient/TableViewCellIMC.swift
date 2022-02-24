@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 protocol CellInfoChangeDelegate {
     func infoChange(id: String, info: Float)

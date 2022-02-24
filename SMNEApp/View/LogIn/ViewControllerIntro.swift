@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 
 class ViewControllerIntro: UIViewController {
     
@@ -15,7 +14,7 @@ class ViewControllerIntro: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var loginButton: MDCButton!
+    @IBOutlet weak var loginButton: SMNEButton!
     
     var index = 0
     

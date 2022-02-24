@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
-import MaterialComponents
 
 class ViewControllerLogin: UIViewController {
 
@@ -17,9 +16,9 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var emailField: SMNETextField!
     @IBOutlet weak var passwordField: SMNETextField!
     
-    @IBOutlet weak var loginButton: MDCButton!
-    @IBOutlet weak var appleLogin: MDCButton!
-    @IBOutlet weak var gmailLogin: MDCButton!
+    @IBOutlet weak var loginButton: SMNEButton!
+    @IBOutlet weak var appleLogin: SMNEButton!
+    @IBOutlet weak var gmailLogin: SMNEButton!
     @IBOutlet weak var googleInfoLabel: UILabel!
     
     let rightButton = UIButton(type: .custom)
@@ -180,31 +179,6 @@ extension ViewControllerLogin: LoginCellDelegate {
         self.email = email
         self.pass = pass
     }
-    
-//    func faceBookLogin() {
-//        let loginManager = LoginManager()
-//        loginManager.logOut()
-//        loginManager.logIn(permissions: [.email, .publicProfile], viewController: self) { (result) in
-//            switch result {
-//            case .success(granted: _, declined: _, token: let token):
-//                let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
-//                let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
-//                nextVC.setAnim(type: .loading)
-//                let delegate: EndPillAnimationProtocol = nextVC
-//                nextVC.modalPresentationStyle = .fullScreen
-//                self.present(nextVC, animated: true) {
-//                    self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
-//                }
-//            case .cancelled:
-//                break
-//            case .failed(_):
-//                let warning = UIAlertController(title: "Error al iniciar sesión", message: "Intente nuevamente.", preferredStyle: .alert)
-//                warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
-//                self.present(warning, animated: true, completion: nil)
-//                break
-//            }
-//        }
-//    }
     
     func loginTapped() {
         let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
