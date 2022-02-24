@@ -49,7 +49,6 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("=====Aquí")
         
         let cellInfo = step2Cells[indexPath.row]
         if let info = cellInfo as? OpenCell {
@@ -94,7 +93,6 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
     }
     
     func changeERC(hasERC: Bool) {
-        print("=====Si cambia jajaja saludos")
         subToCell?.changeERC(hasERC)
     }
     

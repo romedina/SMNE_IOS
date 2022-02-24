@@ -30,15 +30,13 @@ class FirebaseViewModel {
     func setPatient(info: [String: Any], patientId: String, handler: @escaping ()->Void) -> Bool{
         var flag = false
         if docRef == nil {
-            print("Hubo un error al cargar.")
             return false
         }
         if let pid = PatientSelected.shared.patientInfo?.pId {
             patientDoc = docRef?.collection("patients").document(pid)
         }
         patientDoc?.setData(info, merge: true, completion: { (err) in
-            if let err = err {
-                print(err.localizedDescription)
+            if err != nil {
                 return
             }
             flag = true
@@ -279,9 +277,7 @@ class FirebaseViewModel {
         let docRef = db.collection("doctors").document(uId)
         
         docRef.getDocument { (doc, err) in
-            if doc == nil {
-                print("Esto no debió de pasar")
-            } else {
+            if doc != nil {
                 let user = UserDefaults.standard
                 if let name = doc?.get("name") as? String {
                     user.set(name, forKey: "name")
@@ -321,8 +317,7 @@ class FirebaseViewModel {
         guard let dId = UserDefaults.standard.string(forKey: "uId") else { return }
         let patientRef = db.collection("doctors").document(dId).collection("patients").document(patientId)
         patientRef.getDocument { (snapshot, err) in
-            if let err = err {
-                print("Algo sucedió.\n\(err.localizedDescription)")
+            if err != nil {
                 handler(true)
                 return
             }
@@ -341,8 +336,7 @@ class FirebaseViewModel {
                     evaluations.append(last!)
                     data["evaluations"] = evaluations
                     patientRef.setData(data, merge: true) { (err) in
-                        if let err = err {
-                            print("Algo salió aún peor. \(err.localizedDescription)")
+                        if err != nil {
                             handler(true)
                             return
                         } else {

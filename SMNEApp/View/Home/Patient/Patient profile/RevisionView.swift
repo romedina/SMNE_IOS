@@ -37,6 +37,5 @@ class RevisionView: UIView {
 
     @IBAction func revitionTapped(_ sender: Any) {
         delegate?.revitionToList(date: titleS, comment: subtitleS)
-        print(index ?? 0)
     }
 }

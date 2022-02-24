@@ -288,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-dU-mUO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-d0-1JJ">
                                         <rect key="frame" x="0.0" y="52" width="414" height="788"/>
@@ -446,7 +446,7 @@
                         <viewLayoutGuide key="safeArea" id="bjc-ug-oeJ"/>
                         <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="J6z-dU-mUO" secondAttribute="bottom" id="4ZZ-6E-nnX"/>
+                            <constraint firstItem="bjc-ug-oeJ" firstAttribute="bottom" secondItem="J6z-dU-mUO" secondAttribute="bottom" id="4ZZ-6E-nnX"/>
                             <constraint firstItem="J6z-dU-mUO" firstAttribute="top" secondItem="erm-J7-vXr" secondAttribute="top" id="5P1-eA-PUj"/>
                             <constraint firstItem="J6z-dU-mUO" firstAttribute="leading" secondItem="erm-J7-vXr" secondAttribute="leading" id="8lb-gQ-Q51"/>
                             <constraint firstItem="H0g-d0-1JJ" firstAttribute="width" secondItem="erm-J7-vXr" secondAttribute="width" id="gHi-rX-x4A"/>
@@ -1277,7 +1277,7 @@
                                     <constraint firstItem="6en-nM-cdg" firstAttribute="leading" secondItem="jcm-pd-eNS" secondAttribute="leading" constant="17" id="uEk-Zt-3Zj"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zon-U0-988">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zon-U0-988">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -1653,7 +1653,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-OY-c1B">
                                 <rect key="frame" x="0.0" y="142" width="414" height="720"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="XjW-9z-9k6">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XjW-9z-9k6">
                                         <rect key="frame" x="197" y="350" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -2435,7 +2435,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wf5-sW-IoX"/>
+        <segue reference="3u5-hs-73a"/>
         <segue reference="mOW-nE-Tke"/>
     </inferredMetricsTieBreakers>
     <resources>

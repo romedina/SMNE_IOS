@@ -80,7 +80,6 @@ class TableViewCellRevition: UITableViewCell {
                 revitionsStack.addArrangedSubview(rView)
             }
         }
-        print("height:", treatmentImageView.frame.size.height)
     }
     
     override func prepareForReuse() {

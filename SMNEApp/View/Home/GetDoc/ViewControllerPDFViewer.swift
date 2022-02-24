@@ -40,7 +40,6 @@ class ViewControllerPDFViewer: UIViewController, WKNavigationDelegate {
             let filePath = pathComponent.path
             let fileManager = FileManager.default
             if fileManager.fileExists(atPath: filePath) {
-                print("-------FILE EXIST-------")
                 let complete = "\(filePath)"
                 self.pdfUrl = URL(fileURLWithPath: complete)
                 self.downloadFinished()
@@ -68,7 +67,6 @@ class ViewControllerPDFViewer: UIViewController, WKNavigationDelegate {
 
 extension ViewControllerPDFViewer : URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print("File Downloaded Location- ",  location)
         guard let url = downloadTask.originalRequest?.url else {
             return
         }
@@ -79,13 +77,8 @@ extension ViewControllerPDFViewer : URLSessionDownloadDelegate {
         
         try? FileManager.default.removeItem(at: destinationPath)
         
-        do{
-            try FileManager.default.copyItem(at: location, to: destinationPath)
-            self.pdfUrl = destinationPath
-            self.downloadFinished()
-            print("File Downloaded Location- ",  self.pdfUrl ?? "NOT")
-        }catch let error {
-            print("Copy Error: \(error.localizedDescription)")
-        }
+        try? FileManager.default.copyItem(at: location, to: destinationPath)
+        self.pdfUrl = destinationPath
+        self.downloadFinished()
     }
 }

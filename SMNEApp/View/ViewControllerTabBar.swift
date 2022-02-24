@@ -39,6 +39,5 @@ extension ViewControllerTabBar: ChangeViewInMainTabDelegate {
         if SingletonForDelegate.shared.needToChange {
             self.tabBarController?.selectedIndex = 2
         }
-        print("Aquí no cambia perrro")
     }
 }

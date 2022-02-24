@@ -29,10 +29,7 @@ class ViewControllerEditDoctorProfile: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         let user = UserDefaults.standard
         let db = Firestore.firestore()
-        guard let uId = user.string(forKey: "uId") else {
-            print("Hubo un problema.")
-            return
-        }
+        guard let uId = user.string(forKey: "uId") else { return }
         let docRef = db.collection("doctors").document(uId)
         
         
@@ -57,9 +54,7 @@ class ViewControllerEditDoctorProfile: UIViewController {
         info["updatedAt"] = Timestamp()
         
         docRef.updateData(info) { (err) in
-            if let err = err {
-                print(err.localizedDescription)
-            } else {
+            if err == nil {
                 let user = UserDefaults.standard
                 user.set(newemail, forKey: "email")
                 user.set(newName, forKey: "name")

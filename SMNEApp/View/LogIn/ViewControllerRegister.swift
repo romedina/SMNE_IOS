@@ -52,7 +52,6 @@ class ViewControllerRegister: UIViewController {
             self.present(nextVC, animated: true) {
                 Auth.auth().createUser(withEmail: self.email, password: self.pass) { (result, err) in
                     if let err = err {
-                        print(err.localizedDescription)
                         if err.localizedDescription == "The email address is already in use by another account." {
                             delegate.endAnimationWith(error: "") {
                                 let alert = UIAlertController(title: "Error", message: "El email proporcionado ya esta siendo usado por otra cuenta.", preferredStyle: .alert)
@@ -74,9 +73,7 @@ class ViewControllerRegister: UIViewController {
                         let db = Firestore.firestore()
                         let docRef = db.collection("doctors").document(result.user.uid)
                         docRef.setData(info) { (err) in
-                            if let err = err {
-                                print(err.localizedDescription)
-                            } else {
+                            if err == nil {
                                 let user = UserDefaults.standard
                                 user.set(self.email, forKey: "email")
                                 user.set(self.name, forKey: "name")
@@ -91,7 +88,6 @@ class ViewControllerRegister: UIViewController {
                     }
                 }
             }
-            print("Registra")
         } else {
             let alert = UIAlertController(title: "Error", message: "Llena todos los campos", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default))

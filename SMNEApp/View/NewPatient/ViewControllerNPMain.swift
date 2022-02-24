@@ -269,7 +269,6 @@ class ViewControllerNPMain: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: SMNEButton) {
-        print(patientInfo)
         var message: String?
         message = validationsStep1()
         if message == nil {
@@ -279,9 +278,7 @@ class ViewControllerNPMain: UIViewController {
                     if message == nil {
                         prepareStepThree()
                     } else {
-                        AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) {
-                        }
-                        print("Llena todo")
+                        AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) { return }
                         return
                     }
                 }
@@ -356,9 +353,7 @@ class ViewControllerNPMain: UIViewController {
                 }
             }
         } else {
-            AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) {
-            }
-            print("Registra todo")
+            AlertToast.show(message: message ?? "Registra todo", controller: self, type: .Error) { return }
         }
         
     }
@@ -632,7 +627,6 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     }
     
     func optionDelegate(option: Int, ID: String) {
-        print(ID)
         if algorithmID != ID {
             s4Delegate?.needReload()
         }
@@ -646,8 +640,6 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
     }
     
     func infoChanged(id: String, info: Any) {
-        print(id)
-        print(info)
         switch id {
         //S1
         case "type":
@@ -765,11 +757,6 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         let gender = evaluationSchema?.gender
         let isAfro = evaluationSchema?.racialAncestry
         
-        debugPrint(":::Creatinine", creatinineLevels)
-        debugPrint(":::age", age)
-        debugPrint(":::gender", gender)
-        debugPrint(":::isAfro", isAfro)
-        
         struct Constants {
             let A: Float
             let B: Float
@@ -799,7 +786,6 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
         var result = constants.A * pow((creatinineLevels / constants.B), constants.C) * (pow(0.993, Float(age)))
         
         if isAfro == .Afroamericano { result *= 1.159 }
-        debugPrint(":::RESULT: ", result)
         if result < 60 { erc = true }
         delegateS2?.changeHipo(filt: result)
         delegateS2?.changeERC(hasERC: erc)

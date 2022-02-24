@@ -133,33 +133,27 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         case .name:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
             cell.open1Input.setErrorWith(text: mensaje)
-            print("Nombre")
             break
         case .lastName:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
             cell.open2Input.setErrorWith(text: mensaje)
-            print("Apellido")
             break
         case .type:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TableViewCellRadioRadio else { return }
-            print("Tipo")
             cell.typeView.layer.borderColor = UIColor.red.cgColor
             break
         case .gender:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TableViewCellRadioRadio else { return }
-            print("Genero")
             cell.genderView.layer.borderColor = UIColor.red.cgColor
             break
         case .age:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TableViewCellOpen else { return }
-            print("Edad")
             cell.openInput.setErrorWith(text: mensaje)
             break
         case .ascendant:
             break
         case .diabetesYear:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? TableViewCellOpen else { return }
-            print("Año diabetes")
             cell.openInput.setErrorWith(text: mensaje)
             break
         }

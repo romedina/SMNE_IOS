@@ -49,8 +49,6 @@ class ViewControllerPillAnimation: UIViewController {
         anim?.play(completion: { (flag) in
             if flag {
                 self.dismiss(animated: true, completion: nil)
-            } else {
-                print("Usuario cerró")
             }
         })
     }

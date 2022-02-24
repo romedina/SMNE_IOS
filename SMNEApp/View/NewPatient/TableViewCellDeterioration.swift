@@ -84,7 +84,6 @@ class TableViewCellDeterioration: UITableViewCell {
     private func sendInfo() {
         if map[0] != -1 && map[1] != -1 {
             let meta = Float(metas[map[1]][map[0]])
-            print("meta: \(meta)")
             delegate?.infoChange(id: "meta", info: meta)
         }
     }

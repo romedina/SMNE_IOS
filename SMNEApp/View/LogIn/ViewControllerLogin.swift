@@ -188,8 +188,7 @@ extension ViewControllerLogin: LoginCellDelegate {
         
         self.present(nextVC, animated: true) {
             Auth.auth().signIn(withEmail: self.email, password: self.pass) { (result, err) in
-                if let err = err {
-                    print(err.localizedDescription)
+                if err != nil {
                     delegate.endAnimationWith(error: "error", completion: { () in
                         let warning = UIAlertController(title: "Error al iniciar sesión", message: "Usuario o clave incorrecta", preferredStyle: .alert)
                         warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -217,7 +216,6 @@ extension ViewControllerLogin: LoginCellDelegate {
     func loginAndSaveToFirebase(credential: AuthCredential, delegate: EndPillAnimationProtocol) {
         Auth.auth().signIn(with: credential) { (result, err) in
             if let err = err {
-                print(err.localizedDescription)
                 delegate.endAnimationWith {
                     if err.localizedDescription.contains("account already exists") {
                         let warning = UIAlertController(title: "Error al iniciar sesión", message: "Ese correo ya está siendo utilizado con otra forma de ingreso.", preferredStyle: .alert)
@@ -255,9 +253,8 @@ extension ViewControllerLogin: LoginCellDelegate {
                         info["email"] = result.user.email
                         info["updatedAt"] = Timestamp()
                         docRef.setData(info) { (err) in
-                            if let err = err {
+                            if err != nil {
                                 GIDSignIn.sharedInstance()?.signOut()
-                                print(err.localizedDescription)
                             } else {
                                 let user = UserDefaults.standard
                                 user.set(self.email, forKey: "email")
