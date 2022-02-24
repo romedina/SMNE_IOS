@@ -69,12 +69,28 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             return cell
         } else if let _ = cellInfo as? MultiRadioCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "radio", for: indexPath) as! TableViewCellMultiRadio
+            let filterValue = FiltrationEnum(rawValue: UserDefaults.standard.value(forKey: "filter") as? String ?? "na")
             cell.delegate = self
-            cell.delegate?.infoChange(id: "filter", info: "<15")
-            cell.op1Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+            cell.op1Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             cell.op2Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             cell.op3Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
             cell.op4Button.setImage(#imageLiteral(resourceName: "radioNS"), for: .normal)
+            switch filterValue {
+            case .uno:
+                cell.op1Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+                break
+            case .dos:
+                cell.op2Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+                break
+            case .tres:
+                cell.op3Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+                break
+            case .cuatro:
+                cell.op4Button.setImage(#imageLiteral(resourceName: "radioS"), for: .normal)
+                break
+            default:
+                break
+            }
             cell.isUserInteractionEnabled = false
             return cell
         } else if let _ = cellInfo as? DeteriorationCell {

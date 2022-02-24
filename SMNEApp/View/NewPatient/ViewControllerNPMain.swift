@@ -48,7 +48,7 @@ class ViewControllerNPMain: UIViewController {
     var algorithmID = ""
     var treatmentForDB: [TreatmentFromDB] = []
     
-    var featherImage = #imageLiteral(resourceName: "feather")
+    var featherImage = #imageLiteral(resourceName: "radioCheck")
     var viewColor = UIColor(red: 0.67, green: 0.86, blue: 0.96, alpha: 1)
     var s4Delegate: Step4Delegate?
     
@@ -724,6 +724,7 @@ extension ViewControllerNPMain: InfoChangedDelegate, OptionSelectedDelegate {
             evaluationSchema?.fastingGlucose = Double(info as! Float)
             break
         case "filter":
+            UserDefaults.standard.setValue(info as! String, forKey: "filter")
             patientInfo.filterCup = info as? String
             evaluationSchema?.estimatedGlomerularFiltrationRate = FiltrationEnum(rawValue: info as! String)!
             break

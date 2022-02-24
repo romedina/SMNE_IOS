@@ -24,7 +24,7 @@ class TableViewCellRegister: UITableViewCell {
     
     var checkImageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "check")?.withRenderingMode(.alwaysOriginal)
+        view.image = UIImage(named: "radioCheck")?.withRenderingMode(.alwaysOriginal)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
         return view
