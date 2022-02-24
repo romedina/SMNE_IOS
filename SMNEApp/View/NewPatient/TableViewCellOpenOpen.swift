@@ -6,17 +6,13 @@
 //
 
 import UIKit
-import MaterialComponents
 
 class TableViewCellOpenOpen: UITableViewCell {
     
     @IBOutlet weak var title1Label: UILabel!
-    @IBOutlet weak var open1Input: MDCTextField!
+    @IBOutlet weak var open1Input: SMNETextField!
     @IBOutlet weak var title2Label: UILabel!
-    @IBOutlet weak var open2Input: MDCTextField!
-    
-    var input1Controller: MDCTextInputControllerOutlined?
-    var input2Controller: MDCTextInputControllerOutlined?
+    @IBOutlet weak var open2Input: SMNETextField!
     
     var id1 = ""
     var id2 = ""
@@ -26,13 +22,6 @@ class TableViewCellOpenOpen: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        input1Controller = MDCTextInputControllerOutlined(textInput: open1Input)
-        input2Controller = MDCTextInputControllerOutlined(textInput: open2Input)
-        
-        input1Controller?.applyTheme(withScheme: appTheme)
-        input1Controller?.textInput?.textColor = .C052D6C()
-        input2Controller?.applyTheme(withScheme: appTheme)
-        input2Controller?.textInput?.textColor = .C052D6C()
     }
     
     func setInfo(t1: String, t2: String, tr1: String, tr2: String, id1: String, id2: String) {
@@ -47,15 +36,14 @@ class TableViewCellOpenOpen: UITableViewCell {
         label.text = tr1
         label.font = UIFont(name: "OpenSans-Bold", size: 13.0)
         label.textColor = color
-        open1Input.trailingViewMode = .always
-        open1Input.trailingView = label
+        open1Input.rightViewMode = .always
+        open1Input.rightView = label
         
         let label1 = UILabel()
         label1.text = tr2
         label1.font = UIFont(name: "OpenSans-Bold", size: 13.0)
         label1.textColor = color
-        open2Input.trailingViewMode = .always
-        open2Input.trailingView = label1
+        open2Input.setTrailingView(trailingView: label1)
     }
     
     func setValues(v1: String, v2: String) {
@@ -63,13 +51,13 @@ class TableViewCellOpenOpen: UITableViewCell {
         open2Input.text = v2
     }
 
-    @IBAction func open1(_ sender: MDCTextField) {
+    @IBAction func open1(_ sender: SMNETextField) {
         var text = sender.text ?? "0"
         if id1 == "name" {
-            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open1Input.setNormal()
             delegate?.infoChange(id: id1, info: text)
         } else if id1 == "hba1c" {
-            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open2Input.setNormal()
             if text.last == "." {
                 let _ = String(text.removeLast())
                 if text.contains(".") {
@@ -82,11 +70,11 @@ class TableViewCellOpenOpen: UITableViewCell {
 ////                input1Controller?.errorColor = .red
 //            } else {
 //            }
-            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open1Input.setNormal()
             delegate?.infoChange(id: id1, info: myFloat)
         } else {
             let myFloat = (text as NSString).floatValue
-            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open1Input.setNormal()
             delegate?.infoChange(id: id1, info: myFloat)
 //            if myFloat < 4.5 || myFloat > 20 {
 ////                input1Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)
@@ -96,15 +84,15 @@ class TableViewCellOpenOpen: UITableViewCell {
         }
     }
     
-    @IBAction func open2(_ sender: MDCTextField) {
+    @IBAction func open2(_ sender: SMNETextField) {
         let text = sender.text ?? "0"
         if id2 == "lastName" {
-            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open2Input.setNormal()
             delegate?.infoChange(id: id2, info: text)
         } else {
             let myFloat = (text as NSString).floatValue
-            input1Controller?.setErrorText(nil, errorAccessibilityValue: nil)
-            input2Controller?.setErrorText(nil, errorAccessibilityValue: nil)
+            open1Input.setNormal()
+            open2Input.setNormal()
             delegate?.infoChange(id: id2, info: myFloat)
             if myFloat < 20 || myFloat > 1000 {
 //                input2Controller?.setErrorText("Valor fuera de rango", errorAccessibilityValue: nil)

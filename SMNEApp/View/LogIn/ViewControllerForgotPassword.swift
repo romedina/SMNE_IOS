@@ -11,28 +11,18 @@ import Firebase
 
 class ViewControllerForgotPassword: UIViewController {
 
-    @IBOutlet weak var emailField: MDCTextField!
+    @IBOutlet weak var emailField: SMNETextField!
     @IBOutlet weak var sendButton: MDCButton!
-    
-    var emailController: MDCTextInputControllerOutlined?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sendButton.layer.cornerRadius = 8
         sendButton.setTitleColor(.white, for: .normal)
-        emailController = MDCTextInputControllerOutlined(textInput: emailField)
-        emailController = MDCTextInputControllerOutlined(textInput: emailField)
-        
-        emailController?.applyTheme(withScheme: appTheme)
     }
     
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func emailChanged(_ sender: MDCTextField) {
-        
     }
     
     @IBAction func sendTapped(_ sender: Any) {

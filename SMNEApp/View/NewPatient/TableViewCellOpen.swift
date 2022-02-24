@@ -15,9 +15,7 @@ protocol OpenCellDelegate {
 class TableViewCellOpen: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var openInput: MDCTextField!
-    
-    var openController: MDCTextInputControllerOutlined?
+    @IBOutlet weak var openInput: SMNETextField!
     
     var delegate: OpenCellDelegate?
     
@@ -26,11 +24,6 @@ class TableViewCellOpen: UITableViewCell {
         // Initialization code
         openInput.keyboardType = .decimalPad
         openInput.returnKeyType = .done
-        
-        openController = MDCTextInputControllerOutlined(textInput: openInput)
-        
-        openController?.applyTheme(withScheme: appTheme)
-        openController?.textInput?.textColor = .C052D6C()
     }
     
     func setInfo(title: String, placeHolder: String) {
@@ -49,7 +42,7 @@ class TableViewCellOpen: UITableViewCell {
         }
     }
     @IBAction func openChanged(_ sender: MDCOutlinedTextField) {
-        openController?.setErrorText(nil, errorAccessibilityValue: nil)
+        openInput.setNormal()
         if titleLabel.text == "Edad" {
             if sender.text!.count > 3 {
                 let _ = sender.text?.popLast()
@@ -59,14 +52,8 @@ class TableViewCellOpen: UITableViewCell {
             if sender.text!.count > 4 {
                 let _ = sender.text?.popLast()
             }
-            openController?.setErrorText(nil, errorAccessibilityValue: nil)
+            openInput.setNormal()
             delegate?.openChanged(id: "diabetes", info: sender.text ?? "")
-            if sender.text?.count ?? 0 < 4 {
-//                openController?.setErrorText("Valor inválido", errorAccessibilityValue: nil)
-//                openController?.errorColor = .red
-            } else {
-                
-            }
         }
     }
 }

@@ -9,22 +9,19 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
-import FacebookLogin
 import MaterialComponents
 
 class ViewControllerLogin: UIViewController {
 
     @IBOutlet weak var returnButton: UIButton!
-    @IBOutlet weak var emailField: MDCTextField!
-    @IBOutlet weak var passwordField: MDCTextField!
+    @IBOutlet weak var emailField: SMNETextField!
+    @IBOutlet weak var passwordField: SMNETextField!
     
     @IBOutlet weak var loginButton: MDCButton!
     @IBOutlet weak var appleLogin: MDCButton!
     @IBOutlet weak var gmailLogin: MDCButton!
     @IBOutlet weak var googleInfoLabel: UILabel!
     
-    var emailController: MDCTextInputControllerOutlined?
-    var passController: MDCTextInputControllerOutlined?
     let rightButton = UIButton(type: .custom)
     
     var flags = [false, false]
@@ -40,20 +37,14 @@ class ViewControllerLogin: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
         
-        emailController = MDCTextInputControllerOutlined(textInput: emailField)
-        passController = MDCTextInputControllerOutlined(textInput: passwordField)
-        
-        emailController?.applyTheme(withScheme: appTheme)
-        passController?.applyTheme(withScheme: appTheme)
-        
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
         rightButton.setImage(UIImage(named: "eye"), for: .normal)
         rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.tintColor = .C052D6C()
         
-        passwordField.trailingView = rightButton
-        passwordField.trailingViewMode = .always
+        passwordField.rightView = rightButton
+        passwordField.rightViewMode = .always
         
         loginButton.layer.cornerRadius = 8
         loginButton.setTitleColor(.white, for: .normal)
@@ -129,7 +120,7 @@ class ViewControllerLogin: UIViewController {
         }
     }
     
-    @IBAction func emailChanged(_ sender: MDCTextField) {
+    @IBAction func emailChanged(_ sender: SMNETextField) {
         if sender.text != "" && sender.text != nil {
             flags[0] = true
         } else {
@@ -138,7 +129,7 @@ class ViewControllerLogin: UIViewController {
         validateTextNotEmpty()
     }
     
-    @IBAction func passChanged(_ sender: MDCTextField) {
+    @IBAction func passChanged(_ sender: SMNETextField) {
         if sender.text != "" && sender.text != nil {
             flags[1] = true
         } else {
@@ -180,7 +171,7 @@ extension ViewControllerLogin: LoginCellDelegate {
         case .facebook:
             UserDefaults.standard.set("facebook", forKey: "provider")
             firebaseLogOut()
-            faceBookLogin()
+//            faceBookLogin()
             break
         }
     }
@@ -190,30 +181,30 @@ extension ViewControllerLogin: LoginCellDelegate {
         self.pass = pass
     }
     
-    func faceBookLogin() {
-        let loginManager = LoginManager()
-        loginManager.logOut()
-        loginManager.logIn(permissions: [.email, .publicProfile], viewController: self) { (result) in
-            switch result {
-            case .success(granted: _, declined: _, token: let token):
-                let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
-                let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
-                nextVC.setAnim(type: .loading)
-                let delegate: EndPillAnimationProtocol = nextVC
-                nextVC.modalPresentationStyle = .fullScreen
-                self.present(nextVC, animated: true) {
-                    self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
-                }
-            case .cancelled:
-                break
-            case .failed(_):
-                let warning = UIAlertController(title: "Error al iniciar sesión", message: "Intente nuevamente.", preferredStyle: .alert)
-                warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
-                self.present(warning, animated: true, completion: nil)
-                break
-            }
-        }
-    }
+//    func faceBookLogin() {
+//        let loginManager = LoginManager()
+//        loginManager.logOut()
+//        loginManager.logIn(permissions: [.email, .publicProfile], viewController: self) { (result) in
+//            switch result {
+//            case .success(granted: _, declined: _, token: let token):
+//                let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+//                let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+//                nextVC.setAnim(type: .loading)
+//                let delegate: EndPillAnimationProtocol = nextVC
+//                nextVC.modalPresentationStyle = .fullScreen
+//                self.present(nextVC, animated: true) {
+//                    self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
+//                }
+//            case .cancelled:
+//                break
+//            case .failed(_):
+//                let warning = UIAlertController(title: "Error al iniciar sesión", message: "Intente nuevamente.", preferredStyle: .alert)
+//                warning.addAction(UIAlertAction(title: "Aceptar", style: .default))
+//                self.present(warning, animated: true, completion: nil)
+//                break
+//            }
+//        }
+//    }
     
     func loginTapped() {
         let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)

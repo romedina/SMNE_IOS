@@ -227,10 +227,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eaK-4h-Af4" customClass="TableViewCellRegister" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="715.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="668.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaK-4h-Af4" id="zdm-v0-EWW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="715.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="668.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para crear una cuenta debemos saber algunos datos sobre ti." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUZ-3C-MKn">
@@ -245,7 +245,7 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paN-3z-Wl9" customClass="MDCTextField">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paN-3z-Wl9" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                                     <rect key="frame" x="30" y="214" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="wCR-ju-pdx"/>
@@ -256,7 +256,7 @@
                                                         <action selector="nameChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="O0Q-XF-ahd"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-9O-IJt" customClass="MDCTextField">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-9O-IJt" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                                     <rect key="frame" x="30" y="284" width="354" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="XLO-JN-ywD"/>
@@ -276,10 +276,10 @@
                                                     <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-ZX-f5e" customClass="MDCTextField">
-                                                    <rect key="frame" x="30" y="396" width="354" height="85"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-ZX-f5e" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="396" width="354" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="85" id="bqf-j4-Eq5"/>
+                                                        <constraint firstAttribute="height" constant="50" id="bqf-j4-Eq5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
@@ -288,10 +288,10 @@
                                                         <action selector="emailChanged:" destination="eaK-4h-Af4" eventType="editingDidEnd" id="YeI-0g-kzu"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Go-jG7" customClass="MDCTextField">
-                                                    <rect key="frame" x="30" y="481" width="354" height="80"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Go-jG7" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="466" width="354" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="bcg-ho-kPL"/>
+                                                        <constraint firstAttribute="height" constant="50" id="bcg-ho-kPL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -299,10 +299,10 @@
                                                         <action selector="passChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="izG-Ae-7wT"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-10-2gS" customClass="MDCTextField">
-                                                    <rect key="frame" x="30" y="561" width="354" height="90"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-10-2gS" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="536" width="354" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="cJD-aT-iVg"/>
+                                                        <constraint firstAttribute="height" constant="50" id="cJD-aT-iVg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -320,7 +320,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-4Q-LbZ">
-                                                    <rect key="frame" x="70" y="651.5" width="230" height="33"/>
+                                                    <rect key="frame" x="70" y="604.5" width="230" height="33"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                                     <state key="normal" title="Acepto términos y condiciones">
                                                         <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,7 +330,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoQ-G5-9b0">
-                                                    <rect key="frame" x="30" y="653" width="30" height="30"/>
+                                                    <rect key="frame" x="30" y="606" width="30" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="0hI-VF-8Mf"/>
@@ -350,7 +350,7 @@
                                                 <constraint firstItem="gLx-qF-kkA" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ARn-jD-Iw6"/>
                                                 <constraint firstItem="e5g-ia-3LC" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ESe-mj-GLh"/>
                                                 <constraint firstItem="UiG-ZX-f5e" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="IKp-XG-zCk"/>
-                                                <constraint firstItem="voL-Go-jG7" firstAttribute="top" secondItem="UiG-ZX-f5e" secondAttribute="bottom" id="J0B-5r-MOD"/>
+                                                <constraint firstItem="voL-Go-jG7" firstAttribute="top" secondItem="UiG-ZX-f5e" secondAttribute="bottom" constant="20" id="J0B-5r-MOD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="UiG-ZX-f5e" secondAttribute="trailing" constant="10" id="K4e-Bq-xby"/>
                                                 <constraint firstItem="paN-3z-Wl9" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Mz1-Wn-75S"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="voL-Go-jG7" secondAttribute="trailing" constant="10" id="OCK-y5-GEQ"/>
@@ -359,13 +359,13 @@
                                                 <constraint firstItem="e5g-ia-3LC" firstAttribute="top" secondItem="7AW-9O-IJt" secondAttribute="bottom" constant="30" id="T28-cZ-3ZM"/>
                                                 <constraint firstItem="UiG-ZX-f5e" firstAttribute="top" secondItem="e5g-ia-3LC" secondAttribute="bottom" constant="10" id="Tgh-1R-Lwd"/>
                                                 <constraint firstItem="FXP-XR-DfS" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Wzg-FZ-zBc"/>
-                                                <constraint firstItem="WoQ-G5-9b0" firstAttribute="top" secondItem="FOO-10-2gS" secondAttribute="bottom" constant="2" id="bMd-fO-7hT"/>
+                                                <constraint firstItem="WoQ-G5-9b0" firstAttribute="top" secondItem="FOO-10-2gS" secondAttribute="bottom" constant="20" id="bMd-fO-7hT"/>
                                                 <constraint firstItem="hUZ-3C-MKn" firstAttribute="top" secondItem="zdm-v0-EWW" secondAttribute="topMargin" constant="10" id="cov-wm-sNu"/>
                                                 <constraint firstItem="tp6-4Q-LbZ" firstAttribute="centerY" secondItem="WoQ-G5-9b0" secondAttribute="centerY" id="dIo-TP-DLR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tp6-4Q-LbZ" secondAttribute="bottom" constant="20" id="eqW-dW-sEP"/>
                                                 <constraint firstAttribute="trailing" secondItem="hUZ-3C-MKn" secondAttribute="trailing" constant="30" id="fCo-46-dSO"/>
                                                 <constraint firstItem="FXP-XR-DfS" firstAttribute="top" secondItem="hUZ-3C-MKn" secondAttribute="bottom" constant="10" id="fLJ-84-xAm"/>
-                                                <constraint firstItem="FOO-10-2gS" firstAttribute="top" secondItem="voL-Go-jG7" secondAttribute="bottom" id="jq0-8D-pdR"/>
+                                                <constraint firstItem="FOO-10-2gS" firstAttribute="top" secondItem="voL-Go-jG7" secondAttribute="bottom" constant="20" id="jq0-8D-pdR"/>
                                                 <constraint firstItem="7AW-9O-IJt" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="lEh-k0-RpV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="7AW-9O-IJt" secondAttribute="trailing" constant="10" id="mss-u0-mEc"/>
                                                 <constraint firstItem="hUZ-3C-MKn" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leading" constant="30" id="nX2-A4-6KM"/>
@@ -439,10 +439,10 @@
                                 <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baz-oZ-Tdc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="780"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="742.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-gV-Th9">
-                                                <rect key="frame" x="28" y="71.5" width="157" height="39"/>
+                                                <rect key="frame" x="28" y="60" width="157" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="L8T-aw-5Eg"/>
                                                 </constraints>
@@ -451,13 +451,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor ingresa a tu cuenta con los datos que elegiste al momento de tu registro." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-2F-nRh">
-                                                <rect key="frame" x="28" y="120.5" width="358" height="44"/>
+                                                <rect key="frame" x="28" y="109" width="358" height="44"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-Wv-rgy" customClass="MDCTextField">
-                                                <rect key="frame" x="28" y="184.5" width="358" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-Wv-rgy" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
+                                                <rect key="frame" x="28" y="173" width="358" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="wTC-GJ-5hO"/>
                                                 </constraints>
@@ -467,8 +467,8 @@
                                                     <action selector="emailChanged:" destination="RrF-Sw-2vj" eventType="editingChanged" id="eLK-oH-sfW"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-hZ-bBQ" customClass="MDCTextField">
-                                                <rect key="frame" x="28" y="254.5" width="358" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-hZ-bBQ" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
+                                                <rect key="frame" x="28" y="243" width="358" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="5O5-oj-NCV"/>
                                                 </constraints>
@@ -479,7 +479,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-ON-CFy" customClass="MDCButton">
-                                                <rect key="frame" x="219" y="334.5" width="167" height="32"/>
+                                                <rect key="frame" x="219" y="323" width="167" height="32"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="1XN-Di-ppy"/>
@@ -493,7 +493,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBt-A1-Dl4" customClass="MDCButton">
-                                                <rect key="frame" x="28" y="386.5" width="358" height="50"/>
+                                                <rect key="frame" x="28" y="375" width="358" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="5D0-cd-AaO"/>
@@ -507,7 +507,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-Ss-9XY" customClass="MDCButton">
-                                                <rect key="frame" x="128.5" y="451.5" width="157" height="19"/>
+                                                <rect key="frame" x="128.5" y="440" width="157" height="19"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="KR7-ud-FsL"/>
@@ -521,7 +521,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O iniciar sesión con" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETn-2A-6jb">
-                                                <rect key="frame" x="143.5" y="566.5" width="127" height="20"/>
+                                                <rect key="frame" x="143.5" y="529" width="127" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="GJy-pu-dFP"/>
                                                 </constraints>
@@ -530,7 +530,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cke-dX-XQy" customClass="MDCButton">
-                                                <rect key="frame" x="28" y="606.5" width="358" height="50"/>
+                                                <rect key="frame" x="28" y="569" width="358" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="XMK-iV-1e2"/>
@@ -545,7 +545,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-9m-2oC" customClass="MDCButton">
-                                                <rect key="frame" x="28" y="666.5" width="358" height="50"/>
+                                                <rect key="frame" x="28" y="629" width="358" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="paQ-rk-Sy7"/>
@@ -558,21 +558,21 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLM-5U-vVd">
-                                                <rect key="frame" x="280.5" y="576" width="85.5" height="1"/>
+                                                <rect key="frame" x="280.5" y="538.5" width="85.5" height="1"/>
                                                 <color key="backgroundColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="2QA-53-Zyd"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-rq-rAB">
-                                                <rect key="frame" x="48" y="576" width="85.5" height="1"/>
+                                                <rect key="frame" x="48" y="538.5" width="85.5" height="1"/>
                                                 <color key="backgroundColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="wHJ-p4-Ihf"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6d-UF-34l">
-                                                <rect key="frame" x="20" y="726.5" width="374" height="33.5"/>
+                                                <rect key="frame" x="20" y="689" width="374" height="33.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Al registrarse con gmail estas atentando nuestros términos y condiciones">
                                                         <attributes>
@@ -602,10 +602,10 @@
                                             <constraint firstItem="ETn-2A-6jb" firstAttribute="leading" secondItem="Mnv-rq-rAB" secondAttribute="trailing" constant="10" id="CRy-4d-vRj"/>
                                             <constraint firstItem="mK5-hZ-bBQ" firstAttribute="top" secondItem="oCL-Wv-rgy" secondAttribute="bottom" constant="20" id="I4P-SF-fsh"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="mK5-hZ-bBQ" secondAttribute="trailing" constant="20" id="N9Q-bf-ATU"/>
-                                            <constraint firstItem="ETn-2A-6jb" firstAttribute="top" secondItem="xQk-Ss-9XY" secondAttribute="bottom" constant="96" id="QIF-ZM-9Fm"/>
+                                            <constraint firstItem="ETn-2A-6jb" firstAttribute="top" secondItem="xQk-Ss-9XY" secondAttribute="bottom" constant="70" id="QIF-ZM-9Fm"/>
                                             <constraint firstItem="mK5-hZ-bBQ" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="Quk-5j-XOd"/>
+                                            <constraint firstItem="Lee-gV-Th9" firstAttribute="top" secondItem="baz-oZ-Tdc" secondAttribute="top" constant="60" id="U4x-Lk-YMG"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="BBt-A1-Dl4" secondAttribute="trailing" constant="20" id="Uii-E7-dVc"/>
-                                            <constraint firstAttribute="height" constant="780" id="WvX-MA-buc"/>
                                             <constraint firstItem="bp6-2F-nRh" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="Zus-Ft-6Gz"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="bp6-2F-nRh" secondAttribute="trailing" constant="20" id="abD-g4-wh0"/>
                                             <constraint firstItem="Mnv-rq-rAB" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="40" id="bLy-Ec-uLa"/>
@@ -708,16 +708,13 @@
                                 <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-Nr-RSy" customClass="MDCTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-Nr-RSy" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                 <rect key="frame" x="33" y="328" width="348" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gsR-KW-NtN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
-                                <connections>
-                                    <action selector="emailChanged:" destination="cvV-ds-aRF" eventType="editingChanged" id="WTY-7P-oJY"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-H7-Dq7" customClass="MDCButton">
                                 <rect key="frame" x="217" y="782" width="164" height="50"/>

@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import IQKeyboardManagerSwift
-import FBSDKCoreKit
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,15 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configure GoogleLogin
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        return GIDSignIn.sharedInstance()?.handle(url) ??  false ||
-            ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        return GIDSignIn.sharedInstance()?.handle(url) ??  false //||
+            //ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
 //    #warning("cambios")
 //    FlagFetcher.fetchFlags { result in

@@ -33,7 +33,6 @@ class ViewControllerIntro: UIViewController {
         loginButton.setBackgroundColor(.white)
         updateInfo()
         
-        
     }
     
     func updateInfo() {

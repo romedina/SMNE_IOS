@@ -28,23 +28,7 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        setTextBorder(input: nameInput)
-        setTextBorder(input: fSurnameInput)
-        setTextBorder(input: sSurnameInput)
-        setTextBorder(input: emailInput)
-        setTextBorder(input: cedulaInput)
-        setTextBorder(input: espeInput)
-        setTextBorder(input: schoolInput)
-        setTextBorder(input: countryInput)
-        
         setTextInfo()
-    }
-    
-    func setTextBorder(input: UITextField) {
-        input.layer.borderColor = UIColor.C5FD6CB().cgColor
-        input.layer.borderWidth = 1
-        input.layer.cornerRadius = 10
-        input.textColor = .C052D6C()
     }
     
     func setTextInfo() {

@@ -41,6 +41,7 @@
 		9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */; };
 		9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */; };
 		9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */; };
+		9BD3417B27C495E700F9553B /* SMNETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3417A27C495E700F9553B /* SMNETextField.swift */; };
 		9BE0943525F85FB400E2F90F /* fin__tratamiento.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BE0943425F85FB400E2F90F /* fin__tratamiento.json */; };
 		A8DE202D7D47580D94116868 /* Pods_SMNEApp_SMNEAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD46C3922F02162E64A70FB /* Pods_SMNEApp_SMNEAppUITests.framework */; };
 		B29DBAF23E9F2AC8AEA1E752 /* Pods_SMNEApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C37C7ECDE0BCE3A14855D /* Pods_SMNEApp.framework */; };
@@ -171,6 +172,7 @@
 		9BCDA6BB25EDEAA600AA423C /* ObservationSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationSchema.swift; sourceTree = "<group>"; };
 		9BCDA6C025EDEAF700AA423C /* SchemaEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaEnum.swift; sourceTree = "<group>"; };
 		9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		9BD3417A27C495E700F9553B /* SMNETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNETextField.swift; sourceTree = "<group>"; };
 		9BE0943425F85FB400E2F90F /* fin__tratamiento.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fin__tratamiento.json; sourceTree = "<group>"; };
 		A33D4C44EA4C10E09D1EF259 /* Pods-SMNEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEApp.debug.xcconfig"; path = "Target Support Files/Pods-SMNEApp/Pods-SMNEApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B304935725DB7FEF0072812C /* TableViewCellOpenOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOpenOpen.swift; sourceTree = "<group>"; };
@@ -404,6 +406,14 @@
 			path = FirebaseModels;
 			sourceTree = "<group>";
 		};
+		9BD3417927C4954B00F9553B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9BD3417A27C495E700F9553B /* SMNETextField.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B30CDB0A25C247E400B7CECF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +603,7 @@
 		B3CC13D325B8B9FA00CD968E /* SMNEApp */ = {
 			isa = PBXGroup;
 			children = (
+				9BD3417927C4954B00F9553B /* Utils */,
 				988A389C260031320089BC86 /* Warnings */,
 				B31C97B925BF46E8006DDCD8 /* GoogleService-Info.plist */,
 				B3CC13E225B8B9FF00CD968E /* Info.plist */,
@@ -987,6 +998,7 @@
 				B3F8118A25D4681F00323534 /* IntroModels.swift in Sources */,
 				B34C459D25C1007400EBE1BC /* TableViewCellInfoPatient.swift in Sources */,
 				B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */,
+				9BD3417B27C495E700F9553B /* SMNETextField.swift in Sources */,
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,

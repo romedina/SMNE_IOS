@@ -134,14 +134,12 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         switch value {
         case .name:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
-            cell.input1Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.input1Controller?.errorColor = .red
+            cell.open1Input.setErrorWith(text: mensaje)
             print("Nombre")
             break
         case .lastName:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellOpenOpen else { return }
-            cell.input2Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.input2Controller?.errorColor = .red
+            cell.open2Input.setErrorWith(text: mensaje)
             print("Apellido")
             break
         case .type:
@@ -157,16 +155,14 @@ class TableViewControllerNewPatient_S1: UITableViewController {
         case .age:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TableViewCellOpen else { return }
             print("Edad")
-            cell.openController?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.openController?.errorColor = .red
+            cell.openInput.setErrorWith(text: mensaje)
             break
         case .ascendant:
             break
         case .diabetesYear:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? TableViewCellOpen else { return }
             print("Año diabetes")
-            cell.openController?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.openController?.errorColor = .red
+            cell.openInput.setErrorWith(text: mensaje)
             break
         }
     }

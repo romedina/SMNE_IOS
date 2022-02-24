@@ -119,17 +119,14 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
         switch value {
         case .weight:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellIMC else { return }
-            cell.weightController?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.weightController?.errorColor = .red
+            cell.weightTextInput.setErrorWith(text: mensaje)
             break
         case .height:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellIMC else { return }
-            cell.heightController?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.heightController?.errorColor = .red
+            cell.heightTextInput.setErrorWith(text: mensaje)
         case .levels:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellIMC else { return }
-            cell.levelController?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.levelController?.errorColor = .red
+            cell.levelstextInput.setErrorWith(text: mensaje)
         case .renal:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellBool else { return }
             cell.yesButton.setBorderColor(.red, for: .normal)

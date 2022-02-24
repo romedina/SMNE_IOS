@@ -93,13 +93,11 @@ class TableViewControllerNewPatient_S4: UITableViewController {
         switch value {
         case .hba1c:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellOpenOpen else { return }
-            cell.input1Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.input1Controller?.errorColor = .red
+            cell.open1Input.setErrorWith(text: mensaje)
             break
         case .glucose:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellOpenOpen else { return }
-            cell.input2Controller?.setErrorText(mensaje, errorAccessibilityValue: nil)
-            cell.input2Controller?.errorColor = .red
+            cell.open2Input.setErrorWith(text: mensaje)
             break
         case .filter:
             guard let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TableViewCellMultiRadio else { return }
@@ -109,7 +107,7 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             cell.op4View.layer.borderColor = UIColor.red.cgColor
             break
         case .deterioration:
-            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellDeterioration else { return }
+//            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TableViewCellDeterioration else { return }
             break
         }
     }

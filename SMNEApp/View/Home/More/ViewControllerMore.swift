@@ -8,7 +8,6 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
-import FacebookLogin
 
 class ViewControllerMore: UIViewController {
 
@@ -35,9 +34,9 @@ class ViewControllerMore: UIViewController {
         if let provider = user.string(forKey: "provider") {
             if provider == "google" {
                 GIDSignIn.sharedInstance()?.signOut()
-            } else if provider == "facebook" {
-                LoginManager().logOut()
-            }
+            } //else if provider == "facebook" {
+//                LoginManager().logOut()
+//            }
         }
         do {
             try Auth.auth().signOut()

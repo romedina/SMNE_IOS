@@ -10,19 +10,13 @@ import MaterialComponents
 
 class TableViewCellRegister: UITableViewCell {
 
-    @IBOutlet weak var nameInput: MDCTextField!
-    @IBOutlet weak var surnameInput: MDCTextField!
-    @IBOutlet weak var emailInput: MDCTextField!
-    @IBOutlet weak var passwordInput: MDCTextField!
-    @IBOutlet weak var confirmPasswordInput: MDCTextField!
+    @IBOutlet weak var nameInput: SMNETextField!
+    @IBOutlet weak var surnameInput: SMNETextField!
+    @IBOutlet weak var emailInput: SMNETextField!
+    @IBOutlet weak var passwordInput: SMNETextField!
+    @IBOutlet weak var confirmPasswordInput: SMNETextField!
     @IBOutlet weak var acceptTermsButton: UIButton!
     @IBOutlet weak var goToTermsButton: UIButton!
-    
-    var nameController: MDCTextInputControllerOutlined?
-    var surnameController: MDCTextInputControllerOutlined?
-    var emailController: MDCTextInputControllerOutlined?
-    var passController: MDCTextInputControllerOutlined?
-    var confController: MDCTextInputControllerOutlined?
     
     var delegate: RegisterDelegate?
     
@@ -40,17 +34,6 @@ class TableViewCellRegister: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        nameController = MDCTextInputControllerOutlined(textInput: nameInput)
-        surnameController = MDCTextInputControllerOutlined(textInput: surnameInput)
-        emailController = MDCTextInputControllerOutlined(textInput: emailInput)
-        passController = MDCTextInputControllerOutlined(textInput: passwordInput)
-        confController = MDCTextInputControllerOutlined(textInput: confirmPasswordInput)
-        
-        nameController?.applyTheme(withScheme: appTheme)
-        surnameController?.applyTheme(withScheme: appTheme)
-        emailController?.applyTheme(withScheme: appTheme)
-        passController?.applyTheme(withScheme: appTheme)
-        confController?.applyTheme(withScheme: appTheme)
         
         self.contentView.addSubview(checkImageView)
         
@@ -81,8 +64,8 @@ class TableViewCellRegister: UITableViewCell {
         rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.tintColor = .C052D6C()
         
-        passwordInput.trailingView = rightButton
-        passwordInput.trailingViewMode = .always
+        passwordInput.rightView = rightButton
+        passwordInput.rightViewMode = .always
         
         rightButtonconfirm.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButtonconfirm.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
@@ -90,8 +73,8 @@ class TableViewCellRegister: UITableViewCell {
         rightButtonconfirm.imageView?.contentMode = .scaleAspectFit
         rightButtonconfirm.tintColor = .C052D6C()
         
-        confirmPasswordInput.trailingView = rightButtonconfirm
-        confirmPasswordInput.trailingViewMode = .always
+        confirmPasswordInput.rightView = rightButtonconfirm
+        confirmPasswordInput.rightViewMode = .always
         
     }
     
@@ -119,11 +102,11 @@ class TableViewCellRegister: UITableViewCell {
         }
     }
     
-    @IBAction func emailChanged(_ sender: MDCTextField) {
+    @IBAction func emailChanged(_ sender: SMNETextField) {
         if !sender.isValidEmail() {
-            emailController?.setErrorText("Email inválido.", errorAccessibilityValue: nil)
+            emailInput.setErrorWith(text: "Email inválido")
         } else {
-            emailController?.setErrorText(nil, errorAccessibilityValue: nil)
+            emailInput.setNormal()
             delegate?.infoChanged(id: "email", data: sender.text!)
         }
     }
@@ -143,9 +126,9 @@ class TableViewCellRegister: UITableViewCell {
             if passwordInput.text != nil && passwordInput.text != "" {
                 if sender.text == passwordInput.text {
                     delegate?.infoChanged(id: "pass", data: sender.text!)
-                    confController?.setErrorText(nil, errorAccessibilityValue: nil)
+                    confirmPasswordInput.setNormal()
                 } else {
-                    confController?.setErrorText("No coinciden las contraseñas", errorAccessibilityValue: nil)
+                    confirmPasswordInput.setErrorWith(text: "No coinciden las contraseñas")
                 }
             }
         }

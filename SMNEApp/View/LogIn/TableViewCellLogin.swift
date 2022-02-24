@@ -17,8 +17,8 @@ protocol LoginCellDelegate {
 
 class TableViewCellLogin: UITableViewCell {
 
-    @IBOutlet weak var emailInput: MDCTextField!
-    @IBOutlet weak var passwordInput: MDCTextField!
+    @IBOutlet weak var emailInput: SMNETextField!
+    @IBOutlet weak var passwordInput: SMNETextField!
     
     @IBOutlet weak var forgotPassButton: MDCButton!
     @IBOutlet weak var registerButton: MDCButton!
@@ -26,9 +26,6 @@ class TableViewCellLogin: UITableViewCell {
     @IBOutlet weak var gmailLoginButton: MDCButton!
     @IBOutlet weak var facebookLoginButton: MDCButton!
     @IBOutlet weak var loginButton: MDCButton!
-    
-    var emailController: MDCTextInputControllerOutlined?
-    var passController: MDCTextInputControllerOutlined?
     
     let rightButton = UIButton(type: .custom)
     
@@ -48,19 +45,14 @@ class TableViewCellLogin: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        emailController = MDCTextInputControllerOutlined(textInput: emailInput)
-        passController = MDCTextInputControllerOutlined(textInput: passwordInput)
-        
-        emailController?.applyTheme(withScheme: appTheme)
-        passController?.applyTheme(withScheme: appTheme)
         
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
         rightButton.setImage(UIImage(named: "eye.fill"), for: .normal)
         rightButton.tintColor = .C052D6C()
         
-        passwordInput.trailingView = rightButton
-        passwordInput.trailingViewMode = .always
+        passwordInput.rightView = rightButton
+        passwordInput.rightViewMode = .always
         
         
         forgotPassButton.setBackgroundColor(.white)
@@ -101,7 +93,7 @@ class TableViewCellLogin: UITableViewCell {
         }
     }
     
-    @IBAction func emailChanged(_ sender: MDCTextField) {
+    @IBAction func emailChanged(_ sender: SMNETextField) {
         if sender.text != "" && sender.text != nil {
             flags[0] = true
         } else {
@@ -110,7 +102,7 @@ class TableViewCellLogin: UITableViewCell {
         validateTextNotEmpty()
     }
     
-    @IBAction func passChanged(_ sender: MDCTextField) {
+    @IBAction func passChanged(_ sender: SMNETextField) {
         if sender.text != "" && sender.text != nil {
             flags[1] = true
         } else {

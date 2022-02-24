@@ -479,7 +479,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-oe-ESX">
-                                <rect key="frame" x="25" y="237" width="364" height="30"/>
+                                <rect key="frame" x="25" y="237" width="364" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Mi cuenta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -490,7 +490,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47O-6Q-fIU">
-                                <rect key="frame" x="25" y="296" width="364" height="30"/>
+                                <rect key="frame" x="25" y="294" width="364" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Directorio de colaboradores">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,7 +501,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw9-AR-W8f">
-                                <rect key="frame" x="25" y="355" width="364" height="30"/>
+                                <rect key="frame" x="25" y="351" width="364" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Aviso de Privacidad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -512,7 +512,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apv-jw-vTV">
-                                <rect key="frame" x="25" y="414" width="364" height="30"/>
+                                <rect key="frame" x="25" y="408" width="364" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="Cerrar sesión">
                                     <color key="titleColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -529,21 +529,21 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="d6U-DC-yjZ">
-                                <rect key="frame" x="367" y="241" width="22" height="22"/>
+                                <rect key="frame" x="367" y="240" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="168-Py-eTS"/>
                                     <constraint firstAttribute="height" constant="22" id="3nZ-Mt-tv0"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-Wi-izM">
-                                <rect key="frame" x="367" y="300" width="22" height="22"/>
+                                <rect key="frame" x="367" y="296" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="XGo-r0-cAi"/>
                                     <constraint firstAttribute="width" constant="22" id="n8h-iE-hu8"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="jgd-lM-ZKf">
-                                <rect key="frame" x="367" y="359" width="22" height="22"/>
+                                <rect key="frame" x="367" y="353" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fOx-em-MBJ"/>
                                     <constraint firstAttribute="width" constant="22" id="ns7-CB-1OC"/>
@@ -774,7 +774,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-CT-hae">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-CT-hae" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="84" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="jjZ-y8-hjG"/>
@@ -800,7 +800,7 @@
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-cm-5IQ">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-cm-5IQ" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="23.5" width="185" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="2IH-To-dTi"/>
@@ -825,7 +825,7 @@
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-0c-VKh">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-0c-VKh" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="23.5" width="185" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="13q-zH-heN"/>
@@ -858,7 +858,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-3f-fpx" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="335.5" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="amU-0j-WhU"/>
@@ -878,7 +878,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-l6-LVT">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-l6-LVT" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="430" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="nvg-Ad-Ipq"/>
@@ -898,7 +898,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-6i-ia9">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-6i-ia9" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="524.5" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="7bC-AO-ia9"/>
@@ -918,7 +918,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-4g-w8D">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-4g-w8D" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="619" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="x1E-uZ-jWN"/>
@@ -935,7 +935,7 @@
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-Jv-nqv">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-Jv-nqv" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
                                             <rect key="frame" x="17" y="709.5" width="380" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="QlM-7k-Cec"/>
