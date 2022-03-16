@@ -22,6 +22,8 @@ class TableViewCellOpenOpen: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        open1Input.setTextFieldLook()
+        open2Input.setTextFieldLook()
     }
     
     func setInfo(t1: String, t2: String, tr1: String, tr2: String, id1: String, id2: String) {

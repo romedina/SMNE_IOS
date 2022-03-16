@@ -15,6 +15,10 @@ protocol RegisterDelegate {
     func openTerms()
 }
 
+protocol TableControllerToCellsDelegate {
+    func setTextViews()
+}
+
 class ViewControllerRegister: UIViewController {
 
     @IBOutlet weak var tableViewRegister: UITableView!
@@ -27,6 +31,8 @@ class ViewControllerRegister: UIViewController {
     var email = ""
     var pass = ""
     
+    var controllerToCell: TableControllerToCellsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +42,11 @@ class ViewControllerRegister: UIViewController {
         privacyButton.setBackgroundColor(.white)
         privacyButton.addTarget(self, action: #selector(openTerms), for: .touchUpInside)
         registerButton.backgroundColor = UIColor.C00D9CC().withAlphaComponent(0.5)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        controllerToCell?.setTextViews()
     }
 
     @IBAction func returnButtonTapped(_ sender: Any) {
@@ -105,6 +116,7 @@ extension ViewControllerRegister: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCellRegister
         cell.delegate = self
+        controllerToCell = cell
         return cell
     }
 }

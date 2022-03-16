@@ -23,6 +23,8 @@ class TableViewCellOpen: UITableViewCell {
         // Initialization code
         openInput.keyboardType = .decimalPad
         openInput.returnKeyType = .done
+        
+        openInput.setTextFieldLook()
     }
     
     func setInfo(title: String, placeHolder: String) {

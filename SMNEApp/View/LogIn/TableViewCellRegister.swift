@@ -75,6 +75,12 @@ class TableViewCellRegister: UITableViewCell {
         confirmPasswordInput.rightView = rightButtonconfirm
         confirmPasswordInput.rightViewMode = .always
         
+        nameInput.setTextFieldLook()
+        surnameInput.setTextFieldLook()
+        emailInput.setTextFieldLook()
+        passwordInput.setTextFieldLook()
+        confirmPasswordInput.setTextFieldLook()
+        
     }
     
     @objc func passChangeView() {
@@ -140,5 +146,15 @@ class TableViewCellRegister: UITableViewCell {
     @IBAction func acceptTermsTapped(_ sender: Any) {
         checkImageView.isHidden.toggle()
         delegate?.activeRegisterButton(isActive: !checkImageView.isHidden)
+    }
+}
+
+extension TableViewCellRegister: TableControllerToCellsDelegate {
+    func setTextViews() {
+        nameInput.setup()
+        surnameInput.setup()
+        emailInput.setup()
+        passwordInput.setup()
+        confirmPasswordInput.setup()
     }
 }

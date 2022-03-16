@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxa-Ve-VdF">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -26,17 +26,17 @@
             <objects>
                 <viewController storyboardIdentifier="init" id="bxa-Ve-VdF" customClass="ViewControllerNPMain" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EUQ-a9-3QJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-Zi-ddk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="128.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJz-b9-Wi8" userLabel="stepperView">
-                                        <rect key="frame" x="0.0" y="73.5" width="414" height="55"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="375" height="55"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Ib-zs7">
-                                                <rect key="frame" x="18" y="0.0" width="378" height="55"/>
+                                                <rect key="frame" x="18" y="0.0" width="339" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5z4-uN-Bei">
                                                         <rect key="frame" x="0.0" y="12" width="31" height="31"/>
@@ -52,7 +52,7 @@
                                                         </state>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RId-6d-uCI">
-                                                        <rect key="frame" x="44" y="26" width="30" height="3"/>
+                                                        <rect key="frame" x="39" y="26" width="30" height="3"/>
                                                         <color key="backgroundColor" red="0.6705882353" green="0.86274509799999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="BZT-X1-df8"/>
@@ -60,7 +60,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-yg-ng0">
-                                                        <rect key="frame" x="87" y="12" width="31" height="31"/>
+                                                        <rect key="frame" x="77" y="12" width="31" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="31" id="nVw-Or-Ebm"/>
@@ -73,7 +73,7 @@
                                                         </state>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dac-Qe-2KE">
-                                                        <rect key="frame" x="130.5" y="26" width="30" height="3"/>
+                                                        <rect key="frame" x="116" y="26" width="30" height="3"/>
                                                         <color key="backgroundColor" red="0.6705882353" green="0.86274509799999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="IBE-wh-dfF"/>
@@ -81,7 +81,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-zO-M5b">
-                                                        <rect key="frame" x="173.5" y="12" width="31" height="31"/>
+                                                        <rect key="frame" x="154" y="12" width="31" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="31" id="HgG-Fl-Zna"/>
@@ -94,7 +94,7 @@
                                                         </state>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-2l-Zhm">
-                                                        <rect key="frame" x="217.5" y="26" width="30" height="3"/>
+                                                        <rect key="frame" x="193" y="26" width="30" height="3"/>
                                                         <color key="backgroundColor" red="0.6705882353" green="0.86274509799999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Apc-wQ-Pha"/>
@@ -102,7 +102,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnn-IS-iPR">
-                                                        <rect key="frame" x="260.5" y="12" width="31" height="31"/>
+                                                        <rect key="frame" x="231" y="12" width="31" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="31" id="O6f-ES-76z"/>
@@ -115,7 +115,7 @@
                                                         </state>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBE-zn-kqg">
-                                                        <rect key="frame" x="304" y="26" width="30" height="3"/>
+                                                        <rect key="frame" x="270" y="26" width="30" height="3"/>
                                                         <color key="backgroundColor" red="0.6705882353" green="0.86274509799999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="2ei-cn-26M"/>
@@ -123,7 +123,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8b-wo-puC">
-                                                        <rect key="frame" x="347" y="12" width="31" height="31"/>
+                                                        <rect key="frame" x="308" y="12" width="31" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="31" id="TYs-dT-Dqk"/>
@@ -148,16 +148,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XT-h3-259" userLabel="titleView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear un nuevo paciente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-z4-kB9">
-                                                <rect key="frame" x="48" y="10" width="318" height="27.5"/>
+                                                <rect key="frame" x="48" y="10" width="279" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-TV-u7Y">
-                                                <rect key="frame" x="48" y="42.5" width="318" height="22"/>
+                                                <rect key="frame" x="48" y="42.5" width="279" height="22"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -198,16 +198,16 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igF-lb-6ex">
-                                <rect key="frame" x="0.0" y="172.5" width="414" height="619.5"/>
+                                <rect key="frame" x="0.0" y="128.5" width="375" height="468.5"/>
                                 <connections>
                                     <segue destination="ntm-TT-dQm" kind="embed" identifier="PVCMainSegue" id="p2V-gi-soy"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="H6V-6J-Ull">
-                                <rect key="frame" x="18" y="802" width="378" height="50"/>
+                                <rect key="frame" x="18" y="607" width="339" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPG-KQ-Eec" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Lme-3H-Fge"/>
@@ -221,7 +221,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56w-cC-bSg" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="189" y="0.0" width="0.0" height="50"/>
+                                        <rect key="frame" x="169.5" y="0.0" width="0.0" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ui1-CF-IQy"/>
@@ -232,7 +232,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2N-bP-z6N" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="196.5" y="0.0" width="181.5" height="50"/>
+                                        <rect key="frame" x="177" y="0.0" width="162" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                         <state key="normal" title="Siguiente">
@@ -245,7 +245,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-tm-eYJ">
-                                <rect key="frame" x="0.0" y="792" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="4"/>
                                 <color key="backgroundColor" red="0.86274509803921573" green="0.97254901960784312" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="TAn-1E-BtC"/>
@@ -299,22 +299,22 @@
             <objects>
                 <tableViewController storyboardIdentifier="S1" id="arn-fo-ikD" customClass="TableViewControllerNewPatient_S1" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ckK-9d-g06">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio,radio" rowHeight="150" id="UoN-9o-oss" customClass="TableViewCellRadioRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoN-9o-oss" id="cOU-F3-ITM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nD7-2O-4gZ">
-                                            <rect key="frame" x="17" y="20" width="380" height="130"/>
+                                            <rect key="frame" x="17" y="20" width="341" height="130"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="bB7-Ft-ufI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="165.5" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za7-aq-xTI">
@@ -327,7 +327,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjI-MM-WBt">
-                                                            <rect key="frame" x="0.0" y="29" width="185" height="101"/>
+                                                            <rect key="frame" x="0.0" y="29" width="165.5" height="101"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-My-uya">
                                                                     <rect key="frame" x="17" y="17" width="18" height="18"/>
@@ -393,7 +393,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" id="Bzc-Cd-SW3">
-                                                    <rect key="frame" x="195" y="0.0" width="185" height="130"/>
+                                                    <rect key="frame" x="175.5" y="0.0" width="165.5" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yis-Uq-MHE">
@@ -406,7 +406,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogr-68-RPB">
-                                                            <rect key="frame" x="0.0" y="29" width="185" height="101"/>
+                                                            <rect key="frame" x="0.0" y="29" width="165.5" height="101"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZt-LR-dz6">
                                                                     <rect key="frame" x="17" y="17" width="18" height="18"/>
@@ -496,10 +496,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoPatient" id="u6I-8Y-LMF" customClass="TableViewCellInfoPatient" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="178" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6I-8Y-LMF" id="pG3-Qk-0aR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paciente" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-4d-8bi">
@@ -524,13 +524,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVQ-S2-JOj">
-                                            <rect key="frame" x="285.5" y="35" width="35" height="16.5"/>
+                                            <rect key="frame" x="266.5" y="35" width="35" height="16.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/01/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-kZ-4wD">
-                                            <rect key="frame" x="285.5" y="51.5" width="105.5" height="27.5"/>
+                                            <rect key="frame" x="266.5" y="51.5" width="85.5" height="27.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -543,7 +543,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56a-BM-b0v" userLabel="Separator">
-                                            <rect key="frame" x="0.0" y="103" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="103" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509803921573" green="0.97254901960784312" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="WTA-e9-oAV"/>
@@ -572,6 +572,7 @@
                                         <constraint firstItem="Qxh-kZ-4wD" firstAttribute="leading" secondItem="uVQ-S2-JOj" secondAttribute="leading" id="q0A-7h-OAt"/>
                                         <constraint firstAttribute="trailing" secondItem="Qxh-kZ-4wD" secondAttribute="trailing" constant="23" id="rEM-QD-ZOU"/>
                                         <constraint firstItem="anV-3W-RDW" firstAttribute="height" secondItem="fjZ-4d-8bi" secondAttribute="height" id="rmD-bn-lza"/>
+                                        <constraint firstItem="uVQ-S2-JOj" firstAttribute="leading" secondItem="anV-3W-RDW" secondAttribute="trailing" constant="20" id="sC7-3X-B0C"/>
                                         <constraint firstItem="uVQ-S2-JOj" firstAttribute="top" secondItem="2uj-ff-sv2" secondAttribute="top" id="yYO-kP-8La"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -582,10 +583,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="list" id="G4Z-C2-wEV" customClass="TableViewCellList" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="286" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="286" width="375" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4Z-C2-wEV" id="CPC-9T-TIq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C82-yl-giL">
@@ -595,7 +596,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FwB-RK-gYX">
-                                            <rect key="frame" x="18" y="58" width="378" height="70"/>
+                                            <rect key="frame" x="18" y="58" width="339" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="tWL-Mx-EbZ"/>
                                             </constraints>
@@ -616,14 +617,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="jDZ-se-hp2" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="434" width="414" height="114"/>
+                                <rect key="frame" x="0.0" y="434" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jDZ-se-hp2" id="VMZ-Hp-3HM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año en que se diagnosticó la diabetes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-OJ-L0V">
-                                            <rect key="frame" x="18" y="10" width="378" height="34"/>
+                                            <rect key="frame" x="18" y="10" width="339" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="S4N-D5-zYy"/>
                                             </constraints>
@@ -632,7 +633,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-gs-Gwd" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                            <rect key="frame" x="18" y="44" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="44" width="339" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Ru5-GK-6oc"/>
                                             </constraints>
@@ -659,10 +660,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="qhO-yX-BEC" customClass="TableViewCellRadioButton" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="548" width="414" height="116"/>
+                                <rect key="frame" x="0.0" y="548" width="375" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qhO-yX-BEC" id="qXc-NZ-N4C">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ascendencia racial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-la-HWG">
@@ -672,13 +673,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-00-c2c">
-                                            <rect key="frame" x="18" y="48" width="378" height="58"/>
+                                            <rect key="frame" x="18" y="48" width="339" height="58"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0En-G3-LMr">
-                                                    <rect key="frame" x="19" y="0.0" width="340" height="58"/>
+                                                    <rect key="frame" x="17" y="0.0" width="305" height="58"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RHD-VE-Qco">
-                                                            <rect key="frame" x="0.0" y="14" width="165" height="30"/>
+                                                            <rect key="frame" x="0.0" y="14" width="147.5" height="30"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJt-Hu-GGw">
                                                                     <rect key="frame" x="0.0" y="6" width="18" height="18"/>
@@ -692,7 +693,7 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czH-mV-HUF">
-                                                                    <rect key="frame" x="28" y="0.0" width="137" height="30"/>
+                                                                    <rect key="frame" x="28" y="0.0" width="119.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                                                     <state key="normal" title="No afroamericano">
                                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -704,7 +705,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" id="On7-Vc-rrO">
-                                                            <rect key="frame" x="175" y="13" width="165" height="32"/>
+                                                            <rect key="frame" x="157.5" y="13" width="147.5" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-Co-ZIM">
@@ -719,7 +720,7 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-iN-2H2">
-                                                                    <rect key="frame" x="28" y="0.0" width="137" height="32"/>
+                                                                    <rect key="frame" x="28" y="0.0" width="119.5" height="32"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                                     <state key="normal" title="Afroamericano">
                                                                         <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -760,14 +761,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="HM4-Xg-AwH">
-                                <rect key="frame" x="0.0" y="664" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="664" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HM4-Xg-AwH" id="54P-Yc-TwI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSr-Pi-zJp">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="70"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="gyJ-4H-jz1"/>
                                             </constraints>
@@ -785,26 +786,26 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="uF5-nL-fIP" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="734" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="734" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uF5-nL-fIP" id="dFE-Ys-nbX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7h0-HT-YRA">
-                                            <rect key="frame" x="18" y="21" width="378" height="82"/>
+                                            <rect key="frame" x="18" y="21" width="339" height="82"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9fw-XR-OkF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="82"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2h-3q-1il">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-7E-Uln" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="sr7-sN-rNk"/>
                                                             </constraints>
@@ -817,16 +818,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-1k-eZr">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="174.5" y="0.0" width="164.5" height="82"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-cJ-6He">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-ST-n32" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="qsZ-rh-kxo"/>
                                                             </constraints>
@@ -841,7 +842,7 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qq-TZ-9nu" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="133" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="133" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="keR-08-lf3"/>
@@ -882,15 +883,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="S2" id="NTT-bX-OYZ" customClass="TableViewControllerNewPatient_S2" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mls-ua-XQH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bool" id="BA1-Bm-8Kc" customClass="TableViewCellBool" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BA1-Bm-8Kc" id="KJA-eY-Q1d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-fP-mfi">
@@ -900,10 +901,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LyO-1S-308">
-                                            <rect key="frame" x="18" y="47" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="47" width="339" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-Or-BZ8" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="50"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Si">
@@ -914,7 +915,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKO-7R-bju" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="50"/>
+                                                    <rect key="frame" x="174.5" y="0.0" width="164.5" height="50"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="No">
@@ -930,10 +931,10 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AUX-OC-6nE">
-                                            <rect key="frame" x="18" y="102" width="378" height="18"/>
+                                            <rect key="frame" x="18" y="102" width="339" height="18"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM0-kB-lLV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="18"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                     <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -961,14 +962,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="open" id="Kxs-7s-cRS" customClass="TableViewCellOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="158" width="414" height="124"/>
+                                <rect key="frame" x="0.0" y="158" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kxs-7s-cRS" id="JcN-Kn-CuY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año en que se diagnosticó la diabetes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTd-dR-qsJ">
-                                            <rect key="frame" x="18" y="10" width="378" height="34"/>
+                                            <rect key="frame" x="18" y="10" width="339" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="9g3-s9-HPC"/>
                                             </constraints>
@@ -977,7 +978,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWr-hq-lei" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                            <rect key="frame" x="18" y="54" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="54" width="339" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="U6u-rI-yeu"/>
                                             </constraints>
@@ -1001,10 +1002,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imc" id="WZm-Ta-NBK" customClass="TableViewCellIMC" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="282" width="414" height="351.5"/>
+                                <rect key="frame" x="0.0" y="282" width="375" height="351.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZm-Ta-NBK" id="QFq-b9-Mok">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="351.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="351.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Índice de masa corporal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-pY-ec5">
@@ -1014,19 +1015,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-Pl-wmV">
-                                            <rect key="frame" x="18" y="41.5" width="378" height="112"/>
+                                            <rect key="frame" x="18" y="41.5" width="339" height="112"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-9I-DOP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="112"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="112"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQd-7f-kKE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="42"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="42"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-K1-Mxp" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="42" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="42" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="Vj7-cL-CL2"/>
                                                             </constraints>
@@ -1037,7 +1038,7 @@
                                                             </connections>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImQ-5j-pco">
-                                                            <rect key="frame" x="0.0" y="92" width="184" height="20"/>
+                                                            <rect key="frame" x="0.0" y="92" width="164.5" height="20"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="KpY-eo-ZWd"/>
@@ -1046,16 +1047,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xmX-Po-B1x">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="112"/>
+                                                    <rect key="frame" x="174.5" y="0.0" width="164.5" height="112"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ql-TD-rvh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="42"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="42"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poX-rZ-ggz" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="42" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="42" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="DZm-cd-wps"/>
                                                             </constraints>
@@ -1066,7 +1067,7 @@
                                                             </connections>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-v3-B8c">
-                                                            <rect key="frame" x="0.0" y="92" width="184" height="20"/>
+                                                            <rect key="frame" x="0.0" y="92" width="164.5" height="20"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="UXW-RI-p9Y"/>
@@ -1086,7 +1087,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-b2-WgT" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                            <rect key="frame" x="18" y="205.5" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="205.5" width="339" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="GhQ-iG-lWv"/>
                                             </constraints>
@@ -1097,10 +1098,10 @@
                                             </connections>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-O1-nf6">
-                                            <rect key="frame" x="18" y="285.5" width="378" height="50"/>
+                                            <rect key="frame" x="18" y="285.5" width="339" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-qd-57b">
-                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su IMC es: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-2O-G9N">
                                                             <rect key="frame" x="20" y="15" width="87" height="20"/>
@@ -1153,14 +1154,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="Ugl-Li-GjD">
-                                <rect key="frame" x="0.0" y="633.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="633.5" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugl-Li-GjD" id="gOZ-Hv-SZO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-Ff-93V">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="70"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="V6a-z5-X0f"/>
                                             </constraints>
@@ -1194,28 +1195,28 @@
             <objects>
                 <tableViewController storyboardIdentifier="S3" id="a9p-uN-4e9" customClass="TableViewControllerNewPatient_S3" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7CJ-X8-wsb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="algorithm" id="DPb-uq-CrT" customClass="TableViewCellAlgorithmSelection" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="223.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="248"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPb-uq-CrT" id="wbS-OF-dCH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="223.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syV-kN-hV5">
-                                            <rect key="frame" x="18" y="10" width="378" height="203.5"/>
+                                            <rect key="frame" x="18" y="10" width="339" height="228"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algoritmo de tratamiento de la DM2 con enfermedad renal crónica (ERC) af bgdb andga dga dg " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX1-UJ-EBq">
-                                                    <rect key="frame" x="22" y="20" width="255" height="98.5"/>
+                                                    <rect key="frame" x="22" y="20" width="216" height="123"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-Ck-9a4" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="22" y="138.5" width="158" height="45"/>
+                                                    <rect key="frame" x="22" y="163" width="158" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="158" id="URl-5w-s4z"/>
                                                         <constraint firstAttribute="height" constant="45" id="n29-M2-H15"/>
@@ -1229,7 +1230,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treatmentPage" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-Fx-7Xb">
-                                                    <rect key="frame" x="218" y="28.5" width="160" height="147"/>
+                                                    <rect key="frame" x="179" y="40.5" width="160" height="147"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="147" id="D7u-Ti-78n"/>
                                                         <constraint firstAttribute="width" constant="160" id="rhQ-F8-u7V"/>
@@ -1265,14 +1266,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tng-Yp-gSJ">
-                                <rect key="frame" x="0.0" y="251.5" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="276" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tng-Yp-gSJ" id="9jv-Jn-bi7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq9-hD-6Bt">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="70"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="Tcg-XZ-lHP"/>
                                             </constraints>
@@ -1307,19 +1308,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="S4" id="REV-Xp-brX" customClass="TableViewControllerNewPatient_S4" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R3W-uu-juR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deterioration" id="r95-10-51y" customClass="TableViewCellDeterioration" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="533.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="533.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r95-10-51y" id="yuE-zI-88R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="533.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gua-zd-OFy">
-                                            <rect key="frame" x="18" y="50" width="378" height="342.5"/>
+                                            <rect key="frame" x="18" y="50" width="339" height="342.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="hUh-3M-kYB">
                                                     <rect key="frame" x="0.0" y="0.0" width="378" height="107.5"/>
@@ -1474,29 +1475,29 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oE7-bo-c2K" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="402.5" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="402.5" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="fTq-G0-IUO"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica el deterioro de salud del paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBI-xh-foG">
-                                            <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="22"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tratamiento actual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-h8-Gah">
-                                            <rect key="frame" x="20" y="421.5" width="357" height="22"/>
+                                            <rect key="frame" x="16" y="421.5" width="326" height="22"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Guv-5t-gVm">
-                                            <rect key="frame" x="17" y="448.5" width="380" height="60"/>
+                                            <rect key="frame" x="17" y="448.5" width="341" height="60"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xJj-zE-X70">
-                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="165.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="FVh-bo-V6S"/>
                                                     </constraints>
@@ -1509,7 +1510,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yyj-Fq-5c3">
-                                                    <rect key="frame" x="195" y="0.0" width="185" height="60"/>
+                                                    <rect key="frame" x="175.5" y="0.0" width="165.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="nVH-Gp-IUq"/>
                                                     </constraints>
@@ -1524,7 +1525,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-qZ-K4S" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="518.5" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="518.5" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="2nw-hr-7hp"/>
@@ -1562,10 +1563,10 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="slider" id="bcW-Ww-LMr" customClass="TableViewCellSlider" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="561.5" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="561.5" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcW-Ww-LMr" id="mG7-Fi-R0T">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveles de HbA1c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOc-18-efK">
@@ -1575,7 +1576,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="V0O-FM-pyN" customClass="CustomSlide" customModule="SMNEApp" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="73" width="382" height="31"/>
+                                            <rect key="frame" x="16" y="73" width="343" height="31"/>
                                             <color key="minimumTrackTintColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="maximumTrackTintColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="thumbTintColor" red="0.0" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1595,20 +1596,20 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-j5-8sD">
-                                            <rect key="frame" x="380" y="103" width="16" height="19.5"/>
+                                            <rect key="frame" x="341" y="103" width="16" height="19.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="de7-Ap-6oJ" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="123" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="123" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="o2r-iq-ZOs"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sj-7S-SiN">
-                                            <rect key="frame" x="326" y="20" width="70" height="37"/>
+                                            <rect key="frame" x="287" y="20" width="70" height="37"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VnX-6C-1nr">
                                                     <rect key="frame" x="11" y="-10.5" width="48" height="58"/>
@@ -1666,10 +1667,10 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comment" id="a6y-zJ-VTn" customClass="TableViewCellComment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="689.5" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="689.5" width="375" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6y-zJ-VTn" id="oO1-gl-Di1">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-qH-Bss">
@@ -1682,7 +1683,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UIx-gf-dtu">
-                                            <rect key="frame" x="17" y="50" width="380" height="130"/>
+                                            <rect key="frame" x="17" y="50" width="341" height="130"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="130" id="eH4-d9-Y3a"/>
@@ -1706,21 +1707,21 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="radio" id="9T7-8t-nEu" customClass="TableViewCellMultiRadio" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="879.5" width="414" height="66"/>
+                                <rect key="frame" x="0.0" y="879.5" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9T7-8t-nEu" id="aai-af-A1R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-PL-gDZ" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="61" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="61" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="g7d-IB-hUU"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasa de Filtrado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-AG-xBR">
-                                            <rect key="frame" x="20" y="11" width="127" height="22"/>
+                                            <rect key="frame" x="16" y="11" width="127" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="64K-kD-xiG"/>
                                             </constraints>
@@ -1729,7 +1730,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-2H-z0H">
-                                            <rect key="frame" x="20" y="38" width="374" height="13"/>
+                                            <rect key="frame" x="16" y="38" width="343" height="13"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="qrb-Q9-fVN">
                                                     <rect key="frame" x="0.0" y="0.0" width="86" height="13"/>
@@ -1825,7 +1826,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLF-rD-Fj0">
-                                                    <rect key="frame" x="288" y="0.0" width="86" height="13"/>
+                                                    <rect key="frame" x="257" y="0.0" width="86" height="13"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iVe-1z-e3O">
                                                             <rect key="frame" x="5.5" y="-8.5" width="75" height="30"/>
@@ -1883,14 +1884,14 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="4WS-p8-0S8">
-                                <rect key="frame" x="0.0" y="945.5" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="945.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WS-p8-0S8" id="LZ1-ri-em8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-LG-L76">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="120"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="6Fd-8o-zr7"/>
                                             </constraints>
@@ -1908,26 +1909,26 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="openopen" id="9wF-S0-pA0" customClass="TableViewCellOpenOpen" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1065.5" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="1065.5" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9wF-S0-pA0" id="cf7-Bu-r5y">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-WW-zHt">
-                                            <rect key="frame" x="18" y="21" width="378" height="82"/>
+                                            <rect key="frame" x="18" y="21" width="339" height="82"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Drz-OL-2kf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="82"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-gf-YBd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-7e-gng" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="3FT-e9-OZ0"/>
                                                             </constraints>
@@ -1940,16 +1941,16 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-MC-6uV">
-                                                    <rect key="frame" x="194" y="0.0" width="184" height="82"/>
+                                                    <rect key="frame" x="174.5" y="0.0" width="164.5" height="82"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDw-ez-URg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqg-zt-h4P" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="32" width="184" height="50"/>
+                                                            <rect key="frame" x="0.0" y="32" width="164.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="7wx-Ig-sZQ"/>
                                                             </constraints>
@@ -1964,7 +1965,7 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-jS-1eX" userLabel="dividerView">
-                                            <rect key="frame" x="0.0" y="133" width="414" height="5"/>
+                                            <rect key="frame" x="0.0" y="133" width="375" height="5"/>
                                             <color key="backgroundColor" red="0.86274509799999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="5" id="PTL-IG-XFN"/>
@@ -2005,28 +2006,28 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
             <objects>
                 <tableViewController storyboardIdentifier="S5" id="D0z-aZ-VAN" customClass="TableViewControllerNewPatient_S5" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Prg-tI-MqN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="treatment" id="JEQ-Rj-eXf" customClass="TableViewCellTreatment" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="347"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="385"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEQ-Rj-eXf" id="iXu-dv-d1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="347"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="385"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se recomienda evaluar la relación albúmina creatinina en una muestra de orina al azar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-sH-jcq">
-                                            <rect key="frame" x="18" y="211" width="378" height="44"/>
+                                            <rect key="frame" x="18" y="211" width="339" height="65.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TA_E1_D1" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-6t-ejh">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="211"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="211"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDA-Ed-LoH">
-                                            <rect key="frame" x="18" y="265" width="378" height="72"/>
+                                            <rect key="frame" x="18" y="286.5" width="339" height="88.5"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="iSGLT2">
                                                     <attributes>
@@ -2109,14 +2110,14 @@ Enfermedad terminal§, Demencia moderada en adelante, Dependiente por completo e
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="space" id="tcD-At-dfV">
-                                <rect key="frame" x="0.0" y="375" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="413" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcD-At-dfV" id="c9n-zV-tzH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-Kb-wWW">
-                                            <rect key="frame" x="18" y="0.0" width="378" height="70"/>
+                                            <rect key="frame" x="18" y="0.0" width="339" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="rVo-Ts-gQi"/>
                                             </constraints>

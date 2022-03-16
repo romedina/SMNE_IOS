@@ -56,6 +56,10 @@ class TableViewCellIMC: UITableViewCell {
         levelstextInput.setTrailingView(trailingView: label2)
         
         imcOutput.text = "0.0"
+        
+        weightTextInput.setTextFieldLook()
+        heightTextInput.setTextFieldLook()
+        levelstextInput.setTextFieldLook()
     }
     
     private func calculateIMC() {

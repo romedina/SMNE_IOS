@@ -11,6 +11,12 @@ import FirebaseFirestore
 import GoogleSignIn
 
 class ViewControllerLogin: UIViewController {
+    
+    enum LoginType {
+        case apple
+        case google
+        case facebook
+    }
 
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var emailField: SMNETextField!
@@ -87,6 +93,16 @@ class ViewControllerLogin: UIViewController {
         googleInfoLabel.attributedText = mString
         
         validateTextNotEmpty()
+        
+        emailField.setTextFieldLook()
+        passwordField.setTextFieldLook()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        emailField.setup()
+        passwordField.setup()
     }
     
     @objc func labelTapped() {
@@ -155,8 +171,8 @@ class ViewControllerLogin: UIViewController {
     }
 }
 
-extension ViewControllerLogin: LoginCellDelegate {
-    func otherLogin(type: TableViewCellLogin.LoginType) {
+extension ViewControllerLogin {
+    func otherLogin(type: LoginType) {
         switch type {
         case .apple:
             UserDefaults.standard.set("apple", forKey: "provider")

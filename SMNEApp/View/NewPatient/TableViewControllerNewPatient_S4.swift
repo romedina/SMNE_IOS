@@ -34,11 +34,6 @@ class TableViewControllerNewPatient_S4: UITableViewController {
             needsReload = false
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     // MARK: - Table view data source
 

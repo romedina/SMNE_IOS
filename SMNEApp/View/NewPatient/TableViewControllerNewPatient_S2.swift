@@ -36,10 +36,6 @@ class TableViewControllerNewPatient_S2: UITableViewController, MainToS2Delegate 
     var subToCell: SubToCellDelegate?
     var subToCellHipo: SubToCellDelegate?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

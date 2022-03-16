@@ -10,14 +10,14 @@ import UIKit
 class TableViewCellEditDoctorInfo: UITableViewCell {
     
     
-    @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var fSurnameInput: UITextField!
-    @IBOutlet weak var sSurnameInput: UITextField!
-    @IBOutlet weak var emailInput: UITextField!
-    @IBOutlet weak var cedulaInput: UITextField!
-    @IBOutlet weak var espeInput: UITextField!
-    @IBOutlet weak var schoolInput: UITextField!
-    @IBOutlet weak var countryInput: UITextField!
+    @IBOutlet weak var nameInput: SMNETextField!
+    @IBOutlet weak var fSurnameInput: SMNETextField!
+    @IBOutlet weak var sSurnameInput: SMNETextField!
+    @IBOutlet weak var emailInput: SMNETextField!
+    @IBOutlet weak var cedulaInput: SMNETextField!
+    @IBOutlet weak var espeInput: SMNETextField!
+    @IBOutlet weak var schoolInput: SMNETextField!
+    @IBOutlet weak var countryInput: SMNETextField!
     @IBOutlet weak var femButton: UIButton!
     @IBOutlet weak var maleButton: UIButton!
     
@@ -26,7 +26,14 @@ class TableViewCellEditDoctorInfo: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        nameInput.setTextFieldLook()
+        fSurnameInput.setTextFieldLook()
+        sSurnameInput.setTextFieldLook()
+        emailInput.setTextFieldLook()
+        cedulaInput.setTextFieldLook()
+        espeInput.setTextFieldLook()
+        schoolInput.setTextFieldLook()
+        countryInput.setTextFieldLook()
         setTextInfo()
     }
     

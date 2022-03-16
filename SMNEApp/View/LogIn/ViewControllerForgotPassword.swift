@@ -18,6 +18,12 @@ class ViewControllerForgotPassword: UIViewController {
 
         sendButton.layer.cornerRadius = 8
         sendButton.setTitleColor(.white, for: .normal)
+        emailField.setTextFieldLook()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emailField.setup()
     }
     
     @IBAction func backTapped(_ sender: Any) {

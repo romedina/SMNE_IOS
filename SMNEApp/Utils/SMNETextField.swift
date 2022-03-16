@@ -11,16 +11,16 @@ public class SMNETextField: UITextField {
     
     public init() {
         super.init(frame: .zero)
-        setup()
+//        setup()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+//        setup()
     }
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+//        setup()
     }
     
     private var centerYConstraint: NSLayoutConstraint?
@@ -37,12 +37,12 @@ public class SMNETextField: UITextField {
     let border: CALayer = {
         let view = CALayer()
         view.borderColor = UIColor.C00D9CC().cgColor
-        view.borderWidth = 2.0
+        view.borderWidth = 1.0
         view.cornerRadius = 8
         return view
     }()
     
-    private func setup() {
+    public func setup() {
         self.addTarget(self, action: #selector(textFieldDidBegin(_:)), for: .editingDidBegin)
         self.addTarget(self, action: #selector(textFieldDidEnd(_:)), for: .editingDidEnd)
         self.borderStyle = .none
@@ -69,7 +69,7 @@ public class SMNETextField: UITextField {
         }()
         self.leftViewMode = .always
         NSLayoutConstraint.activate([
-            placeholderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 18),
+            placeholderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             
             assistLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             assistLabel.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 2),
@@ -78,6 +78,8 @@ public class SMNETextField: UITextField {
         centerYConstraint?.isActive = false
         centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         centerYConstraint?.isActive = true
+        
+        self.layer.borderWidth = 0
     }
     
     public func movePlaceHolder(isUp: Bool) {
@@ -89,7 +91,7 @@ public class SMNETextField: UITextField {
         }
         centerYConstraint?.isActive = true
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut) {
             self.layoutIfNeeded()
         }
     }
@@ -129,5 +131,26 @@ public class SMNETextField: UITextField {
     
     override public func rightViewRect(forBounds bounds: CGRect) -> CGRect {
         return CGRect(x: bounds.width - 30, y: 0, width: 20 , height: bounds.height)
+    }
+}
+
+extension UITextField {
+    public func setTextFieldLook() {
+        self.borderStyle = .none
+        self.leftView = {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+            view.backgroundColor = .clear
+            return view
+        }()
+        self.leftViewMode = .always
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.C00D9CC().cgColor
+        self.layer.cornerRadius = 8
+        self.textColor = UIColor.C052D6C()
+        
+        self.attributedPlaceholder = NSAttributedString(
+            string: self.placeholder ?? "",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.C00D9CC(), NSAttributedString.Key.font: UIFont(name: "Open Sans Regular", size: 16) ?? UIFont()]
+        )
     }
 }

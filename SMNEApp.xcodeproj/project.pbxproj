@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987605FB26983FDD009303E8 /* SingletonForDelegate.swift */; };
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
+		9B4FB41F27D8672E003E14A4 /* NewForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */; };
 		9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */; };
 		9B6445A427C707BD002E4A04 /* SMNEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6445A327C707BD002E4A04 /* SMNEButton.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
@@ -96,7 +97,6 @@
 		B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */; };
 		B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */; };
 		B395716025D2090100E89EB5 /* TableViewCellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */; };
-		B395716525D2092E00E89EB5 /* TableViewCellLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */; };
 		B3B67BD625E4AE500035916B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B67BD525E4AE500035916B /* Extensions.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
@@ -140,6 +140,7 @@
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		987605FB26983FDD009303E8 /* SingletonForDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForDelegate.swift; sourceTree = "<group>"; };
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
+		9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		9B6445A327C707BD002E4A04 /* SMNEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEButton.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
@@ -226,7 +227,6 @@
 		B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
 		B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
 		B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRegister.swift; sourceTree = "<group>"; };
-		B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLogin.swift; sourceTree = "<group>"; };
 		B3B67BD525E4AE500035916B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -314,6 +314,14 @@
 				989811A22617B0F600CEED13 /* PopCommentView.swift */,
 			);
 			path = PopComment;
+			sourceTree = "<group>";
+		};
+		9B4FB41D27D866DE003E14A4 /* NewLogin */ = {
+			isa = PBXGroup;
+			children = (
+				9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */,
+			);
+			path = NewLogin;
 			sourceTree = "<group>";
 		};
 		9B645FF9262573AD00DED7F5 /* Floating menu */ = {
@@ -446,6 +454,7 @@
 		B31C97B725BF46A8006DDCD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B4FB41D27D866DE003E14A4 /* NewLogin */,
 				9898119B2617AF8D00CEED13 /* PopComment */,
 				9B8071EC25F3385000D23519 /* Animations */,
 				B395714C25D1DCCB00E89EB5 /* LogIn */,
@@ -572,7 +581,6 @@
 				B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */,
 				B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */,
 				B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */,
-				B395716425D2092E00E89EB5 /* TableViewCellLogin.swift */,
 				9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */,
 			);
 			path = LogIn;
@@ -1001,6 +1009,7 @@
 				9BD3417B27C495E700F9553B /* SMNETextField.swift in Sources */,
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */,
+				9B4FB41F27D8672E003E14A4 /* NewForgotPasswordViewController.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
 				989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */,
@@ -1025,7 +1034,6 @@
 				B3DA1A7425CB4F5C004C89AC /* TableViewCellIMC.swift in Sources */,
 				9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */,
 				B3B67BD625E4AE500035916B /* Extensions.swift in Sources */,
-				B395716525D2092E00E89EB5 /* TableViewCellLogin.swift in Sources */,
 				9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */,
 				9BCD130126047EA900B0DBF5 /* TableViewCellRevition.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
@@ -1208,15 +1216,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 499H3YDN7T;
+				DEVELOPMENT_TEAM = LBY2866A5Z;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.Ard.SMNEApp-1";
+				MARKETING_VERSION = 1.2.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.Ard.SMNEApp-M";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1231,15 +1239,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 499H3YDN7T;
+				DEVELOPMENT_TEAM = LBY2866A5Z;
 				INFOPLIST_FILE = SMNEApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.Ard.SMNEApp-1";
+				MARKETING_VERSION = 1.2.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.Ard.SMNEApp-M";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
