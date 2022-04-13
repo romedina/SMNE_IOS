@@ -26,7 +26,10 @@ class ViewControllerStart: UIViewController {
         imageView.layer.cornerRadius = 20
         tableViewOptions.delegate = self
         tableViewOptions.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let user = UserDefaults.standard
         if let info = user.string(forKey: "lastName") {
             drLabel.text = "Hola Dr. \(info.capitalized)"
@@ -34,6 +37,7 @@ class ViewControllerStart: UIViewController {
             drLabel.text = "Hola Dr."
         }
     }
+    
     @IBAction func buttonTapped(_ sender: Any) {
 //        let firebase = FirebaseViewModel()
 //        firebase.setNewComment(comment: "Prueba de nuevos comentarios.", patientId: "4aJT12O1Nl2MzKuRZOC5")

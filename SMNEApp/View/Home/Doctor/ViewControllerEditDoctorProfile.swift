@@ -34,7 +34,7 @@ class ViewControllerEditDoctorProfile: UIViewController {
         
         
         let newName = user.string(forKey: "newName")
-        let newLast = "\(user.string(forKey: "newfSur")!) \(user.string(forKey: "newsSur")!)"
+        let newLast = "\(user.string(forKey: "newfSur") ?? "") \(user.string(forKey: "newsSur") ?? "")"
         let newGender = user.string(forKey: "newgender")
         let newemail = user.string(forKey: "newemail")
         let newCedula = user.string(forKey: "newCedula")

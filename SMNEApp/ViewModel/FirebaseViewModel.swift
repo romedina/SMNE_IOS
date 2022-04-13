@@ -222,7 +222,7 @@ class FirebaseViewModel {
                         for ob in observationsFromDB {
                             observations.append(ObservationSchema(createdAt: ob["createdAt"] as? Timestamp ?? Timestamp(), content: ob["content"] as? String ?? ""))
                         }
-                        let rev = EvaluationSchema(age: i["age"] as! Int,
+                        let rev = EvaluationSchema(age: i["age"] as? Int ?? 0,
                                                    cardiovascularComplications: i["cardiovascularComplications"] as? Bool ?? false,
                                                    chronicKidneyDisease: i["chronicKidneyDisease"] as? Bool ?? false,
                                                    consultationType: ConsultationEnum(rawValue: i["consultationType"] as?  String ?? "public") ?? .publica,
@@ -234,9 +234,9 @@ class FirebaseViewModel {
                                                    estimatedGlomerularFiltrationRate: FiltrationEnum(rawValue: i["estimatedGlomerularFiltrationRate"] as? String ?? "NA") ?? .na,
                                                    fastingGlucose: i["fastingGlucose"] as? Double ?? 0.0,
                                                    gender: GenderEnum(rawValue: i["gender"] as? String ?? "male") ?? .mas,
-                                                   glycosylatedHemoglobin: i["glycosylatedHemoglobin"] as? Float ?? 0.0,
+                                                   glycosylatedHemoglobin: Float(i["glycosylatedHemoglobin"] as? Double ?? 0.0),
                                                    height: i["height"] as? Double ?? 0,
-                                                   hypoglycemia: i["hypoglycemia"] as? Bool ?? false,
+                                                   hypoglycemia: hasHypoRisk(creatinineLevels: Float(i["creatinineLevels"] as? Double ?? 0.0), age: i["age"] as? Int ?? 0, gender: GenderEnum(rawValue: i["gender"] as? String ?? "male") ?? .mas, isAfro: RacialEnum(rawValue: i["racialAncestry"] as? String ?? "notAfroAmerican") ?? .No),
                                                    imc: i["imc"] as? Double ?? 0.0,
                                                    racialAncestry: RacialEnum(rawValue: i["racialAncestry"] as? String ?? "notAfroAmerican") ?? .No,
                                                    treatment: TreatmentEnum(rawValue: i["treatment"] as? String ?? "") ?? .A,
@@ -349,4 +349,38 @@ class FirebaseViewModel {
             }
         }
     }
+}
+
+fileprivate func hasHypoRisk(creatinineLevels: Float, age: Int, gender: GenderEnum, isAfro: RacialEnum) -> Bool {
+    
+    struct Constants {
+        let A: Float
+        let B: Float
+        let C: Float
+    }
+    
+    let constants: Constants = {
+        if gender == .fem && creatinineLevels <= 0.7 {
+            return Constants(A: 144, B: 0.7, C: -0.329)
+        }
+        
+        if gender == .fem && creatinineLevels > 0.7 {
+            return Constants(A: 144, B: 0.7, C: -1.209)
+        }
+        
+        if gender == .mas && creatinineLevels <= 0.9 {
+            return Constants(A: 141, B: 0.9, C: -0.411)
+        }
+        
+        if gender == .mas && creatinineLevels > 0.9 {
+            return Constants(A: 141, B: 0.9, C: -1.209)
+        }
+        
+        return Constants(A: 0, B: 0, C: 0)
+    }()
+    
+    var result = constants.A * pow((creatinineLevels / constants.B), constants.C) * (pow(0.993, Float(age)))
+    
+    if isAfro == .Afroamericano { result *= 1.159 }
+    if (result < 60) || age > 64 { return true } else { return false }
 }

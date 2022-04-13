@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>241591734402-t3onpl2u3ac21mj35jnvn273dva7203g.apps.googleusercontent.com</string>
+	<string>241591734402-lsncipqreq1k28cmt889r1ug33e2rk9a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.241591734402-t3onpl2u3ac21mj35jnvn273dva7203g</string>
+	<string>com.googleusercontent.apps.241591734402-lsncipqreq1k28cmt889r1ug33e2rk9a</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>241591734402-gg9diabecpefupli6i86umr1kfgletmr.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB1KjlVIAFsiaiKaE0xBXCscWkius2FDXY</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Ard.SMNEApp</string>
+	<string>com.mx.Ard.SMNEApp</string>
 	<key>PROJECT_ID</key>
 	<string>smne-development</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:241591734402:ios:f4ec1f4599b50f7317a49b</string>
+	<string>1:241591734402:ios:0ce088d4f7872d5717a49b</string>
 </dict>
 </plist>

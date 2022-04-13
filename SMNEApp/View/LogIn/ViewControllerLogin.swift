@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
+import AuthenticationServices
+import CryptoKit
 
 class ViewControllerLogin: UIViewController {
     
@@ -26,6 +28,8 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var appleLogin: SMNEButton!
     @IBOutlet weak var gmailLogin: SMNEButton!
     @IBOutlet weak var googleInfoLabel: UILabel!
+    
+    var currentNonce: String?
     
     let rightButton = UIButton(type: .custom)
     
@@ -169,6 +173,79 @@ class ViewControllerLogin: UIViewController {
     @IBAction func faceLoginTapped(_ sender: Any) {
         otherLogin(type: .facebook)
     }
+    
+    // Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce
+    private func randomNonceString(length: Int = 32) -> String {
+      precondition(length > 0)
+      let charset: [Character] =
+        Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+      var result = ""
+      var remainingLength = length
+
+      while remainingLength > 0 {
+        let randoms: [UInt8] = (0 ..< 16).map { _ in
+          var random: UInt8 = 0
+          let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+          if errorCode != errSecSuccess {
+            fatalError(
+              "Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)"
+            )
+          }
+          return random
+        }
+
+        randoms.forEach { random in
+          if remainingLength == 0 {
+            return
+          }
+
+          if random < charset.count {
+            result.append(charset[Int(random)])
+            remainingLength -= 1
+          }
+        }
+      }
+
+      return result
+    }
+    
+    @available(iOS 13, *)
+    private func sha256(_ input: String) -> String {
+      let inputData = Data(input.utf8)
+      let hashedData = SHA256.hash(data: inputData)
+      let hashString = hashedData.compactMap {
+        String(format: "%02x", $0)
+      }.joined()
+
+      return hashString
+    }
+}
+
+@available(iOS 13.0, *)
+extension ViewControllerLogin: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        guard let nonce = currentNonce else { return }
+        guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
+        guard let appleIDToken = appleIDCredential.identityToken else { return }
+        guard let appleIDTokenString = String(data: appleIDToken, encoding: .utf8) else { return }
+        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: appleIDTokenString, rawNonce: nonce)
+        let nextVC = ViewControllerPillAnimation(nibName: "ViewControllerPillAnimation", bundle: nil)
+        nextVC.setAnim(type: .loading)
+        let delegate: EndPillAnimationProtocol = nextVC
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true) {
+            self.loginAndSaveToFirebase(credential: credential, delegate: delegate)
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
 }
 
 extension ViewControllerLogin {
@@ -176,6 +253,18 @@ extension ViewControllerLogin {
         switch type {
         case .apple:
             UserDefaults.standard.set("apple", forKey: "provider")
+            firebaseLogOut()
+            if #available(iOS 13.0, *) {
+                currentNonce = randomNonceString()
+                let appleIDProvider = ASAuthorizationAppleIDProvider()
+                let request = appleIDProvider.createRequest()
+                request.requestedScopes = [.email, .fullName]
+                request.nonce = sha256(currentNonce!)
+                let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+                authorizationController.delegate = self
+                authorizationController.presentationContextProvider = self
+                authorizationController.performRequests()
+            }
             break
         case .google:
             UserDefaults.standard.set("google", forKey: "provider")
@@ -255,11 +344,13 @@ extension ViewControllerLogin {
                         let complete = result.user.displayName?.split(separator: " ")
                         var name = ""
                         var lastName = ""
-                        for i in complete! {
-                            if i == complete?.first {
-                                name = String(i)
-                            } else {
-                                lastName.append("\(String(i)) ")
+                        if let completeName = complete {
+                            for i in completeName {
+                                if i == completeName.first {
+                                    name = String(i)
+                                } else {
+                                    lastName.append("\(String(i)) ")
+                                }
                             }
                         }
                         var info: [String: Any] = [:]
