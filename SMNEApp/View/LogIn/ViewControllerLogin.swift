@@ -21,13 +21,31 @@ class ViewControllerLogin: UIViewController {
     }
 
     @IBOutlet weak var returnButton: UIButton!
-    @IBOutlet weak var emailField: SMNETextField!
-    @IBOutlet weak var passwordField: SMNETextField!
     
     @IBOutlet weak var loginButton: SMNEButton!
     @IBOutlet weak var appleLogin: SMNEButton!
     @IBOutlet weak var gmailLogin: SMNEButton!
     @IBOutlet weak var googleInfoLabel: UILabel!
+    
+    @IBOutlet weak var textFieldsParentView: UIView!
+    
+    let emailField: GenericTextField = {
+        let view = GenericTextField()
+        view.keyboardType = .emailAddress
+        view.textContentType = .emailAddress
+        view.autocorrectionType = .no
+        view.autocapitalizationType = .none
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let secretField: GenericTextField = {
+        let view = GenericTextField()
+        view.isSecureTextEntry = true
+        view.rightViewMode = .always
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     var currentNonce: String?
     
@@ -45,15 +63,6 @@ class ViewControllerLogin: UIViewController {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
-        
-        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
-        rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
-        rightButton.setImage(UIImage(named: "eye"), for: .normal)
-        rightButton.imageView?.contentMode = .scaleAspectFit
-        rightButton.tintColor = .C052D6C()
-        
-        passwordField.rightView = rightButton
-        passwordField.rightViewMode = .always
         
         loginButton.layer.cornerRadius = 8
         loginButton.setTitleColor(.white, for: .normal)
@@ -98,21 +107,48 @@ class ViewControllerLogin: UIViewController {
         
         validateTextNotEmpty()
         
-        emailField.setTextFieldLook()
-        passwordField.setTextFieldLook()
-        
         if #available(iOS 13, *) {
             appleLogin.isHidden = false
         }
         
+        setTextFields()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    private func setTextFields() {
+        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
+        rightButton.addTarget(self, action: #selector(passChangeView), for: .touchUpInside)
+        rightButton.setImage(UIImage(named: "eye"), for: .normal)
+        rightButton.imageView?.contentMode = .scaleAspectFit
+        rightButton.tintColor = .C052D6C()
         
-        emailField.setup()
-        passwordField.setup()
+        let rightViewParent = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
+        rightViewParent.addSubview(rightButton)
+        
+        secretField.rightView = rightViewParent
+        
+        secretField.addTarget(self, action: #selector(secretChanged), for: .editingChanged)
+        emailField.addTarget(self, action: #selector(emailChanged), for: .editingChanged)
+        
+        emailField.setValues(placeholder: "Email", text: nil)
+        secretField.setValues(placeholder: "Contraseña", text: nil)
+        
+        textFieldsParentView.addSubview(secretField)
+        textFieldsParentView.addSubview(emailField)
+        
+        NSLayoutConstraint.activate([
+            emailField.topAnchor.constraint(equalTo: textFieldsParentView.topAnchor),
+            emailField.leadingAnchor.constraint(equalTo: textFieldsParentView.leadingAnchor),
+            emailField.trailingAnchor.constraint(equalTo: textFieldsParentView.trailingAnchor),
+            emailField.heightAnchor.constraint(equalToConstant: 50),
+            
+            secretField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 20),
+            secretField.leadingAnchor.constraint(equalTo: textFieldsParentView.leadingAnchor),
+            secretField.trailingAnchor.constraint(equalTo: textFieldsParentView.trailingAnchor),
+            secretField.bottomAnchor.constraint(equalTo: textFieldsParentView.bottomAnchor),
+            secretField.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
     @objc func labelTapped() {
@@ -126,8 +162,8 @@ class ViewControllerLogin: UIViewController {
     }
     
     @objc func passChangeView() {
-        passwordField.isSecureTextEntry.toggle()
-        if passwordField.isSecureTextEntry {
+        secretField.isSecureTextEntry.toggle()
+        if secretField.isSecureTextEntry {
             rightButton.setImage(UIImage(named: "eye"), for: .normal)
         } else {
             rightButton.setImage(#imageLiteral(resourceName: "crossEye"), for: .normal)
@@ -138,14 +174,14 @@ class ViewControllerLogin: UIViewController {
         if flags[0] && flags[1] {
             loginButton.isEnabled = true
             loginButton.backgroundColor?.withAlphaComponent(1.0)
-            infoChanged(email: emailField.text!, pass: passwordField.text!)
+            infoChanged(email: emailField.text!, pass: secretField.text!)
         } else {
             loginButton.backgroundColor?.withAlphaComponent(0.61)
             loginButton.isEnabled = false
         }
     }
     
-    @IBAction func emailChanged(_ sender: SMNETextField) {
+    @objc func emailChanged(_ sender: GenericTextField) {
         if sender.text != "" && sender.text != nil {
             flags[0] = true
         } else {
@@ -154,7 +190,7 @@ class ViewControllerLogin: UIViewController {
         validateTextNotEmpty()
     }
     
-    @IBAction func passChanged(_ sender: SMNETextField) {
+    @objc func secretChanged(_ sender: GenericTextField) {
         if sender.text != "" && sender.text != nil {
             flags[1] = true
         } else {

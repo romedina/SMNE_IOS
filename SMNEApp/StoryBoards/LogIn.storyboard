@@ -226,28 +226,6 @@
                                                 <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-Wv-rgy" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                <rect key="frame" x="28" y="173" width="319" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="wTC-GJ-5hO"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
-                                                <connections>
-                                                    <action selector="emailChanged:" destination="RrF-Sw-2vj" eventType="editingChanged" id="eLK-oH-sfW"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-hZ-bBQ" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                <rect key="frame" x="28" y="243" width="319" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="5O5-oj-NCV"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                                <connections>
-                                                    <action selector="passChanged:" destination="RrF-Sw-2vj" eventType="editingChanged" id="yip-Fc-Cv8"/>
-                                                </connections>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-ON-CFy" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
                                                 <rect key="frame" x="180" y="323" width="167" height="32"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,6 +332,13 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRh-Xt-WsP">
+                                                <rect key="frame" x="28" y="173" width="319" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="jVy-VT-QaC"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -363,32 +348,29 @@
                                             <constraint firstAttribute="bottom" secondItem="i6d-UF-34l" secondAttribute="bottom" constant="20" id="333-2K-iEv"/>
                                             <constraint firstItem="xQk-Ss-9XY" firstAttribute="centerX" secondItem="baz-oZ-Tdc" secondAttribute="centerX" id="39x-Df-pjW"/>
                                             <constraint firstItem="i6d-UF-34l" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leading" constant="20" id="3c6-hx-esw"/>
-                                            <constraint firstItem="oCL-Wv-rgy" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="62V-wL-zUB"/>
+                                            <constraint firstAttribute="trailing" secondItem="mRh-Xt-WsP" secondAttribute="trailing" constant="28" id="5tM-fZ-w2m"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="2m9-9m-2oC" secondAttribute="trailing" constant="20" id="7db-K0-2qg"/>
                                             <constraint firstItem="2m9-9m-2oC" firstAttribute="top" secondItem="cke-dX-XQy" secondAttribute="bottom" constant="10" id="9WB-Bv-DgU"/>
                                             <constraint firstItem="Mnv-rq-rAB" firstAttribute="centerY" secondItem="ETn-2A-6jb" secondAttribute="centerY" id="AA4-HD-ofh"/>
                                             <constraint firstItem="JLM-5U-vVd" firstAttribute="centerY" secondItem="ETn-2A-6jb" secondAttribute="centerY" id="Abv-uw-oZg"/>
                                             <constraint firstItem="i6d-UF-34l" firstAttribute="top" secondItem="2m9-9m-2oC" secondAttribute="bottom" constant="10" id="BqS-Vi-38X"/>
                                             <constraint firstItem="ETn-2A-6jb" firstAttribute="leading" secondItem="Mnv-rq-rAB" secondAttribute="trailing" constant="10" id="CRy-4d-vRj"/>
-                                            <constraint firstItem="mK5-hZ-bBQ" firstAttribute="top" secondItem="oCL-Wv-rgy" secondAttribute="bottom" constant="20" id="I4P-SF-fsh"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="mK5-hZ-bBQ" secondAttribute="trailing" constant="20" id="N9Q-bf-ATU"/>
                                             <constraint firstItem="ETn-2A-6jb" firstAttribute="top" secondItem="xQk-Ss-9XY" secondAttribute="bottom" constant="70" id="QIF-ZM-9Fm"/>
-                                            <constraint firstItem="mK5-hZ-bBQ" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="Quk-5j-XOd"/>
                                             <constraint firstItem="Lee-gV-Th9" firstAttribute="top" secondItem="baz-oZ-Tdc" secondAttribute="top" constant="60" id="U4x-Lk-YMG"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="BBt-A1-Dl4" secondAttribute="trailing" constant="20" id="Uii-E7-dVc"/>
                                             <constraint firstItem="bp6-2F-nRh" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="Zus-Ft-6Gz"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="bp6-2F-nRh" secondAttribute="trailing" constant="20" id="abD-g4-wh0"/>
                                             <constraint firstItem="Mnv-rq-rAB" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="40" id="bLy-Ec-uLa"/>
                                             <constraint firstAttribute="trailing" secondItem="i6d-UF-34l" secondAttribute="trailing" constant="20" id="cDW-Sy-q0I"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="oCL-Wv-rgy" secondAttribute="trailing" constant="20" id="eEk-iL-kO1"/>
+                                            <constraint firstItem="ikG-ON-CFy" firstAttribute="top" secondItem="mRh-Xt-WsP" secondAttribute="bottom" constant="30" id="ca8-vz-c71"/>
                                             <constraint firstItem="BBt-A1-Dl4" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="g6P-0I-bJs"/>
                                             <constraint firstItem="BBt-A1-Dl4" firstAttribute="top" secondItem="ikG-ON-CFy" secondAttribute="bottom" constant="20" id="gPB-8e-52Q"/>
-                                            <constraint firstItem="ikG-ON-CFy" firstAttribute="top" secondItem="mK5-hZ-bBQ" secondAttribute="bottom" constant="30" id="ihd-uG-Cdx"/>
                                             <constraint firstItem="JLM-5U-vVd" firstAttribute="leading" secondItem="ETn-2A-6jb" secondAttribute="trailing" constant="10" id="irn-lA-EJN"/>
-                                            <constraint firstItem="oCL-Wv-rgy" firstAttribute="top" secondItem="bp6-2F-nRh" secondAttribute="bottom" constant="20" id="jDY-1E-iXM"/>
-                                            <constraint firstItem="ikG-ON-CFy" firstAttribute="trailing" secondItem="mK5-hZ-bBQ" secondAttribute="trailing" id="jgy-aa-fNq"/>
+                                            <constraint firstItem="mRh-Xt-WsP" firstAttribute="top" secondItem="bp6-2F-nRh" secondAttribute="bottom" constant="20" id="jft-Fp-wzZ"/>
+                                            <constraint firstItem="ikG-ON-CFy" firstAttribute="trailing" secondItem="mRh-Xt-WsP" secondAttribute="trailing" id="jgy-aa-fNq"/>
                                             <constraint firstItem="cke-dX-XQy" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="l6C-O2-Trj"/>
                                             <constraint firstItem="cke-dX-XQy" firstAttribute="top" secondItem="ETn-2A-6jb" secondAttribute="bottom" constant="20" id="lQd-6M-Mpc"/>
+                                            <constraint firstItem="mRh-Xt-WsP" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leading" constant="28" id="lxa-Vu-aMh"/>
                                             <constraint firstItem="i6d-UF-34l" firstAttribute="centerX" secondItem="baz-oZ-Tdc" secondAttribute="centerX" id="n1s-jF-rBU"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="cke-dX-XQy" secondAttribute="trailing" constant="20" id="oLl-0q-O6z"/>
                                             <constraint firstItem="Lee-gV-Th9" firstAttribute="leading" secondItem="baz-oZ-Tdc" secondAttribute="leadingMargin" constant="20" id="xb5-mh-uUe"/>
@@ -428,18 +410,17 @@
                     <navigationItem key="navigationItem" id="D1s-vw-Pfx"/>
                     <connections>
                         <outlet property="appleLogin" destination="cke-dX-XQy" id="Uob-ES-4jg"/>
-                        <outlet property="emailField" destination="oCL-Wv-rgy" id="mBr-8D-YHq"/>
                         <outlet property="gmailLogin" destination="2m9-9m-2oC" id="6G7-gR-79b"/>
                         <outlet property="googleInfoLabel" destination="i6d-UF-34l" id="4Ca-DQ-36H"/>
                         <outlet property="loginButton" destination="BBt-A1-Dl4" id="eq2-gX-qDj"/>
-                        <outlet property="passwordField" destination="mK5-hZ-bBQ" id="Vod-VK-MsY"/>
                         <outlet property="returnButton" destination="NDt-ka-4E0" id="NTT-HO-H2S"/>
+                        <outlet property="textFieldsParentView" destination="mRh-Xt-WsP" id="cwH-dZ-v1w"/>
                         <segue destination="F8h-3Z-kua" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="odf-Oh-Enx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yh4-I2-Lty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="83"/>
+            <point key="canvasLocation" x="2045.5999999999999" y="82.3088455772114"/>
         </scene>
         <!--Main-->
         <scene sceneID="Xkd-eQ-u10">
