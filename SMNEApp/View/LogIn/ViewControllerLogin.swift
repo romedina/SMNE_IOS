@@ -100,6 +100,12 @@ class ViewControllerLogin: UIViewController {
         
         emailField.setTextFieldLook()
         passwordField.setTextFieldLook()
+        
+        if #available(iOS 13, *) {
+            appleLogin.isHidden = false
+        }
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -170,8 +176,16 @@ class ViewControllerLogin: UIViewController {
         otherLogin(type: .google)
     }
     
-    @IBAction func faceLoginTapped(_ sender: Any) {
-        otherLogin(type: .facebook)
+    @IBAction func passwordResetTapped(_ sender: Any) {
+        let view = ForgotPasswordViewController()
+        view.modalPresentationStyle = .fullScreen
+        present(view, animated: true)
+    }
+    
+    @IBAction func registerTapped(_ sender: Any) {
+        let view = RegisterViewController()
+        view.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(view, animated: true)
     }
     
     // Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce

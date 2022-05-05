@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		987605FC26983FDD009303E8 /* SingletonForDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987605FB26983FDD009303E8 /* SingletonForDelegate.swift */; };
 		989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989811A22617B0F600CEED13 /* PopCommentView.swift */; };
-		9B4FB41F27D8672E003E14A4 /* NewForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */; };
+		9B4F1999281A407000641012 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F1998281A407000641012 /* RegisterViewModel.swift */; };
+		9B4FB41F27D8672E003E14A4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FB41E27D8672E003E14A4 /* ForgotPasswordViewController.swift */; };
+		9B52DE052818E96F004B4F82 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52DE042818E96F004B4F82 /* RegisterViewController.swift */; };
 		9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */; };
 		9B6445A427C707BD002E4A04 /* SMNEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6445A327C707BD002E4A04 /* SMNEButton.swift */; };
 		9B6454302605EB1500F69027 /* TableViewCellPatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */; };
@@ -21,10 +23,10 @@
 		9B65CB1726190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */; };
 		9B66C0C825F9EA6A0004041E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B66C0C725F9EA6A0004041E /* loading.json */; };
 		9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B675901260FB04400C50151 /* TreatmentFromDB.swift */; };
+		9B6A66EA2812556800F6A7FD /* SMNEBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6A66E92812556800F6A7FD /* SMNEBundle.swift */; };
 		9B6CE74125ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */; };
 		9B6CE74F25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */; };
 		9B71EBF0265DED500049B2B8 /* ViewControllerGetDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */; };
-		9B71EBF8265DED620049B2B8 /* ViewControllerForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */; };
 		9B71EC69265E19F40049B2B8 /* ViewControllerDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC68265E19F40049B2B8 /* ViewControllerDirectory.swift */; };
 		9B71EC6E265E1A020049B2B8 /* ViewControllerPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC6D265E1A020049B2B8 /* ViewControllerPrivacy.swift */; };
 		9B71EC73265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71EC72265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift */; };
@@ -95,8 +97,6 @@
 		B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */; };
 		B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715025D1DD3000E89EB5 /* ViewControllerIntro.swift */; };
 		B395715625D1E4C000E89EB5 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */; };
-		B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */; };
-		B395716025D2090100E89EB5 /* TableViewCellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */; };
 		B3B67BD625E4AE500035916B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B67BD525E4AE500035916B /* Extensions.swift */; };
 		B3CC13D525B8B9FA00CD968E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */; };
 		B3CC13D725B8B9FA00CD968E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC13D625B8B9FA00CD968E /* SceneDelegate.swift */; };
@@ -140,7 +140,9 @@
 		6A3A2631CA26A763928E0C4B /* Pods-SMNEAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMNEAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SMNEAppTests/Pods-SMNEAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		987605FB26983FDD009303E8 /* SingletonForDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForDelegate.swift; sourceTree = "<group>"; };
 		989811A22617B0F600CEED13 /* PopCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCommentView.swift; sourceTree = "<group>"; };
-		9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9B4F1998281A407000641012 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		9B4FB41E27D8672E003E14A4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9B52DE042818E96F004B4F82 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9B5F5B6527BCA31D004905E2 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		9B6445A327C707BD002E4A04 /* SMNEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEButton.swift; sourceTree = "<group>"; };
 		9B64542F2605EB1500F69027 /* TableViewCellPatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPatientEditProfile.swift; sourceTree = "<group>"; };
@@ -153,10 +155,10 @@
 		9B65CB1626190EBA00823AD0 /* TableViewControllerEditDoctorProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEditDoctorProfile.swift; sourceTree = "<group>"; };
 		9B66C0C725F9EA6A0004041E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		9B675901260FB04400C50151 /* TreatmentFromDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentFromDB.swift; sourceTree = "<group>"; };
+		9B6A66E92812556800F6A7FD /* SMNEBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNEBundle.swift; sourceTree = "<group>"; };
 		9B6CE74025ECC77D00464AF1 /* ViewControllerPatienInfoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatienInfoEdit.swift; sourceTree = "<group>"; };
 		9B6CE74E25ECC9FB00464AF1 /* ViewControllerPatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPatientProfile.swift; sourceTree = "<group>"; };
 		9B71EBEF265DED500049B2B8 /* ViewControllerGetDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGetDocument.swift; sourceTree = "<group>"; };
-		9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForgotPassword.swift; sourceTree = "<group>"; };
 		9B71EC68265E19F40049B2B8 /* ViewControllerDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDirectory.swift; sourceTree = "<group>"; };
 		9B71EC6D265E1A020049B2B8 /* ViewControllerPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPrivacy.swift; sourceTree = "<group>"; };
 		9B71EC72265E1F9C0049B2B8 /* ViewControllerPDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPDFViewer.swift; sourceTree = "<group>"; };
@@ -226,8 +228,6 @@
 		B371AE9525E61D26001377BA /* TableViewCellEditDoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellEditDoctorInfo.swift; sourceTree = "<group>"; };
 		B395715025D1DD3000E89EB5 /* ViewControllerIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIntro.swift; sourceTree = "<group>"; };
 		B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
-		B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
-		B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRegister.swift; sourceTree = "<group>"; };
 		B3B67BD525E4AE500035916B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B3CC13D125B8B9FA00CD968E /* SMNEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMNEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC13D425B8B9FA00CD968E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -317,10 +317,19 @@
 			path = PopComment;
 			sourceTree = "<group>";
 		};
+		9B4F1997281A405A00641012 /* NewLogin */ = {
+			isa = PBXGroup;
+			children = (
+				9B4F1998281A407000641012 /* RegisterViewModel.swift */,
+			);
+			path = NewLogin;
+			sourceTree = "<group>";
+		};
 		9B4FB41D27D866DE003E14A4 /* NewLogin */ = {
 			isa = PBXGroup;
 			children = (
-				9B4FB41E27D8672E003E14A4 /* NewForgotPasswordViewController.swift */,
+				9B4FB41E27D8672E003E14A4 /* ForgotPasswordViewController.swift */,
+				9B52DE042818E96F004B4F82 /* RegisterViewController.swift */,
 			);
 			path = NewLogin;
 			sourceTree = "<group>";
@@ -420,6 +429,7 @@
 			children = (
 				9BD3417A27C495E700F9553B /* SMNETextField.swift */,
 				9B6445A327C707BD002E4A04 /* SMNEButton.swift */,
+				9B6A66E92812556800F6A7FD /* SMNEBundle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -502,6 +512,7 @@
 		B31C97B825BF46AE006DDCD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9B4F1997281A405A00641012 /* NewLogin */,
 				B356BFF525CE4D810025F62A /* ViewModelSteps.swift */,
 				B3E9C34225E1FEDF0072F92A /* ViewModelStep5.swift */,
 				9BCDA6C525EDF1E600AA423C /* FirebaseViewModel.swift */,
@@ -611,9 +622,6 @@
 			children = (
 				B395715025D1DD3000E89EB5 /* ViewControllerIntro.swift */,
 				B395715525D1E4C000E89EB5 /* ViewControllerLogin.swift */,
-				B395715A25D1E4D000E89EB5 /* ViewControllerRegister.swift */,
-				B395715F25D2090100E89EB5 /* TableViewCellRegister.swift */,
-				9B71EBF7265DED620049B2B8 /* ViewControllerForgotPassword.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -1017,15 +1025,14 @@
 				B317F14725E0BDE600DC5CA8 /* TableViewCellMultiRadio.swift in Sources */,
 				9BCDA6C125EDEAF700AA423C /* SchemaEnum.swift in Sources */,
 				B356BFE025CDD7CD0025F62A /* ViewControllerPatientList.swift in Sources */,
-				9B71EBF8265DED620049B2B8 /* ViewControllerForgotPassword.swift in Sources */,
 				9B675902260FB04400C50151 /* TreatmentFromDB.swift in Sources */,
 				B3DA1A6F25CB4F24004C89AC /* TableViewCellRadioButton.swift in Sources */,
+				9B4F1999281A407000641012 /* RegisterViewModel.swift in Sources */,
 				B371AE9125E61AA1001377BA /* ViewControllerEditDoctorProfile.swift in Sources */,
 				9BCDA6C625EDF1E600AA423C /* FirebaseViewModel.swift in Sources */,
 				B30CDB0425C20F3500B7CECF /* TableViewCellSlider.swift in Sources */,
+				9B6A66EA2812556800F6A7FD /* SMNEBundle.swift in Sources */,
 				B356BFCA25CDCD620025F62A /* ViewControllerTabBar.swift in Sources */,
-				B395715B25D1E4D000E89EB5 /* ViewControllerRegister.swift in Sources */,
-				B395716025D2090100E89EB5 /* TableViewCellRegister.swift in Sources */,
 				B30CDB2825C24CF000B7CECF /* TableViewCellTreatment.swift in Sources */,
 				9BCDA6BC25EDEAA600AA423C /* ObservationSchema.swift in Sources */,
 				B3494A8125C4839900ACC4DD /* ViewControllerNPPageView.swift in Sources */,
@@ -1043,7 +1050,7 @@
 				9BD3417B27C495E700F9553B /* SMNETextField.swift in Sources */,
 				B371AE9625E61D26001377BA /* TableViewCellEditDoctorInfo.swift in Sources */,
 				9B645C022609774400EA401B /* ViewControllerNreRevition.swift in Sources */,
-				9B4FB41F27D8672E003E14A4 /* NewForgotPasswordViewController.swift in Sources */,
+				9B4FB41F27D8672E003E14A4 /* ForgotPasswordViewController.swift in Sources */,
 				B395715125D1DD3000E89EB5 /* ViewControllerIntro.swift in Sources */,
 				B30CDAEF25C1FA5500B7CECF /* TableViewControllerNewPatient_S3.swift in Sources */,
 				989811A32617B0F600CEED13 /* PopCommentView.swift in Sources */,
@@ -1070,6 +1077,7 @@
 				B3B67BD625E4AE500035916B /* Extensions.swift in Sources */,
 				9B5F5B6627BCA31D004905E2 /* TermsConditionsViewController.swift in Sources */,
 				9BCD130126047EA900B0DBF5 /* TableViewCellRevition.swift in Sources */,
+				9B52DE052818E96F004B4F82 /* RegisterViewController.swift in Sources */,
 				B34C453825C0AFB000EBE1BC /* TableViewControllerNewPatient_S1.swift in Sources */,
 				B30CDB0625C20F5000B7CECF /* TableViewCellComment.swift in Sources */,
 			);

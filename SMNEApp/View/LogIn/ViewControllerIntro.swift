@@ -68,4 +68,10 @@ class ViewControllerIntro: UIViewController {
             lastPageButton.isHidden = false
         }
     }
+    
+    @IBAction func registerTapped(_ sender: Any) {
+        let view = RegisterViewController()
+        view.modalPresentationStyle = .fullScreen
+        present(view, animated: true)
+    }
 }

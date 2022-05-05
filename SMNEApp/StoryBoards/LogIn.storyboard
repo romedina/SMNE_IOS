@@ -72,7 +72,7 @@
                                                     <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="RrF-Sw-2vj" kind="presentation" modalPresentationStyle="fullScreen" id="TzX-97-oFt"/>
+                                                    <segue destination="XHb-xC-n0d" kind="presentation" modalPresentationStyle="fullScreen" id="kxo-6r-oow"/>
                                                 </connections>
                                             </button>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OTM-OI-1Xm">
@@ -109,7 +109,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Jzd-RK-YiZ" kind="presentation" modalPresentationStyle="fullScreen" id="Lx7-T9-nkj"/>
+                                                    <action selector="registerTapped:" destination="YVW-pU-hGl" eventType="touchUpInside" id="wlj-AJ-LaH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -170,251 +170,21 @@
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
         </scene>
-        <!--View Controller Register-->
-        <scene sceneID="O35-mk-Pu4">
+        <!--Navigation Controller-->
+        <scene sceneID="VOf-xZ-j2N">
             <objects>
-                <viewController id="Jzd-RK-YiZ" customClass="ViewControllerRegister" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="omi-tz-elL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDg-lE-jZb">
-                                <rect key="frame" x="18" y="30" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="RnV-tD-VUZ"/>
-                                    <constraint firstAttribute="height" constant="29" id="kIA-0t-xRp"/>
-                                </constraints>
-                                <state key="normal" image="arrowL"/>
-                                <connections>
-                                    <action selector="returnButtonTapped:" destination="Jzd-RK-YiZ" eventType="touchUpInside" id="Icn-gm-cS1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuenta nueva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tym-8H-bw3">
-                                <rect key="frame" x="135" y="34.5" width="105.5" height="20"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-oW-qNv">
-                                <rect key="frame" x="30" y="577" width="315" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6wO-fc-mtO" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
-                                        <state key="normal" title="Aviso de privacidad">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6b-TQ-XzS" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="162.5" y="0.0" width="152.5" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                        <state key="normal" title="Registrar">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerButtonTapped:" destination="Jzd-RK-YiZ" eventType="touchUpInside" id="t2K-gf-6gj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZRv-6n-4cy"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qDH-KR-AKd"/>
-                                </constraints>
-                            </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-G3-nID">
-                                <rect key="frame" x="0.0" y="79" width="375" height="478"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eaK-4h-Af4" customClass="TableViewCellRegister" customModule="SMNEApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="649"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaK-4h-Af4" id="zdm-v0-EWW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="649"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para crear una cuenta debemos saber algunos datos sobre ti." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUZ-3C-MKn">
-                                                    <rect key="frame" x="30" y="21" width="315" height="87.5"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
-                                                    <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos personales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLx-qF-kkA">
-                                                    <rect key="frame" x="26" y="167" width="125" height="19"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                                    <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paN-3z-Wl9" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="196" width="323" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="wCR-ju-pdx"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="nameChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="O0Q-XF-ahd"/>
-                                                    </connections>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-9O-IJt" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="266" width="323" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="XLO-JN-ywD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="surnameChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="Wto-lo-Y7D"/>
-                                                    </connections>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5g-ia-3LC">
-                                                    <rect key="frame" x="26" y="346" width="118" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="98w-DH-GaX"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                                    <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-ZX-f5e" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="378" width="323" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="bqf-j4-Eq5"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
-                                                    <connections>
-                                                        <action selector="emailChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="SwN-ft-kA5"/>
-                                                        <action selector="emailChanged:" destination="eaK-4h-Af4" eventType="editingDidEnd" id="YeI-0g-kzu"/>
-                                                    </connections>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Go-jG7" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="448" width="323" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="bcg-ho-kPL"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <action selector="passChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="izG-Ae-7wT"/>
-                                                    </connections>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-10-2gS" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="518" width="323" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="cJD-aT-iVg"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <action selector="confPassChanged:" destination="eaK-4h-Af4" eventType="editingChanged" id="Sc0-Mo-3YN"/>
-                                                    </connections>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Una vez creada tu cuenta, puedes completar tu información dentro de tu perfil." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXP-XR-DfS">
-                                                    <rect key="frame" x="26" y="118.5" width="323" height="38.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="38.5" id="6KZ-ck-TWA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                    <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-4Q-LbZ">
-                                                    <rect key="frame" x="66" y="588" width="208" height="30"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
-                                                    <state key="normal" title="Acepto términos y condiciones">
-                                                        <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="termsTapped:" destination="eaK-4h-Af4" eventType="touchUpInside" id="LYF-bK-dqo"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoQ-G5-9b0">
-                                                    <rect key="frame" x="26" y="588" width="30" height="30"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="0hI-VF-8Mf"/>
-                                                        <constraint firstAttribute="width" constant="30" id="57a-um-8ks"/>
-                                                    </constraints>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <connections>
-                                                        <action selector="acceptTermsTapped:" destination="eaK-4h-Af4" eventType="touchUpInside" id="k7W-ep-oCz"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="voL-Go-jG7" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="4iL-cM-Glp"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FOO-10-2gS" secondAttribute="trailing" constant="10" id="6ni-MD-5dS"/>
-                                                <constraint firstItem="tp6-4Q-LbZ" firstAttribute="leading" secondItem="WoQ-G5-9b0" secondAttribute="trailing" constant="10" id="72l-bX-82b"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="paN-3z-Wl9" secondAttribute="trailing" constant="10" id="91k-qb-GeS"/>
-                                                <constraint firstItem="gLx-qF-kkA" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ARn-jD-Iw6"/>
-                                                <constraint firstItem="e5g-ia-3LC" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="ESe-mj-GLh"/>
-                                                <constraint firstItem="UiG-ZX-f5e" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="IKp-XG-zCk"/>
-                                                <constraint firstItem="voL-Go-jG7" firstAttribute="top" secondItem="UiG-ZX-f5e" secondAttribute="bottom" constant="20" id="J0B-5r-MOD"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="UiG-ZX-f5e" secondAttribute="trailing" constant="10" id="K4e-Bq-xby"/>
-                                                <constraint firstItem="paN-3z-Wl9" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Mz1-Wn-75S"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="voL-Go-jG7" secondAttribute="trailing" constant="10" id="OCK-y5-GEQ"/>
-                                                <constraint firstItem="WoQ-G5-9b0" firstAttribute="leading" secondItem="FOO-10-2gS" secondAttribute="leading" id="OhZ-1x-qse"/>
-                                                <constraint firstItem="FOO-10-2gS" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="SSD-Nq-9M4"/>
-                                                <constraint firstItem="e5g-ia-3LC" firstAttribute="top" secondItem="7AW-9O-IJt" secondAttribute="bottom" constant="30" id="T28-cZ-3ZM"/>
-                                                <constraint firstItem="UiG-ZX-f5e" firstAttribute="top" secondItem="e5g-ia-3LC" secondAttribute="bottom" constant="10" id="Tgh-1R-Lwd"/>
-                                                <constraint firstItem="FXP-XR-DfS" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="Wzg-FZ-zBc"/>
-                                                <constraint firstItem="WoQ-G5-9b0" firstAttribute="top" secondItem="FOO-10-2gS" secondAttribute="bottom" constant="20" id="bMd-fO-7hT"/>
-                                                <constraint firstItem="hUZ-3C-MKn" firstAttribute="top" secondItem="zdm-v0-EWW" secondAttribute="topMargin" constant="10" id="cov-wm-sNu"/>
-                                                <constraint firstItem="tp6-4Q-LbZ" firstAttribute="centerY" secondItem="WoQ-G5-9b0" secondAttribute="centerY" id="dIo-TP-DLR"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="tp6-4Q-LbZ" secondAttribute="bottom" constant="20" id="eqW-dW-sEP"/>
-                                                <constraint firstAttribute="trailing" secondItem="hUZ-3C-MKn" secondAttribute="trailing" constant="30" id="fCo-46-dSO"/>
-                                                <constraint firstItem="FXP-XR-DfS" firstAttribute="top" secondItem="hUZ-3C-MKn" secondAttribute="bottom" constant="10" id="fLJ-84-xAm"/>
-                                                <constraint firstItem="FOO-10-2gS" firstAttribute="top" secondItem="voL-Go-jG7" secondAttribute="bottom" constant="20" id="jq0-8D-pdR"/>
-                                                <constraint firstItem="7AW-9O-IJt" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leadingMargin" constant="10" id="lEh-k0-RpV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7AW-9O-IJt" secondAttribute="trailing" constant="10" id="mss-u0-mEc"/>
-                                                <constraint firstItem="hUZ-3C-MKn" firstAttribute="leading" secondItem="zdm-v0-EWW" secondAttribute="leading" constant="30" id="nX2-A4-6KM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FXP-XR-DfS" secondAttribute="trailing" constant="10" id="rpF-XH-2pv"/>
-                                                <constraint firstItem="gLx-qF-kkA" firstAttribute="top" secondItem="FXP-XR-DfS" secondAttribute="bottom" constant="10" id="uVP-Nt-8T5"/>
-                                                <constraint firstItem="paN-3z-Wl9" firstAttribute="top" secondItem="gLx-qF-kkA" secondAttribute="bottom" constant="10" id="w25-2W-cOz"/>
-                                                <constraint firstItem="7AW-9O-IJt" firstAttribute="top" secondItem="paN-3z-Wl9" secondAttribute="bottom" constant="20" id="z06-j3-nc7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="acceptTermsButton" destination="WoQ-G5-9b0" id="65c-Ov-N1C"/>
-                                            <outlet property="confirmPasswordInput" destination="FOO-10-2gS" id="BOY-oQ-3IF"/>
-                                            <outlet property="emailInput" destination="UiG-ZX-f5e" id="aXY-iS-DTN"/>
-                                            <outlet property="goToTermsButton" destination="tp6-4Q-LbZ" id="dxi-G7-Y2I"/>
-                                            <outlet property="nameInput" destination="paN-3z-Wl9" id="TDe-mT-wor"/>
-                                            <outlet property="passwordInput" destination="voL-Go-jG7" id="sIa-yb-P8b"/>
-                                            <outlet property="surnameInput" destination="7AW-9O-IJt" id="ahZ-Aa-SdN"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bJV-DA-VRp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nDg-lE-jZb" firstAttribute="leading" secondItem="bJV-DA-VRp" secondAttribute="leading" constant="18" id="2be-vI-ufm"/>
-                            <constraint firstItem="dxR-G3-nID" firstAttribute="leading" secondItem="bJV-DA-VRp" secondAttribute="leading" id="2oV-FS-gOj"/>
-                            <constraint firstItem="Tym-8H-bw3" firstAttribute="centerY" secondItem="nDg-lE-jZb" secondAttribute="centerY" id="CNC-3Q-8E0"/>
-                            <constraint firstItem="6v9-oW-qNv" firstAttribute="leading" secondItem="omi-tz-elL" secondAttribute="leading" constant="30" id="G0N-6v-U9e"/>
-                            <constraint firstAttribute="trailing" secondItem="6v9-oW-qNv" secondAttribute="trailing" constant="30" id="GHc-pT-yvK"/>
-                            <constraint firstItem="nDg-lE-jZb" firstAttribute="top" secondItem="bJV-DA-VRp" secondAttribute="top" constant="30" id="IrP-mA-gzm"/>
-                            <constraint firstItem="Tym-8H-bw3" firstAttribute="centerX" secondItem="omi-tz-elL" secondAttribute="centerX" id="MwR-pF-NvC"/>
-                            <constraint firstItem="dxR-G3-nID" firstAttribute="top" secondItem="nDg-lE-jZb" secondAttribute="bottom" constant="20" id="cK6-32-htw"/>
-                            <constraint firstItem="6v9-oW-qNv" firstAttribute="top" secondItem="dxR-G3-nID" secondAttribute="bottom" constant="20" id="gJ3-oP-Vfm"/>
-                            <constraint firstAttribute="bottom" secondItem="6v9-oW-qNv" secondAttribute="bottom" constant="40" id="iMv-VJ-EoW"/>
-                            <constraint firstItem="dxR-G3-nID" firstAttribute="trailing" secondItem="bJV-DA-VRp" secondAttribute="trailing" id="qoh-3s-C0y"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="fL1-uf-QyK"/>
+                <navigationController id="XHb-xC-n0d" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qNE-3g-JIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
                     <connections>
-                        <outlet property="privacyButton" destination="6wO-fc-mtO" id="fPs-oX-OOj"/>
-                        <outlet property="registerButton" destination="D6b-TQ-XzS" id="zEw-Qx-Dje"/>
-                        <outlet property="tableViewRegister" destination="dxR-G3-nID" id="HrZ-oA-HMC"/>
-                        <segue destination="F8h-3Z-kua" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="nuG-el-YJB"/>
+                        <segue destination="RrF-Sw-2vj" kind="relationship" relationship="rootViewController" id="dat-mQ-o1X"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HBG-bp-iBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJq-5u-9Kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.9710144927537" y="442.63392857142856"/>
+            <point key="canvasLocation" x="1046" y="83"/>
         </scene>
         <!--View Controller Login-->
         <scene sceneID="UWs-sH-f1V">
@@ -425,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDt-ka-4E0">
-                                <rect key="frame" x="20" y="20" width="29" height="29"/>
+                                <rect key="frame" x="20" y="64" width="29" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="I8W-be-Vwa"/>
                                     <constraint firstAttribute="width" constant="29" id="ins-7K-Sdg"/>
@@ -436,7 +206,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rja-xw-Z6o">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baz-oZ-Tdc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="742.5"/>
@@ -489,7 +259,7 @@
                                                     <color key="titleColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="cvV-ds-aRF" kind="presentation" modalPresentationStyle="fullScreen" id="Upy-0e-qRX"/>
+                                                    <action selector="passwordResetTapped:" destination="RrF-Sw-2vj" eventType="touchUpInside" id="BtP-2H-ieP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBt-A1-Dl4" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
@@ -517,7 +287,7 @@
                                                     <color key="titleColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Jzd-RK-YiZ" kind="presentation" modalPresentationStyle="fullScreen" id="qSw-1t-rBj"/>
+                                                    <action selector="registerTapped:" destination="RrF-Sw-2vj" eventType="touchUpInside" id="S3o-fG-w2P"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O iniciar sesión con" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETn-2A-6jb">
@@ -529,7 +299,7 @@
                                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cke-dX-XQy" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cke-dX-XQy" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
                                                 <rect key="frame" x="28" y="569" width="319" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -635,7 +405,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1G4-rO-9Kj">
-                                <rect key="frame" x="134.5" y="23.5" width="106" height="22"/>
+                                <rect key="frame" x="134.5" y="67.5" width="106" height="22"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.71764705880000002" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -669,97 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yh4-I2-Lty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.9710144927537" y="-246.42857142857142"/>
-        </scene>
-        <!--View Controller Forgot Password-->
-        <scene sceneID="msm-OV-C5N">
-            <objects>
-                <viewController id="cvV-ds-aRF" customClass="ViewControllerForgotPassword" customModule="SMNEApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lUs-8C-hKO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08q-wH-wO1">
-                                <rect key="frame" x="20" y="20" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="Pti-hc-itz"/>
-                                    <constraint firstAttribute="height" constant="29" id="qKh-jf-o8f"/>
-                                </constraints>
-                                <state key="normal" image="arrowL"/>
-                                <connections>
-                                    <action selector="backTapped:" destination="cvV-ds-aRF" eventType="touchUpInside" id="TxJ-uT-BsE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidaste tu contraseña?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8h-Nv-uOe">
-                                <rect key="frame" x="84" y="23.5" width="207" height="22"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                <color key="textColor" red="0.16078431369999999" green="0.71764705880000002" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para poder recuperar tu contraseña, es necesario ingresar tu email." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-1v-i3k">
-                                <rect key="frame" x="33" y="95.5" width="309" height="153"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
-                                <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Te enviaremos un correo electrónico con los pasos que debes seguir." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57j-de-B21">
-                                <rect key="frame" x="33" y="258.5" width="309" height="44"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
-                                <color key="textColor" red="0.019607843140000001" green="0.1764705882" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-Nr-RSy" customClass="SMNETextField" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="33" y="322.5" width="309" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gsR-KW-NtN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-H7-Dq7" customClass="SMNEButton" customModule="SMNEApp" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="587" width="144.5" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="yOA-in-Z5E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
-                                <state key="normal" title="Entrar">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendTapped:" destination="cvV-ds-aRF" eventType="touchUpInside" id="WL5-b4-cCn"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yS1-zo-KD1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gTG-Nr-RSy" firstAttribute="top" secondItem="57j-de-B21" secondAttribute="bottom" constant="20" id="1qY-RU-vP6"/>
-                            <constraint firstItem="gTG-Nr-RSy" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="BJy-9q-yex"/>
-                            <constraint firstItem="ZDL-H7-Dq7" firstAttribute="leading" secondItem="lUs-8C-hKO" secondAttribute="centerX" constant="10" id="DQj-LN-IqJ"/>
-                            <constraint firstItem="9nl-1v-i3k" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="Jk1-KH-n14"/>
-                            <constraint firstItem="d8h-Nv-uOe" firstAttribute="centerY" secondItem="08q-wH-wO1" secondAttribute="centerY" id="JmY-y2-NVx"/>
-                            <constraint firstItem="57j-de-B21" firstAttribute="top" secondItem="9nl-1v-i3k" secondAttribute="bottom" constant="10" id="RbU-3p-Ilv"/>
-                            <constraint firstItem="9nl-1v-i3k" firstAttribute="top" secondItem="d8h-Nv-uOe" secondAttribute="bottom" constant="50" id="T8P-Ph-dgG"/>
-                            <constraint firstAttribute="trailing" secondItem="gTG-Nr-RSy" secondAttribute="trailing" constant="33" id="TOL-ld-NKC"/>
-                            <constraint firstItem="yS1-zo-KD1" firstAttribute="trailing" secondItem="ZDL-H7-Dq7" secondAttribute="trailing" constant="33" id="UEF-yR-83t"/>
-                            <constraint firstItem="d8h-Nv-uOe" firstAttribute="centerX" secondItem="lUs-8C-hKO" secondAttribute="centerX" id="UsP-nE-dxR"/>
-                            <constraint firstItem="yS1-zo-KD1" firstAttribute="trailing" secondItem="9nl-1v-i3k" secondAttribute="trailing" constant="33" id="V0B-rB-phU"/>
-                            <constraint firstItem="08q-wH-wO1" firstAttribute="top" secondItem="yS1-zo-KD1" secondAttribute="top" constant="20" id="jtu-KY-gq9"/>
-                            <constraint firstItem="57j-de-B21" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="33" id="s4q-Zh-MIz"/>
-                            <constraint firstItem="yS1-zo-KD1" firstAttribute="bottom" secondItem="ZDL-H7-Dq7" secondAttribute="bottom" constant="30" id="sgJ-y7-cZ3"/>
-                            <constraint firstItem="08q-wH-wO1" firstAttribute="leading" secondItem="yS1-zo-KD1" secondAttribute="leading" constant="20" id="uOk-w3-JGr"/>
-                            <constraint firstAttribute="trailing" secondItem="57j-de-B21" secondAttribute="trailing" constant="33" id="zVn-nJ-vcR"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="emailField" destination="gTG-Nr-RSy" id="MK6-Kr-cVd"/>
-                        <outlet property="sendButton" destination="ZDL-H7-Dq7" id="Olo-tR-TXX"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPj-aQ-38o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2158" y="-246"/>
+            <point key="canvasLocation" x="2047" y="83"/>
         </scene>
         <!--Main-->
         <scene sceneID="Xkd-eQ-u10">
@@ -767,13 +447,9 @@
                 <viewControllerPlaceholder storyboardName="Main" id="F8h-3Z-kua" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W30-JG-IcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="84"/>
+            <point key="canvasLocation" x="2844" y="83"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="odf-Oh-Enx"/>
-        <segue reference="qSw-1t-rBj"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo SMNE" width="157" height="155.5"/>
         <image name="apple" width="19.5" height="23"/>
